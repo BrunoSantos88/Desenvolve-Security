@@ -1,5 +1,6 @@
 # Desenvolve-Security
 - Aulas Trilha CyberSecuirty - Alura
+- Link https://docs.google.com/document/d/e/2PACX-1vSfEyXSOcMsmu2gyci3YCSHpCDNoeufjtWklvDZ3cmbdQEUOL8C8sNXqoAB7nWXzmORKJ7ma-JK646w/pub
 
  # Semana 1 - 16h
 - JavaScript e HTML: desenvolva um jogo e pratique lógica de programação
