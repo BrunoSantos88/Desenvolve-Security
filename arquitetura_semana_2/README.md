@@ -1,6 +1,7 @@
 # Desenvolve-Security
 - Aulas Trilha CyberSecuirty - Alura
 
+# Semana 2 - 8h
 - Arquitetura de computadores: por trás de como seu programa funciona
 
  # Instalar 
