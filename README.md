@@ -6,7 +6,7 @@
 
  # Semana 1 - 16h
 - JavaScript e HTML: desenvolva um jogo e pratique lógica de programação
-- <a href=https://github.com/BrunoSantos88/Desenvolve-Security/tree/main/javascript_semana_1/>  Aula Javascript </a>  </p>
+- <a href=https://github.com/BrunoSantos88/Desenvolve-Security/tree/main/javascript_semana_1/>  Aula JavaScript </a>  </p>
         </li>
  # Semana 2 - 8h
 - Arquitetura de computadores: por trás de como seu programa funciona
