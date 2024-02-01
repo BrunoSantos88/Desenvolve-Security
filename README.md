@@ -1,8 +1,13 @@
-# Desenvolve-Security
-- Aulas Trilha CyberSecuirty - Alura
+
+  <h3> Desenvolve-CyberSecurity </h3>  </p>
+   <a href=https://docs.google.com/document/d/e/2PACX-1vSfEyXSOcMsmu2gyci3YCSHpCDNoeufjtWklvDZ3cmbdQEUOL8C8sNXqoAB7nWXzmORKJ7ma-JK646w/pub/> Formação Segurança da Informação Desenvolve 2024 - Grupo Boticário </a>  </p>
+        </li>
+      </p>
 
  # Semana 1 - 16h
 - JavaScript e HTML: desenvolva um jogo e pratique lógica de programação
+- <a href=https://github.com/BrunoSantos88/Desenvolve-Security/tree/main/javascript_semana_1/>  Aula JavaScript </a>  </p>
+        </li>
  # Semana 2 - 8h
 - Arquitetura de computadores: por trás de como seu programa funciona
  # Semana 3 - 8h - 8h
