@@ -9,7 +9,7 @@
 - <a href=https://github.com/BrunoSantos88/Desenvolve-Security/tree/main/javascript_semana_1/>  Aula JavaScript com html </a>  </p>
         </li>
  # Semana 2 - 8h
-- Arquitetura de computadores: por trás de como seu programa funciona
+- Arquitetura de computadores: por trás de como seu programa funciona.  </p>
  <a href=https://github.com/BrunoSantos88/Desenvolve-Security/tree/main/javascript_semana_1/>  Aula Processo computadores e JavaScript </a>  </p>
  # Semana 3 - 8h - 8h
 - Linux Onboarding: usando a CLI de uma forma rápida e prática
