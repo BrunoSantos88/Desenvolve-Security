@@ -27,4 +27,9 @@
  # Monitorar Redes
   - install wireshark wireshark.org.
 
+  # Class IP 
+ - Classe A: 10.0.0.0
+ - Classe B: 172.16.0.0 a 172.31.0.0
+ - Classe C: 192.68.0.0
+
 
