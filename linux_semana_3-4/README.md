@@ -7,12 +7,31 @@
  # Semana 4 - 8h - 8h
 - Linux Onboarding: obtendo e tratando informações do sistema
 - Linux Onboarding: trabalhe com usuários, permissões e dispositivos
- 
 
- # Criando maquina Azure Cloud
-  - Az login, selecionar sua conta login email e sennha
-  - az group create --name aluralabs --location eastus
-  - az vm create --resource-group aluralabs --name aluralabs-server-vm --image Ubuntu2204 --data-disk-sizes-gb 80 --size Standard_D2s_v3 --admin-username "alura"  --ssh-key-value ~/.ssh/id_rsa.pub --public-ip-sku Standard
-  - az vm open-port --resource-group aluralabs --name aluralabs-server-vm --port 22 --priority 1010
+# Commandos 
 
-  - Acesso ssh -i ~/.ssh/id_rsa.pem alura@172.191.233.68
+
+#  Armazenar o hash das senhas dos usuários?
+ - sudo cat /etc/shadow =
+ - cria um user; adduser
+ - criar uma senha; su -
+ - criar um gropo; groupadd name
+ - colocar um user ao grupo; usermod -aG grupo user
+ - deletar user; userdel
+ - deletar grupo; groupdel
+
+ # Permições
+ - “rw-rw”. “rw” é “4 + 2 = 6”, “6 – 6 = 0”
+ - o-r-g;  o= ower r= read g- grupos 
+ - Então é fácil, “r” — direito de leitura, “w” — direito de escrita e “x” - direito de execução
+
+ - exemplos
+ - sudo chmod 770 /pasta ou arquivo
+ - sudo chmod 774 /pastat ou arquivo
+ - sudo chown; mudar proprietario.
+ - chmod g+s /pasta;
+
+ # link Simbolico
+ - ln -s /projetos  projetos
+
+ # instalar pacotes
