@@ -1,0 +1,24 @@
+enable
+configure terminal
+interface Fa 0/0
+no shutdown
+ip dhcp pool vlan10
+network 192.168.10.0 255.255.255.0
+exit
+ip dhcp pool vlan20
+network 192.168.20.0 255.255.255.0
+exit
+interface Fa 0/0.1
+encapsulation dot1Q 10
+ip address 192.168.10.1 255.255.255.0
+exit
+interface Fa 0/0.2
+encapsulation dot1Q 20
+ip address 192.168.20.1 255.255.255.0
+exit
+ip dhcp pool vlan10
+default-router 192.168.10.1
+exit
+ip dhcp pool vlan20
+default-router 192.168.20.1
+exit
