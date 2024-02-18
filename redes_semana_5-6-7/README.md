@@ -1,5 +1,8 @@
 # Desenvolve-Security
 - Aulas Trilha CyberSecuirty - Alura
+- Projeto que construímos no curso anterior, a rede apresenta conexão com a internet, suporte para mais de 600 dispositivos conectados, segmentação entre os diferentes setores que constituem o Instituto.
+- Além disso, temos um servidor com acesso mais restrito (Políticas de acesso), pois armazena dados sensíveis da instituição e das pessoas colaboradoras. Também precisamos suportar um serviço de VolP.
+- Tudo isso já está configurado, mas surge um questionamento: como o computador do pesquisador A consegue acessar algo que está no provedor de serviços, que está na internet?
  # Semana 5-7
 - Redes: dos conceitos iniciais à criação de uma intranet
 - Redes: construindo um projeto com VLANs, políticas de acesso e conexão com internet
