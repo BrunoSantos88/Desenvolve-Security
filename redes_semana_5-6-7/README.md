@@ -38,4 +38,9 @@
  - Configuração STP Switch
  - Congiguração controle ACL
  - Nat
-
+# Laboratorios Packet Tracert modulo 7
+- OSPF
+- BGP
+- DNS
+- RIP
+- IPV6
