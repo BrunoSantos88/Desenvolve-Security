@@ -2,6 +2,7 @@ enable
 configure terminal
 interface Fa 0/0
 no shutdown
+configure terminal
 ip dhcp pool vlan10
 network 192.168.10.0 255.255.255.0
 exit

@@ -5,7 +5,7 @@ no shutdown
 configure terminal
 ip dhcp pool vlan10
 network 172.16.0.0 255.255.254.0
-default-router 172.16.0.17
+default-router 172.16.0.1
 exit
 ip dhcp pool vlan20
 network 172.16.2.0 255.255.254.0
