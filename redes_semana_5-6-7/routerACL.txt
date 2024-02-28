@@ -1,11 +1,12 @@
 enable
 configure terminal
-ip dhcp exclude-address 172.16.2.2
-ip dhcp exclude-address 172.16.2.3
-deny tcp 172.16.2.6 0.0.255.255 172.16.4.2 0.0.0.0
+ip dhcp excluded-address 172.16.2.2
+ip dhcp excluded-address 172.16.2.4
 ip access-list extended gerencial
-permit tcp 172.16.0.2 0.0.0.0 172.16.4.2 0.0.0.0
-permit tcp 172.16.0.3 0.0.0.0 172.16.4.2 0.0.0.0
+permit tcp 172.16.2.2 0.0.0.0 172.16.4.2 0.0.0.0
+permit tcp 172.16.2.4 0.0.0.0 172.16.4.2 0.0.0.0
 deny tcp 172.16.2.6 0.0.255.255 172.16.4.2 0.0.0.0
+deny tcp 172.16.0.2 0.0.255.255 172.16.4.2 0.0.0.0
+deny tcp 172.16.0.4 0.0.255.255 172.16.4.2 0.0.0.0
 permit ip any any
 exit

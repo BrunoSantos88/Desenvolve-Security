@@ -1,7 +1,7 @@
 Vagrant.configure("2") do |config|
     config.vm.box = "ubuntu/focal64"
     
-    config.vm.network "public_network", bridge: "TP-Link Wireless USB Adapter", :ip => "192.168.15.50"
+    config.vm.network "public_network", bridge: "TP-Link Wireless USB Adapter", :ip => "192.168.15.7"
     config.vm.network "forwarded_port", guest: 22, host: 2222
     config.vm.network "forwarded_port", guest: 80, host: 8080
    
@@ -14,24 +14,7 @@ Vagrant.configure("2") do |config|
     
     # Provisioning script
     config.vm.provision "shell", inline: <<-SHELL
-      # Atualiza a lista de pacotes
     sudo apt update
-    
-    # Instala o Nginx
     sudo apt install -y nginx
-
-    # Adiciona o repositório do Docker
-    sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-    
-    # Instala o Docker
-    sudo apt update
-    sudo apt install -y docker-ce docker-ce-cli containerd.io
-    
-    # Adiciona o usuário ao grupo docker para executar comandos Docker sem sudo
-    sudo usermod -aG docker vagrant
-      # CHAVESSH VAGRANT USER
-      echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDKZK2yPVzIwwrI4k59F8S9G5vNv6AhP4mgE8h5g7tSkczY1uISqS+ssnHOzgEYelUlYTfXXPIy5zaU8w2LKQ9xtBTDZrZ6XVuGwho1uZ1BzwCHlS4vdnsJpBX4do+juBB2QRo46ZTea0IpMfI/6lIQZ4Za1WXlmJQPs8d3kYBYputcIBEB8uNtfkrceJr4TjH3CUPSG8ql2z8uaVrZh1UpvJ7w2+EXUIlH1PQ+xHZigbpHUy25QSwqvdZ3+J68dD0Y3FAFkxevCC9PO6a4zci2fEb6xGAonOJX0uZQQwpsxa6RbYcwyZq2vBSqRbTcbefVmip8qwT/y/y9HwuyUvZcrLGB38cuqcxx2rqzWbFaZL87ZRQv5M0XPsThRwNR1N1Q8WBPfTmdMg0gsplYt29MoP8YLjbDISdBKd5theZDfEbO3oHob4+uQpmt9/at6qmLSTfmGfC7T5yi5sdGsIzoMbUJaT+7md0qIih+qH9LZxU23MxFGCe3Fv5onxtMpNM= NoteCasa@DESKTOP-OUCBTTA' >> /home/vagrant/.ssh/authorized_keys
     SHELL
   end

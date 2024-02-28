@@ -1,6 +1,6 @@
 enable
 configure terminal
-interface Fa 0/0
+interface Fa 0/0.1
 no shutdown
 configure terminal
 ip dhcp pool vlan10
