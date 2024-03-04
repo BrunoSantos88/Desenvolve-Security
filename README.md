@@ -9,7 +9,7 @@
  - Arquitetura de computadores: por trás de como seu programa funciona.  </p>
  - <a href=https://github.com/BrunoSantos88/Desenvolve-Security/tree/main/arquitetura_semana_2/> Lab Processo computadores e JavaScript </a>  </p>
 
-<img src=" https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/issues/3#issue-2167892907" min-width="600px" max-width="600px" width="600
+<img src="https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/issues/3#issue-2167892907" min-width="600px" max-width="600px" width="600
 px" align="rigth" alt="Desenvolve">
 
 
