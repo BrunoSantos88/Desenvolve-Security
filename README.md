@@ -9,37 +9,8 @@
  - Arquitetura de computadores: por trás de como seu programa funciona.  </p>
  - <a href=https://github.com/BrunoSantos88/Desenvolve-Security/tree/main/arquitetura_semana_2/> Lab Processo computadores e JavaScript </a>  </p>
 
- - Linux Onboarding: usando a CLI de uma forma rápida e prática
- - Linux Onboarding: localizando arquivos e conteúdos
- - Linux Onboarding: obtendo e tratando informações do sistema
- - Linux Onboarding: trabalhe com usuários, permissões e dispositivos
- - Redes: dos conceitos iniciais à criação de uma intranet
- - Redes: construindo um projeto com VLANs, políticas de 
- - Shell Scripting parte 1: scripts de automação de tarefas </p>
- - Shell Scripting parte 2: fazendo monitoramento, agendando tarefas e backup </p>
- - Docker: criando e gerenciando containers
- - Segurança de rede: firewall, WAF e SIEM
- - Segurança de rede: proxy reverso, SSH e DNS
- - Segurança de rede: manipule logs e dashboards
- - NGINX: servidor Web, Proxy Reverso e API Gateway
- - OWASP Top 10: de Injections a Broken Access Control
- - OWASP Top 10: Security misconfiguration, logging e monitoramento
- - OWASP: padrão de verificação de segurança de aplicações
- - OWASP: padrão de verificação de segurança de aplicações V5 a V8
- - OWASP: padrão de verificação de segurança de aplicações V9 a V14
- - Modelagem de ameaças: identifique riscos na concepção do software
- - Desenvolvimento Seguro: estratégias de segurança para dados de entrada
- - Desenvolvimento Seguro: lidando com erros e logs em uma aplicação
- - Pentest: explorando vulnerabilidades em aplicações web
- - Pentest: investigando vulnerabilidades em um servidor de aplicações web
- - Pentest: combinando vulnerabilidades e acessando o Shell
- - Observabilidade: coletando métricas de uma aplicação com Prometheus
- - Monitoramento: Prometheus, Grafana e Alertmanager
- - Confiabilidade: garantindo o estado de integridade de sistemas através de logs
- - Confiabilidade: centralizando logs com Grafana Loki
- - Rastreamento: fazendo tracing com Jaeger e OpenTelemetry
- - LGPD: conhecendo e entendendo seus impactos
-
+<img src=" https://private-user-images.githubusercontent.com/91704169/309918809-360afb07-a368-4e25-8b62-b20ea6cf8753.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDk1OTEyNzIsIm5iZiI6MTcwOTU5MDk3MiwicGF0aCI6Ii85MTcwNDE2OS8zMDk5MTg4MDktMzYwYWZiMDctYTM2OC00ZTI1LThiNjItYjIwZWE2Y2Y4NzUzLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAzMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMzA0VDIyMjI1MlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWZmMzZiOWJlNmM0Y2I0OGJmODgwN2MwZGUxZjU2ZmM3MmM3ODRlOGFkOThjMmI4MjdiZThkZThjNTYzMzhhZDYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0._yKSly-vdMx5lGHruuz3IgoLwig_Ncy0CdEjAl242B8" min-width="600px" max-width="600px" width="600
+px" align="rigth" alt="Desenvolve">
 
 
  
