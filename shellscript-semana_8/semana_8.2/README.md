@@ -18,3 +18,6 @@
  - curl --write-out %{http_code} --silent --output /dev/null http://localhost
  - bash monitoracao-servidor.sh
  - curl --write-out %{http_code} http://google.com
+ - curl --write-out %{http_code} https://caelum-online-public.s3.amazonaws.com/shell-script/parte2/aula_2/index.html
+ - sudo service apache2 start
+ - http://localhost/site.html
