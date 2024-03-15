@@ -46,29 +46,33 @@ function resetState() {
   document.body.removeAttribute("class")
   $nextQuestionButton.classList.add("hide")
 }
-
+// correct e incorrect fuction
 function selectAnswer(event) {
-  const answerClicked = event.target
+  const answerClicked = event.target;
+
+ 
+  document.querySelectorAll(".answer").forEach(button => {
+    button.classList.remove("correct", "incorrect");
+    button.disabled = true;
+  });
 
   if (answerClicked.dataset.correct) {
-    document.body.classList.add("correct")
-    totalCorrect++
+    document.body.classList.add("correct");
+    totalCorrect++;
   } else {
-    document.body.classList.add("incorrect") 
+    document.body.classList.add("incorrect");
   }
 
   document.querySelectorAll(".answer").forEach(button => {
-    button.disabled = true
-
     if (button.dataset.correct) {
-      button.classList.add("correct")
+      button.classList.add("correct");
     } else {
-      button.classList.add("incorrect")
+      button.classList.add("incorrect");
     }
-  })
+  });
   
-  $nextQuestionButton.classList.remove("hide")
-  currentQuestionIndex++
+  $nextQuestionButton.classList.remove("hide");
+  currentQuestionIndex++;
 }
 
 function finishGame() {
@@ -107,14 +111,15 @@ function finishGame() {
 }
 
 
+//banco das questoes
 const questions = [
   {
-    question: "Dentro de qual elemento HTML colocamos o JavaScript?",
+    question: "Qual data que começou Desenvolve?",
     answers: [
-      { text: "<javascript>", correct: false },
-      { text: "<js>", correct: false },
-      { text: "<script>", correct: true },
-      { text: "<scripting>", correct: false }
+      { text: "Dia 29 janeiro", correct: false },
+      { text: "Dia 02 Fevereiro", correct: true },
+      { text: "12 Dezembro", correct: false},
+      { text: "29 Fevereiro", correct: false }
     ]
   },
   {
@@ -170,3 +175,31 @@ const questions = [
     ]
   },
 ]
+
+
+//timer
+let timeLeft = 30; // Define o tempo inicial em segundos
+let timerInterval; // Variável para armazenar o intervalo do temporizador
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timeLeft--; // Decrementa o tempo restante
+    document.getElementById('time-left').textContent = timeLeft; // Atualiza o tempo na tela
+
+    if (timeLeft === 0) {
+      clearInterval(timerInterval); // Para o temporizador quando o tempo acabar
+      document.querySelector('.timer').textContent = "Fim de jogo"; // Altera o texto do temporizador
+      endGame(); // Chama a função para encerrar o jogo
+    }
+  }, 1000); // Define o intervalo do temporizador para 1 segundo (1000 milissegundos)
+}
+
+function endGame() {
+ 
+  document.querySelector('.final-message').classList.remove('hide'); // Exibe a mensagem final
+  document.querySelector('.controls-container').classList.add('hide'); // Oculta o contêiner de controles
+}
+
+document.querySelector('.start-quiz').addEventListener('click', function() {
+  startTimer(); // Inicia o temporizador quando o botão "Iniciar!" é clicado
+});

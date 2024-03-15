@@ -9,8 +9,8 @@ button {
 }
 
 body {
-  background-color: #121214;
-  color: #fff;
+  background-color: #d5e0ec;
+  color: #049b48;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -18,9 +18,10 @@ body {
 }
 
 .container {
-  background-color: #121214;
-  width: 90%;
-  max-width: 800px;
+  background-color: #b0b0cc;
+  width: 75%;
+  max-width: 700px;
+  text-align: center;
 
   border: 2px solid #e1e1e6;
   border-radius: 6px;
@@ -39,6 +40,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 24px;
+  text-align: center;
 }
 
 .question {
@@ -51,7 +53,8 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 14px;
+  text-align: center;
 }
 
 .answer:disabled {
@@ -59,9 +62,9 @@ body {
 }
 
 .next-question {
-  margin-top: 32px;
+  margin-top: 28px;
 }
-
+ 
 .button {
   background-color: #4863f7;
   color: #fff;
@@ -69,36 +72,68 @@ body {
   font-weight: bold;
   border: 0;
   border-radius: 6px;
-  height: 48px;
+  height: 38px;
   padding: 0 32px;
+  text-align: center;
 
   transition: filter 0.1s;
 }
+
+.placar{
+  background-color: #4863f7;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 6px;
+  height: 38px;
+  padding: 0 32px;
+  text-align: center;
+
+  transition: filter 0.1s;
+}
+
 
 .button:not(:disabled):hover {
   filter: brightness(0.8);
 }
 
-/* Finish game */
 .final-message {
   font-size: 20px;
+  text-align: center;
   text-align: center;
 }
 
 .final-message span {
   display: block;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
-/* General styles */
 .hide {
   display: none;
 }
 
 .correct {
-  background-color: #049b48;
+  background-color: #07a915;
 }
 
 .incorrect {
   background-color: #a10101;
+}
+
+.timer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.controls-container .timer {
+  margin-top: 30px;
+  text-align: center;
+  color: #07a915;
+}
+
+.score {
+  margin-top: 30px;
+  text-align: center;
+  color:#07a915;
 }
