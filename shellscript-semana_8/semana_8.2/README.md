@@ -16,6 +16,10 @@ sudo apt-get install curl
 sudo apt-get install ssmtp -y
 sudo apt-get install mailutils -y
 sudo apt-get install nmap -y
+apt-get install -y mysql-server
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
 ```
  # commando etapa-3 
  ```
