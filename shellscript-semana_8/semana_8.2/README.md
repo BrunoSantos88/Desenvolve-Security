@@ -1,14 +1,14 @@
-# commando executar etapa-1
+# commando executar log
 ```
  - ./filter_access_log.sh "GET"
 ```
- # filtro GET PUT e DELETE etapa-2
+ # filtro GET PUT e DELETE
  ```
  - bash filter_result.sh put
  - bash filter_result.sh get
  - bash filtenr_result.sh delete
  ```
- # install depedencia lab 
+ # instalar depedencia para o laboratorio. 
  ```
 sudo apt-get install apache2
 sudo service apache2 start
@@ -16,8 +16,9 @@ sudo apt-get install curl
 sudo apt-get install ssmtp -y
 sudo apt-get install mailutils -y
 sudo apt-get install nmap -y
+sudo apt-get install awscli -y
 ```
- # commando etapa-3 
+ # commando curl e bash
  ```
  - curl --write-out %{http_code} --output /dev/null http://localhost
  - curl --write-out %{http_code} --silent --output /dev/null http://localhost
@@ -27,12 +28,12 @@ sudo apt-get install nmap -y
  - sudo service apache2 start
  - http://localhost/site.html
 ```
- # acessar crontab 
+ # acesso ao crontab 
  ```
  sudo crontab -e
  ```
 
- # commando etapa-4
+ # commando para visualizar consumo.
 
 ```
 free | grep
@@ -42,7 +43,7 @@ free -h | grep -i mem | awk '{ print $3 }'
 echo 63.00 | awk -F. '{ print $2 }'
 ```
 
-# commandos etapa-5 mysql
+# commandos mysql
 ```
 sudo mysql -u root
 show databases;
@@ -50,13 +51,41 @@ use mutillidae
 show tables;
 select * from produtos;
 select * from usuarios;
+sudo mysql -u root
+use mutillidae
+delete from produtos;
+delete from usuarios;
+
 ```
 
-# commandos etapa-6 mysql
+# commandos script backup myql
 ```
+- mkdir backup
 - mysqldump -u root $1 > $1.sql
 - sudo mysql -u root mutillidae < /home/backup/mutillidae.sql
+- sudo mysqldump -u root -p mutillidae > /home/backup/mutillidae2.sql
 ```
+
+# commandos aws cli upload
+
+```
+- mkdir backup_mutillidae_amazon
+- nano backup-amazon.sh
+- chmod +x backup-amazon.sh
+- sudo bash backup-amazon.sh
+```
+ - acessar crontab
+ ```
+ sudo crontab -e
+ ```
+
+ # commandos aws cli upload
+
+ ```
+ - mkdir restore_mutillidae_amazon
+ - chmod +x restore_amazon.sh produtos
+ - bash restore_amazon.sh produtos
+ ```
 
 # link github 
 

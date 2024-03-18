@@ -1,11 +1,11 @@
 #!/bin/bash
 
-CAMINHO_HOME=/home
+CAMINHO_HOME=/home/backup/
 
 cd $CAMINHO_HOME
-if [ ! -d backupmysql2 ]
+if [ ! -d backupmysql ]
 then
-    mkdir backupmysql2
+    mkdir backupmysql
 fi
 
 mysqldump -u root $1 > $CAMINHO_HOME/backup/$1.sql
