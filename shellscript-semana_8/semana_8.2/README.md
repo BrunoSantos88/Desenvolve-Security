@@ -81,7 +81,7 @@ delete from usuarios;
 - chmod +x backup-amazon.sh
 - sudo bash backup-amazon.sh
 ```
-<img src="aws backup s3.png" alt="Alt Text" width="800" height="800">
+<img src="aws backup s3.png" alt="Alt Text" width="500" height="500">
 
  - acessar crontab
  ```
