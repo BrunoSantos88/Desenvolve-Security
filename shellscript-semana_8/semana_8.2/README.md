@@ -16,7 +16,14 @@ sudo apt-get install curl
 sudo apt-get install ssmtp -y
 sudo apt-get install mailutils -y
 sudo apt-get install nmap -y
+<<<<<<< HEAD
 sudo apt-get install awscli -y
+=======
+apt-get install -y mysql-server
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+>>>>>>> 36d1978e9b3568d4a8b37c16ebeae2ae51458a07
 ```
  # commando curl e bash
  ```
@@ -74,6 +81,8 @@ delete from usuarios;
 - chmod +x backup-amazon.sh
 - sudo bash backup-amazon.sh
 ```
+<img src="aws backup s3.png" alt="Alt Text" width="400">
+
  - acessar crontab
  ```
  sudo crontab -e
