@@ -88,12 +88,18 @@ delete from usuarios;
  sudo crontab -e
  ```
 
- # commandos aws cli upload
+ # commandos aws cli restore
 
  ```
  - mkdir restore_mutillidae_amazon
  - chmod +x restore_amazon.sh produtos
  - bash restore_amazon.sh produtos
+ ```
+
+ # commandos aws cli download
+ ```
+ aws s3 sync $CAMINHO_BACKUP s3://curso-shell-script
+ 
  ```
 
 # link github 

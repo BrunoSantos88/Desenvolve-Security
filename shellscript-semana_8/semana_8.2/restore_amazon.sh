@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CAMINHO_RESTORE=/home/bruno/restore_mutillidae_amazon
-aws s3 sync s3://curso-shell-script/$(date + %F) $CAMINHO_RESTORE
+aws s3 sync s3://my-desenvolve-bucket/backup/$(date + %F) $CAMINHO_RESTORE
 
 cd $CAMINHO_RESTORE
 if [ -f $1.sql ]
