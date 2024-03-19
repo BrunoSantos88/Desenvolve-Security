@@ -102,6 +102,6 @@ delete from usuarios;
  
  ```
 
-# link github 
+# link github referencia
 
 - https://github.com/RafaelNercessian/curso-shell.git
