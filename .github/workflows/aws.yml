@@ -1,24 +1,36 @@
-name: Deploy to AWS S3
+name: desafio Deploy S3
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v2
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: your-aws-region
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}  # Optional
+        run: |
+          aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+          aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+          aws configure set region $AWS_REGION  # Optional
 
-      - name: Sync files to S3 bucket
-        run: aws s3 sync ./path/to/local/files s3://your-bucket-name --delete
+      - name: Install AWS CLI (optional, if not pre-installed on runner)
+        run: |
+          curl -sL https://raw.githubusercontent.com/aws/aws-cli/v2/installer/ubuntu/apt | sudo bash
+          sudo apt install awscli -y
+
+      - name: Build your project (replace with your build command)
+        run: make build  # Replace with your build command
+
+      - name: Upload files to S3 bucket
+        run: |
+          aws s3 cp --recursive build s3://your-bucket-name/path/in/bucket
+
+      # Add other steps for deployment (e.g., invalidation of CloudFront cache)
