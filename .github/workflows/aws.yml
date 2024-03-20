@@ -15,19 +15,18 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: ${{ secrets.AWS_REGION }}  # Optional
+          AWS_REGION: ${{ secrets.AWS_REGION }}  
         run: |
           aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
           aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
-          aws configure set region $AWS_REGION  # Optional
+          aws configure set region $AWS_REGION
 
       - name: Install AWS CLI (optional, if not pre-installed on runner)
         run: |
-          curl -sL https://raw.githubusercontent.com/aws/aws-cli/v2/installer/ubuntu/apt | sudo bash
-          sudo apt install awscli -y
+           sudo apt-get install awscli -y
 
-      - name: Build your project (replace with your build command)
-        run: make build  # Replace with your build command
+      - name: Build your project 
+        run: make build
 
       - name: Upload files to S3 bucket
         run: |
