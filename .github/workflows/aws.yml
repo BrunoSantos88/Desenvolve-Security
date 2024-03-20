@@ -33,4 +33,3 @@ jobs:
         run: |
           cd desafio_desenvolve_1
           aws s3 cp * s3://desafioquizdesenvolvebrsantos/quiz/
-      # Add other steps for deployment (e.g., invalidation of CloudFront cache)
