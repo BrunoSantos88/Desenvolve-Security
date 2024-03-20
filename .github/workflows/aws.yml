@@ -28,4 +28,4 @@ jobs:
       - name: Upload and Deploy Files S3
         run: |
           cd desafio_desenvolve_1
-          aws s3 cp * s3://desafioquizdesenvolvebrsantos/quiz/
+          aws s3 cp --recursive . s3://desafioquizdesenvolvebrsantos/quiz/
