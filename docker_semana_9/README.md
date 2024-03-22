@@ -106,10 +106,10 @@ Login Succeeded
 
 # Desafio Criando e gerencindo container 
 
-- ETAPA-1 baixar e extrair pasta node-app
+- Baixar e extrair pasta node-app
 - Baixar https://github.com/danielartine/alura-docker/blob/aula-3/app-exemplo.zip?raw=true
 
-- ETAPA-2 criar dockerfile
+- Criar dockerfile
 ```dockerfile
 
 FROM node:14
@@ -121,24 +121,24 @@ EXPOSE 3000
 CMD ["npm", "start"]
 ```
 
-- Etapa-3
-``` Criar imagen
+- Criando imagen
+```
 docker build -t meuappnode:v1 .
 ```
 
-- Etapa-4 rodar aplicação
+- Rodar aplicação
 ``` run imagen
 docker run -d -p 3000:3000 meuappnode:v1
 ```
 
-- Etapa-5 login dockerhub
+- Login dockerhub
 ``` login docker hub 
 docker login 
 - login
 - senha
 ```
 
-- Etapa-6 Upload
+- Tag e Upload da imagens para dockerhub
 ```
 docker tag  meuappnode:v1 repositoriodockehub:v1
 docker push repositoriodockehub:v1
