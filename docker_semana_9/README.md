@@ -144,3 +144,40 @@ docker login
 docker tag  meuappnode:v1 repositoriodockehub:v1
 docker push repositoriodockehub:v1
 ```
+
+# Utilizando bind mounts
+
+````
+- mkdir volume-docker
+- docker run -it -v /volume-docker:/app ubuntu bash
+- cd app/
+- touch arquivo-qualquer.txt
+- docker run -it --mount type=bind,source=/C/Users/NoteCasa/Projetos/Desenvolve-Trilha-SI/- docker_semana_9/volume-docker,target=/app ubuntu bash
+````
+
+# Criando um volume
+````
+docker volume create meu-volume
+docker run -it -v meu-volume:/app ubuntu bash
+````
+
+# Criando uma rede
+````
+docker network create alura "criar uma rede"
+docker netework ls "visualizar as redes criadas"
+docker network rm alura "remover rede alura"
+docker network create --driver bridge minha-bridge  "criar uma rede e especificar o drive"
+docker network create --driver=bridge --subnet=192.168.0.0/16 alura 
+ - "criar uma rede,drive e subnet com cidr"
+ - link documentação "https://docs.docker.com/reference/cli/docker/network/create/".
+````
+ #  Comunicando aplicação com banco
+
+````
+docker run -d --network minha-bridge --name meu-mongo mongo:4.4.6
+docker run -d --network minha-bridge --name alurabooks -p 3000:3000 aluradocker/alura-books:1.0
+````
+- http://localhost:3000/seed
+- http://localhost:3000/
+
+<img src="livros.png" alt="Alt Text" width="1000">
