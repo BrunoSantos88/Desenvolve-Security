@@ -44,3 +44,74 @@ docker images
 ````
 
 <img src="docker ps.png" alt="Alt Text" width="1000">
+
+
+ # Analisando outros comandos importantes
+
+ ``` 
+ docker ps -a  = "verificar container que não estao up"
+ docker stop "idcontainer" =  "parar container"
+ docker start "idcontainer" =  "iniciar container"
+ docker exec = "executar commando no container"
+ docker exec -it "idcontainer" bash "executar commando no container, mode interativo"
+   - "vc pode acessa esse container e modificar ou instalar"
+docker ps = "visualizar container uptime"
+docker rm "idcontainer" = "excluir container"
+docker rm "idcontainer" --force "excluir container e forçar"
+docker port "idecontainer" = saber qual porta container esta rodando"
+docker run -d -p "imagens container" = "excutar container (-d) mode interativo (-p) flaq da porta, exemplo 80:80" = curl http://localhost:80.
+ docker inspect "ipcontainer" = "inspecificação do container"
+ docker history "idecontainer"  = "saber tempo da imagens ou uptime do container"
+``` 
+
+# Criando images dockerfile
+``` 
+docker pull = "baixar uma imagen"
+ - exemplo = docker pull ubuntu:latest
+docker run -it ubuntu:latest bash 
+``` 
+
+  ``` - Criando dockerfile - "Commando sempre com letras Maiusculas"
+  FROM -- baixar imagen "ubuntu:lastest"
+  RUN  -- commando "apt-get update"
+  COPY -- copiar arquivo "index.html" 
+  EXPOSE -- expor um porta "80"
+  CMD --- rodar um commando "["npm", "start"]"
+  ENTRYPOINT -- rodar um arquivo  "npm start"
+```
+
+ # Criando a imagem
+
+ ``` build
+ docker build -t nomedaimagens:v1 .
+ docker images " saber qual foi criada"
+ docker run -d –p porta:porta "imagen que vc criou":v1
+```
+
+# Autenticando a conta do Docker Hub e Upload.
+
+```login hub
+docker login -u "seucadastro"
+ - vai solicitar senha *****
+
+Authenticating with existing credentials...
+Login Succeeded
+```
+
+```docker tag
+docker tag "sua imagens + imagendorepositorio:versao
+```
+
+```docker push
+docker push imagendorepositorio:versao
+```
+
+
+
+
+
+
+
+
+
+ ``` 
