@@ -144,4 +144,8 @@ docker tag  meuappnode:v1 repositoriodockehub:v1
 docker push repositoriodockehub:v1
 ```
 
+```docker ps
+ id container "81ab7dfae549"  imagens "brunoappnode:v12"   "docker-entrypoint.s…" 
+      porta "0.0.0.0:3000->3000/tcp" 
+```
 <img src="appnode.png" alt="Alt Text" width="1000">
