@@ -75,7 +75,7 @@ docker run -it ubuntu:latest bash
   FROM -- baixar imagen "ubuntu:lastest"
   RUN  -- commando "apt-get update"
   COPY -- copiar arquivo "index.html" 
-  EXPOSE -- expor um porta "80"
+  EXPOSE -- expor porta "80"
   CMD --- rodar um commando "["npm", "start"]"
   ENTRYPOINT -- rodar um arquivo  "npm start"
 ```
