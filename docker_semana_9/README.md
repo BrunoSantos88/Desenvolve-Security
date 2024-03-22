@@ -39,6 +39,8 @@ sudo usermod -aG docker $USER
 # Executar container
 ````
 docker run hello-world
+docker ps
+docker images
 ````
 
 <img src="docker ps.png" alt="Alt Text" width="1000">
