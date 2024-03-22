@@ -183,18 +183,22 @@ docker run -d --network minha-bridge --name alurabooks -p 3000:3000 aluradocker/
 <img src="livros.png" alt="Alt Text" width="1000">
 
 # Docker Compose
-```` instalar linux ubuntu
+
+- instalar linux ubuntu
+````
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 ````
 
-````docker-compose commandos
+- docker-compose commandos
+````
 docker-compose ls
 docker-compose up 
 docker-compose up -d 
 docker-compose down
 ````
-````docker-compose.yml
+- docker-compose.yml
+````
 version: "3.9"
 services:
   mongodb:
