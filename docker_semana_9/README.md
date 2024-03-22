@@ -90,20 +90,18 @@ docker run -it ubuntu:latest bash
 
 # Autenticando a conta do Docker Hub e Upload.
 
-```login hub
-docker login -u "seucadastro"
+```docker login hub
+
+- docker login -u "seucadastro"
  - vai solicitar senha *****
 
 Authenticating with existing credentials...
 Login Succeeded
-```
 
-```docker tag
-docker tag "sua imagens + imagendorepositorio:versao
-```
-
-```docker push
-docker push imagendorepositorio:versao
+- docker tag
+- docker tag "sua imagens + imagendorepositorio:versao
+- docker push
+- docker push imagendorepositorio:versao
 ```
 
 
