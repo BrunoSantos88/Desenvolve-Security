@@ -103,13 +103,3 @@ Login Succeeded
 - docker push
 - docker push imagendorepositorio:versao
 ```
-
-
-
-
-
-
-
-
-
- ``` 
