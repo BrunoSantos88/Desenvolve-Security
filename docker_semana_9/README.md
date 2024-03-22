@@ -194,3 +194,24 @@ docker-compose up
 docker-compose up -d 
 docker-compose down
 ````
+````docker-compose.yml
+version: "3.9"
+services:
+  mongodb:
+    image: mongo:4.4.6
+    container_name: meu-mongo
+    networks:
+      - alura
+  
+  alurabooks:
+    image: aluradocker/alura-books:1.0
+    container_name: alurabooks
+    networks:
+      - alura
+    ports:
+      - 3000:3000
+
+networks:
+  alura:
+    driver: bridge
+````
