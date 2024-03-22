@@ -1,7 +1,7 @@
  # instalação docker 
  - documentação https://docs.docker.com/get-docker/
 
- -instalando linux
+ - instalando linux
 
  ````
  sudo apt-get update
