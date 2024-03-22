@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  background-image: url("images/code.png");
+  color: #04049b;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #f2f2f7fa;
+  width: 75%;
+  max-width: 700px;
+  text-align: center;
+
+  border: 2px solid #e1e1e6;
+  border-radius: 6px;
+  padding: 16px;
+  box-shadow: 0 0 2px 2px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.questions-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.question {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.answers-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  text-align: center;
+}
+
+.answer:disabled {
+  cursor: not-allowed;
+}
+
+.next-question {
+  margin-top: 28px;
+}
+ 
+.button {
+  background-color: #4863f7;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 6px;
+  height: 38px;
+  padding: 0 32px;
+  text-align: center;
+
+  transition: filter 0.1s;
+}
+
+.placar{
+  background-color: #4863f7;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 6px;
+  height: 38px;
+  padding: 0 32px;
+  text-align: center;
+
+  transition: filter 0.1s;
+}
+
+
+.button:not(:disabled):hover {
+  filter: brightness(0.8);
+}
+
+.final-message {
+  font-size: 20px;
+  text-align: center;
+  text-align: center;
+}
+
+.final-message span {
+  display: block;
+  margin-top: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.timer {
+  text-align: center;
+  margin-top: 30px;
+  color: #07a915;
+}
+
+.controls-container .timer {
+  margin-top: 30px;
+  text-align: center;
+  color: #07a915;
+}
+
+.score {
+  margin-top: 30px;
+  text-align: center;
+  color:#07a915;
+}
+
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
+}
