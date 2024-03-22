@@ -103,3 +103,45 @@ Login Succeeded
 - docker push
 - docker push imagendorepositorio:versao
 ```
+
+# Desafio Criando e gerencindo container 
+
+- ETAPA-1 baixar e extrair pasta node-app
+- Baixar https://github.com/danielartine/alura-docker/blob/aula-3/app-exemplo.zip?raw=true
+
+- ETAPA-2 criar dockerfile
+```dockerfile
+
+FROM node:14
+COPY app-node /usr/src/app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["npm", "start"]
+```
+
+- Etapa-3
+``` Criar imagen
+docker build -t meuappnode:v1 .
+```
+
+- Etapa-4 rodar aplicação
+``` run imagen
+docker run -d -p 3000:3000 meuappnode:v1
+```
+
+- Etapa-5 login dockerhub
+``` login docker hub 
+docker login 
+- login
+- senha
+```
+
+- Etapa-6 Upload
+```
+docker tag  meuappnode:v1 repositoriodockehub:v1
+docker push repositoriodockehub:v1
+```
+
+<img src="appnode.png" alt="Alt Text" width="1000">
