@@ -51,7 +51,7 @@
  - Implemente senhas nas redes sem fio
  - Explore os principais protocolos auxiliares de WiFi
 
- # Laboratorio_STP e Semana_5
+ # Laboratorio_STP e Semana_6
 
  - Switch_A e Switch_B
 
@@ -185,6 +185,40 @@ dns-server 172.16.4.2
 <img src="rede_stp.png" alt="Alt Text" width="1000">
 
 
-- Configura Router-A NAT, 
+- Configura Router-A NAT.
 
+- Router_A Provedor
+```
+enable
+configure terminal
+interface serial 0/1/0
+ip address 150.1.1.1 255.255.255.252
+exit
+no shutdown
+```
 
+- Router_B _Servidor Local
+```
+enable
+configure terminal
+interface serial 0/1/0
+ip address 150.1.1.2 255.255.255.252
+exit
+no shutdown
+ip access-list standart NAT
+permit 172.16.0.0
+permit 172.16.0.0 0.0.255.255
+interface Fa 0/0.1
+ip nat inside
+interface Fa 0/0.2
+ip nat inside
+interface serial 0/1/0
+ip nat outside
+ip nat inside source list NAT overload
+exit
+```
+- Commando Router_B
+- show ip nat translations
+- ping 150.1.1.1
+
+<img src="rede_nat.png" alt="Alt Text" width="1000">
