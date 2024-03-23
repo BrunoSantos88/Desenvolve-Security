@@ -50,3 +50,141 @@
  - Configure um sistema EAP para controle de acesso
  - Implemente senhas nas redes sem fio
  - Explore os principais protocolos auxiliares de WiFi
+
+ # Laboratorio_STP e Semana_5
+
+ - Switch_A e Switch_B
+
+ ````
+enable
+configure terminal
+vlan 10
+name pesquisa
+exit
+vlan 20
+name administrativo
+exit
+vlan 30
+name servidores
+exit
+interface Fa 0/1
+switchport mode access
+switchport access vlan 10
+exit
+interface fa 0/2
+switchport mode access
+switchport access vlan 20
+exit
+interface Fa 0/3
+switchport mode trunk
+ ````
+
+Switch_C
+ ````
+enable
+configure terminal
+vlan 10
+name pesquisa
+exit
+vlan 20
+name administrativo
+exit
+vlan 30
+name servidores
+exit
+interface Fa 0/4
+switchport mode access
+switchport access vlan 30
+exit
+ ````
+
+ Router_B
+
+ ````
+enable
+configure terminal
+interface Fa 0/0
+no shutdown
+configure terminal
+ip dhcp pool vlan10
+network 192.168.10.0 255.255.255.0
+exit
+ip dhcp pool vlan20
+network 192.168.20.0 255.255.255.0
+exit
+interface Fa 0/0.1
+encapsulation dot1Q 10
+ip address 192.168.10.1 255.255.255.0
+exit
+interface Fa 0/0.2
+encapsulation dot1Q 20
+ip address 192.168.20.1 255.255.255.0
+exit
+ip dhcp pool vlan10
+default-router 192.168.10.1
+exit
+ip dhcp pool vlan20
+default-router 192.168.20.1
+exit
+````
+
+- Alterar Router_B
+
+````
+enable
+configure terminal
+interface Fa 0/0.1
+no shutdown
+configure terminal
+ip dhcp pool vlan10
+network 172.16.0.0 255.255.254.0
+default-router 172.16.0.1
+exit
+ip dhcp pool vlan20
+network 172.16.2.0 255.255.254.0
+default-router 172.16.2.1
+exit
+interface Fa 0/0.1
+ip address 172.16.0.1 255.255.254.0 
+exit
+interface Fa 0/0.2
+ip address 172.16.2.1 255.255.254.0
+exit
+interface Fa 0/0.3
+encapsulation dot1Q 30
+ip address 172.16.4.1 255.255.254.0
+exit
+````
+
+- Controle ACL para o servidor 172.16.4.2
+````
+enable
+configure terminal
+ip dhcp excluded-address 172.16.2.2
+ip dhcp excluded-address 172.16.2.4
+ip access-list extended gerencial
+permit tcp 172.16.2.2 0.0.0.0 172.16.4.2 0.0.0.0
+permit tcp 172.16.2.4 0.0.0.0 172.16.4.2 0.0.0.0
+deny tcp 172.16.2.6 0.0.255.255 172.16.4.2 0.0.0.0
+deny tcp 172.16.0.2 0.0.255.255 172.16.4.2 0.0.0.0
+deny tcp 172.16.0.4 0.0.255.255 172.16.4.2 0.0.0.0
+permit ip any any
+exit
+````
+
+- Configurar Router_B para DNS 
+````
+enable
+configure terminal
+ip dhcp pool vlan10
+dns-server 172.16.4.2
+exit
+ip dhcp pool vlan20
+dns-server 172.16.4.2
+````
+<img src="rede_stp.png" alt="Alt Text" width="1000">
+
+
+- Configura Router-A NAT, 
+
+
