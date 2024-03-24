@@ -77,6 +77,7 @@ switchport access vlan 20
 exit
 interface Fa 0/3
 switchport mode trunk
+write
  ````
 
 Switch_C
@@ -96,6 +97,7 @@ interface Fa 0/4
 switchport mode access
 switchport access vlan 30
 exit
+write
  ````
 
  Router_B
@@ -154,6 +156,7 @@ interface Fa 0/0.3
 encapsulation dot1Q 30
 ip address 172.16.4.1 255.255.254.0
 exit
+write
 ````
 
 - Controle ACL para o servidor 172.16.4.2
@@ -222,3 +225,169 @@ exit
 - ping 150.1.1.1
 
 <img src="rede_nat.png" alt="Alt Text" width="1000">
+
+ #
+
+- ISP 1 - A
+- ip 150.1.1.5 (Rede Link)
+- ip 150.1.1.1 (rede Wan)
+- ip 160.1.1.1 (rede_serial)
+
+````
+enable
+configure terminal
+interface serial 0/1/0
+no shutdown
+ip address 160.1.1.1 255.255.255.252
+````
+- Configurando RIP
+````
+exit
+router rip
+version 2
+no auto-summary
+network 150.1.1.4
+network 150.1.1.8
+exit
+write
+````
+
+- ISP 1 - B
+- ip 150.1.1.6 (Rede Link)
+- ip 150.1.1.9 (rede servidor)
+- ip 160.1.1.1 (rede_serial)
+- Ip 150.1.1.10 (servidor)
+````
+enable
+configure terminal
+interface serial 0/1/0
+no shutdown
+ip address 160.1.1.2 255.255.255.252
+````
+
+ISP 1 - C
+- ip address 160.1.1.2 (rede_serial)
+- ip address 170.1.1.1 (rede_servidor)
+- Ip adreess 170.1.1.2 (servidor)
+- ip address 180.1.1.1 (rede_Lan)
+
+````
+enable
+configure terminal
+interface serial 0/1/0
+ip address 160.1.1.2 255.255.255.252
+no shutdown
+exit
+interface Fa0/0
+ip address 170.1.1.1 255.255.255.252
+no shutdown
+exit
+interface Fa0/1
+ip address 180.1.1.1 255.255.255.252
+no shutdown
+exit
+````
+
+ISP 1 - D
+- ip address 190.1.1.1 (rede_servidor)
+- Ip adreess 190.1.1.2 (servidor)
+- ip address 180.1.1.2 (rede_Lan)
+
+````
+enable
+configure terminal
+interface Fa0/0
+ip address 180.1.1.2 255.255.255.252
+no shutdown
+exit
+interface Fa0/1
+ip address 190.1.1.1 255.255.255.252
+no shutdown
+exit
+````
+
+- Configuração_OSPF
+
+- ISP 1 - C
+- enable
+- show IP route
+
+````
+enable
+configure terminal
+router ospf 1
+network 170.1.1.0 0.0.0.255 area 0
+network 180.1.1.0 0.0.0.255 area 0
+interface Fa0/0
+ip address 170.1.1.1 255.255.255.252
+exit
+route ospf 1
+no network 180.1.1.0 0.0.0.255 area 0
+network 170.1.1.0 0.0.0.255 area 0
+exit
+````
+
+- ISP 1 - D
+- enable
+- show IP route
+
+````
+configure terminal
+router ospf 1
+network 180.1.1.0 0.0.0.255 area 0
+network 190.1.1.0 0.0.0.255 area 1
+````
+
+
+- Configuração_BGP
+
+- ISP 1 - B
+````
+enable
+configure terminal
+router bgp 1000
+neighbor 160.1.1.2 remote-as 2000
+router bgp 1000
+network 150.1.1.0 mask 255.255.255.252
+network 150.1.1.4 mask 255.255.255.252
+network 150.1.1.8 mask 255.255.255.252
+router rip
+default-information originate
+````
+
+
+- ISP 1 - C
+- commandos
+- show ip route
+````
+enable
+configure terminal
+router bgp 2000
+neighbor 160.1.1.1 remote-as 1000
+network 170.1.1.0 mask 205.255.255.252
+network 180.1.1.0 mask 255.255.255.252
+network 190.1.1.0 mask 255.255.255.252
+router ospf 1
+redistribute bgp 2000 subnets
+````
+
+- ISP 1 - b
+
+````
+enable
+configure terninal
+router rip
+default-information originate
+````
+
+- ISP 1 - A
+<img src="show ip route.png" alt="Alt Text" width="1000">
+
+ - Router -B  Data Center Local
+ - Alterar saida para 0.0.0.0 150.1.1.1
+
+````
+  configure terminal
+  ip route 150.1.1.8 255.255.255.252 serial 0/1/0
+````  
+<img src="show ip router router_b.png" alt="Alt Text" width="1000">
