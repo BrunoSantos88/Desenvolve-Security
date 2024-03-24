@@ -1,0 +1,11 @@
+enable
+configure terminal
+interface Fa 0/0.1
+ip access-group gerencial in
+exit
+interface Fa 0/0.2
+ip access-group gerencial in
+exit
+interface Fa 0/0.3
+ip access-group gerencial in
+exit

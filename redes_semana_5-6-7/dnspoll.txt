@@ -1,0 +1,22 @@
+RouterA
+
+DNS
+enable
+configure terminal
+ip dhcp pool vlan10
+dns-server 180.1.1.2
+exit
+ip dhcp pool vlan20
+dns-server 180.1.1.2
+
+http://www.inovae.com.br/
+
+enable
+configure terminal
+ip dhcp pool vlan10
+dns-server 172.16.4.2
+exit
+ip dhcp pool vlan20
+dns-server 172.16.4.2
+
+http://monitoramento.inovae.com.br

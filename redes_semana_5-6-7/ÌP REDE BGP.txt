@@ -1,0 +1,54 @@
+ISP 1 - C
+enable
+configure terminal
+router ospf 1
+network 170.1.1.0 0.0.0.255 area 0
+network 180.1.1.0 0.0.0.255 area 0
+
+ISP 1 - D
+enable
+configure terminal
+router ospf 1
+network 180.1.1.0 0.0.0.255 area 0
+network 190.1.1.0 0.0.0.255 area 1
+
+
+ISP 1 - ISP 1 - B
+enable
+configure terminal
+router bgp 1000
+# Apos fazer ISCP C
+router bgp 1000
+network 150.1.1.0 mask 255.255.255.252
+network 150.1.1.4 mask 255.255.255.252
+network 150.1.1.8 mask 255.255.255.252
+Apos efetuar configuração ISP_C
+enable 
+configure terminal
+router rip
+default-information originate
+
+ISP 1 - ISP 1 - C
+enable
+configure terminal
+router bgp 2000
+neighbor 160.1.1.1 remote-as 1000
+network 170.1.1.0 mask 205.255.255.252
+network 180.1.1.0 mask 255.255.255.252
+network 190.1.1.0 mask 255.255.255.252
+
+
+ISP 1 - ISP 1 - C
+enable
+configure terminal
+router ospf 1
+redistribute bgp 2000 subnets
+
+RouterA
+enable
+#show ip route
+configure terminal
+no ip route 150.1.1.8 255.255.255.252 serial 0/1/0
+ip route 0.0.0.0 0.0.0.0 serial 0/1/0
+
+
