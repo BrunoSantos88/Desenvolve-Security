@@ -385,9 +385,11 @@ default-information originate
 
  - Router -B  Data Center Local
  - Alterar saida para 0.0.0.0 150.1.1.1
+ - show ip route
 
 ````
+  enable
   configure terminal
-  ip route 150.1.1.8 255.255.255.252 serial 0/1/0
+  ip route 0.0.0.0 0.0.0.0 serial 0/1/0
 ````  
 <img src="show ip router router_b.png" alt="Alt Text" width="1000">
