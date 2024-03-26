@@ -261,6 +261,24 @@ document.querySelector('.start-quiz').addEventListener('click', function() {
 
 ///speech
 
+// Initialize speech synthesis
+const synth = window.speechSynthesis;
+
+// Create a new SpeechSynthesisUtterance instance
+const utterance = new SpeechSynthesisUtterance('I am your father.');
+
+// Set voice to Darth Vader style
+const voices = synth.getVoices();
+const darthVaderVoice = voices.find(voice => voice.name === 'Google UK English Male');
+utterance.voice = darthVaderVoice;
+
+// Set pitch and rate for Darth Vader effect
+utterance.pitch = 0.8; // Lower pitch for deeper voice
+utterance.rate = 0.9; // Adjust rate as needed
+
+// Speak the utterance
+synth.speak(utterance);
+
 function displayNextQuestion() {
   resetState();
   
