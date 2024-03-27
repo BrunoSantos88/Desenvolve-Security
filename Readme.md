@@ -1,4 +1,4 @@
- # Desafio desenvole 1 Quiz
+ # Desafio desenvole 1  - Quiz
 Projeto 1: Desafio de Perguntas e Respostas  </p>
 Descrição do Projeto: </p>
 Os alunos criarão um quiz simples com perguntas de múltipla escolha. O objetivo é </p>
