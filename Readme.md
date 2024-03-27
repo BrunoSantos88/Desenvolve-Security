@@ -1,10 +1,10 @@
-#  desafio desenvole 1 Quiz
+- Desafio desenvole 1 Quiz
 - Projeto 1: Desafio de Perguntas e Respostas
 Descrição do Projeto: </p>
 Os alunos criarão um quiz simples com perguntas de múltipla escolha. O objetivo é </p>
 proporcionar uma prática mais leve e divertida, incorporando conceitos aprendidos de </p>
 HTML, CSS e JavaScript. </p>
-# Requisitos Mínimos:
+- Requisitos Mínimos:
 - 1. Interface Gráfica:
 ○ Página HTML com a estrutura básica. </p>
 ○ Estilo CSS básico para tornar o quiz visualmente agradável. </p>
@@ -15,7 +15,7 @@ HTML, CSS e JavaScript. </p>
 ○ Feedback imediato sobre a resposta correta ou incorreta. </p>
 ○ Contagem de pontuação total. </p>
 
-# Critérios de Avaliação:
+- Critérios de Avaliação:
 - 1. Funcionalidade (70%):
 ○ O quiz deve apresentar perguntas e opções de resposta. </p>
 ○ Feedback imediato sobre a correção da resposta. </p>
