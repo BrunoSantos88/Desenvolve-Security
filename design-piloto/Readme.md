@@ -5,7 +5,7 @@
  Quiz sera dentro caixa preta.  </p>
  Quiz vai ter Titulo (Quiz desafio).  </p>
  Quiz vai ter Botao (inicar quiz)centralizado </p>
- QUiz vai informar tempo maximo de cada pergunta. </p>
+ Quiz vai informar tempo maximo de cada pergunta. </p>
  <img src="quiz inicio.png" alt="Alt Text" width="1000">
 
 
@@ -20,7 +20,7 @@
  Quiz vai informar, qual pergunta ele respodeu errada </p>
  Quiz vai informar, qual pergunta ele respodeu certa </p>
  Quiz vai informar o tempo abaixo das perguntas.</p>
- <img src="quiz-pergunta" alt="Alt Text" width="1000">
+ <img src="quiz-pergunta.png" alt="Alt Text" width="1000">
 
 
  - Etapa 3 (Tela encerranto) 
