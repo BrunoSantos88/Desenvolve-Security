@@ -1,6 +1,6 @@
  # Desafio desenvole 1  - Quiz - Design piloto.
 
- - Etapa 1 (Tela inicial) 
+ - Etapa 1 (Tela inicial) </p>
  Quiz vai ter logo da empresa. </p>
  Quiz sera dentro caixa preta.  </p>
  Quiz vai ter Titulo (Quiz desafio).  </p>
@@ -10,7 +10,7 @@
 
 
 
- - Etapa 2 (Tela perguntas) 
+ - Etapa 2 (Tela perguntas) </p>
  Quiz vai ter logo da empresa. </p>
  Quiz sera dentro caixa preta.  </p>
  Quiz ter as perguntas aond é o titulo.  </p>
@@ -23,7 +23,7 @@
  <img src="quiz-pergunta.png" alt="Alt Text" width="1000">
 
 
- - Etapa 3 (Tela encerranto) 
+ - Etapa 3 (Tela encerranto) </p>
  Quiz vai ter logo da empresa. </p>
  Quiz sera dentro caixa preta.  </p>
  Quiz vai informar que o quiz encerrou  </p>
