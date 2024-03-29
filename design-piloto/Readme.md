@@ -20,7 +20,7 @@
  Quiz vai informar, qual pergunta ele respodeu errada </p>
  Quiz vai informar, qual pergunta ele respodeu certa </p>
  Quiz vai informar o tempo abaixo das perguntas.</p>
- <img src="quiz-perguntas.png" alt="Alt Text" width="1000">
+ <img src="quiz-pergunta" alt="Alt Text" width="1000">
 
 
  - Etapa 3 (Tela encerranto) 
