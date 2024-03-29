@@ -29,7 +29,7 @@
  Quiz vai informar que o quiz encerrou  </p>
  Quiz vai informar quantas pergunetas acertou </p>
  Quiz vai ter um botao aonde vai informar, vc quer refazer o quiz</p>
- <img src="quiz encerramento.png" alt="Alt Text" width="1000">
+ <img src="quiz encerrado.png" alt="Alt Text" width="1000">
 
 
 
