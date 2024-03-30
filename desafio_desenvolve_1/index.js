@@ -268,3 +268,24 @@ const questions = [
     ]
   },
 ]
+
+function selectAnswer(event) {
+  const answerClicked = event.target;
+  document.querySelectorAll(".answer").forEach(button => {
+    button.disabled = true;
+  });
+  if (answerClicked.dataset.correct) {
+    answerClicked.classList.add("correct");
+    totalCorrect++;
+    document.getElementById("totalCorrect").textContent = totalCorrect; // Atualiza a pontuação exibida
+  } else {
+    answerClicked.classList.add("incorrect");
+  }
+  document.querySelectorAll(".answer").forEach(button => {
+    if (button.dataset.correct) {
+      button.classList.add("correct");
+    }
+  });
+  $nextQuestionButton.classList.remove("hide");
+  currentQuestionIndex++;
+}

@@ -24,6 +24,7 @@
       <button id="read-question" class="button hide">Ler Pergunta</button>
       <button class="next-question button hide"> Próxima Pergunta!</button>
       <div class="timer">Tempo restante: <span id="time-left">120</span> segundos</div>
+      <p class="score">Pontuação: <span id="totalCorrect">0</span></p>
     </div>
     <div class="final-message hide">
       <p>Fim de jogo! Gostaria de tentar mais um vez?.</p>
@@ -33,10 +34,7 @@
   <script>
     const readQuestionButton = document.getElementById('read-question');
     const questionSpan = document.getElementById('question');
-
     readQuestionButton.addEventListener('click', () => {
-      const speech = new SpeechSynthesisUtterance(questionSpan.innerText);
-      speechSynthesis.speak(speech);
     });
   </script>
 </body>
