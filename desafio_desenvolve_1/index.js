@@ -234,7 +234,7 @@ function finishGame() {
           <span>Resultado: ${message}</span>
       </p>
       <button onclick=window.location.reload() class="button">
-          Refazer teste
+          Refazer Quiz!
       </button>
   `;
 }
