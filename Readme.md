@@ -11,7 +11,7 @@ Clicando na opão correta, botao de ira mudar para cor verde. </p>
 
 Clicando na opão incorreta, botão de opçao incorreta, ele ira mudar para cor vermelha e vai monstra opoção correta na cor verde! </p>
 
-<img src="images/incorreta.png" alt="Alt Text" width="800"> <img src="images/incorreta.png" alt="Alt Text" width="800"> </p>
+<img src="images/incorreta.png" alt="Alt Text" width="800"> </p>
 
 Após responder, você ira clicar na opção Proxima pergunta!, Total de 5 perguntas </p>
 
@@ -19,10 +19,3 @@ Após responder, você ira clicar na opção Proxima pergunta!, Total de 5 pergu
 
 Final quiz existe uma contagem de pontuação total de perguntas </p>
 <img src="images/comtagem.png" alt="Alt Text" width="800">
-
-Após responder, você ira clicar na opção Proxima pergunta!, Total de 5 perguntas </p>
-
-<img src="images/proxima.png" alt="Alt Text" width="800"> </p>
-
-Final quiz existe uma contagem de pontuação total de perguntas </p>
-<img src="images/contagem.png" alt="Alt Text" width="800">
