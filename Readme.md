@@ -21,6 +21,7 @@ No final do quiz, existe uma contagem de acertos / total de perguntas </p>
 <img src="images/contagem.png" alt="Alt Text" width="800">
 Após reponder, vai aparecer opção refazer quiz! </p>
 
-
-                         Vamos jogar? </p> 
+´´´´
+                          Vamos jogar? 
+````
 https://desafioquizdesenvolvebrsantos.s3.us-east-2.amazonaws.com/quiz/index.html
