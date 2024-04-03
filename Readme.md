@@ -13,9 +13,10 @@ Clicando na opão incorreta, botão ira mudar para cor vermelha e vai monstra op
 
 <img src="images/incorreta.png" alt="Alt Text" width="800"> </p>
 
-Após responder, você ira clicar na opção proxima pergunta.</p>
+Após responder, você ira clicar na opção, proxima pergunta.</p>
 
 <img src="images/proxima.png" alt="Alt Text" width="800"> </p>
 
-No final do Quiz, existe uma contagem de acertos / total de perguntas </p>
+No final do quiz, existe uma contagem de acertos / total de perguntas </p>
 <img src="images/contagem.png" alt="Alt Text" width="800">
+Após reponder, vai aparecer opção refazer quiz! </p>
