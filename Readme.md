@@ -18,4 +18,4 @@ Após responder, você ira clicar na opção Proxima pergunta!, Total de 5 pergu
 <img src="images/proxima.png" alt="Alt Text" width="800"> </p>
 
 Final quiz existe uma contagem de pontuação total de perguntas </p>
-<img src="images/comtagem.png" alt="Alt Text" width="800">
+<img src="images/contagem.png" alt="Alt Text" width="800">
