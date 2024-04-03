@@ -292,3 +292,16 @@ nextQuestionButton.addEventListener('click', function() {
     displayNextQuestion();
 });
 
+
+
+//hide feedback e aparecer apos finalizar
+document.addEventListener('DOMContentLoaded', function() {
+  const feedbackElement = document.getElementById('feedback');
+  
+  feedbackElement.style.display = 'none';
+  const startQuizButton = document.querySelector('.start-quiz');
+  startQuizButton.addEventListener('click', function() {
+      feedbackElement.style.display = 'block';
+      startQuizButton.style.display = 'none';
+  });
+});
