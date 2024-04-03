@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  images/tela-inicial.png
+  <img src="images/tela-inicial.png" alt="Alt Text" width="800"> 
 </p>
 
 <p align="center">
@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  images/correta.png
+  <img src="images/correta.png" alt="Alt Text" width="800"> 
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@
 </p>
 
 <p align="center">
-  images/incorreta.png
+  <img src="images/incorreta.png" alt="Alt Text" width="800"> 
 </p>
 
 <p align="center">
@@ -35,7 +35,7 @@
 </p>
 
 <p align="center">
-  images/proxima.png
+   <img src="images/proxima.png" alt="Alt Text" width="800"> 
 </p>
 
 <p align="center">
@@ -43,7 +43,7 @@
 </p>
 
 <p align="center">
-  images/contagem.png
+  <img src="images/contagem.png" alt="Alt Text" width="800"> 
 </p>
 
 <p align="center">
@@ -51,11 +51,9 @@
 </p>
 
 <p align="center">
-
-
+Vamos jogar? 
 </p>
 
 <p align="center">
-Vamos jogar? 
-https://desafioquizdesenvolvebrsantos.s3.us-east-2.amazonaws.com/quiz/index.html
+https://desafioquizdesenvolvebrsantos.s3.us-east-2.amazonaws.com/quiz/index.html)
 </p>
