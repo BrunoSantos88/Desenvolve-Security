@@ -1,30 +1,21 @@
- # Desafio desenvole 1  - Quiz
-Projeto 1: Desafio de Perguntas e Respostas  </p>
-Descrição do Projeto: </p>
-Os alunos criarão um quiz simples com perguntas de múltipla escolha. O objetivo é </p>
-proporcionar uma prática mais leve e divertida, incorporando conceitos aprendidos de </p>
-HTML, CSS e JavaScript. </p>
-Requisitos Mínimos: </p>
-1. Interface Gráfica: </p>
-○ Página HTML com a estrutura básica. </p>
-○ Estilo CSS básico para tornar o quiz visualmente agradável. </p>
-○ Área para exibir as perguntas e opções de resposta. </p>
+# Como jogar o quiz desafio </p>
 
-2. Funcionalidades Básicas em JavaScript: </p>
-○ Perguntas com opções de múltipla escolha. </p>
-○ Feedback imediato sobre a resposta correta ou incorreta. </p>
-○ Contagem de pontuação total. </p>
+Começando o quiz! Você vai começar clicando botao "Iniciar Quiz"! </p>
 
-Critérios de Avaliação: </p>
-1. Funcionalidade (70%): </p>
-○ O quiz deve apresentar perguntas e opções de resposta. </p>
-○ Feedback imediato sobre a correção da resposta. </p>
-○ Contagem de pontuação total correta. </p>
-2. Interface do Usuário (30%):
-○ A interface deve ser clara e fácil de entender. </p>
-○ O estilo deve tornar a experiência agradável. </p>
+<img src="images/tela-inicial.png" alt="Alt Text" width="800"> </p>
 
-Entrega: </p>
-Os alunos devem criar um repositório no GitHub para o projeto e enviar o link do repositório </p>
-como entrega final. Certifique-se de que o código esteja bem documentado e que o </p>
-README do projeto explique como jogar o quiz. </p>
+Após clicar, vai abrir opçao de multipla escolha, entre 4 ou 2 perguntas,sendo uma correta. </p>
+Clicando na opão correta, botao de ira mudar para cor verde. </p>
+
+<img src="images/correta.png" alt="Alt Text" width="800"> </p>
+
+Clicando na opão incorreta, botao de opçao incorreta ira mudar para cor vermelha. </p>
+
+<img src="images/incorreta.png" alt="Alt Text" width="800"> <img src="images/incorreta.png" alt="Alt Text" width="800"> </p>
+
+Após responder, você ira clicar na opção Proxima pergunta!, Total de 5 perguntas </p>
+
+<img src="images/proxima.png" alt="Alt Text" width="800"> </p>
+
+Final quiz existe uma contagem de pontuação total de perguntas </p>
+<img src="images/contagem.png" alt="Alt Text" width="1000">
