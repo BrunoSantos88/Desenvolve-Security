@@ -9,7 +9,7 @@ Clicando na opão correta, botao de ira mudar para cor verde. </p>
 
 <img src="images/correta.png" alt="Alt Text" width="800"> </p>
 
-Clicando na opão incorreta, botao de opçao incorreta ira mudar para cor vermelha. </p>
+Clicando na opão incorreta, botão de opçao incorreta, ele ira mudar para cor vermelha e vai monstra opoção correta na cor verde! </p>
 
 <img src="images/incorreta.png" alt="Alt Text" width="800"> <img src="images/incorreta.png" alt="Alt Text" width="800"> </p>
 
