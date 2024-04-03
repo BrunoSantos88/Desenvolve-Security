@@ -1,3 +1,5 @@
+
+//Seletor//
 const $startGameButton = document.querySelector(".start-quiz") 
 const $nextQuestionButton = document.querySelector(".next-question")
 const $questionsContainer = document.querySelector(".questions-container") 
@@ -15,7 +17,7 @@ let totalCorrect = 1
 $startGameButton.addEventListener("click", startGame)
 $nextQuestionButton.addEventListener("click", displayNextQuestion)
 
-//Funçoes
+//Funçoes start quiz esconder///
 function startGame() {
   $startGameButton.classList.add("hide")
   $questionsContainer.classList.remove("hide")
@@ -91,7 +93,8 @@ function displayNextQuestion() {
   });
 
 }
-//nest question//
+
+//Função de proxima pergunta//
 function displayNextQuestion() {
   resetState();
   
@@ -114,7 +117,7 @@ function displayNextQuestion() {
   });
 }
 
-// Exibe a mensagem final//
+// Apos terminar, mensagens final do quiz//
 function endGame() {
   document.querySelector('.final-message').classList.remove('hide'); 
   document.querySelector('.controls-container').classList.add('hide');
@@ -145,7 +148,7 @@ function displayNextQuestion() {
 }
 
 
-//"<!-- banco de perguntas -->//
+//"<!-- Quiz Banco de perguntas -->//
 const questions = [
   {
     question: "Qual data que começou Desenvolve?",
@@ -194,7 +197,7 @@ const questions = [
 
 
 
-//"<!-- Tela final ao terminar o quiz -->//
+//"<!-- Computar acerto do quiz  -->//
 function finishGame() {
   const totalQuestions = questions.length;
   const performance = Math.floor((totalCorrect / totalQuestions) * 100);
