@@ -1,19 +1,21 @@
-const $startGameButton = document.querySelector(".start-quiz")
+const $startGameButton = document.querySelector(".start-quiz") 
 const $nextQuestionButton = document.querySelector(".next-question")
-const $questionsContainer = document.querySelector(".questions-container")
-const $questionText = document.querySelector(".question")
+const $questionsContainer = document.querySelector(".questions-container") 
+const $questionText = document.querySelector(".question") 
 const $answersContainer = document.querySelector(".answers-container")
 const $answers = document.querySelectorAll(".answer")
-const $questionTimeLimit = 120; 
 
-let currentQuestionIndex = 0
-let totalCorrect = 0
 
+
+//Contagen de perguntas
+let currentQuestionIndex = 1
+let totalCorrect = 1
+
+// Clicar star quiz.
 $startGameButton.addEventListener("click", startGame)
 $nextQuestionButton.addEventListener("click", displayNextQuestion)
 
-
-//Fuction
+//Funçoes
 function startGame() {
   $startGameButton.classList.add("hide")
   $questionsContainer.classList.remove("hide")
@@ -45,6 +47,7 @@ function resetState() {
   $nextQuestionButton.classList.add("hide")
 }
 
+//Incrementa o número de perguntas corretas//
 function selectAnswer(event) {
   const answerClicked = event.target;
   document.querySelectorAll(".answer").forEach(button => {
@@ -52,6 +55,7 @@ function selectAnswer(event) {
   });
   if (answerClicked.dataset.correct) {
     answerClicked.classList.add("correct");
+    totalCorrect++; // 
   } else {
     answerClicked.classList.add("incorrect");
   }
@@ -62,53 +66,7 @@ function selectAnswer(event) {
   });
   $nextQuestionButton.classList.remove("hide");
   currentQuestionIndex++;
-}
-
-function finishGame() {
-  const totalQuestions = questions.length;
-  const performance = Math.floor((totalCorrect / totalQuestions) * 100);
-
-  let message = "";
-
-  switch (true) {
-    case performance >= 90:
-      message = "Excelente :)";
-      break;
-    case performance >= 70:
-      message = "Muito bom :)";
-      break;
-    case performance >= 50:
-      message = "Bom";
-      break;
-    default:
-      message = "Pode melhorar :(";
-  }
-
-  $questionsContainer.innerHTML = `
-    <p class="final-message">
-      Você acertou ${totalCorrect} de ${totalQuestions} questões!
-      <span>Resultado: ${message}</span>
-    </p>
-    <button onclick=window.location.reload() class="button">
-      Refazer teste
-    </button>
-  `;
-}
-
-function startTimer() {
-  let timeLeft = $questionTimeLimit; 
-
-  timerInterval = setInterval(() => {
-    timeLeft--; 
-    document.getElementById('time-left').textContent = timeLeft; 
-
-    if (timeLeft === 0) {
-      clearInterval(timerInterval); 
-      endGame();
-    }
-  }, 1000);
-}
-
+} 
 
 function displayNextQuestion() {
   resetState();
@@ -132,8 +90,8 @@ function displayNextQuestion() {
     newAnswer.addEventListener("click", selectAnswer);
   });
 
-  startTimer(); // Inicia o temporizador para a nova pergunta
 }
+//nest question//
 function displayNextQuestion() {
   resetState();
   
@@ -154,15 +112,15 @@ function displayNextQuestion() {
 
     newAnswer.addEventListener("click", selectAnswer);
   });
-
-  startTimer(); // Inicia o temporizador para a nova pergunta
 }
+
+// Exibe a mensagem final//
 function endGame() {
-  document.querySelector('.final-message').classList.remove('hide'); // Exibe a mensagem final
-  document.querySelector('.controls-container').classList.add('hide'); // Oculta o contêiner de controles
+  document.querySelector('.final-message').classList.remove('hide'); 
+  document.querySelector('.controls-container').classList.add('hide');
 }
 document.querySelector('.start-quiz').addEventListener('click', function() {
-  startTimer(); // Inicia o temporizador quando o botão "Iniciar!" é clicado
+  startTimer(); 
 });
 function displayNextQuestion() {
   resetState();
@@ -184,27 +142,10 @@ function displayNextQuestion() {
 
     newAnswer.addEventListener("click", selectAnswer);
   });
-
-function endGame() {
-  // Altera o texto do temporizador para "Fim de jogo"
-  document.querySelector('.timer').textContent = "Fim de jogo";
-  // Exibe a mensagem final
-  document.querySelector('.final-message').classList.remove('hide');
-  // Oculta o contêiner de controles
-  document.querySelector('.controls-container').classList.add('hide');
-
-  // Fala a mensagem de que o jogador perdeu
-  speakMessage("Tempo esgotado! Você perdeu o jogo.");
 }
 
-// Função para falar uma mensagem
-function speakMessage(message) {
-  const speech = new SpeechSynthesisUtterance(message);
-  speechSynthesis.speak(speech);
-}
-}
 
-//banco das questoes
+//"<!-- banco de perguntas -->//
 const questions = [
   {
     question: "Qual data que começou Desenvolve?",
@@ -216,76 +157,72 @@ const questions = [
     ]
   },
   {
-    question: "Onde é o lugar correto para inserir JavaScript?",
+    question: "Que dia foi o primeiro encontro?",
     answers: [
-      { text: "Tanto no <head> quanto no <body> está correto", correct: true },
-      { text: "No <body>", correct: false },
-      { text: "No <head>", correct: false },
-      { text: "Em outro lugar", correct: false }
+      { text: "Dia 7, em uma quarta-feita!", correct: false },
+      { text: "Dia 8 em uma quinta-feira!", correct: true },
+      { text: "Dia 5 em uma terça-feira!", correct: true },
+      { text: "Dia 02 no mesmo dia que começou!", correct: false }
     ]
   },
   {
-    question: 'Qual é a sintaxe correta para se referir a um script externo chamado "xxx.js"',
+    question: 'Qual foi o primero curso da primeira semana?"',
     answers: [
-      { text: '<script src="xxx.js">', correct: true },
-      { text: '<script href="xxx.js">', correct: false },
-      { text: '<script name="xxx.js">', correct: false },
-      { text: "Nenhuma das alternativas", correct: false }
+      { text: 'Javascript', correct: true },
+      { text: 'Linux', correct: false },
+      { text: 'Redes', correct: false },
+      { text: "Shelscript", correct: false }
     ]
   },
   {
-    question: 'O arquivo JavaScript externo deve conter a tag <script>',
+    question: 'O desenvolve oferece curso pela plataforma Alura?',
     answers: [
-      { text: "Verdadeiro", correct: false },
-      { text: "Falso", correct: true }
+      { text: "Verdadeiro", correct: true },
+      { text: "Falso", correct: false }
     ]
   },
   {
-    question: 'Como escrever "Hello World" numa caixa de alerta?',
+    question: 'Qual foi o dia da aula inaugural Desenvolve?',
     answers: [
-      { text: 'msg("Hello World");', correct: false },
-      { text: 'alert("Hello World");', correct: true },
-      { text: 'msgBox("Hello World");', correct: false },
-      { text: 'alertBox("Hello World");', correct: false }
-    ]
-  },
-  {
-    question: 'Como podemos criar uma função no JavaScript?',
-    answers: [
-      { text: 'function:myFunction()', correct: false },
-      { text: 'function myFunction()', correct: true },
-      { text: 'function = myFunction()', correct: false },
-      { text: 'Nenhum desses códigos criaria uma função', correct: false }
-    ]
-  },
-  {
-    question: 'Como podemos chamar uma função chamada "minhaFuncao"?',
-    answers: [
-      { text: 'call minhaFuncao()', correct: false },
-      { text: 'call function minhaFuncao()', correct: false },
-      { text: 'Nenhum desses códigos chamaria essa função', correct: false },
-      { text: 'minhaFuncao()', correct: true },
+      { text: 'Dia 02 de janeiro as 20h', correct: false },
+      { text: 'Dia 29 de janeiro as 19h', correct: true },
+      { text: 'Dia 02 de Fevereiro as 20h', correct: false },
+      { text: 'Dia 08 de Fevereiro 8h da manha', correct: false }
     ]
   },
 ]
 
-function selectAnswer(event) {
-  const answerClicked = event.target;
-  document.querySelectorAll(".answer").forEach(button => {
-    button.disabled = true;
-  });
-  if (answerClicked.dataset.correct) {
-    answerClicked.classList.add("correct");
-    totalCorrect++;
-    document.getElementById("totalCorrect").textContent = totalCorrect; // Atualiza a pontuação exibida
-  } else {
-    answerClicked.classList.add("incorrect");
+
+
+//"<!-- Tela final ao terminar o quiz -->//
+function finishGame() {
+  const totalQuestions = questions.length;
+  const performance = Math.floor((totalCorrect / totalQuestions) * 100);
+
+  let message = "";
+
+  switch (true) {
+    case performance >= 90:
+      message = "Excelente :)";
+      break;
+    case performance >= 70:
+      message = "Muito bom :)";
+      break;
+    case performance >= 50:
+      message = "Bom";
+      break;
+    default:
+      message = "Pode melhorar :(";
+      break;
   }
-  document.querySelectorAll(".answer").forEach(button => {
-    if (button.dataset.correct) {
-      button.classList.add("correct");
-    }
-  });
-  $nextQuestionButton.classList.remove("hide");
-  currentQuestionIndex++;
+
+  $questionsContainer.innerHTML = `
+    <p class="final-message">
+      Você acertou ${totalCorrect} de ${totalQuestions} questões!
+      <span>Resultado: ${message}</span>
+    </p>
+    <button onclick=window.location.reload() class="button">
+      Refazer teste
+    </button>
+  `;
 }

@@ -8,8 +8,16 @@
   <script src="index.js" async></script>
   <title>Quiz JavaScript</title>
 </head>
-<body>
-  <div class="container">
+
+<!-- Container Quiz-->
+  <body>
+		<div id="container">
+			<header>
+				<h1 id="h1">Quiz Desafio</h1>
+			</header>
+			<hr style="margin-bottom: 70px;">
+
+<!-- Container Perguntas-->
     <div class="questions-container hide">
       <span id="question" class="question">Pergunta aqui?</span>
       <div class="answers-container">
@@ -19,23 +27,25 @@
         <button class="answer button">Resposta 4</button>
       </div>
     </div>
-    <div class="controls-container">
-      <button class="start-quiz button">Iniciar Quiz!</button>
+    
+    <!-- Container Controlador Quiz-->
+    <div class="controls-container"> 
+      <button class="start-quiz button">Iniciar Quiz!</button>  <!-- botao de inicar -->
       <button id="read-question" class="button hide">Ler Pergunta</button>
-      <button class="next-question button hide"> Próxima Pergunta!</button>
-      <div class="timer">Tempo restante: <span id="time-left">120</span> segundos</div>
-      <p class="score">Pontuação: <span id="totalCorrect">0</span></p>
+      <button class="next-question button hide"> Próxima Pergunta!</button> <!-- botao proxima pergunta -->
     </div>
+    <!-- mensagens termino do quiz -->
     <div class="final-message hide">
       <p>Fim de jogo! Gostaria de tentar mais um vez?.</p>
     </div>
-  </div>
 
-  <script>
-    const readQuestionButton = document.getElementById('read-question');
-    const questionSpan = document.getElementById('question');
-    readQuestionButton.addEventListener('click', () => {
-    });
-  </script>
+       <!-- info quiz -->
+			<hr style="margin-top: 100px;">
+			<footer>
+				<p id="progress"> 5 perguntas</p>
+				<div id="timer">Tempo/Segundos</div>
+			</footer>
+
+  </div>
 </body>
 </html>
