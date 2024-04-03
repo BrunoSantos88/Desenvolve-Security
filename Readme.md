@@ -22,4 +22,5 @@ No final do quiz, existe uma contagem de acertos / total de perguntas </p>
 Após reponder, vai aparecer opção refazer quiz! </p>
 
 
- - Vamos jogar? Link: https://desafioquizdesenvolvebrsantos.s3.us-east-2.amazonaws.com/quiz/index.html
+                         Vamos jogar? </p> 
+https://desafioquizdesenvolvebrsantos.s3.us-east-2.amazonaws.com/quiz/index.html
