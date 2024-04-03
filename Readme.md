@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  ![Tela Inicial](images/tela-inicial.png)
+  images/tela-inicial.png
 </p>
 
 <p align="center">
@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  ![Resposta Correta](images/correta.png)
+  images/correta.png
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@
 </p>
 
 <p align="center">
-  ![Resposta Incorreta](images/incorreta.png)
+  images/incorreta.png
 </p>
 
 <p align="center">
@@ -35,7 +35,7 @@
 </p>
 
 <p align="center">
-  ![Próxima Pergunta](images/proxima.png)
+  images/proxima.png
 </p>
 
 <p align="center">
@@ -43,7 +43,7 @@
 </p>
 
 <p align="center">
-  ![Contagem de Acertos](images/contagem.png)
+  images/contagem.png
 </p>
 
 <p align="center">
@@ -57,5 +57,5 @@
 
 <p align="center">
 Vamos jogar? 
-[Link para o Quiz](https://desafioquizdesenvolvebrsantos.s3.us-east-2.amazonaws.com/quiz/index.html)
+https://desafioquizdesenvolvebrsantos.s3.us-east-2.amazonaws.com/quiz/index.html
 </p>
