@@ -52,8 +52,9 @@
 
 <p align="center">
 Vamos jogar? 
+________________________________________________________
 </p>
 
 <p align="center">
-https://desafioquizdesenvolvebrsantos.s3.us-east-2.amazonaws.com/quiz/index.html)
+https://desafioquizdesenvolvebrsantos.s3.us-east-2.amazonaws.com/quiz/index.html
 </p>
