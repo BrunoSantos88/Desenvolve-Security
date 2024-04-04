@@ -1,5 +1,5 @@
 
-//Seletor//
+//Seletor html botoes//
 const $startGameButton = document.querySelector(".start-quiz") 
 const $nextQuestionButton = document.querySelector(".next-question")
 const $questionsContainer = document.querySelector(".questions-container") 
@@ -49,7 +49,7 @@ function resetState() {
   $nextQuestionButton.classList.add("hide")
 }
 
-//Incrementa o número de perguntas corretas//
+//funçoes correta e incorreta
 function selectAnswer(event) {
   const answerClicked = event.target;
   document.querySelectorAll(".answer").forEach(button => {
@@ -117,7 +117,7 @@ function displayNextQuestion() {
   });
 }
 
-// Apos terminar, mensagens final do quiz//
+// Apos terminar, enconder start quiz (escoder)//
 function endGame() {
   document.querySelector('.final-message').classList.remove('hide'); 
   document.querySelector('.controls-container').classList.add('hide');
@@ -131,7 +131,6 @@ function displayNextQuestion() {
   if (questions.length === currentQuestionIndex) {
     return finishGame();
   }
-
   const currentQuestion = questions[currentQuestionIndex];
   $questionText.textContent = currentQuestion.question;
   currentQuestion.answers.forEach(answer => {
@@ -147,7 +146,7 @@ function displayNextQuestion() {
   });
 }
 
-//"<!-- Quiz Banco de perguntas -->//
+//Quiz Banco de perguntas//
 const questions = [
   {
     question: "Qual data que começou Desenvolve?",
@@ -195,8 +194,7 @@ const questions = [
 ];
 
 
-
-// Função para finalizar o quiz
+// Função para finalizar e feedback quantas acertou///
 function finishGame() {
   const totalQuestions = questions.length;
   const performance = Math.floor((totalCorrect / totalQuestions) * 100);
@@ -218,90 +216,16 @@ function finishGame() {
           break;
   }
 
- // Atualizar o conteúdo do elemento 'feedback' com a mensagem de quiz finalizado
- feedbackElement.textContent = 'Feedback: Quiz finalizado';
-
- // Imprimir feedback das respostas
- questions.forEach(question => {
-     question.answers.forEach(answer => {
-         console.log(answer.feedback);
-     });
- });
-
+  ///Criar botao centralizado apos finalizar quiz /// 
   $questionsContainer.innerHTML = `
       <p class="final-message">
           Você acertou ${totalCorrect} de ${totalQuestions} questões!
           <span>Resultado: ${message}</span>
       </p>
       <button onclick=window.location.reload() class="button">
-          Refazer Quiz!
+          Refazer Quiz!  
       </button>
   `;
 }
 
-// feedback start quiz//texto
-let feedbackElement = document.getElementById('feedback');
-let startQuizButton = document.querySelector('.start-quiz');
 
-// Alterar o texto do feedback após clicar no botão
-startQuizButton.addEventListener('click', function() {
-    feedbackElement.textContent = 'Atenção quiz está iniciado!';
-});
-
-
-
-///// Function Feedback
-function selectAnswer(event) {
-  const answerClicked = event.target;
-  const questionIndex = currentQuestionIndex - 1; // Índice da pergunta atual
-
-  document.querySelectorAll(".answer").forEach(button => {
-    button.disabled = true;
-  });
-  if (answerClicked.dataset.correct) {
-    answerClicked.classList.add("correct");
-    totalCorrect++; // Incrementa o número de perguntas corretas
-    displayFeedback("Resposta correta: " + answerClicked.textContent); // Exibe a resposta correta
-  } else {
-    answerClicked.classList.add("incorrect");
-    displayFeedback("Resposta incorreta: " + answerClicked.textContent); // Exibe a resposta incorreta
-  }
-  document.querySelectorAll(".answer").forEach(button => {
-    if (button.dataset.correct) {
-      button.classList.add("correct");
-    }
-  });
-  $nextQuestionButton.classList.remove("hide");
-  
-  // Exibe o feedback da pergunta
-  displayFeedback(questions[questionIndex].answers.filter(ans => ans.text === answerClicked.textContent)[0].feedback);
-  
-  currentQuestionIndex++;
-} 
-
-// Função para exibir o feedback
-function displayFeedback(feedbackText) {
-  const feedbackElement = document.getElementById('feedback');
-  feedbackElement.textContent = 'Feedback: ' + feedbackText;
-}
-
-const nextQuestionButton = document.querySelector('.next-question');
-
-nextQuestionButton.addEventListener('click', function() {
-    currentQuestionIndex++;
-    displayNextQuestion();
-});
-
-
-
-//hide feedback e aparecer apos finalizar
-document.addEventListener('DOMContentLoaded', function() {
-  const feedbackElement = document.getElementById('feedback');
-  
-  feedbackElement.style.display = 'none';
-  const startQuizButton = document.querySelector('.start-quiz');
-  startQuizButton.addEventListener('click', function() {
-      feedbackElement.style.display = 'block';
-      startQuizButton.style.display = 'none';
-  });
-});
