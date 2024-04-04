@@ -1,5 +1,5 @@
 
-//Seletor html botoes//
+//Seletor html botões//
 const $startGameButton = document.querySelector(".start-quiz") 
 const $nextQuestionButton = document.querySelector(".next-question")
 const $questionsContainer = document.querySelector(".questions-container") 
@@ -13,16 +13,21 @@ const $answers = document.querySelectorAll(".answer")
 let currentQuestionIndex = 1
 let totalCorrect = 1
 
-// Clicar star quiz.
+// Evento start quiz //
 $startGameButton.addEventListener("click", startGame)
 $nextQuestionButton.addEventListener("click", displayNextQuestion)
 
-//Funçoes start quiz esconder///
+//Função de start quiz esconder///
 function startGame() {
   $startGameButton.classList.add("hide")
   $questionsContainer.classList.remove("hide")
   displayNextQuestion()
 }
+
+///fim///
+
+
+/// Função de proxima pergunta ////
 function displayNextQuestion() {
   resetState()
   if (questions.length === currentQuestionIndex) {
@@ -45,11 +50,14 @@ function resetState() {
     $answersContainer.removeChild($answersContainer.firstChild)
   }
 
+  ///escoder///
   document.body.removeAttribute("class")
   $nextQuestionButton.classList.add("hide")
 }
+///fim///
 
-//funçoes correta e incorreta
+
+//função de correta e incorreta//// --- Evento ---///
 function selectAnswer(event) {
   const answerClicked = event.target;
   document.querySelectorAll(".answer").forEach(button => {
@@ -66,6 +74,8 @@ function selectAnswer(event) {
       button.classList.add("correct");
     }
   });
+
+  ///Escoder////
   $nextQuestionButton.classList.remove("hide");
   currentQuestionIndex++;
 } 
@@ -91,10 +101,11 @@ function displayNextQuestion() {
 
     newAnswer.addEventListener("click", selectAnswer);
   });
-
 }
 
-//Função de proxima pergunta//
+////-> Fim <---///
+
+//Evento display proxima pergunta // ate endgame ////
 function displayNextQuestion() {
   resetState();
   
@@ -117,7 +128,7 @@ function displayNextQuestion() {
   });
 }
 
-// Apos terminar, enconder start quiz (escoder)//
+// Apos fim de jogo //
 function endGame() {
   document.querySelector('.final-message').classList.remove('hide'); 
   document.querySelector('.controls-container').classList.add('hide');
@@ -194,15 +205,16 @@ const questions = [
 ];
 
 
-// Função para finalizar e feedback quantas acertou///
+// Função para finalizar e feedback quantas acertou/// Endgame ///
 function finishGame() {
   const totalQuestions = questions.length;
   const performance = Math.floor((totalCorrect / totalQuestions) * 100);
 
   let message = "";
 
+  ///mensagem de pontuação///
   switch (true) {
-      case performance >= 90:
+      case performance >= 90:   
           message = "Excelente :)";
           break;
       case performance >= 70:
