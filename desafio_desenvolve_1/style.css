@@ -8,21 +8,23 @@ button {
   cursor: pointer;
 }
 
+/* Tela de fundo */
 body {
-  background-image: url("images/matrizlogo.jpg");
+  background-image: url("images/matrizlogo.jpg"); 
   color: #d9d9e7;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Isso garante que a altura da tela seja totalmente preenchida */
+  height: 100vh; 
   margin: 0;
 }
 
+/* tamanho do container 800x800 , azul e sombra cinza*/
 #container {
 	background-color: #001a33;
 	position: relative;
 	height: auto;
-	width: 800px;
+	width: 850px;
 	margin: 20px auto;
 	border-radius: 40px;
 	box-shadow: 5px 7px 5px 5px rgba(0,26,51,0.5);
@@ -30,17 +32,18 @@ body {
 	margin: 100px auto;
 }
 
+/* Tamanho texto box */
 .questions-container {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 2px;
   text-align: center;
 }
 
 .question {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
   text-align: center;
 }
@@ -61,19 +64,19 @@ body {
   margin-top: 28px;
 }
  
-
+/* Tamanho do botao, dentro do box */
 .button {
   background-color: #4a4a4e;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   border: 0;
   border-radius: 6px;
-  height: 38px;
-  padding: 0 32px;
+  height: 42px;
+  padding: 0 38px;
   text-align: center;
 }
-
+/* Placar centralziado, texto cor branca */
 .placar{
   background-color: #e7e9f0;
   color: #fff;
@@ -106,75 +109,35 @@ body {
 .hide {
   display: none;
 }
-
-.timer {
-  text-align: center;
-  margin-top: 30px;
-  color: #07a915;
-}
-
-.controls-container .timer {
-  margin-top: 30px;
-  text-align: center;
-  color: #07a915;
-}
-
-.score {
-  margin-top: 30px;
-  text-align: center;
-  color:#07a915;
-}
-
+/* botao mudar para cor verde correto */
 .correct {
   background-color: green;
 }
-
+/* Botao mudar para cor vermelha incorreto */
 .incorrect {
   background-color: red;
 }
-
+/* Linha branca, com margen 30cm*/
 footer {
 	position: relative; 
 	margin-bottom: 30px;
 }
 
-#progress {
-	position: relative;
-	float: left;
-	text-align: right;
-	margin-top: 20px;
-	font-size: 30px;
-	color: white;
-}
-
-#timer {
-	position: relative;
-	float: right;
-	text-align: right;
-	margin-top: 20px;
-	font-size: 30px;
-	color: white;
-}
+/* cor palavras resultado */
 #result {
 	text-align: center;
 	font-size: 40px;
 	color: white;
 }
 
-.feedback{
-  text-align: left;
-	font-size: 30px;
-	color: white;
-}
-
-
+/* texto Quiz desafio superior */
 #h1 {
   text-align: center;
 	font-size: 30px;
 	color: white;
 
 }
-
+/* Centralizar container */
 .controls-container {
   display: flex;
   justify-content: center;
