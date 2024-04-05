@@ -6,51 +6,21 @@ const $questionText = document.querySelector(".question");
 const $answersContainer = document.querySelector(".answers-container");
 const $answers = document.querySelectorAll(".answer");
 
-<<<<<<< HEAD
 // Contagem de perguntas /// iniciar apartir -> start quiz //
 let currentQuestionIndex = 0;
 let totalCorrect = 0;
-=======
-//Seletor html botões//
-const $startGameButton = document.querySelector(".start-quiz") 
-const $nextQuestionButton = document.querySelector(".next-question")
-const $questionsContainer = document.querySelector(".questions-container") 
-const $questionText = document.querySelector(".question") 
-const $answersContainer = document.querySelector(".answers-container")
-const $answers = document.querySelectorAll(".answer")
->>>>>>> e6527affa8b60a99652976609c7169e4ae5e9380
 
 // Clicar start quiz ///
 $startGameButton.addEventListener("click", startGame);
 $nextQuestionButton.addEventListener("click", displayNextQuestion);
 
-<<<<<<< HEAD
 // Funções start quiz esconder
-=======
-
-//Contagen de perguntas
-let currentQuestionIndex = 1
-let totalCorrect = 1
-
-// Evento start quiz //
-$startGameButton.addEventListener("click", startGame)
-$nextQuestionButton.addEventListener("click", displayNextQuestion)
-
-//Função de start quiz esconder///
->>>>>>> e6527affa8b60a99652976609c7169e4ae5e9380
 function startGame() {
   $startGameButton.classList.add("hide");
   $questionsContainer.classList.remove("hide");
   displayNextQuestion();
 }
 
-<<<<<<< HEAD
-=======
-///fim///
-
-
-/// Função de proxima pergunta ////
->>>>>>> e6527affa8b60a99652976609c7169e4ae5e9380
 function displayNextQuestion() {
   resetState();
   if (questions.length === currentQuestionIndex) {
@@ -74,23 +44,11 @@ function resetState() {
     $answersContainer.removeChild($answersContainer.firstChild);
   }
 
-<<<<<<< HEAD
   document.body.removeAttribute("class");
   $nextQuestionButton.classList.add("hide");
-=======
-  ///escoder///
-  document.body.removeAttribute("class")
-  $nextQuestionButton.classList.add("hide")
->>>>>>> e6527affa8b60a99652976609c7169e4ae5e9380
 }
-///fim///
 
-<<<<<<< HEAD
 // Funções correta e incorreta //
-=======
-
-//função de correta e incorreta//// --- Evento ---///
->>>>>>> e6527affa8b60a99652976609c7169e4ae5e9380
 function selectAnswer(event) {
   const answerClicked = event.target;
   document.querySelectorAll(".answer").forEach(button => {
@@ -107,8 +65,6 @@ function selectAnswer(event) {
       button.classList.add("correct");
     }
   });
-
-  ///Escoder////
   $nextQuestionButton.classList.remove("hide");
   currentQuestionIndex++;
 }
@@ -135,7 +91,6 @@ function finishGame() {
       break;
   }
 
-<<<<<<< HEAD
   ///Criar botao refazer QUIZ/// Após fim de jogo ///
   $questionsContainer.innerHTML = `
       <p class="final-message">
@@ -149,79 +104,6 @@ function finishGame() {
 }
 
 ///banco de perguntas//
-=======
-  const currentQuestion = questions[currentQuestionIndex];
-  $questionText.textContent = currentQuestion.question;
-
-  currentQuestion.answers.forEach(answer => {
-    const newAnswer = document.createElement("button");
-    newAnswer.classList.add("button", "answer");
-    newAnswer.textContent = answer.text;
-    if (answer.correct) {
-      newAnswer.dataset.correct = answer.correct;
-    }
-    $answersContainer.appendChild(newAnswer);
-
-    newAnswer.addEventListener("click", selectAnswer);
-  });
-}
-
-////-> Fim <---///
-
-//Evento display proxima pergunta // ate endgame ////
-function displayNextQuestion() {
-  resetState();
-  
-  if (questions.length === currentQuestionIndex) {
-    return finishGame();
-  }
-
-  const currentQuestion = questions[currentQuestionIndex];
-  $questionText.textContent = currentQuestion.question;
-  currentQuestion.answers.forEach(answer => {
-    const newAnswer = document.createElement("button");
-    newAnswer.classList.add("button", "answer");
-    newAnswer.textContent = answer.text;
-    if (answer.correct) {
-      newAnswer.dataset.correct = answer.correct;
-    }
-    $answersContainer.appendChild(newAnswer);
-
-    newAnswer.addEventListener("click", selectAnswer);
-  });
-}
-
-// Apos fim de jogo //
-function endGame() {
-  document.querySelector('.final-message').classList.remove('hide'); 
-  document.querySelector('.controls-container').classList.add('hide');
-}
-document.querySelector('.start-quiz').addEventListener('click', function() {
-  startTimer(); 
-});
-function displayNextQuestion() {
-  resetState();
-  
-  if (questions.length === currentQuestionIndex) {
-    return finishGame();
-  }
-  const currentQuestion = questions[currentQuestionIndex];
-  $questionText.textContent = currentQuestion.question;
-  currentQuestion.answers.forEach(answer => {
-    const newAnswer = document.createElement("button");
-    newAnswer.classList.add("button", "answer");
-    newAnswer.textContent = answer.text;
-    if (answer.correct) {
-      newAnswer.dataset.correct = answer.correct;
-    }
-    $answersContainer.appendChild(newAnswer);
-
-    newAnswer.addEventListener("click", selectAnswer);
-  });
-}
-
-//Quiz Banco de perguntas//
->>>>>>> e6527affa8b60a99652976609c7169e4ae5e9380
 const questions = [
   {
     question: "Qual foi a data de início do Desenvolve?",
@@ -277,44 +159,3 @@ const questions = [
     ]
   },
 ];
-
-<<<<<<< HEAD
-=======
-
-// Função para finalizar e feedback quantas acertou/// Endgame ///
-function finishGame() {
-  const totalQuestions = questions.length;
-  const performance = Math.floor((totalCorrect / totalQuestions) * 100);
-
-  let message = "";
-
-  ///mensagem de pontuação///
-  switch (true) {
-      case performance >= 90:   
-          message = "Excelente :)";
-          break;
-      case performance >= 70:
-          message = "Muito bom :)";
-          break;
-      case performance >= 50:
-          message = "Bom";
-          break;
-      default:
-          message = "Pode melhorar :(";
-          break;
-  }
-
-  ///Criar botao centralizado apos finalizar quiz /// 
-  $questionsContainer.innerHTML = `
-      <p class="final-message">
-          Você acertou ${totalCorrect} de ${totalQuestions} questões!
-          <span>Resultado: ${message}</span>
-      </p>
-      <button onclick=window.location.reload() class="button">
-          Refazer Quiz!  
-      </button>
-  `;
-}
-
-
->>>>>>> e6527affa8b60a99652976609c7169e4ae5e9380
