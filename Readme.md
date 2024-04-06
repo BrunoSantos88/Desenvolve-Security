@@ -55,5 +55,5 @@ Vamos jogar?
 </p>
 
 <p align="center">
-https://desafioquizdesenvolvebrsantos.s3.us-east-2.amazonaws.com/quiz/index.js
+https://desafioquizdesenvolvebrsantos.s3.us-east-2.amazonaws.com/quiz/index.html
 </p>
