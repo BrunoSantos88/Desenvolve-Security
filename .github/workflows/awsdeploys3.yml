@@ -31,5 +31,4 @@ jobs:
 # upload arquivos
       - name: Upload and Deploy Files S3
         run: |
-          cd desafio_desenvolve_1
-          aws s3 cp --recursive * images index.html index.js style.css s3://desafioquizdesenvolvebrsantos/quiz/
+          aws s3 cp --recursive desafio_desenvolve_1  s3://desafioquizdesenvolvebrsantos/quiz/
