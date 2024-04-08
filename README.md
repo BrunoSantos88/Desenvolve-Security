@@ -11,7 +11,7 @@ Arquitetura Redes de computadores: Semana 5-6-7  </p>
 <a href=https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/redes_semana_5-6-7/> Lab redes packet tracert </a>  </p>
 
 Shell Scripting Automatizando processos: Semana 8 </p>
-<a href= https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/redes_semana_5-6-7/> Lab automação em shellscript </a>  </p>
+<a href= https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/shellscript-semana_8/semana_8.2/> Lab automação em shellscript </a>  </p>
 
 Docker: criando e gerenciando containers: Semana 9 </p>
  <a href= https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/docker_semana_9/> Lab automação em shellscript </a>  </p> 
