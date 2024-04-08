@@ -24,6 +24,15 @@ jobs:
           aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
           aws configure set region $AWS_REGION
 
+      - name: Connect with Travis CI
+        run: |
+         curl -X POST \
+            -H "Content-Type: application/json" \
+            -H "Travis-API-Version: 3" \
+            -H "Authorization: token TRAVIS_CI_TOKEN" \
+            -d '{"request": {"branch": "main"}}' \
+            https://api.travis-ci.com/repo/BrunoSantos88/Desenvolve-Trilha-SI/requests
+
 # install dependencia aws cli
       - name: Install AWS CLI (optional, if not pre-installed on runner)
         run: |
