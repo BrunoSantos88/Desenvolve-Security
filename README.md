@@ -20,4 +20,4 @@ Docker: criando e gerenciando containers: Semana 9 </p>
 
 # Desafios Desenvolve
 
- Desafio 1 - Criando um Quiz;
+ Desafio 1 - Criando um Quiz.
