@@ -1,5 +1,5 @@
 
-#  Desenvolve - Trilha Alura CyberSecurity </h3> 
+#  Desenvolve - Trilha Alura </h3> 
    
 JavaScript e HTML: desenvolva um jogo e pratique lógica de programação. </p>
 <a href=https://github.com/BrunoSantos88/Desenvolve-Security/tree/main/javascript_semana_1/> Lab JavaScript com html </a>  </p>
