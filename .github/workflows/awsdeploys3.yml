@@ -1,12 +1,12 @@
-#Deploy S3
-name: desafio Deploy S3
+#Deploy S3 AWS
+name: Quiz Deploy S3
 
 # Deploy branch
 on:
   push:
-    branches: [ desafio ]
+    branches: [ desafio ]  #branch
 
-# virtual machine 
+# virtual machine github action
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -22,15 +22,6 @@ jobs:
           aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
           aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
           aws configure set region $AWS_REGION
-
-      - name: Connect with Travis CI
-        run: |
-          curl -X POST \
-          -H "Content-Type: application/json" 
-          -H "Travis-API-Version: 3" 
-          -H "Authorization: token $TRAVIS_TOKEN" 
-          -d '{"request": {"branch": "desafio"}}' 
-           https://api.travis-ci.com/repo/BrunoSantos88/Desenvolve-Trilha-SI/requests
 
       - name: Install AWS CLI (optional, if not pre-installed on runner)
         run: |
