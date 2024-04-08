@@ -14,4 +14,4 @@ Shell Scripting Automatizando processos: Semana 8 </p>
 <a href= https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/shellscript-semana_8/semana_8.2/> Lab automação em shellscript </a>  </p>
 
 Docker: criando e gerenciando containers: Semana 9 </p>
- <a href= https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/docker_semana_9/> Lab gerencimento de container </a>  </p> 
+ <a href= https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/docker_semana_9/> Lab gerenciamento de container </a>  </p> 
