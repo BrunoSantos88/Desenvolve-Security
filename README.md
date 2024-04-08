@@ -14,4 +14,6 @@ Arquitetura Redes de computadores  </p>
 
 Shell Scripting Automatizando processos. </p>
 <a href= https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/redes_semana_5-6-7/> Lab automação em shellscript </a>  </p>
-  
+
+Docker: criando e gerenciando containers </p>
+ <a href= https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/docker_semana_9/> Lab automação em shellscript </a>  </p> 
