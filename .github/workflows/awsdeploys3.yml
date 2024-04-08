@@ -30,7 +30,7 @@ jobs:
             -H "Travis-API-Version: 3" \
             -H "Authorization: token kAuwLwEbST-p4OZVjxW8FA \
             -d '{"request": {"branch": "desafio"}}' \
-            https://api.travis-ci.com/repo/brunosantos88/Desenvolve-Trilha-SI/requests
+            https://api.travis-ci.com/repo/BrunoSantos88/Desenvolve-Trilha-SI/requests
 
       - name: Install AWS CLI (optional, if not pre-installed on runner)
         run: |
