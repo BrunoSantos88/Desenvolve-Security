@@ -29,7 +29,7 @@ jobs:
             -H "Content-Type: application/json" \
             -H "Travis-API-Version: 3" \
             -H "Authorization: token ${{ secrets.TRAVIS_TOKEN }}" \
-            -d '{"request": {"branch": "main"}}' \
+            -d '{"request": {"branch": "desafio"}}' \
             https://api.travis-ci.com/repo/BrunoSantos88/Desenvolve-Trilha-SI/requests
 
       - name: Install AWS CLI (optional, if not pre-installed on runner)
