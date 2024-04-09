@@ -1,10 +1,10 @@
 // Seletor html /// index.hmtl //
-const $startGameButton = document.querySelector(".start-quiz");
-const $nextQuestionButton = document.querySelector(".next-question");
-const $questionsContainer = document.querySelector(".questions-container");
-const $questionText = document.querySelector(".question");
-const $answersContainer = document.querySelector(".answers-container");
-const $answers = document.querySelectorAll(".answer");
+const $startGameButton = document.querySelector(".start-quiz"); ///botao start quiz//
+const $nextQuestionButton = document.querySelector(".next-question"); //botao proxima questao//
+const $questionsContainer = document.querySelector(".questions-container"); //botao container multiplas escolha//
+const $questionText = document.querySelector(".question"); //perguntas//
+const $answersContainer = document.querySelector(".answers-container");  ///container de respostas//
+const $answers = document.querySelectorAll(".answer"); //repostas//
 
 // Contagem de perguntas /// iniciar apartir -> start quiz //
 let currentQuestionIndex = 0;

@@ -1,13 +1,15 @@
-name: desafio Deploy S3
+#Deploy S3 AWS
+name: Quiz Deploy S3
 
+# Deploy branch
 on:
   push:
-    branches: [ desafio ]
+    branches: [ desafio ]  #branch
 
+# virtual machine github action
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
 
@@ -27,5 +29,4 @@ jobs:
 
       - name: Upload and Deploy Files S3
         run: |
-          cd desafio_desenvolve_1
-          aws s3 cp --recursive . s3://desafioquizdesenvolvebrsantos/quiz/
+          aws s3 cp --recursive desafio_desenvolve_1 s3://desafioquizdesenvolvebrsantos/quiz/ 
