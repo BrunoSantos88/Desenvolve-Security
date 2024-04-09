@@ -94,7 +94,7 @@ function finishGame() {
   // Adiciona o conteúdo da mensagem de finalização e o botão de refazer o quiz
   $questionsContainer.innerHTML = `
     <p class="final-message">
-        Você acertou ${totalCorrect} de ${totalQuestions} questões!
+        Você acertou  ${totalCorrect} de ${totalQuestions} pontos!
         <span>Resultado: ${message}</span>
     </p>
     <button onclick=window.location.reload() class="button">
@@ -102,6 +102,7 @@ function finishGame() {
     </button>
   `;
 }
+
 ///banco de perguntas//
 const questions = [
   {
@@ -159,38 +160,64 @@ const questions = [
   },
 ];
 
-// progresso quiz // Funçao ao clicar inicar quiz // Progresso aparecer //
-document.addEventListener('DOMContentLoaded', function () {
-  const $startGameButton = document.querySelector(".start-quiz"); // Botão "Iniciar Quiz"
-  const $progressMessage = document.querySelector(".progress-message"); // Mensagem de progresso
+//progress Quiz// Hide Html inincio iniciar quiz/ remove hide click apos click//
+document.querySelector('.start-quiz').addEventListener('click', showProgressMessage);
 
-  $startGameButton.addEventListener('click', function () {
-    $progressMessage.classList.remove('hide'); // Remove a classe "hide" para mostrar a mensagem de progresso
-    updateProgressMessage();
-  });
-
-  $nextQuestionButton.addEventListener('click', function () {
-    updateProgressMessage();
-  });
-});
-
-// Fuçao de contagem /// Quiz 1/6 apos chegar na pergunta 6/6/ Mensagem Quiz Encerrado //
-function updateProgressMessage() {
-  const $progressMessage = document.querySelector(".progress-message");
-  const totalQuestions = questions.length;
-  const currentQuestionNumber = currentQuestionIndex + 1; //começar 1/6//
-
-  if (currentQuestionNumber <= totalQuestions) {
-    $progressMessage.textContent = `Quiz ${currentQuestionNumber}/${totalQuestions}`;
-  } else if (currentQuestionNumber === totalQuestions + 1) {
-    $progressMessage.textContent = "Quiz Encerrado";
-  } else {
-    $progressMessage.style.display = "none"; 
+//Funcão de tira hide apos clicar StartQuiz///
+function showProgressMessage() {
+  var progressMessage = document.getElementById('progressMessage');
+  if (progressMessage) {
+    progressMessage.classList.remove('hide');
   }
 }
 
-function resetQuiz() {
-  const $progressMessage = document.querySelector(".progress-message");
-  $progressMessage.classList.add('hide'); // Adiciona a classe "hide" para ocultar a mensagem de progresso
-  totalQuestions = 6; 
+$nextQuestionButton.addEventListener('click', function () {
+  updateProgressMessage();
+});
+
+function updateProgressMessage() {
+const $progressMessage = document.querySelector(".progress-message");
+const totalQuestions = questions.length;
+const currentQuestionNumber = currentQuestionIndex + 1; //começar 1/6//
+
+if (currentQuestionNumber <= totalQuestions + 1 ) {
+  $progressMessage.textContent = `Quiz ${currentQuestionNumber}/${totalQuestions}`;
+  if (currentQuestionNumber === totalQuestions +1 ) {
+    $progressMessage.textContent = "Quiz Encerrado";
+  }
+} else {
+  $progressMessage.style.display = "none"; 
+}
+}
+
+
+///Feedback Quiz Acertou ou Errou para peessoa///
+function selectAnswer(event) {
+  const answerClicked = event.target;
+  document.querySelectorAll(".answer").forEach(button => {
+    button.disabled = true;
+  });
+  if (answerClicked.dataset.correct) {
+    answerClicked.classList.add("correct"); //click na pergunta correta/
+    document.getElementById('feedbackMessage').textContent = 'Você Acertou (+1ponto)';
+    document.getElementById('feedbackMessage').classList.remove('hide'); 
+    totalCorrect++;
+  } else {
+    answerClicked.classList.add("incorrect"); // vc clicou a pergunta incorreta //
+    document.getElementById('feedbackMessage').textContent = 'Você Errou (-1ponto)';
+    document.getElementById('feedbackMessage').classList.remove('hide'); 
+  }
+  document.querySelectorAll(".answer").forEach(button => {
+    if (button.dataset.correct) {
+      button.classList.add("correct");
+    }
+  });
+  $nextQuestionButton.classList.remove("hide");
+
+  // Timer do feedback // Ativar hide //
+  setTimeout(() => {
+    document.getElementById('feedbackMessage').classList.add('hide');
+  }, 1000);
+
+  currentQuestionIndex++;
 }

@@ -144,16 +144,26 @@ footer {
   align-items: center;
 }
 
-/* Contador Quiz */
 .progress-message {
-	position: relative;
-	float: lef;
+	float: left;
 	text-align: left;
 	margin-top: 20px;
 	font-size: 30px;
 	color: white;
 }
 
-#progressMessage {
-  text-align: left;
+.feedback-message{
+  float: right;
+	text-align: right;
+	margin-top: 20px;
+	font-size: 30px;
+	color: white;
+}
+
+#Acertou{
+  color: green;
+}
+
+#Errou {
+  color: red;
 }
