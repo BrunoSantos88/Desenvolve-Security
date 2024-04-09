@@ -91,18 +91,17 @@ function finishGame() {
       break;
   }
 
-  ///Criar botao refazer QUIZ/// Após fim de jogo ///
+  // Adiciona o conteúdo da mensagem de finalização e o botão de refazer o quiz
   $questionsContainer.innerHTML = `
-      <p class="final-message">
-          Você acertou ${totalCorrect} de ${totalQuestions} questões!
-          <span>Resultado: ${message}</span>
-      </p>
-      <button onclick=window.location.reload() class="button">
-          Refazer Quiz!  
-      </button>
+    <p class="final-message">
+        Você acertou ${totalCorrect} de ${totalQuestions} questões!
+        <span>Resultado: ${message}</span>
+    </p>
+    <button onclick=window.location.reload() class="button">
+        Refazer Quiz!  
+    </button>
   `;
 }
-
 ///banco de perguntas//
 const questions = [
   {
@@ -159,3 +158,39 @@ const questions = [
     ]
   },
 ];
+
+// progresso quiz // Funçao ao clicar inicar quiz // Progresso aparecer //
+document.addEventListener('DOMContentLoaded', function () {
+  const $startGameButton = document.querySelector(".start-quiz"); // Botão "Iniciar Quiz"
+  const $progressMessage = document.querySelector(".progress-message"); // Mensagem de progresso
+
+  $startGameButton.addEventListener('click', function () {
+    $progressMessage.classList.remove('hide'); // Remove a classe "hide" para mostrar a mensagem de progresso
+    updateProgressMessage();
+  });
+
+  $nextQuestionButton.addEventListener('click', function () {
+    updateProgressMessage();
+  });
+});
+
+// Fuçao de contagem /// Quiz 1/6 apos chegar na pergunta 6/6/ Mensagem Quiz Encerrado //
+function updateProgressMessage() {
+  const $progressMessage = document.querySelector(".progress-message");
+  const totalQuestions = questions.length;
+  const currentQuestionNumber = currentQuestionIndex + 1; //começar 1/6//
+
+  if (currentQuestionNumber <= totalQuestions) {
+    $progressMessage.textContent = `Quiz ${currentQuestionNumber}/${totalQuestions}`;
+  } else if (currentQuestionNumber === totalQuestions + 1) {
+    $progressMessage.textContent = "Quiz Encerrado";
+  } else {
+    $progressMessage.style.display = "none"; 
+  }
+}
+
+function resetQuiz() {
+  const $progressMessage = document.querySelector(".progress-message");
+  $progressMessage.classList.add('hide'); // Adiciona a classe "hide" para ocultar a mensagem de progresso
+  totalQuestions = 6; 
+}

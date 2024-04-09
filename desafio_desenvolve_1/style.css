@@ -143,3 +143,17 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+/* Contador Quiz */
+.progress-message {
+	position: relative;
+	float: lef;
+	text-align: left;
+	margin-top: 20px;
+	font-size: 30px;
+	color: white;
+}
+
+#progressMessage {
+  text-align: left;
+}
