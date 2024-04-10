@@ -167,7 +167,7 @@ document.querySelector('.start-quiz').addEventListener('click', showProgressMess
 function showProgressMessage() {
   var progressMessage = document.getElementById('progressMessage');
   if (progressMessage) {
-    progressMessage.classList.remove('hide');
+    progressMessage.classList.remove('hide'); // remover Progresso apos clicar inicar quiz.
   }
 }
 
@@ -175,15 +175,16 @@ $nextQuestionButton.addEventListener('click', function () {
   updateProgressMessage();
 });
 
+//Fuçao de prograsso//Depois de Clicar Inicar QUIZ///
 function updateProgressMessage() {
 const $progressMessage = document.querySelector(".progress-message");
 const totalQuestions = questions.length;
-const currentQuestionNumber = currentQuestionIndex + 1; //começar 1/6//
+const currentQuestionNumber = currentQuestionIndex + 1; //começar 1/6 ir ate 6/6.
 
 if (currentQuestionNumber <= totalQuestions + 1 ) {
   $progressMessage.textContent = `Quiz ${currentQuestionNumber}/${totalQuestions}`;
   if (currentQuestionNumber === totalQuestions +1 ) {
-    $progressMessage.textContent = "Quiz Encerrado";
+    $progressMessage.textContent = "Quiz Encerrado"; /// Encerramento Quiz Finalizado //
   }
 } else {
   $progressMessage.style.display = "none"; 
@@ -191,7 +192,7 @@ if (currentQuestionNumber <= totalQuestions + 1 ) {
 }
 
 
-///Feedback Quiz Acertou ou Errou para peessoa///
+///Feedback Quiz Acertou ou Errou///
 function selectAnswer(event) {
   const answerClicked = event.target;
   document.querySelectorAll(".answer").forEach(button => {
@@ -204,7 +205,7 @@ function selectAnswer(event) {
     totalCorrect++;
   } else {
     answerClicked.classList.add("incorrect"); // vc clicou a pergunta incorreta //
-    document.getElementById('feedbackMessage').textContent = 'Você Errou (-1ponto)';
+    document.getElementById('feedbackMessage').textContent = 'Você Errou (+0pontos)';
     document.getElementById('feedbackMessage').classList.remove('hide'); 
   }
   document.querySelectorAll(".answer").forEach(button => {
@@ -214,7 +215,7 @@ function selectAnswer(event) {
   });
   $nextQuestionButton.classList.remove("hide");
 
-  // Timer do feedback // Ativar hide //
+ /// Gambi // Timer do feedback // Ativar hide // Tentei colocar menos hide e remove hide //
   setTimeout(() => {
     document.getElementById('feedbackMessage').classList.add('hide');
   }, 1000);
