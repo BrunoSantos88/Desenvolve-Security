@@ -29,16 +29,16 @@
    <img src="images/proxima.png" alt="Botão Próxima Pergunta" width="800"> 
 </p>
 <p align="center">
-  No final do quiz, haverá uma contagem de acertos sobre o total de perguntas. 
-</p>
-<p align="center">
-  <img src="images/progresso.png" alt="Contagem de Acertos" width="800"> 
-</p>
-<p align="center">
   A partir da primeira pergunta, haverá Progresso de 1/6 do total de perguntas. Caso você acerte, ganhará 1 ponto; caso erre, não ganhará pontos.
 </p>
 <p align="center">
   <img src="images/contagem.png" alt="Contagem de Pontos" width="800"> 
+</p>
+<p align="center">
+  No final do quiz, haverá uma contagem de acertos sobre o total de perguntas. 
+</p>
+<p align="center">
+  <img src="images/progresso.png" alt="Contagem de Acertos" width="700"> 
 </p>
 <p align="center">
   Após responder, você terá a opção de refazer o quiz! 
