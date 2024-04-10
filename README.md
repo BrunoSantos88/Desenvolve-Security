@@ -38,7 +38,7 @@
   No final do quiz, haverá uma contagem de acertos sobre o total de perguntas e pontos possíveis, além da mensagem "Quiz Encerrado"!
 </p>
 <p align="center">
-  <img src="images/contagem.png" alt="Contagem de Pontos" width="800"> 
+  <img src="images/pontos.png" alt="Contagem de Pontos" width="800"> 
 </p>
 <p align="center">
   Após responder, você terá a opção de refazer o quiz! 
