@@ -94,7 +94,7 @@ function finishGame() {
   // Adiciona o conteúdo da mensagem de finalização e o botão de refazer o quiz
   $questionsContainer.innerHTML = `
     <p class="final-message">
-        Você acertou  ${totalCorrect} de ${totalQuestions} pontos!
+        Você acertou  ${totalCorrect} de ${totalQuestions} pontos possíveis!
         <span>Resultado: ${message}</span>
     </p>
     <button onclick=window.location.reload() class="button">
