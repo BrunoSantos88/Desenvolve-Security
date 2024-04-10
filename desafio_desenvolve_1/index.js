@@ -160,10 +160,10 @@ const questions = [
   },
 ];
 
-//progress Quiz// Hide Html inincio iniciar quiz/ remove hide click apos click//
+//Progress Quiz// Hide Html inincio iniciar quiz/ remove hide click apos click//
 document.querySelector('.start-quiz').addEventListener('click', showProgressMessage);
 
-//Funcão de tira hide apos clicar StartQuiz///
+//Funcão que vai remover hide, apos clicar StartQuiz///
 function showProgressMessage() {
   var progressMessage = document.getElementById('progressMessage');
   if (progressMessage) {
@@ -175,7 +175,7 @@ $nextQuestionButton.addEventListener('click', function () {
   updateProgressMessage();
 });
 
-//Fuçao de prograsso//Depois de Clicar Inicar QUIZ///
+//Funçao de prograsso, depois de clicar inicar QUIZ///
 function updateProgressMessage() {
 const $progressMessage = document.querySelector(".progress-message");
 const totalQuestions = questions.length;
@@ -184,7 +184,7 @@ const currentQuestionNumber = currentQuestionIndex + 1; //começar 1/6 ir ate 6/
 if (currentQuestionNumber <= totalQuestions + 1 ) {
   $progressMessage.textContent = `Quiz ${currentQuestionNumber}/${totalQuestions}`;
   if (currentQuestionNumber === totalQuestions +1 ) {
-    $progressMessage.textContent = "Quiz Encerrado"; /// Encerramento Quiz Finalizado //
+    $progressMessage.textContent = "Quiz Finalizado!"; /// Encerramento Quiz Finalizado //
   }
 } else {
   $progressMessage.style.display = "none"; 
@@ -199,13 +199,13 @@ function selectAnswer(event) {
     button.disabled = true;
   });
   if (answerClicked.dataset.correct) {
-    answerClicked.classList.add("correct"); //click na pergunta correta/
-    document.getElementById('feedbackMessage').textContent = 'Você Acertou (+1ponto)';
+    answerClicked.classList.add("correct"); //click na pergunta correta ou incorreta//
+    document.getElementById('feedbackMessage').textContent = 'Você Acertou (+1ponto)'; //Click correta//
     document.getElementById('feedbackMessage').classList.remove('hide'); 
     totalCorrect++;
-  } else {                                     // Nao fica abaixo de 0, melhor não -1//
-    answerClicked.classList.add("incorrect"); // vc clicou a pergunta incorreta //
-    document.getElementById('feedbackMessage').textContent = 'Você Errou (+0ponto)'; //
+  } else {                                     // Nao fica abaixo de 0, melhor não colocar -1pontos//
+    answerClicked.classList.add("incorrect"); // Click na pergunta incorreta //
+    document.getElementById('feedbackMessage').textContent = 'Você Errou (+0ponto)'; // +-=- - ++=+ //
     document.getElementById('feedbackMessage').classList.remove('hide'); 
   }
   document.querySelectorAll(".answer").forEach(button => {
@@ -215,10 +215,10 @@ function selectAnswer(event) {
   });
   $nextQuestionButton.classList.remove("hide");
 
- /// Gambi // Timer do feedback // Ativar hide // Tentei colocar menos hide e remove hide //
+ /// Gambi // Timer ativar hide // Tentei colocar menos hide e remove hide //
   setTimeout(() => {
     document.getElementById('feedbackMessage').classList.add('hide');
-  }, 1000);
+  }, 1000); //5s
 
   currentQuestionIndex++;
 }
