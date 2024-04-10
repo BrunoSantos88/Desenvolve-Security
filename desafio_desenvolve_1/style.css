@@ -153,17 +153,9 @@ footer {
 }
 
 .feedback-message{
-  float: center;
-	text-align: Center;
+  float: right;
+	text-align: right;
 	margin-top: 20px;
 	font-size: 30px;
 	color: white;
-}
-
-#Acertou{
-  color: green;
-}
-
-#Errou {
-  color: red;
 }
