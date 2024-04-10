@@ -153,8 +153,8 @@ footer {
 }
 
 .feedback-message{
-  float: right;
-	text-align: right;
+  float: center;
+	text-align: Center;
 	margin-top: 20px;
 	font-size: 30px;
 	color: white;
