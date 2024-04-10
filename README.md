@@ -24,4 +24,3 @@ Docker: criando e gerenciando containers. </p>
  <a href= https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/desafio/> Criando uma Gameficação simples em HTML > CSS > Javascript </a>  </p> 
 
 
-# Continue
