@@ -203,9 +203,9 @@ function selectAnswer(event) {
     document.getElementById('feedbackMessage').textContent = 'Você Acertou (+1ponto)';
     document.getElementById('feedbackMessage').classList.remove('hide'); 
     totalCorrect++;
-  } else {
+  } else {                                     // Nao fica abaixo de 0, melhor não -1//
     answerClicked.classList.add("incorrect"); // vc clicou a pergunta incorreta //
-    document.getElementById('feedbackMessage').textContent = 'Você Errou (+0pontos)';
+    document.getElementById('feedbackMessage').textContent = 'Você Errou (+0ponto)'; //
     document.getElementById('feedbackMessage').classList.remove('hide'); 
   }
   document.querySelectorAll(".answer").forEach(button => {
