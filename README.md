@@ -43,7 +43,7 @@
 </p>
 
 <p align="center">
-  <img src="images/contagem.png" alt="Alt Text" width="800"> 
+  <img src="images/progresso.png" alt="Alt Text" width="800"> 
 </p>
 
 <p align="center">
