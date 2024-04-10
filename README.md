@@ -35,7 +35,7 @@
   <img src="images/progresso.png" alt="Contagem de Acertos" width="800"> 
 </p>
 <p align="center">
-  No final do quiz, haverá uma contagem de acertos sobre o total de perguntas. 
+  No final do quiz, haverá uma contagem de acertos sobre o total de perguntas e pontos possíveis, além da mensagem "Quiz Encerrado"!
 </p>
 <p align="center">
   <img src="images/contagem.png" alt="Contagem de Pontos" width="800"> 
