@@ -47,6 +47,14 @@
 </p>
 
 <p align="center">
+  Aparti da primeira pergunta havera Progresso de 1/6 do total de perguntas.Caso voce acerte ganhará 1 ou nada se errar.
+</p>
+
+<p align="center">
+  <img src="images/contagem.png" alt="Alt Text" width="800"> 
+</p>
+
+<p align="center">
   Após responder, você terá a opção de refazer o quiz! 
 </p>
 
