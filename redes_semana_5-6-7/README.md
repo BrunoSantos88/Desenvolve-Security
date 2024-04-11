@@ -381,7 +381,7 @@ default-information originate
 ````
 
 - ISP 1 - A
-<img src="show ip route.png" alt="Alt Text" width="1000">
+<img src="show ip route.png" alt="Alt Text" width="800">
 
  - Router -B  Data Center Local
  - Alterar saida para 0.0.0.0 150.1.1.1
@@ -392,4 +392,4 @@ default-information originate
   configure terminal
   ip route 0.0.0.0 0.0.0.0 serial 0/1/0
 ````  
-<img src="show ip router router_b.png" alt="Alt Text" width="950">
+<img src="show ip router router_b.png" alt="Alt Text" width="800">
