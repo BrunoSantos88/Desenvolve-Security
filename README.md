@@ -29,13 +29,13 @@
    <img src="images/proxima.png" alt="Botão Próxima Pergunta" width="800"> 
 </p>
 <p align="center">
-  A partir da primeira pergunta, haverá Progresso de 1/6 do total de perguntas. Caso você acerte, ganhará 1 ponto; caso erre, não ganhará pontos.
+  A partir da primeira pergunta, haverá um progresso de 1/6 do total de perguntas. Caso você acerte, ganhará 1 ponto; caso erre, não ganhará pontos.
 </p>
 <p align="center">
   <img src="images/progresso.png" alt="Contagem de Acertos" width="800"> 
 </p>
 <p align="center">
-  No final do quiz, haverá uma contagem de acertos sobre o total de perguntas e pontos possíveis, além da mensagem "Quiz Encerrado"!
+  A partir da primeira pergunta, haverá um progresso de 1/5 do total de perguntas e um progresso de pontos fixo. O contador começará zerado e, após a primeira pergunta, será adicionado quando começar a segunda pergunta. Caso você acerte, ganhará 1 ponto; caso erre, não ganhará pontos.
 </p>
 <p align="center">
   <img src="images/pontos.png" alt="Contagem de Pontos" width="800"> 
@@ -49,3 +49,4 @@ Vamos jogar?
 <p align="center">
 https://desafioquizdesenvolvebrsantos.s3.us-east-2.amazonaws.com/quiz/index.html
 </p>
+Se precisar de mais alguma c
