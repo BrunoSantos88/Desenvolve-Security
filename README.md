@@ -38,7 +38,7 @@
   A partir da primeira pergunta, haverá um progresso de 1/5 do total de perguntas e um progresso de pontos fixo. O contador começará zerado e, após a primeira pergunta, será adicionado quando começar a segunda pergunta. Caso você acerte, ganhará 1 ponto; caso erre, não ganhará pontos.
 </p>
 <p align="center">
-  <img src="images/pontos.png" alt="Contagem de Pontos" width="800"> 
+  <img src="images/quizfinalizado.png" alt="Contagem de Pontos" width="800"> 
 </p>
 <p align="center">
   Após responder, você terá a opção de refazer o quiz! 
