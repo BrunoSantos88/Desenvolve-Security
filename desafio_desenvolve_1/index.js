@@ -150,10 +150,10 @@ const questions = [
   },
 ];
 
-//Progress Quiz// Hide Html inincio iniciar quiz/ remove hide click apos click//
+//progress Quiz// Hide Html inincio iniciar quiz/ remove hide click apos click//
 document.querySelector('.start-quiz').addEventListener('click', showProgressMessage);
 
-//Funcão que vai remover hide, apos clicar StartQuiz///
+//Funcão de tira hide apos clicar StartQuiz///
 function showProgressMessage() {
   var progressMessage = document.getElementById('progressMessage');
   if (progressMessage) {
@@ -165,7 +165,7 @@ $nextQuestionButton.addEventListener('click', function () {
   updateProgressMessage();
 });
 
-//Funçao de prograsso, depois de clicar inicar QUIZ///
+//Fuçao de prograsso//Depois de Clicar Inicar QUIZ///
 function updateProgressMessage() {
 const $progressMessage = document.querySelector(".progress-message");
 const totalQuestions = questions.length;
@@ -174,11 +174,7 @@ const currentQuestionNumber = currentQuestionIndex + 1; //começar 1/6 ir ate 6/
 if (currentQuestionNumber <= totalQuestions + 1 ) {
   $progressMessage.textContent = `Quiz ${currentQuestionNumber}/${totalQuestions}`;
   if (currentQuestionNumber === totalQuestions +1 ) {
-<<<<<<< HEAD
     $progressMessage.textContent = "Quiz Finalizado"; /// Encerramento Quiz Finalizado //
-=======
-    $progressMessage.textContent = "Quiz Finalizado!"; /// Encerramento Quiz Finalizado //
->>>>>>> 9c1b027d522fbe948e2383429d24a1cf6ad7e211
   }
 } else {
   $progressMessage.style.display = "none"; 
@@ -239,7 +235,6 @@ function selectAnswer(event) {
   });
 
   if (answerClicked.dataset.correct) {
-<<<<<<< HEAD
     answerClicked.classList.add("correct"); // Adiciona classe para estilo correto (verde)
     totalCorrect++;
     updateScore(); // Chama a função para atualizar a pontuação
@@ -247,16 +242,6 @@ function selectAnswer(event) {
   } else {
     answerClicked.classList.add("incorrect"); // Adiciona classe para estilo incorreto (vermelho)
     showFeedback("Incorreto!"); // Exibe feedback incorreto no elemento feedbackMessage
-=======
-    answerClicked.classList.add("correct"); //click na pergunta correta ou incorreta//
-    document.getElementById('feedbackMessage').textContent = 'Você Acertou (+1ponto)'; //Click correta//
-    document.getElementById('feedbackMessage').classList.remove('hide'); 
-    totalCorrect++;
-  } else {                                     // Nao fica abaixo de 0, melhor não colocar -1pontos//
-    answerClicked.classList.add("incorrect"); // Click na pergunta incorreta //
-    document.getElementById('feedbackMessage').textContent = 'Você Errou (+0ponto)'; // +-=- - ++=+ //
-    document.getElementById('feedbackMessage').classList.remove('hide'); 
->>>>>>> 9c1b027d522fbe948e2383429d24a1cf6ad7e211
   }
 
   document.querySelectorAll(".answer").forEach(button => {
@@ -266,15 +251,6 @@ function selectAnswer(event) {
   });
 
   $nextQuestionButton.classList.remove("hide");
-<<<<<<< HEAD
-=======
-
- /// Gambi // Timer ativar hide // Tentei colocar menos hide e remove hide //
-  setTimeout(() => {
-    document.getElementById('feedbackMessage').classList.add('hide');
-  }, 1000); //5s
-
->>>>>>> 9c1b027d522fbe948e2383429d24a1cf6ad7e211
   currentQuestionIndex++;
 }
 
