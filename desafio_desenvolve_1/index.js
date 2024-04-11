@@ -140,16 +140,6 @@ const questions = [
     ]
   },
   {
-    question: 'Qual foi o dia da aula inaugural do Desenvolve?',
-    answers: [
-      { text: '02 de janeiro às 20h', correct: false, feedback: "Incorreto! Não houve nenhum evento nesta data. A primeira live foi no dia 29 de janeiro." },
-      { text: '29 de janeiro às 19h', correct: true, feedback: "Correto! Essa foi a primeira live do grupo Desenvolve." },
-      { text: '02 de fevereiro às 20h', correct: false, feedback: "Incorreto! A primeira live foi no dia 29 de janeiro." },
-      { text: '08 de fevereiro às 8h da manhã', correct: false, feedback: "Incorreto! A primeira live foi no dia 29 de janeiro." },
-    ]
-  },
-  
-  {
     question: 'Qual é a data para entregar o primeiro projeto?',
     answers: [
       { text: '16 de abril no grupo WhatsApp do Desenvolve.', correct: false },
@@ -184,7 +174,7 @@ const currentQuestionNumber = currentQuestionIndex + 1; //começar 1/6 ir ate 6/
 if (currentQuestionNumber <= totalQuestions + 1 ) {
   $progressMessage.textContent = `Quiz ${currentQuestionNumber}/${totalQuestions}`;
   if (currentQuestionNumber === totalQuestions +1 ) {
-    $progressMessage.textContent = "Quiz Encerrado"; /// Encerramento Quiz Finalizado //
+    $progressMessage.textContent = "Quiz Finalizado"; /// Encerramento Quiz Finalizado //
   }
 } else {
   $progressMessage.style.display = "none"; 
@@ -192,33 +182,86 @@ if (currentQuestionNumber <= totalQuestions + 1 ) {
 }
 
 
-///Feedback Quiz Acertou ou Errou///
+///Score quiz point//
+document.querySelector('.start-quiz').addEventListener('click', showScoreMessage);
+
+// Function to show the score message after clicking Start Quiz
+function showScoreMessage() {
+  const scoreMessage = document.getElementById('scoreMessage');
+  if (scoreMessage) {
+    scoreMessage.classList.remove('hide'); // Remove the 'hide' class from scoreMessage
+  }
+}
+
+$nextQuestionButton.addEventListener('click', updateScoreMessage);
+
+// Function to update the score message after answering a question
+function updateScoreMessage() {
+  const scoreMessage = document.getElementById('scoreMessage');
+  if (scoreMessage) {
+    scoreMessage.textContent = `QuizPoints: ${score}`; // Update scoreMessage with the current score
+    scoreMessage.classList.remove('hide'); // Make sure scoreMessage is not hidden
+  }
+}
+
+
+//score progresso//
+// Inicialize a pontuação como uma variável global
+let score = 0;
+
+// Função para atualizar a pontuação
+function updateScore() {
+  score++; // Adiciona 1 ponto por resposta correta
+}
+
+// Função para exibir a pontuação atualizada após responder a uma pergunta
+function showScoreMessage() {
+  const scoreMessage = document.getElementById('scoreMessage');
+  scoreMessage.textContent = `QuizPoints: ${score}`; // Atualiza a mensagem de pontuação
+  scoreMessage.classList.remove('hide'); // Exibe a mensagem de pontuação
+}
+
+// Adiciona um ouvinte de evento ao botão "Start Quiz"
+document.querySelector('.start-quiz').addEventListener('click', function() {
+  const feedbackMessage = document.getElementById('feedbackMessage');
+  feedbackMessage.classList.remove('hide'); // Exibe o feedback ao clicar em "Start Quiz"
+});
+
+// Função para exibir feedback e atualizar a pontuação
 function selectAnswer(event) {
   const answerClicked = event.target;
   document.querySelectorAll(".answer").forEach(button => {
     button.disabled = true;
   });
+
   if (answerClicked.dataset.correct) {
-    answerClicked.classList.add("correct"); //click na pergunta correta/
-    document.getElementById('feedbackMessage').textContent = 'Você Acertou (+1ponto)';
-    document.getElementById('feedbackMessage').classList.remove('hide'); 
+    answerClicked.classList.add("correct"); // Adiciona classe para estilo correto (verde)
     totalCorrect++;
-  } else {                                     // Nao fica abaixo de 0, melhor não -1//
-    answerClicked.classList.add("incorrect"); // vc clicou a pergunta incorreta //
-    document.getElementById('feedbackMessage').textContent = 'Você Errou (+0ponto)'; //
-    document.getElementById('feedbackMessage').classList.remove('hide'); 
+    updateScore(); // Chama a função para atualizar a pontuação
+    showFeedback("Correto!"); // Exibe feedback correto no elemento feedbackMessage
+  } else {
+    answerClicked.classList.add("incorrect"); // Adiciona classe para estilo incorreto (vermelho)
+    showFeedback("Incorreto!"); // Exibe feedback incorreto no elemento feedbackMessage
   }
+
   document.querySelectorAll(".answer").forEach(button => {
     if (button.dataset.correct) {
       button.classList.add("correct");
     }
   });
+
   $nextQuestionButton.classList.remove("hide");
-
- /// Gambi // Timer do feedback // Ativar hide // Tentei colocar menos hide e remove hide //
-  setTimeout(() => {
-    document.getElementById('feedbackMessage').classList.add('hide');
-  }, 1000);
-
   currentQuestionIndex++;
+}
+
+// Função para exibir feedback por um curto período de tempo
+function showFeedback(message) {
+  const feedbackElement = document.getElementById("feedbackMessage");
+  feedbackElement.textContent = message;
+  feedbackElement.classList.remove('hide'); // Exibe o feedback
+
+  // Define um timeout para ocultar o feedback após 2 segundos
+  setTimeout(function() {
+    feedbackElement.classList.add('hide'); // Oculta o feedback
+  }, 2000);
 }

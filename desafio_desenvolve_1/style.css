@@ -147,23 +147,22 @@ footer {
 .progress-message {
 	float: left;
 	text-align: left;
-	margin-top: 20px;
 	font-size: 30px;
 	color: white;
 }
 
-.feedback-message{
+.score-message{
   float: right;
 	text-align: right;
-	margin-top: 20px;
 	font-size: 30px;
 	color: white;
 }
 
-#Acertou{
-  color: green;
-}
-
-#Errou {
-  color: red;
+.feedback-message {
+  float: center;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  margin-top: 0px; /* Adicione a margem superior desejada aqui */
+  margin-bottom: 0px; /* Adicione a margem inferior desejada aqui */
 }
