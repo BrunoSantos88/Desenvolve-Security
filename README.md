@@ -49,4 +49,3 @@ Vamos jogar?
 <p align="center">
 https://desafioquizdesenvolvebrsantos.s3.us-east-2.amazonaws.com/quiz/index.html
 </p>
-Se precisar de mais alguma c
