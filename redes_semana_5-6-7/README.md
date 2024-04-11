@@ -224,7 +224,7 @@ exit
 - show ip nat translations
 - ping 150.1.1.1
 
-<img src="rede_nat.png" alt="Alt Text" width="1000">
+<img src="rede_nat.png" alt="Alt Text" width="800">
 
  #
 
