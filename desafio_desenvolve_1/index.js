@@ -181,37 +181,35 @@ if (currentQuestionNumber <= totalQuestions + 1 ) {
 }
 }
 
-
-///Score quiz point//
+///Score QuizPoint//
 document.querySelector('.start-quiz').addEventListener('click', showScoreMessage);
 
-// Function to show the score message after clicking Start Quiz
+// Função apos click remover Hide
 function showScoreMessage() {
   const scoreMessage = document.getElementById('scoreMessage');
   if (scoreMessage) {
-    scoreMessage.classList.remove('hide'); // Remove the 'hide' class from scoreMessage
+    scoreMessage.classList.remove('hide'); // Remover hide Score //
   }
 }
 
 $nextQuestionButton.addEventListener('click', updateScoreMessage);
 
-// Function to update the score message after answering a question
+
 function updateScoreMessage() {
   const scoreMessage = document.getElementById('scoreMessage');
   if (scoreMessage) {
-    scoreMessage.textContent = `QuizPoints: ${score}`; // Update scoreMessage with the current score
-    scoreMessage.classList.remove('hide'); // Make sure scoreMessage is not hidden
+    scoreMessage.textContent = `QuizPoints: ${score}`;  //inicar com QuizPoints/// 
+    scoreMessage.classList.remove('hide'); // HidePoints//
   }
 }
 
 
 //score progresso//
-// Inicialize a pontuação como uma variável global
-let score = 0;
+let score = 0; //Começar com 0 //
 
 // Função para atualizar a pontuação
 function updateScore() {
-  score++; // Adiciona 1 ponto por resposta correta
+  score++; // Adiciona 1 ponto por resposta correta e nao adicionar nada incorreta//
 }
 
 // Função para exibir a pontuação atualizada após responder a uma pergunta
@@ -235,12 +233,12 @@ function selectAnswer(event) {
   });
 
   if (answerClicked.dataset.correct) {
-    answerClicked.classList.add("correct"); // Adiciona classe para estilo correto (verde)
+    answerClicked.classList.add("correct"); 
     totalCorrect++;
-    updateScore(); // Chama a função para atualizar a pontuação
+    updateScore(); // 
     showFeedback("Correto!"); // Exibe feedback correto no elemento feedbackMessage
   } else {
-    answerClicked.classList.add("incorrect"); // Adiciona classe para estilo incorreto (vermelho)
+    answerClicked.classList.add("incorrect"); 
     showFeedback("Incorreto!"); // Exibe feedback incorreto no elemento feedbackMessage
   }
 
@@ -263,5 +261,5 @@ function showFeedback(message) {
   // Define um timeout para ocultar o feedback após 2 segundos
   setTimeout(function() {
     feedbackElement.classList.add('hide'); // Oculta o feedback
-  }, 2000);
+  }, 1700); // Tempo para hide FeedbackMessage///
 }
