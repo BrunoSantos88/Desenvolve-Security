@@ -204,13 +204,7 @@ function updateScoreMessage() {
 }
 
 
-//score progresso//
-let score = 0; //Começar com 0 //
-
-// Função para atualizar a pontuação
-function updateScore() {
-  score++; // Adiciona 1 ponto por resposta correta e nao adicionar nada incorreta//
-}
+let score = 0; // Inicia com pontuação zero
 
 // Função para exibir a pontuação atualizada após responder a uma pergunta
 function showScoreMessage() {
@@ -218,12 +212,6 @@ function showScoreMessage() {
   scoreMessage.textContent = `QuizPoints: ${score}`; // Atualiza a mensagem de pontuação
   scoreMessage.classList.remove('hide'); // Exibe a mensagem de pontuação
 }
-
-// Adiciona um ouvinte de evento ao botão "Start Quiz"
-document.querySelector('.start-quiz').addEventListener('click', function() {
-  const feedbackMessage = document.getElementById('feedbackMessage');
-  feedbackMessage.classList.remove('hide'); // Exibe o feedback ao clicar em "Start Quiz"
-});
 
 // Função para exibir feedback e atualizar a pontuação
 function selectAnswer(event) {
@@ -235,7 +223,8 @@ function selectAnswer(event) {
   if (answerClicked.dataset.correct) {
     answerClicked.classList.add("correct"); 
     totalCorrect++;
-    updateScore(); // 
+    score++; // Incrementa a pontuação por resposta correta
+    showScoreMessage(); // Atualiza e exibe a pontuação
     showFeedback("Correto!"); // Exibe feedback correto no elemento feedbackMessage
   } else {
     answerClicked.classList.add("incorrect"); 
@@ -251,7 +240,6 @@ function selectAnswer(event) {
   $nextQuestionButton.classList.remove("hide");
   currentQuestionIndex++;
 }
-
 // Função para exibir feedback por um curto período de tempo
 function showFeedback(message) {
   const feedbackElement = document.getElementById("feedbackMessage");
@@ -261,5 +249,6 @@ function showFeedback(message) {
   // Define um timeout para ocultar o feedback após 2 segundos
   setTimeout(function() {
     feedbackElement.classList.add('hide'); // Oculta o feedback
-  }, 1700); // Tempo para hide FeedbackMessage///
+  }, 1700); // Tempo
 }
+
