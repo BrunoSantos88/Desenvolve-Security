@@ -1,5 +1,5 @@
 
-   
+ <p align="center">  
    Como Jogar o Quiz Desafio
 </p>
 <p align="center">
