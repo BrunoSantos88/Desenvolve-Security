@@ -408,6 +408,6 @@ ip dhcp pool vlan20
 dns-server 190.1.1.2
 ````
 
-- Arquitetura BGP e OSP. REDE INOVA HAVAI .
+- Arquitetura BGP e OSP. REDE INOVAE HAVAI .
 
-<img src="redebgpinova.png" alt="Alt Text" width="800">
+<img src="redebgpinova.png" alt="Alt Text" width="1000">
