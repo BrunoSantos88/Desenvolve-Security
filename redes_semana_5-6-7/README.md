@@ -187,7 +187,7 @@ exit
 ip dhcp pool vlan20
 dns-server 172.16.4.2
 ````
-# Bug do packet tracer ou nao! Não aceita (.br) Servidor DNS (A --> IP). (packertracertv7).
+- Bug do packet tracer ou nao? não aceita (.br) servidor dns (A --> IP). (packertracertv7).
 <img src="inovae.png" alt="Alt Text" width="800"> </p>
 
 - Configura Router-A NAT.
@@ -396,8 +396,8 @@ default-information originate
 ````  
 <img src="show ip router router_b.png" alt="Alt Text" width="800">
 
-# DNS Servidor 190.1.1.2 (Inova.com) </p>
-- Configurar Router_B
+- DNS Servidor inovae está no 190.1.1.2 www.Inova.com </p>
+- Configurado no Router_B
 ````
 enable
 configure terminal
@@ -408,6 +408,6 @@ ip dhcp pool vlan20
 dns-server 190.1.1.2
 ````
 
-# Arquitetura BGP e OSP. REDE INOVA HAVAI .
+- Arquitetura BGP e OSP. REDE INOVA HAVAI .
 
 <img src="redebgpinova.png" alt="Alt Text" width="800">
