@@ -395,3 +395,20 @@ default-information originate
   ip route 0.0.0.0 0.0.0.0 serial 0/1/0
 ````  
 <img src="show ip router router_b.png" alt="Alt Text" width="800">
+
+# DNS Servidor 190.1.1.2 (Inova.com) </p>
+- Configurar Router_B
+````
+enable
+configure terminal
+ip dhcp pool vlan10
+dns-server 190.1.1.2
+exit
+ip dhcp pool vlan20
+dns-server 190.1.1.2
+````
+
+
+
+
+# Arquitetura BGP e OSP. REDE INOVA HAVAI .
