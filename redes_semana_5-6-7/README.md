@@ -408,6 +408,6 @@ ip dhcp pool vlan20
 dns-server 190.1.1.2
 ````
 
-- Arquitetura BGP e OSP. REDE INOVAE HAVAI .
+- Arquitetura BGP,OSPF e NAT. Link A e B. Configurado rede Inovae (Router_b) Havai Institute. Servidor DNS (A) IP 190.1.1.2 (www.inovae.com).
 
 <img src="redebgpinova.png" alt="Alt Text" width="1000">
