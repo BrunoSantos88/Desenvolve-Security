@@ -187,7 +187,7 @@ exit
 ip dhcp pool vlan20
 dns-server 172.16.4.2
 ````
-# Bug do packet tracer ou nao! Não aceita no DNS não aceita .br  (packertracertv7).
+# Bug do packet tracer ou nao! Não aceita (.br) Servidor DNS (A --> IP). (packertracertv7).
 <img src="inovae.png" alt="Alt Text" width="800"> </p>
 
 - Configura Router-A NAT.
