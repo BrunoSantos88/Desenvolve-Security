@@ -174,6 +174,8 @@ deny tcp 172.16.0.4 0.0.255.255 172.16.4.2 0.0.0.0
 permit ip any any
 exit
 ````
+<img src="rede_stp.png" alt="Alt Text" width="1000"> </p>
+
 
 - Configurar Router_B para DNS 
 ````
@@ -185,8 +187,8 @@ exit
 ip dhcp pool vlan20
 dns-server 172.16.4.2
 ````
-<img src="rede_stp.png" alt="Alt Text" width="1000">
 
+<img src="inovae.png" alt="Alt Text" width="1000"> </p>
 
 - Configura Router-A NAT.
 
