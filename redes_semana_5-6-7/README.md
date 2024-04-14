@@ -174,7 +174,7 @@ deny tcp 172.16.0.4 0.0.255.255 172.16.4.2 0.0.0.0
 permit ip any any
 exit
 ````
-<img src="rede_stp.png" alt="Alt Text" width="800"> </p>
+<img src="/imagens/rede_stp.png" alt="Alt Text" width="800"> </p>
 
 
 - Configurar Router_B para DNS 
@@ -188,7 +188,7 @@ ip dhcp pool vlan20
 dns-server 172.16.4.2
 ````
 - Bug do packet tracer ou nao? não aceita (.br) servidor dns (A --> IP). (packertracertv7).
-<img src="inovae.png" alt="Alt Text" width="800"> </p>
+<img src="imagens/inovae.png" alt="Alt Text" width="800"> </p>
 
 - Configura Router-A NAT.
 
@@ -226,9 +226,7 @@ exit
 - show ip nat translations
 - ping 150.1.1.1
 
-<img src="rede_nat.png" alt="Alt Text" width="800">
-
- #
+<img src="imagens/rede_nat.png" alt="Alt Text" width="800">
 
 - ISP 1 - A
 - ip 150.1.1.5 (Rede Link)
@@ -383,7 +381,7 @@ default-information originate
 ````
 
 - ISP 1 - A
-<img src="show ip route.png" alt="Alt Text" width="800">
+<img src="imagens/show ip route.png" alt="Alt Text" width="800">
 
  - Router -B  Data Center Local
  - Alterar saida para 0.0.0.0 150.1.1.1
@@ -394,7 +392,7 @@ default-information originate
   configure terminal
   ip route 0.0.0.0 0.0.0.0 serial 0/1/0
 ````  
-<img src="show ip router router_b.png" alt="Alt Text" width="800">
+<img src="imagens/show ip router router_b.png" alt="Alt Text" width="800">
 
 - DNS Servidor inovae está no 190.1.1.2 www.Inova.com </p>
 - Configurado no Router_B
@@ -410,7 +408,7 @@ dns-server 190.1.1.2
 
 - Arquitetura BGP,OSPF e NAT. Link A e B. Configurado rede Inovae (Router_b) Havai Institute. Servidor DNS (A) IP 190.1.1.2 (www.inovae.com).
 
-<img src="redebgpinova.png" alt="Alt Text" width="1000">
+<img src="imagens/redebgpinova.png" alt="Alt Text" width="1000">
 
 - Configuração Servidor Radius IP 172.16.0.250.
 - Criar 2 roteadores com Conexao Ap-Server na mesma rede Vlan3, com os IP 172.16.0.2 e 172.16.0.4
