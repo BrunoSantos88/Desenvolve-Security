@@ -411,3 +411,10 @@ dns-server 190.1.1.2
 - Arquitetura BGP,OSPF e NAT. Link A e B. Configurado rede Inovae (Router_b) Havai Institute. Servidor DNS (A) IP 190.1.1.2 (www.inovae.com).
 
 <img src="redebgpinova.png" alt="Alt Text" width="1000">
+
+- Configuração Servidor Radius IP 172.16.0.250.
+- Criar 2 roteadores com Conexao Ap-Server na mesma rede Vlan3, com os IP 172.16.0.2 e 172.16.0.4
+- Conexao wifi para dois notebook Pesquisa C e D.
+- Criado login e senha no servidor radius para os roteadores, com acesso somente via WPA2.
+
+<img src="Radiusconfiguraçao.png" alt="Alt Text" width="1000">
