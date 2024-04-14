@@ -417,4 +417,4 @@ dns-server 190.1.1.2
 - Conexao wifi para dois notebook Pesquisa C e D.
 - Criado login e senha no servidor radius para os roteadores, com acesso somente via WPA2.
 
-<img src="Radiusconfiguraçao.png" alt="Alt Text" width="1000">
+<img src="radius-arquitetura.png" alt="Alt Text" width="1000">
