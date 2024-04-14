@@ -174,7 +174,7 @@ deny tcp 172.16.0.4 0.0.255.255 172.16.4.2 0.0.0.0
 permit ip any any
 exit
 ````
-<img src="/imagens/rede_stp.png" alt="Alt Text" width="800"> </p>
+<img src="imagens/rede_stp.png" alt="Alt Text" width="800"> </p>
 
 
 - Configurar Router_B para DNS 
