@@ -26,4 +26,4 @@ jobs:
           pip install gdown
 
       - name: Download files
-        run: gdown --id YOUR_GOOGLE_DRIVE_FILE_ID
+        run: gdown --id https://drive.google.com/drive/u/0/folders/1cuu_g9dgaMfc-84nDOkxHwuqY7P4FPJv
