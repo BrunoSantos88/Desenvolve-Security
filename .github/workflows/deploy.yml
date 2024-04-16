@@ -1,4 +1,4 @@
-name: Deploy to GCP Bucket
+name: Deploy to GCS Bucket
 
 on:
   push:
@@ -7,8 +7,8 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
-
+    runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -19,10 +19,6 @@ jobs:
           project_id: ${{ secrets.GCP_PROJECT_ID }}
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
-
-      - name: Install dependencies and build
-        run: |
-          # Commands to install dependencies and build your project
 
       - name: Deploy to GCP Bucket
         run: |
