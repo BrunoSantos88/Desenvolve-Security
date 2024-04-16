@@ -22,4 +22,4 @@ jobs:
 
       - name: Deploy to GCS Bucket
         run: |
-         gsutil cp desafio_desenvolve_1 gs://desafioquiz
+         gsutil cp -r desafio_desenvolve_1 gs://desafioquiz
