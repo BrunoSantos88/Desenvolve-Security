@@ -20,6 +20,6 @@ jobs:
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
 
-      - name: Deploy to GCP Bucket
+      - name: Deploy to GCS Bucket
         run: |
           gsutil rsync -r . gs://desafioquiz
