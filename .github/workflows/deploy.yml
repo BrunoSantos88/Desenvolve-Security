@@ -3,7 +3,7 @@ name: Deploy to GCP Bucket
 on:
   push:
     branches:
-      - main
+      - desafio
 
 jobs:
   deploy:
