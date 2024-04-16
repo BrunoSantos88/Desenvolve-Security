@@ -48,6 +48,5 @@
 Vamos jogar? 
 </p>
 <p align="center">
-Arrumar deploy na GCP ou AWS) </p>
 https://desafioquizdesenvolvebrsantos.s3.us-east-2.amazonaws.com/quiz/index.html
 </p>
