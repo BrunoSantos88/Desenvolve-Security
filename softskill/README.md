@@ -5,4 +5,4 @@ Soft Skills e comunicação assertiva são muito importantes para alguém de App
 
 
 
-Link Referencia: https://github.com/BrunoSantos88/roadmap-appsecbr
+Link Referencia: https://github.com/PedroKetzer/roadmap-appsecbr
