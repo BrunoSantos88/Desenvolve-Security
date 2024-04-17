@@ -5,35 +5,36 @@
 
 install chocolatey </p>
 instalar nginx windows.</p>
-´´´´
+````
 choco install nginx</p>
-´´´´
+````
 instalar nginx linux
-´´´´
+````
 sudo apt install nginx -y
 sudo systemctl start nginx 
 sudo systemctl enable nginx
-´´´´
+````
 
 dockerfile</p>
-´´´´
-FROM nginx:latest
-COPY pasta /usr/share/nginx/html
+````
+FROM nginx:latest </p>
+COPY pasta /usr/share/nginx/html </p> 
 EXPOSE port
-´´´´
+````
 
 docker commandos </p>
-´´´´
+````
 docker run -d -p 80:80 nginx:latest
-´´´´
+````
 
 # Commando
 
-´´´´
+````
 nginx -h
-´´´´
+````
 
 - Configuração Exemplo</p>
+````
 etc/ 
 └── nginx/  
     ├── api_conf.d/ ………………………………… Subdirectory for per-API configuration 
@@ -44,3 +45,4 @@ etc/
     │   ├── ... 
     │   └── existing_apps.conf
     └── nginx.conf 
+````
