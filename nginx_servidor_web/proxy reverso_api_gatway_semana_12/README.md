@@ -14,6 +14,7 @@ sudo apt install nginx -y
 sudo systemctl start nginx 
 sudo systemctl enable nginx
 ´´´´
+
 dockerfile</p>
 ´´´´
 FROM nginx:latest
