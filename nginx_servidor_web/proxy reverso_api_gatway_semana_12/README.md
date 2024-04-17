@@ -30,3 +30,16 @@ docker run -d -p 80:80 nginx:latest
 ´´´´
 nginx -h
 ´´´´
+
+´´´´
+etc/ 
+└── nginx/  
+    ├── api_conf.d/ ………………………………… Subdirectory for per-API configuration 
+    │   └── warehouse_api.conf …… Definition and policy of the Warehouse API 
+    ├── api_backends.conf ………………… The backend services (upstreams) 
+    ├── api_gateway.conf …………………… Top-level configuration for the API gateway server
+    ├── api_json_errors.conf ………… HTTP error responses in JSON format
+    │   ├── ... 
+    │   └── existing_apps.conf
+    └── nginx.conf 
+´´´´
