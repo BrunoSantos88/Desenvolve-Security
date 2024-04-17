@@ -2,6 +2,7 @@
 <h3> NGINX: servidor Web, Proxy Reverso e API Gateway </h3>  </p>
 
 # instalando nginx
+
 install chocolatey </p>
 instalar nginx windows.</p>
 ´´´´
@@ -20,7 +21,7 @@ COPY pasta /usr/share/nginx/html
 EXPOSE port
 ´´´´
 
-docker</p>
+docker commandos </p>
 ´´´´
 docker run -d -p 80:80 nginx:latest
 ´´´´
@@ -31,6 +32,7 @@ docker run -d -p 80:80 nginx:latest
 nginx -h
 ´´´´
 
+- Configuração Exemplo</p>
 etc/ 
 └── nginx/  
     ├── api_conf.d/ ………………………………… Subdirectory for per-API configuration 
