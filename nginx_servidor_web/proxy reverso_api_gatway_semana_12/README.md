@@ -33,7 +33,7 @@ docker run -d -p 80:80 nginx:latest
 nginx -h
 ````
 
-- Configuração Exemplo</p>
+- Configuração nginx.conf </p>
 ````
 etc/ 
 └── nginx/  
