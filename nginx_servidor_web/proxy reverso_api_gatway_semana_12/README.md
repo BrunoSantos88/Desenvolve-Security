@@ -1,0 +1,32 @@
+
+<h3> NGINX: servidor Web, Proxy Reverso e API Gateway </h3>  </p>
+
+# instalando nginx
+install chocolatey </p>
+instalar nginx windows.</p>
+´´´´
+choco install nginx</p>
+´´´´
+instalar nginx linux
+´´´´
+sudo apt install nginx -y
+sudo systemctl start nginx 
+sudo systemctl enable nginx
+´´´´
+dockerfile</p>
+´´´´
+FROM nginx:latest
+COPY pasta /usr/share/nginx/html
+EXPOSE port
+´´´´
+
+docker</p>
+´´´´
+docker run -d -p 80:80 nginx:latest
+´´´´
+
+# Commando
+
+´´´´
+nginx -h
+´´´´
