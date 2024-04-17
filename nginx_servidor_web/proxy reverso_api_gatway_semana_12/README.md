@@ -31,7 +31,6 @@ docker run -d -p 80:80 nginx:latest
 nginx -h
 ´´´´
 
-´´´´
 etc/ 
 └── nginx/  
     ├── api_conf.d/ ………………………………… Subdirectory for per-API configuration 
@@ -42,4 +41,3 @@ etc/
     │   ├── ... 
     │   └── existing_apps.conf
     └── nginx.conf 
-´´´´
