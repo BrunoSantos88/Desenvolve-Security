@@ -6,7 +6,7 @@
 install chocolatey </p>
 instalar nginx windows.</p>
 ````
-choco install nginx</p>
+choco install nginx
 ````
 instalar nginx linux
 ````
@@ -17,7 +17,7 @@ sudo systemctl enable nginx
 
 dockerfile</p>
 ````
-FROM nginx:latest </p>
+FROM nginx:latest 
 COPY pasta /usr/share/nginx/html </p> 
 EXPOSE port
 ````
