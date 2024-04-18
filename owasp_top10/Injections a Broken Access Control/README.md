@@ -30,6 +30,6 @@ hql link: Link: https://www.geeksforgeeks.org/hibernate-query-language/
 # A3 Sensitive Data Exposure
 
 mitre-attack Multi-factor Authentication  </p>
-<a href=https://mitre-attack.github.io/attack-navigator//#layerURL=https%3A%2F%2Fattack.mitre.org%2Fmitigations%2FM1032%2FM1032-enterprise-layer.json/> Multi-factor Authentication </a>  </p>
+<img src="imagens\Multifactor_Authentication_M1032.svg" alt="Alt Text" width="1000"> </p>
 
 Link: https://github.com/OWASP/www-project-top-ten/blob/master/2017/A3_2017-Sensitive_Data_Exposure.md
