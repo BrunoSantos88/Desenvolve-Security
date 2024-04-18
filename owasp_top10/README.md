@@ -7,5 +7,5 @@
 
   # Os 10 principais riscos de segurança de aplicativos da Web
 
-  <img src="/imagens/mapping.png" alt="Alt Text" width="800"> </p>
+  <img src="imagens/mapping.png" alt="Alt Text" width="800"> </p>
 
