@@ -1,0 +1,26 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/focal64"
+  config.vm.hostname = "servidor01"
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "1024" # Configuração de memória atualizada para 1GB
+  end
+
+  config.vm.network "public_network", bridge: "TP-Link Wireless USB Adapter", ip: "192.168.15.10"
+  config.vm.network "forwarded_port", guest: 80, host: 8081, id: "http"
+  
+
+  # Configuração de sincronização de pastas
+  config.vm.synced_folder "quiz/", "/var/www/html/"
+
+
+  config.vm.provision "shell", inline: <<-SHELL
+    sudo apt-get update
+    sudo apt-get install -y nginx
+    sudo systemctl restart nginx
+    sudo chown -R www-data:www-data /var/www/quiz
+    sudo chmod -R 755 /var/www/quiz
+  SHELL
+
+  config.ssh.insert_key = false
+end

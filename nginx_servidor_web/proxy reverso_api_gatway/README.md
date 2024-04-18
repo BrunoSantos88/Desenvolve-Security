@@ -33,11 +33,6 @@ docker run -d -p 80:80 nginx:latest
 nginx -h
 ````
 
-<<<<<<< HEAD
-- Organizing the NGINX Configuration</p>
-=======
-- Configuração nginx.conf </p>
->>>>>>> 39e47e0c567e2d21205147c880e5583d7c8c47fa
 ````
 etc/ 
 └── nginx/  
@@ -108,3 +103,6 @@ upstream warehouse_pricing {
 ````
 
 - link Referencia: https://www.nginx.com/blog/deploying-nginx-plus-as-an-api-gateway-part-1/
+
+
+- Link nginx : https://docs.nginx.com/nginx/

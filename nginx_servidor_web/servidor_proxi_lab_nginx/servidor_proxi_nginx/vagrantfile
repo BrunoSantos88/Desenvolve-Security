@@ -1,0 +1,20 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/focal64"
+  config.vm.hostname = "meu-servidor"
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "1024"
+  end
+
+  config.vm.network "public_network", bridge: "TP-Link Wireless USB Adapter", ip: "192.168.15.7"
+  config.vm.network "forwarded_port", guest: 22, host: 2222, id: "ssh"
+  config.vm.network "forwarded_port", guest: 80, host: 8080, id: "http"
+  config.ssh.insert_key = false
+
+  config.vm.provision "shell", inline: <<-SHELL
+    sudo apt-get update
+    sudo apt-get install -y nginx
+  SHELL
+
+  config.ssh.insert_key = false
+end
