@@ -1,6 +1,9 @@
 <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" alt="JavaScript" target="_blank">
     <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black"></a> 
-<a href="https://docs.microsoft.com/en-us/powershell/" alt="PowerShell" target="_blank">
+<a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" alt="JavaScript" target="_blank">
+    <img alt="html" src="https://img.shields.io/badge/html-F7DF1E?style=flat&logo=html&logoColor=black">
+</a>
+
  
  <p align="center">  
    Como Jogar o Quiz Desafio
