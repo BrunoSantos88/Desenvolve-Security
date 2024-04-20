@@ -1,10 +1,10 @@
 <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" alt="JavaScript" target="_blank">
-    <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" width="40" height="auto" > </a> 
+    <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black"  > </a> 
 <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" alt="JavaScript" target="_blank">
-    <img alt="html" src="https://img.shields.io/badge/html-F7DF1E?style=flat&logo=html&logoColor=black&color=red" width="40" height="auto" >
+    <img alt="html" src="https://img.shields.io/badge/html-F7DF1E?style=flat&logo=html&logoColor=black&color=red"  >
 </a>
 <a href="https://www.example.com/css-docs" alt="CSS" target="_blank" class="shield">
-    <img alt="CSS" src="https://img.shields.io/badge/css-1572B6?style=flat&logo=css3&logoColor=white" width="40" height="auto">
+    <img alt="CSS" src="https://img.shields.io/badge/css-1572B6?style=flat&logo=css3&logoColor=white">
 </a>
  
  <p align="center">  
