@@ -27,9 +27,7 @@ hql link: Link: https://www.geeksforgeeks.org/hibernate-query-language/
 
 - O credential stuffing é um tipo de ataque cibernético que se aproveita do mau hábito dos usuários de reutilizar senhas; por isso, é preciso ser consciente no momento de escolher a sua combinação de segurança.
 
+link: https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication
+
 # A3 Sensitive Data Exposure
-
-mitre-attack Multi-factor Authentication  </p>
-<img src="imagens\Multifactor_Authentication_M1032.svg" alt="Alt Text" width="1000"> </p>
-
 Link: https://github.com/OWASP/www-project-top-ten/blob/master/2017/A3_2017-Sensitive_Data_Exposure.md
