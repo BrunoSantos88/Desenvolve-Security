@@ -58,8 +58,7 @@ codigo exemplo.
 Se esses controles não forem possíveis, considere usar patches virtuais, gateways de segurança de API ou Web Application Firewalls (WAFs) para detectar, monitorar e bloquear ataques XXE.
 
 <div style="display: flex;">
-    <img src="imagens/sast_2.png" alt="Alt Text" width="400" style="float: left;">
-    <img src="imagens/sast_1.png" alt="Alt Text" width="400" style="margin: 0 auto;">
+    <img src="imagens/sast_1.png" alt="Alt Text" width="500" style="margin: 0 auto;">
 
 </div>
 
