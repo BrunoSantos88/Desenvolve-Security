@@ -57,8 +57,10 @@ codigo exemplo.
 - As ferramentas SAST podem ajudar a detectar XXE no código-fonte, embora a revisão manual do código seja a melhor alternativa em aplicativos grandes e complexos com muitas integrações.
 Se esses controles não forem possíveis, considere usar patches virtuais, gateways de segurança de API ou Web Application Firewalls (WAFs) para detectar, monitorar e bloquear ataques XXE.
 
-<img src="imagens/sast_2.png" alt="Alt Text" width="300" style="float: left;"></p>
-<img src="imagens/sast_1.png" alt="Alt Text" width="300" style="float: center;"></p>
-<img src="imagens/sast_3.png" alt="Alt Text" width="300" style="float: right;"></p>
-a
+<div style="display: flex;">
+    <img src="imagens/sast_2.png" alt="Alt Text" width="300" style="float: left;">
+    <img src="imagens/sast_1.png" alt="Alt Text" width="300" style="margin: 0 auto;">
+    <img src="imagens/sast_3.png" alt="Alt Text" width="300" style="float: right;">
+</div>
+
 Link: https://owasp.org/www-project-top-ten/2017/A4_2017-XML_External_Entities_(XXE)
