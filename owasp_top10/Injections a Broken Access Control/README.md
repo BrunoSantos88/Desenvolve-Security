@@ -114,7 +114,8 @@ O controle de acesso só é eficaz se aplicado em código confiável do lado do 
 
 - Cenário nº 1 : o aplicativo usa dados não verificados em uma chamada SQL que acessa informações da conta: um invasor simplesmente modifica o parâmetro 'acct' no navegador para enviar o número de conta que desejar. Se não for verificado corretamente, o invasor pode acessar a conta de qualquer usuário. 
 </p>
- - Cenário nº 2 : um invasor simplesmente força a navegação para URLs de destino. Direitos de administrador são necessários para acessar a página de administração. Se um usuário não autenticado puder acessar qualquer uma das páginas, isso é uma falha. Se um não administrador puder acessar a página do administrador, isso é uma falha. </p>
+
+- Cenário nº 2 : um invasor simplesmente força a navegação para URLs de destino. Direitos de administrador são necessários para acessar a página de administração. Se um usuário não autenticado puder acessar qualquer uma das páginas, isso é uma falha. Se um não administrador puder acessar a página do administrador, isso é uma falha. </p>
 
 ````
 pstmt.setString(1, request.getParameter("acct"));
