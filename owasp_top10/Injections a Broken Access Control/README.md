@@ -30,7 +30,39 @@ hql link: Link: https://www.geeksforgeeks.org/hibernate-query-language/
 link: https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication
 
 # A3 Sensitive Data Exposure
+
+# O aplicativo é vulnerável?
+A primeira coisa é determinar as necessidades de proteção dos dados em trânsito e em repouso. Por exemplo, palavras-passe, números de cartão de crédito, registos de saúde, informações pessoais e segredos comerciais requerem proteção extra, especialmente se esses dados estiverem abrangidos por leis de privacidade, por exemplo, o Regulamento Geral de Proteção de Dados (GDPR) da UE, ou regulamentos, por exemplo, proteção de dados financeiros, como PCI Padrão de segurança de dados (PCI DSS). Para todos esses dados:
+* Algum dado é transmitido em texto não criptografado? Isso se aplica a protocolos como HTTP, SMTP e FTP. O tráfego externo da Internet é especialmente perigoso. Verifique todo o tráfego interno, por exemplo, entre balanceadores de carga, servidores web ou sistemas back-end.
+* Algum algoritmo criptográfico antigo ou fraco é usado por padrão ou em códigos mais antigos?
+* As chaves criptográficas padrão estão em uso, as chaves criptográficas fracas são geradas ou reutilizadas ou está faltando gerenciamento ou rotação adequada de chaves?
+* A criptografia não é aplicada, por exemplo, faltam diretivas ou cabeçalhos de segurança do agente do usuário (navegador)?
+* O agente do usuário (por exemplo, aplicativo, cliente de e-mail) não verifica se o certificado do servidor recebido é válido?
+Consulte ASVS Crypto (V7), Proteção de Dados (V9) e SSL/TLS (V10)
+
+# Como prevenir
+Faça pelo menos o seguinte e consulte as referências:
+* Classifique os dados processados, armazenados ou transmitidos por uma aplicação. Identifique quais dados são confidenciais de acordo com leis de privacidade, requisitos regulatórios ou necessidades comerciais.
+* Aplicar controles conforme classificação.
+* Não armazene dados confidenciais desnecessariamente. Descarte-o o mais rápido possível ou use tokenização ou mesmo truncamento compatível com PCI DSS. Os dados que não são retidos não podem ser roubados.
+* Certifique-se de criptografar todos os dados confidenciais em repouso.
+* Garantir que algoritmos, protocolos e chaves padrão fortes e atualizados estejam em vigor; use o gerenciamento de chaves adequado.
+* Criptografe todos os dados em trânsito com protocolos seguros, como TLS, com cifras Perfect Forward Secrecy (PFS), priorização de cifras pelo servidor e parâmetros seguros. Aplique a criptografia usando diretivas como HTTP Strict Transport Security ( HSTS ).
+* Desative o cache para respostas que contenham dados confidenciais.
+* Armazene senhas usando funções de hashing adaptativas e salgadas fortes com um fator de trabalho (fator de atraso), como Argon2 , scrypt , bcrypt ou PBKDF2 .
+* Verifique de forma independente a eficácia das configurações e definições.
+
+
+- Cenário nº 1 : um aplicativo criptografa números de cartão de crédito em um banco de dados usando criptografia automática de banco de dados. No entanto, esses dados são descriptografados automaticamente quando recuperados, permitindo que uma falha de injeção de SQL recupere números de cartão de crédito em texto não criptografado. </p>
+
+- Cenário nº 2 : um site não usa nem aplica TLS para todas as páginas ou oferece suporte a criptografia fraca. Um invasor monitora o tráfego de rede (por exemplo, em uma rede sem fio insegura), faz downgrade das conexões de HTTPS para HTTP, intercepta solicitações e rouba o cookie de sessão do usuário. O invasor então reproduz esse cookie e sequestra a sessão (autenticada) do usuário, acessando ou modificando os dados privados do usuário. Em vez do acima exposto, poderiam alterar todos os dados transportados, por exemplo, o destinatário de uma transferência de dinheiro. </p>
+
+- Cenário nº 3 : O banco de dados de senhas usa hashes simples ou sem sal para armazenar as senhas de todos. Uma falha no upload de arquivos permite que um invasor recupere o banco de dados de senhas. Todos os hashes sem sal podem ser expostos com uma tabela arco-íris de hashes pré-calculados. Hashes gerados por funções hash simples ou rápidas podem ser quebrados por GPUs, mesmo que tenham sido salgados.</p>
+
 Link: https://github.com/OWASP/www-project-top-ten/blob/master/2017/A3_2017-Sensitive_Data_Exposure.md
+
+
+
 
 # A4:2017-XML External Entities (XXE)
 
@@ -96,3 +128,5 @@ http://example.com/app/admin_getappInfo
 ````
 # Solução externas
 - PortSwigger
+
+link: https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control
