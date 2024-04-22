@@ -32,7 +32,7 @@ link: https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication
 # A3 Sensitive Data Exposure
 
 # O aplicativo é vulnerável?
-A primeira coisa é determinar as necessidades de proteção dos dados em trânsito e em repouso. Por exemplo, palavras-passe, números de cartão de crédito, registos de saúde, informações pessoais e segredos comerciais requerem proteção extra, especialmente se esses dados estiverem abrangidos por leis de privacidade, por exemplo, o Regulamento Geral de Proteção de Dados (GDPR) da UE, ou regulamentos, por exemplo, proteção de dados financeiros, como PCI Padrão de segurança de dados (PCI DSS). Para todos esses dados:
+A primeira coisa é determinar as necessidades de proteção dos dados em trânsito e em repouso. Por exemplo, palavras-passe, números de cartão de crédito, registos de saúde, informações pessoais e segredos comerciais requerem proteção extra, especialmente se esses dados estiverem abrangidos por leis de privacidade, por exemplo, o Regulamento Geral de Proteção de Dados (GDPR) da UE, ou regulamentos, por exemplo, proteção de dados financeiros, como PCI Padrão de segurança de dados (PCI DSS). Para todos esses dados:  </p>
 * Algum dado é transmitido em texto não criptografado? Isso se aplica a protocolos como HTTP, SMTP e FTP. O tráfego externo da Internet é especialmente perigoso. Verifique todo o tráfego interno, por exemplo, entre balanceadores de carga, servidores web ou sistemas back-end.
 * Algum algoritmo criptográfico antigo ou fraco é usado por padrão ou em códigos mais antigos?
 * As chaves criptográficas padrão estão em uso, as chaves criptográficas fracas são geradas ou reutilizadas ou está faltando gerenciamento ou rotação adequada de chaves?
@@ -50,7 +50,7 @@ Faça pelo menos o seguinte e consulte as referências:
 * Criptografe todos os dados em trânsito com protocolos seguros, como TLS, com cifras Perfect Forward Secrecy (PFS), priorização de cifras pelo servidor e parâmetros seguros. Aplique a criptografia usando diretivas como HTTP Strict Transport Security ( HSTS ).
 * Desative o cache para respostas que contenham dados confidenciais.
 * Armazene senhas usando funções de hashing adaptativas e salgadas fortes com um fator de trabalho (fator de atraso), como Argon2 , scrypt , bcrypt ou PBKDF2 .
-* Verifique de forma independente a eficácia das configurações e definições.
+* Verifique de forma independente a eficácia das configurações e definições. 
 
 
 - Cenário nº 1 : um aplicativo criptografa números de cartão de crédito em um banco de dados usando criptografia automática de banco de dados. No entanto, esses dados são descriptografados automaticamente quando recuperados, permitindo que uma falha de injeção de SQL recupere números de cartão de crédito em texto não criptografado. </p>
@@ -60,9 +60,6 @@ Faça pelo menos o seguinte e consulte as referências:
 - Cenário nº 3 : O banco de dados de senhas usa hashes simples ou sem sal para armazenar as senhas de todos. Uma falha no upload de arquivos permite que um invasor recupere o banco de dados de senhas. Todos os hashes sem sal podem ser expostos com uma tabela arco-íris de hashes pré-calculados. Hashes gerados por funções hash simples ou rápidas podem ser quebrados por GPUs, mesmo que tenham sido salgados.</p>
 
 Link: https://github.com/OWASP/www-project-top-ten/blob/master/2017/A3_2017-Sensitive_Data_Exposure.md
-
-
-
 
 # A4:2017-XML External Entities (XXE)
 
@@ -113,9 +110,11 @@ O controle de acesso só é eficaz se aplicado em código confiável do lado do 
 * Requisitos exclusivos de limite de negócios de aplicativos devem ser aplicados por modelos de domínio.
 * Desative a listagem de diretórios do servidor web e certifique-se de que os metadados dos arquivos (por exemplo, .git) e os arquivos de backup não estejam presentes nas raízes da web.
 * Registrar falhas de controle de acesso, alertar administradores quando apropriado (por exemplo, falhas repetidas).
-* Limite de taxa de acesso à API e ao controlador para minimizar os danos causados ​​por ferramentas de ataque automatizado.
+* Limite de taxa de acesso à API e ao controlador para minimizar os danos causados ​​por ferramentas de ataque automatizado.  </p>
 
-- Cenário nº 1 : o aplicativo usa dados não verificados em uma chamada SQL que acessa informações da conta: um invasor simplesmente modifica o parâmetro 'acct' no navegador para enviar o número de conta que desejar. Se não for verificado corretamente, o invasor pode acessar a conta de qualquer usuário. - Cenário nº 2 : um invasor simplesmente força a navegação para URLs de destino. Direitos de administrador são necessários para acessar a página de administração. Se um usuário não autenticado puder acessar qualquer uma das páginas, isso é uma falha. Se um não administrador puder acessar a página do administrador, isso é uma falha.
+- Cenário nº 1 : o aplicativo usa dados não verificados em uma chamada SQL que acessa informações da conta: um invasor simplesmente modifica o parâmetro 'acct' no navegador para enviar o número de conta que desejar. Se não for verificado corretamente, o invasor pode acessar a conta de qualquer usuário. 
+</p>
+ - Cenário nº 2 : um invasor simplesmente força a navegação para URLs de destino. Direitos de administrador são necessários para acessar a página de administração. Se um usuário não autenticado puder acessar qualquer uma das páginas, isso é uma falha. Se um não administrador puder acessar a página do administrador, isso é uma falha. </p>
 
 ````
 pstmt.setString(1, request.getParameter("acct"));
