@@ -60,7 +60,7 @@ Se esses controles não forem possíveis, considere usar patches virtuais, gatew
 <div style="display: flex;">
     <img src="imagens/sast_2.png" alt="Alt Text" width="300" style="float: left;">
     <img src="imagens/sast_1.png" alt="Alt Text" width="300" style="margin: 0 auto;">
-    <img src="imagens/sast_3.png" alt="Alt Text" width="300" style="float: right;">
+    <img src="imagens/sast_3.png" alt="Alt Text" width="500" style="float: right;">
 </div>
 
 Link: https://owasp.org/www-project-top-ten/2017/A4_2017-XML_External_Entities_(XXE)
