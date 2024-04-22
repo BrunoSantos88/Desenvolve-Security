@@ -63,3 +63,36 @@ Se esses controles não forem possíveis, considere usar patches virtuais, gatew
 </div>
 
 Link: https://owasp.org/www-project-top-ten/2017/A4_2017-XML_External_Entities_(XXE)
+
+# A5 Broken Access Control
+- Agentes de ameaças/vetores de ataque	Fraqueza de segurança	Impactos
+- Aplicativo. Específico	Explorabilidade: 2	Prevalência: 2	Detectabilidade: 2	Técnico: 3	Negócios ?
+- A exploração do controle de acesso é uma habilidade essencial dos invasores. As ferramentas SAST e - DAST podem detectar a ausência de controle de acesso, mas não podem verificar se ele está funcional quando está presente. O controle de acesso é detectável por meios manuais, ou possivelmente através de automação pela ausência de controles de acesso em determinados frameworks.
+ # O aplicativo é vulnerável?
+- O controle de acesso impõe políticas de forma que os usuários não possam agir fora das permissões pretendidas. As falhas normalmente levam à divulgação não autorizada de informações, modificação ou destruição de todos os dados ou à execução de uma função comercial fora dos limites do usuário. Vulnerabilidades comuns de controle de acesso incluem:
+* Ignorar verificações de controle de acesso modificando a URL, o estado interno do aplicativo ou a página HTML, ou simplesmente usando uma ferramenta de ataque de API personalizada.
+* Permitir que a chave primária seja alterada para o registro de outro usuário, permitindo visualizar ou editar a conta de outra pessoa.
+
+# Como prevenir
+O controle de acesso só é eficaz se aplicado em código confiável do lado do servidor ou API sem servidor, onde o invasor não pode modificar a verificação de controle de acesso ou os metadados.
+* Com exceção dos recursos públicos, negar por defeito.
+* Implemente mecanismos de controle de acesso uma vez e reutilize-os em todo o aplicativo, inclusive minimizando o uso do CORS.
+* Os controles de acesso do modelo devem impor a propriedade do registro, em vez de aceitar que o usuário possa criar, ler, atualizar ou excluir qualquer registro.
+* Requisitos exclusivos de limite de negócios de aplicativos devem ser aplicados por modelos de domínio.
+* Desative a listagem de diretórios do servidor web e certifique-se de que os metadados dos arquivos (por exemplo, .git) e os arquivos de backup não estejam presentes nas raízes da web.
+* Registrar falhas de controle de acesso, alertar administradores quando apropriado (por exemplo, falhas repetidas).
+* Limite de taxa de acesso à API e ao controlador para minimizar os danos causados ​​por ferramentas de ataque automatizado.
+
+- Cenário nº 1 : o aplicativo usa dados não verificados em uma chamada SQL que acessa informações da conta: um invasor simplesmente modifica o parâmetro 'acct' no navegador para enviar o número de conta que desejar. Se não for verificado corretamente, o invasor pode acessar a conta de qualquer usuário. - Cenário nº 2 : um invasor simplesmente força a navegação para URLs de destino. Direitos de administrador são necessários para acessar a página de administração. Se um usuário não autenticado puder acessar qualquer uma das páginas, isso é uma falha. Se um não administrador puder acessar a página do administrador, isso é uma falha.
+
+````
+pstmt.setString(1, request.getParameter("acct"));
+ResultSet results = pstmt.executeQuery( );
+
+http://example.com/app/accountInfo?acct=notmyacct
+
+http://example.com/app/getappInfo
+http://example.com/app/admin_getappInfo
+````
+# Solução externas
+- PortSwigger
