@@ -9,8 +9,6 @@
 
   # Os 10 principais riscos de segurança de aplicativos da Web
 
-  <img src="imagens/mapping.png" alt="Alt Text" width="1000"> </p>
-
 - A01:2021-Quebra de Controle de Acesso sobe da quinta posição; 94% das aplicação foram testados para alguma forma de controle de acesso quebrado. O 34 CWEs mapeados para Quebra de Controle de Acesso tiveram mais ocorrências em aplicações do que qualquer outra categoria.
 
 - A02:2021-Falhas Criptográficas sobe uma posição para #2, anteriormente conhecido como Exposição de Dados Sensíveis, que era um sintoma amplo em vez de uma causa raiz. O foco renovado aqui está nas falhas relacionadas à criptografia, que muitas vezes leva à exposição de dados confidenciais ou sistema comprometido.
@@ -31,7 +29,7 @@
 
 - A10:2021-Falsificação de Solicitação do Lado do Servidor foi adicionada a partir da pesquisa da comunidade, sendo a primeira da classificação. Os dados mostram uma taxa de incidência relativamente baixa com cobertura de teste acima da média, junto com classificações acima da média para potencial de exploração e impacto. Esta categoria representa o cenário em que os membros da comunidade de segurança estão nos dizendo que isso é importante, embora não esteja ilustrado nos dados neste momento.
 
-<img src="imagens/mapping2007-2011.png" alt="Alt Text" width="1000"> </p>
+<img src="imagens/mapping2017-2021.png" alt="Alt Text" width="1000"> </p>
 
 - Referencia:
 Link: https://owasp.org/Top10/pt_BR/
