@@ -34,7 +34,9 @@
 - Referencia:
 Link: https://owasp.org/Top10/pt_BR/
 
-# LAB PRATICOS
+- OWASP ACADAMY
+Link: https://owasp-academy.teachable.com/
 
+# LAB PRATICOS
 link: https://application.security/ </p>
 link: https://tryhackme.com/</p>
