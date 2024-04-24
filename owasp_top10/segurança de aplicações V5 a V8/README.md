@@ -10,6 +10,9 @@
 * Log Processing Requirements
 * Log Protection Requirements
 * Error Handling
+* General Data Protection
+* Client-side Data Protection
+* Sensitive Private Data
 
 
 - Descrição
