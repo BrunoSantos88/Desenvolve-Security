@@ -157,7 +157,6 @@ a segurança deve ser projetada para proteger contra prováveis ​​ameaças e
 firewalls de aplicativos ou comunicações seguras. Recomendamos o uso de modelagem de ameaças durante o design
 sprints, por exemplo, usando o OWASP Cornucopia ou ferramentas similares.  </p>
 
-# Descrição L1 L2 L3 CWE
 * 11.1.1 Verifique se a aplicação processará apenas fluxos de lógica de negócios para o mesmo usuário em
 ordem de etapas sequencial e sem pular etapas.  </p>
 
@@ -476,9 +475,9 @@ tipo).
 ajuda a mitigar o impacto de ataques XSS como HTML, DOM, JSON e JavaScript
 vulnerabilidades de injeção.
 
+* 14.4.4 Verifique se todas as respostas contêm um cabeçalho X-Content-Type-Options: nosniff. 
 
-* 14.4.4 Verifique se todas as respostas contêm um cabeçalho X-Content-Type-Options: nosniff. ✓ ✓ ✓ 116
-14.4.5 Verifique se um cabeçalho Strict-Transport-Security está incluído em todas as respostas e
+* 14.4.5 Verifique se um cabeçalho Strict-Transport-Security está incluído em todas as respostas e
 para todos os subdomínios, como Strict-Transport-Security: max-age=15724800;
 includeSubdomínios.
 
