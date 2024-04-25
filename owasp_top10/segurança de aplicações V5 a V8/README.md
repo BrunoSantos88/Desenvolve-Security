@@ -43,7 +43,6 @@
 * A lista de permissões é a abordagem mínima recomendada. A lista de bloqueio é propensa a erros e pode ser contornada com várias técnicas de evasão e pode ser perigosa quando depende dela mesma. Embora muitas vezes a lista de bloqueio possa ser evitada, ela pode ser útil para ajudar a detectar ataques óbvios. Portanto, embora a lista de permissões ajude a limitar a superfície de ataque, garantindo que os dados tenham a validade sintática e semântica correta, a lista de bloqueios ajuda a detectar e potencialmente interromper ataques óbvios. </p>
 
 Referencia: </p>
-Link: https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs
+Link: https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs  </p>
 
-Drive PDF </p>
-link: https://drive.google.com/file/d/1xeUWOu645Fq98XJ-R_B453ZMAE8HFnSB/view?usp=sharing
+Drive PDF:  https://drive.google.com/file/d/1xeUWOu645Fq98XJ-R_B453ZMAE8HFnSB/view?usp=sharing 
