@@ -507,3 +507,7 @@ corresponde e não suporta a origem "nula".
 
 * 14.5.4 Verifique se os cabeçalhos HTTP adicionados por um proxy confiável ou dispositivos SSO, como um
 token ao portador, são autenticados pelo aplicativo.
+
+
+Drive PDF </P>
+link: https://drive.google.com/file/d/1xeUWOu645Fq98XJ-R_B453ZMAE8HFnSB/view?usp=sharing
