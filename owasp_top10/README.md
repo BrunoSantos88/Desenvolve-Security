@@ -23,12 +23,12 @@
 <img src="imagens/mapping2017-2021.png" alt="Alt Text" width="1000"> </p>
 
 - Referencia:
-Link: https://owasp.org/Top10/pt_BR/
-Link: https://owasp.org/www-project-top-ten/
+Link: https://owasp.org/Top10/pt_BR/ </P>
+Link: https://owasp.org/www-project-top-ten/ </P>
 
-- OWASP ACADAMY
-Link: https://owasp-academy.teachable.com/
+- OWASP ACADAMY 
+Link: https://owasp-academy.teachable.com/ </P>
 
  - LAB PRATICOS
 link: https://application.security/ </p>
-link: https://tryhackme.com/</p>
+link: https://tryhackme.com/</p> </P>
