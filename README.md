@@ -24,7 +24,7 @@ Docker: criando e gerenciando containers. </p>
 
 
 # Desafios Praticos
- <img alt="HTML" src="https://img.shields.io/badge/HTML-239120?style=flat&logo=html5&logoColor=white"> <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black"> ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css3&logoColor=white)
+
  Desafio 1 - Criando um Quiz. </p>
  <a href= https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/desafio/> Criando uma Gameficação simples em HTML > CSS > Javascript </a>  </p> 
 
