@@ -45,4 +45,5 @@
 Referencia: </p>
 Link: https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs
 
-# Validation, Sanitization and Enconding Verification
+Drive PDF </p>
+link: https://drive.google.com/file/d/1xeUWOu645Fq98XJ-R_B453ZMAE8HFnSB/view?usp=sharing
