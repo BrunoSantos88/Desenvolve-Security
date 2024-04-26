@@ -4,7 +4,7 @@
 #  Desenvolve Alura - Trilha Security </h3> 
 
 📕 Packet tracert cisco . </p>
-<a href= https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/network_fundamentos/> labs packet tracert </a>  </p>
+<a href= https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/network_fundamentos/> Lab packet tracert </a>  </p>
 
 📕 Shell Scripting Automatizando processos. </p>
 <a href= https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/shellscript_conceitos/semana_8.2/> Lab automação em shellscript </a>  </p>
