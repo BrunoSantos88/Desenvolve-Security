@@ -1,4 +1,4 @@
- # Semana 5-6-7-8
+ # Semanas 5-6-7
 - Redes: dos conceitos iniciais à criação de uma intranet
 - Redes: construindo um projeto com VLANs, políticas de acesso e conexão com internet
 - Redes: implementando roteamento, DNS e IPv6
