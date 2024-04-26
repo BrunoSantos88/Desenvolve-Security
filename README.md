@@ -7,7 +7,7 @@
         </li>
 
 📕 Arquitetura Redes de computadores. </p>
-<a href=https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/redes_semana_5-6-7/> Lab Redes packet tracert </a>  </p>
+<a href=https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/network_fundamentos/> Lab Redes packet tracert </a>  </p>
 
 📕 Shell Scripting Automatizando processos. </p>
 <a href= https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/shellscript-semana_8/semana_8.2/> Lab automação em shellscript </a>  </p>
