@@ -5,8 +5,6 @@
 📕 JavaScript e HTML: desenvolva um jogo e pratique lógica de programação. </p>
 <a href=https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/javascript_fundamentos/javacript_html_criando_jogo/> Lab JavaScript com html </a>  </p>
         </li>
-📕 Arquitetura de computadores: por trás de como seu programa funciona.  </p>
- <a href=https://github.com/BrunoSantos88/Desenvolve-Security/tree/main/arquitetura_semana_2/> Lab Processo computadores </a>  </p>
 
 📕 Arquitetura Redes de computadores. </p>
 <a href=https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/redes_semana_5-6-7/> Lab Redes packet tracert </a>  </p>
