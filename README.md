@@ -10,7 +10,7 @@
 <a href=https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/network_fundamentos/> Lab Redes packet tracert </a>  </p>
 
 📕 Shell Scripting Automatizando processos. </p>
-<a href= https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/shellscript-semana_8/semana_8.2/> Lab automação em shellscript </a>  </p>
+<a href= https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/shellscript_conceitos/semana_8.2/> Lab automação em shellscript </a>  </p>
 
 📕 Docker: criando e gerenciando containers. </p>
  <a href= https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/main/container_fundamentos/docker_fundamentos/> Lab gerenciamento de container </a>  </p> 
