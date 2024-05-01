@@ -1,0 +1,5 @@
+FROM nginx:latest
+
+COPY desafio_quiz . . /usr/share/nginx/html/
+
+EXPOSE 80

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quiz-deployment
+spec:
+  replicas: 15
+  selector:
+    matchLabels:
+      app: quiz-pod
+  template:
+    metadata:
+      labels:
+        app: quiz-pod
+    spec:
+      containers:
+      - name: quiz-container
+        image: brunosantos88/desafio_quiz:devtest
+        ports:
+        - containerPort: 80

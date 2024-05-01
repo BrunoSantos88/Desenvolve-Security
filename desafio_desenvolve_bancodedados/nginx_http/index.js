@@ -104,51 +104,7 @@ function finishGame() {
 }
 
 ///banco de perguntas//
-const questions = [
-  {
-    question: "Qual foi a data de início do Desenvolve?",
-    answers: [
-      { text: "29 de janeiro", correct: true, feedback: "Correto! Esse dia foi a primeira live de integração do curso Desenvolve!" },
-      { text: "02 de fevereiro", correct: false, feedback: "Incorreto! Essa data não teve eventos relacionados ao Desenvolve." },
-      { text: "12 de dezembro", correct: false, feedback: "Incorreto! Essa data não teve eventos relacionados ao Desenvolve." },
-      { text: "29 de fevereiro", correct: false, feedback: "Incorreto! Esse dia não existe no calendário." }
-    ]
-  },
-  {
-    question: "Qual foi o dia do primeiro encontro?",
-    answers: [
-      { text: "02 e 07 de fevereiro, em uma quarta e quinta-feira.", correct: false, feedback: "Incorreto!" },
-      { text: "05 e 08 de fevereiro, em uma terça e quinta-feira.", correct: true, feedback: "Correto! Esse foi o primeiro encontro à noite, às 20h!" },
-      { text: "04 de janeiro, em uma segunda-feira, em dois horários diferentes.", correct: false, feedback: "Incorreto!" },
-      { text: "06 de fevereiro, em um sábado.", correct: false, feedback: "Incorreto!" }
-    ]
-  },
-  {
-    question: 'Qual foi o primeiro curso da primeira semana?',
-    answers: [
-      { text: 'Javascript', correct: true, feedback: "Correto! O primeiro curso da primeira semana foi Javascript." },
-      { text: 'Linux', correct: false, feedback: "Incorreto! "},
-      { text: 'Redes', correct: false, feedback: "Incorreto!"},
-      { text: "Shelscript", correct: false, feedback: "Incorreto!" }
-    ]
-  },
-  {
-    question: 'O Desenvolve oferece cursos pela plataforma Alura?',
-    answers: [
-      { text: "Verdadeiro", correct: true, feedback: "Correto! Os cursos são oferecidos pela plataforma Alura." },
-      { text: "Falso", correct: false, feedback: "Incorreto! Os cursos são oferecidos pela plataforma Alura." },
-    ]
-  },
-  {
-    question: 'Qual é a data para entregar o primeiro projeto?',
-    answers: [
-      { text: '16 de abril no grupo WhatsApp do Desenvolve.', correct: false },
-      { text: '9 de maio às 19h pelo Telegram.', correct: false  },
-      { text: '17 de abril no email dos mentores.', correct: true },
-      { text: 'Entregar na próxima reunião para os mentores.', correct: false },
-    ]
-  },
-];
+
 
 //progress Quiz// Hide Html inincio iniciar quiz/ remove hide click apos click//
 document.querySelector('.start-quiz').addEventListener('click', showProgressMessage);
