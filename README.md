@@ -16,10 +16,3 @@
  [Guia OWASP v5-8 e V9-14](https://drive.google.com/file/d/1xeUWOu645Fq98XJ-R_B453ZMAE8HFnSB/view?usp=drive_link) </p> 
 
 
-
-# Desafios Praticos
-
- Desafio 1 - Criando um Quiz. </p>
-🎯 <a href= https://github.com/BrunoSantos88/Desenvolve-Trilha-SI/tree/desafio/> Criando uma Gameficação simples em HTML > CSS > Javascript </a>  </p> 
-
-
