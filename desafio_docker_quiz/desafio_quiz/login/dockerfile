@@ -1,0 +1,13 @@
+FROM nginx:latest
+
+# Copy HTML, CSS, JavaScript, and images to nginx html directory
+COPY ./login.html /usr/share/nginx/html/
+COPY ./login.css /usr/share/nginx/html/
+COPY ./login.js /usr/share/nginx/html/
+COPY ./imagens /usr/share/nginx/html/images/
+
+# Expose port 80 to make it accessible
+EXPOSE 80
+
+# Command to start nginx when the container starts
+CMD ["nginx", "-g", "daemon off;"]

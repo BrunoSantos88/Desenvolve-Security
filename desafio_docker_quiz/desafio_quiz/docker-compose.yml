@@ -1,0 +1,35 @@
+version: '3'
+services:
+  login:
+    image: login:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./login:/usr/share/nginx/html     
+  quiz1:
+    image: quiz:latest
+    ports:
+      - "81:80"
+    volumes:
+      - ./quiz:/usr/share/nginx/html
+    depends_on:
+      - login
+  quiz2:
+    image: quiz:latest
+    ports:
+      - "82:80"
+    volumes:
+      - ./quiz:/usr/share/nginx/html
+    depends_on:
+      - login
+  quiz3:
+    image: quiz:latest
+    ports:
+      - "83:80"
+    volumes:
+      - ./quiz:/usr/share/nginx/html
+    depends_on:
+      - login
+  
+  
+   

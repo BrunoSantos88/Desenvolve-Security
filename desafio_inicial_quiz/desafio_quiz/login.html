@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="button-container">
+                <button type="submit" id="loginButton">Logar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginButton').addEventListener('click', function(event) {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Lógica para verificar o login (substitua com sua própria lógica)
+            if (username === 'quiz' && password === 'desafio') {
+                // Redireciona para a página index.html
+                window.location.href = 'quiz/index.html';
+            } else {
+                alert('Usuário ou senha incorretos.'); // Exibe uma mensagem de erro
+            }
+        });
+    </script>
+</body>
+</html>

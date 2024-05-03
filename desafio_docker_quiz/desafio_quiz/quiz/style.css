@@ -10,7 +10,7 @@ button {
 
 /* Tela de fundo */
 body {
-  background-image: url("images/matrizlogo.jpg"); 
+  background-image: url("imagens/matrizlogo.jpg"); 
   color: #d9d9e7;
   display: flex;
   justify-content: center;
