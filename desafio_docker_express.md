@@ -11,16 +11,21 @@ inicial, expondo-a na porta 3000.
 1. Instalação do Docker e Docker Compose:
 ○ Crie um shell script que instale o Docker e o Docker Compose num sistema
 Linux.
+
 ○ Verifique se as instalações foram bem-sucedidas com o script.
 2. Configuração do Container Docker:
+
 ○ Crie um Dockerfile para configurar um container Docker com Express.
 ○ O Dockerfile deve instalar e configurar o ambiente de desenvolvimento.
+
 3. Geração do Projeto Express.js:
 ○ Crie um script dentro do Dockerfile que gere dinamicamente um projeto
 Express.
 ○ Este projeto deve retornar um “Hello World!” na página principal.
+
 4. Configuração do Ambiente de Desenvolvimento:
 ○ Após a geração do projeto Express, inicie o servidor na porta 3000.
+
 5. Teste e Execução:
 ○ Execute o shell script para configurar o ambiente de desenvolvimento.
 ○ Acesse a página web servida na porta 3000 e verifique se a página está
@@ -31,13 +36,16 @@ sendo exibida corretamente.
 ○ Implemente funcionalidades adicionais, como a instalação de ferramentas de
 desenvolvimento ou a configuração de um servidor de banco de dados.
 
-Critérios de Avaliação:
+Critérios de Avaliação: </p>
 ● Funcionalidade do script: O script deve configurar corretamente o ambiente de
-desenvolvimento com Express, expondo a página na porta 3000.
-● Clareza e organização do código: O código do script deve ser claro, organizado e
-bem comentado.
+desenvolvimento com Express, expondo a página na porta 3000. </p>
+
+● Clareza e organização do código: O código do script deve ser claro, organizado e bem comentado. </p>
+
 ● Documentação: a execução do script deve ser detalhadamente documentada no
-README.md do projeto.
-Entrega:
-● Os alunos devem entregar o código no GitHub, em repositório público, juntamente
-com uma breve documentação explicando como usá-lo.
+README.md do projeto. </p>
+
+Entrega: </p>
+● Os alunos devem entregar o código no GitHub, em repositório público, juntamente </p>
+
+- Com uma breve documentação explicando como usá-lo.
