@@ -119,3 +119,29 @@ Se observarmos a barra lateral direita, veremos o botão de um retângulo com um
 Como o próprio nome indica, ela vai associar duas entidades. Então, o que faremos agora? Vamos selecionar a relação Contém e apagá-la, pressionando "Delete". </p>
 m seu lugar, vamos criar uma entidade associativa. Ela será criada em um retângulo denominado E. Assoc. 1 cujo interior possui um losango denominado Relação_1.</p>
 Para conectar essa entidade a Pedido e Livro, vamos selecionar o botão "Cria nova relação entre dois artefatos" na mesma barra lateral direita.</p>
+
+# Chave primária
+Esses atributos são tão cruciais que eles têm um nome especial: chave primária. As chaves primárias são atributos exclusivos de uma entidade. Devido a essa importância, há alguns procedimentos e cuidados que precisamos tomar: </p>
+1 - Esse atributo nunca se repete, por isso ele é único na entidade; </p>
+2 - Ele não pode ser nulo. Precisa ter um valor;</p>
+3 - Apenas as entidades fortes possuem chave primária. Essa informação é crucial. A partir dela, podemos diferenciar as entidades fortes das entidades fracas. Apenas as entidades fortes possuem chaves primárias. </p>
+Mas, será que não podemos ter atributos que identifiquem a entidade fraca? Podemos, no entanto, eles não serão chamados de chaves primárias, mas como chaves parciais. Eles não têm força suficiente porque a entidade é fraca e está vinculada a uma entidade forte. </p>
+Portanto, para complementar esse identificador da entidade fraca, nós usaremos a chave parcial com a chave primária da entidade forte. Vamos para o nosso modelo tentar identificar os atributos principais. </p>
+
+
+# Entidades e Atributos
+Em um modelo Entidade-Relacionamento, as entidades representam objetos ou conceitos do mundo real e são descritas por seus atributos. Por exemplo, em um sistema de biblioteca, podemos ter a entidade "Livro" com atributos como "Título", "Autor", "Ano de Publicação" etc.
+
+# Chave Primária e Identificadores
+Cada entidade possui uma chave primária, que é um atributo (ou conjunto de atributos) que identifica exclusivamente cada instância dessa entidade. Por exemplo, a entidade "Editora" pode ter a chave primária "cod_editora" para identificar cada editora de forma única.
+
+# Entidades Fortes e Fracas
+Uma entidade forte é aquela que possui sua própria chave primária e não depende de nenhuma outra entidade para ser identificada de forma única. Por outro lado, uma entidade fraca é aquela que não possui uma chave primária única por si só e depende da relação com uma entidade forte para ser identificada.
+
+# Relacionamentos e Entidades Fracas
+Os relacionamentos são conexões significativas entre entidades. Podemos ter relacionamentos entre entidades fortes ou entre entidades fortes e fracas. No exemplo anterior, temos a entidade forte "Editora" e a entidade fraca "Livro". A entidade "Livro" é fraca porque precisa de uma referência à entidade "Editora" para ser identificada de forma única. Portanto, além de seus próprios atributos, a entidade "Livro" inclui a chave primária da entidade "Editora" ("cod_editora") como parte de sua própria chave primária.
+
+# Entidade Estoque como Exemplo
+Agora, vamos considerar a entidade "Estoque". Ela está relacionada com a entidade "Livro" e, portanto, precisa receber as chaves identificadoras da entidade "Livro" para manter a integridade da relação entre elas. Nesse caso, a entidade "Estoque" receberá tanto a chave "cod_livro" como a chave da entidade "Editora" ("cod_editora") como parte de sua própria chave primária. </p>
+
+Entender a distinção entre entidades fortes e fracas é essencial para uma modelagem de dados precisa e coerente. As entidades fortes têm suas próprias chaves primárias, enquanto as entidades fracas herdam as chaves primárias das entidades fortes com as quais estão relacionadas. Essa abordagem garante a integridade das relações e a correta representação dos objetos do mundo real dentro do esquema de banco de dados.</p>
