@@ -48,4 +48,74 @@ Entretanto, faz sentido um dependente existir sem que este esteja vinculado a um
 # Entidades no diagrama entidade relacionamento
 
 Como vimos anteriormente, entidades são os objetos físicos ou conceituais. Vamos analisar cada fragmento do texto para tentar identificar isso. </p>
-Uma dica que trazemos de antemão é a seguinte: geralmente, associamos a entidade a um substantivo. Não sempre, mas é uma boa dica, é um norte para iniciarmos.
+Uma dica que trazemos de antemão é a seguinte: geralmente, associamos a entidade a um substantivo. Não sempre, mas é uma boa dica, é um norte para iniciarmos. </p>
+
+- As entidades fortes são representadas através da figura de um retângulo simples. </p>
+- As entidades fracas são representadas por um retângulo duplo, mas essa forma não existe pronta dentro do brModelo. Então, devemos colocar um retângulo menor dentro de um retângulo maior para representar de forma correta.
+
+# Entidade e relacionamento.
+
+Em um banco de dados, os relacionamentos são justamente isso: como as tabelas, ou, em nosso caso, como as entidades, se relacionam. Isso é tão importante que dá nome ao tipo de banco de dados que vamos estudar: o banco de dados relacional. </p>
+Vamos abordar também brevemente os bancos de dados não relacionais, mas esse não é o foco do nosso curso. Estamos estudando bancos de dados que possuem relações entre as tabelas, entre as entidades.
+
+# Graus de Relacionamento
+
+Toda pessoa colaboradora pode exercer uma função na empresa. As duas entidades estão sendo relacionadas pelo relacionamento "trabalha em". </p>
+Nesse caso temos um relacionamento binário. Se tivéssemos três entidades se relacionando — por exemplo, "Colaborador(a)" Trabalha em uma "Função" e também em um "Projeto"—, teríamos um relacionamento ternário. Agora, se tivermos quatro ou mais entidades se relacionando, o relacionamento se torna n-ário.</p>
+
+# Conectando o Relacionamento às Entidades
+ 
+Ela respondeu que podemos manipular livremente este losango de relacionamento. Podemos colocá-lo à esquerda da entidade Pedido.</p>
+Para indicar que Relacionamento_1 está ilustrando o vínculo entre as entidades Cliente e Pedido, podemos ir até a barra de artefatos na lateral direita e descer até a penúltima opção, denominada "Cria nova ligação entre dois artefatos". </p>
+Podemos clicar nessa opção, clicar no nosso relacionamento e em Clientes. Assim, ele cria uma linha em ângulos retos que conecta ambos os componentes.</p>
+Podemos repetir o processo, dessa vez com a entidade Pedidos, e ele também estabelecerá a ligação. Dessa maneira, ilustramos que temos o vínculo entre essas duas entidades.</p>
+Há outra maneira de fazermos isso no brModelo. Primeiro, vamos selecionar o Relacionamento_1 e suas linhas conectadas às entidades, mantendo o botão esquerdo do mouse pressionado, e criando um retângulo que os envolva. Ao pressionar o "Delete", esses elementos serão removidos.</p>
+Em seguida, clicaremos na opção "Cria nova ligação entre dois artefatos" novamente. Na tela principal, onde antes havia o relacionamento, manteremos a tecla "Ctrl" pressionada e clicaremos com o botão esquerdo do mouse em Clientes e depois em Pedidos.</p>
+
+
+# O que é Cardinalidade?
+Então, o que é a cardinalidade? A palavra cardinalidade pode parecer estranha, mas podemos usar um sinônimo mais comum para ela, que é conectividade. A "Cardinalidade" entre entidades talvez não seja de fácil entendimento, mas "duas coisas que se conectam" faz sentido para nós. </p>
+Isso é exatamente o que a cardinalidade quer dizer. No estudo da modelagem de banco de dados, é importante compreender como essas entidades se conectarão. </p>
+Vamos pensar no exemplo de um hospital. Então, aqui, esses desenhos estão representando um consultório médico. Temos duas entidades: a entidade das pessoas médicas e a entidade das pessoas pacientes.</p>
+Queremos entender como essas entidades se conectam e se relacionam (qual a cardinalidade desse relacionamento), porque para nós é bastante óbvio que pessoas médicas consultam pessoas pacientes. Mas como isso funciona?</p>
+Será que apenas uma pessoa médica consulta uma pessoa paciente? Ou será que temos, de repente, uma pessoa médica atendendo mais de uma pessoa paciente? Uma pessoa médica pode atender muitas pessoas pacientes? Será que ela sempre precisa atender pacientes? Ou tem outra pessoa que não está sendo consultada? É esse tipo de estudo que a cardinalidade vai trazer para nós
+</p>
+
+Na seção "Cardinalidade" há o texto "(0,n)". Se clicarmos nele, veremos uma seta à sua direita que abre outras opções. Vamos clicar nela e verificar todos os tipos de cardinalidade disponíveis: </p>
+(1,1)</p>
+(0,1)</p>
+(1,n)</p>
+(0,n)</p>
+Isso está bem definido.
+</p>
+
+
+# Tipos de Cardinalidade, na Prática
+O primeiro passo que ela começou a explicar é o seguinte: vamos imaginar que temos um departamento e uma pessoa colaboradora. E a regra de negócio para esse caso específico é: "O departamento é gerenciado por apenas uma pessoa colaboradora." Não podemos ter duas pessoas colaboradoras gerenciando o departamento.  </p>
+Mas na empresa, podemos ter mais de um departamento. Por exemplo, os departamentos de vendas, compras, o técnico e assim por diante. Mesmo assim, a regra permanece a mesma: para cada departamento, teremos apenas uma pessoa colaboradora gerenciando.  </p>
+Nos dois sentidos isso é verdadeiro: em um departamento tem uma pessoa colaboradora e uma pessoa colaboradora só pode gerenciar um departamento também.  </p>
+Nesse caso, nós temos uma relação de cardinalidade um para um (1, 1) porque há um departamento sendo gerenciado por uma pessoa colaboradora e uma pessoa colaboradora gerencia um departamento.  </p>
+
+# Adicionando Relacionamentos e suas Cardinalidades
+
+Voltando ao brModelo, temos o nosso primeiro relacionamento, Relacionamento_1. Se clicarmos nele, conseguimos alterar seu nome na aba lateral esquerda, assim como fazíamos com as entidades. </p>
+Vamos mudar o nome Relacionamento_1 para torná-lo o mais claro possível. Se quisermos, podemos retornar ao nosso documento, reler o texto e entender como essas entidades estão se relacionando. Ou podemos usar um pouco de lógica, também. </p>
+Por exemplo, o que a pessoa cliente faz com o pedido? Já mencionamos, ela "faz" o pedido. Então, podemos nomear o relacionamento como Faz. Quando pressionarmos "Enter", o texto do losango será alterado. </p>
+A propósito, só por uma questão de concordância, vamos alterar a entidade Clientes para o singular. Vamos clicar nela e realizar o mesmo processo que fizemos com o relacionamento, retirando a letra "s" no final para torná-lo Cliente. </p>
+Em seguida, veremos um detalhe importante: a cardinalidade do Relacionamento_1, não está como vimos (1 para 1 ou 1 para muitos). Nele, temos dois números entre parênteses. </p>
+
+# Cardinalidade Mínima
+
+Para entender um pouco melhor a cardinalidade mínima, vamos pensar no exemplo de uma casa e na sua relação com a pessoa proprietária. Uma casa pode existir sem proprietária? Não. </p></p>
+Talvez possa vir na sua cabeça algum exemplo, mas, segundo a Constituição, não. Não podemos ter uma casa sem proprietária. </p>
+Então, qual seria a cardinalidade mínima dessa relação Proprietária e Casa?. Tem que ser 1, pois tem que haver pelo menos uma pessoa. Não pode ser zero, porque tem que ter uma pessoa proprietária. </p>
+Agora, vamos pensar nas pessoas que habitam ou estão alugando a casa. A casa, obrigatoriamente, tem que ter sempre uma pessoa morando? Não. É muito comum ter uma casa e não ter ninguém morando, à espera de locação. </p>
+Ela pode ter zero, mas também pode ter uma, duas, três, N pessoas. Já aprendemos que na cardinalidade, quando tem mais de um, é N.</p>
+Vamos falar especificamente da cardinalidade mínima. Qual a cardinalidade mínima de uma casa, por exemplo, que está para alugar? É zero. Podemos não ter ninguém nela.</p>
+Esse é o conceito. Vamos retornar para o nosso brModelo.
+
+# Criando uma Entidade Associativa
+Se observarmos a barra lateral direita, veremos o botão de um retângulo com um losango em seu interior. O retângulo representa nossa entidade e o losango representa nossa relação. Esse é o símbolo que representa a entidade associativa. </p>
+Como o próprio nome indica, ela vai associar duas entidades. Então, o que faremos agora? Vamos selecionar a relação Contém e apagá-la, pressionando "Delete". </p>
+m seu lugar, vamos criar uma entidade associativa. Ela será criada em um retângulo denominado E. Assoc. 1 cujo interior possui um losango denominado Relação_1.</p>
+Para conectar essa entidade a Pedido e Livro, vamos selecionar o botão "Cria nova relação entre dois artefatos" na mesma barra lateral direita.</p>
