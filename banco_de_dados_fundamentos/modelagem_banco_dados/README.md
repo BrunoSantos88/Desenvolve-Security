@@ -43,3 +43,9 @@ Os atributos estão sempre ligados às entidades. São as características, os e
 Primeiramente, Marta explicou que a entidade forte é aquela que existe independentemente de outra entidade, enquanto a entidade fraca depende da existência de outra entidade. Mas o que significa que uma entidade depende de outra? </p>
 Suponha que estamos modelando uma empresa e identificamos duas entidades: a "funcionário" e a "dependente de funcionário". Para a empresa, é interessante cadastrar tanto funcionários como os dependentes deles, pois existem alguns benefícios vinculados aos dependentes. </p>
 Entretanto, faz sentido um dependente existir sem que este esteja vinculado a um funcionário? Não. Consequentemente, ambas são entidades, mas "dependente de funcionário" é uma entidade fraca em relação à entidade "funcionário".
+
+
+# Entidades no diagrama entidade relacionamento
+
+Como vimos anteriormente, entidades são os objetos físicos ou conceituais. Vamos analisar cada fragmento do texto para tentar identificar isso. </p>
+Uma dica que trazemos de antemão é a seguinte: geralmente, associamos a entidade a um substantivo. Não sempre, mas é uma boa dica, é um norte para iniciarmos.
