@@ -26,7 +26,12 @@ link brmodelo web: https://www.brmodeloweb.com/lang/pt-br/index.html </p>
 - DER (Diagrama de Entidade e Relacionamento)
 - MER (Modelo Entidade Relacionamento)
 
-# O que são entidades
+ # O que são entidades
+Uma entidade é um objeto único no mundo real. Na verdade, ela pode ser tanto um objeto, uma coisa, quanto uma pessoa. Vamos observar alguns exemplos? </p>
+Clientes de uma empresa podem ser considerados uma entidade. Carros vendidos em uma concessionária, em uma loja, podem ser considerados uma entidade também. Na verdade, o produto que alguma loja vende ou que alguma empresa fabrica pode ser considerado uma entidade. Um departamento de uma empresa, como, por exemplo, o departamento de vendas, pode ser considerado uma entidade da mesma forma. </p>
 
+# O que são atributos?
+Os atributos estão sempre ligados às entidades. São as características, os elementos que compõem a entidade. Eles são tão ligados mutualmente que não podemos ter uma entidade sem um atributo, sem sua característica. Uma entidade sem nenhum atributo não precisaria ser uma entidade em si, poderia ser um atributo ou característica de outra entidade.
+</p>
 
 # Entidade forte x entidade fraca
