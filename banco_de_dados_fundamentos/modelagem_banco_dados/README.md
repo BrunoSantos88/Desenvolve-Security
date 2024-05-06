@@ -147,14 +147,24 @@ Agora, vamos considerar a entidade "Estoque". Ela está relacionada com a entida
 Entender a distinção entre entidades fortes e fracas é essencial para uma modelagem de dados precisa e coerente. As entidades fortes têm suas próprias chaves primárias, enquanto as entidades fracas herdam as chaves primárias das entidades fortes com as quais estão relacionadas. Essa abordagem garante a integridade das relações e a correta representação dos objetos do mundo real dentro do esquema de banco de dados.</p>
 
 # Livros
-- Sistemas de Banco de Dados (pago, português, livro)
+- Sistemas de Banco de Dados (pago, português, livro) 
 Nesta obra, o autor traz informações detalhadas sobre sistemas de banco de dados. Para quem está aprofundando seus conhecimentos na área, este livro se mostra de fundamental importância, abordando conceitos e práticas do campo em questão, o que faz dele uma excelente ferramenta de estudo e consulta.
+<p style="font-size: 10px;">📕 Sistemas de Banco de Dados.</p>
+<a href="https://books.google.com.br/books?id=-Y32zwEACAAJ&newbks=0&hl=pt-BR&source=newbks_fb&redir_esc=y/" style="font-size: 10px;">Sistemas de Banco de Dados</a></p>
 
 - MER e DER funções (gratuito, português, texto)
 Através desse artigo, a Alura explora as funções de Modelagem Entidade-Relacionamento (MER) e Diagrama Entidade-Relacionamento (DER). O texto analisa as diferenças e similaridades de ambos os conceitos, fornecendo um panorama de como eles operam dentro da engenharia de software.
+<p style="font-size: 10px;">📕 MER e DER funções.</p>
+<a href="https://www.alura.com.br/artigos/mer-e-der-funcoes?_gl=1*1s9atji*_ga*MTU2NDUzNDUxMC4xNzA2NTkzMjg2*_ga_1EPWSW3PCS*MTcxNDk2ODcwNi41Ni4xLjE3MTQ5NzE5OTcuMC4wLjA.*_fplc*YVkwa3RLbVVsOEwyaFJIQU5TdiUyRlE0JTJGRnU4ZnJIaVVoajBkU0ZXVW5HSTJzQUlTcDJwNlJSUXMxWDFxV3lrMXlSNDRNQjI2eCUyQmF2ZGRleFBjWHNxa25USGFjSWVBQzRkUkN4dDZqQlZqT3ZHSTc2MWVVSXNTZ3ZwUEhkSEJBJTNEJTNE" style="font-size: 10px;">MER e DER funções</a></p>
+
 
 - Relacionamento reflexivo modelagem banco de dados (gratuito, português, texto)
 O artigo fornece aos leitores uma visão abrangente do relacionamento reflexivo na modelagem de banco de dados. Informa como o relacionamento reflexivo pode ser representado em um Diagrama Entidade Relacionamento (DER) e em uma tabela de banco de dados, além de discutir as vantagens e as principais características desse tipo de relacionamento.
+<p style="font-size: 10px;">📕 Relacionamento reflexivo modelagem banco de dados.</p>
+<a href="https://www.alura.com.br/artigos/relacionamento-reflexivo-modelagem-banco-de-dados?_gl=1*flda95*_ga*MTU2NDUzNDUxMC4xNzA2NTkzMjg2*_ga_1EPWSW3PCS*MTcxNDk2ODcwNi41Ni4xLjE3MTQ5NzIyNTQuMC4wLjA.*_fplc*YVkwa3RLbVVsOEwyaFJIQU5TdiUyRlE0JTJGRnU4ZnJIaVVoajBkU0ZXVW5HSTJzQUlTcDJwNlJSUXMxWDFxV3lrMXlSNDRNQjI2eCUyQmF2ZGRleFBjWHNxa25USGFjSWVBQzRkUkN4dDZqQlZqT3ZHSTc2MWVVSXNTZ3ZwUEhkSEJBJTNEJTNE" style="font-size: 10px;">Relacionamento reflexivo modelagem banco de dados. </a></p>
+
 
 - Modelagem de dados (gratuito, português, texto)
 Este é um artigo que aborda o conceito de modelagem de dados, explicando seu conceito, os diferentes tipos de modelagem e suas aplicações. O texto é bem estruturado e permite que até mesmo pessoas sem experiência prévia no tema compreendam do que se trata. É uma ótima leitura para quem trabalha com processo de desenvolvimento de software.
+<p style="font-size: 10px;">📕 Modelagem de dados.</p>
+<a href="https://www.cursospm3.com.br/blog/modelagem-de-dados/" style="font-size: 10px;">Modelagem de dados. </a></p>
