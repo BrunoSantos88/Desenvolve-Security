@@ -145,3 +145,16 @@ Os relacionamentos são conexões significativas entre entidades. Podemos ter re
 Agora, vamos considerar a entidade "Estoque". Ela está relacionada com a entidade "Livro" e, portanto, precisa receber as chaves identificadoras da entidade "Livro" para manter a integridade da relação entre elas. Nesse caso, a entidade "Estoque" receberá tanto a chave "cod_livro" como a chave da entidade "Editora" ("cod_editora") como parte de sua própria chave primária. </p>
 
 Entender a distinção entre entidades fortes e fracas é essencial para uma modelagem de dados precisa e coerente. As entidades fortes têm suas próprias chaves primárias, enquanto as entidades fracas herdam as chaves primárias das entidades fortes com as quais estão relacionadas. Essa abordagem garante a integridade das relações e a correta representação dos objetos do mundo real dentro do esquema de banco de dados.</p>
+
+# Livros
+- Sistemas de Banco de Dados (pago, português, livro)
+Nesta obra, o autor traz informações detalhadas sobre sistemas de banco de dados. Para quem está aprofundando seus conhecimentos na área, este livro se mostra de fundamental importância, abordando conceitos e práticas do campo em questão, o que faz dele uma excelente ferramenta de estudo e consulta.
+
+- MER e DER funções (gratuito, português, texto)
+Através desse artigo, a Alura explora as funções de Modelagem Entidade-Relacionamento (MER) e Diagrama Entidade-Relacionamento (DER). O texto analisa as diferenças e similaridades de ambos os conceitos, fornecendo um panorama de como eles operam dentro da engenharia de software.
+
+- Relacionamento reflexivo modelagem banco de dados (gratuito, português, texto)
+O artigo fornece aos leitores uma visão abrangente do relacionamento reflexivo na modelagem de banco de dados. Informa como o relacionamento reflexivo pode ser representado em um Diagrama Entidade Relacionamento (DER) e em uma tabela de banco de dados, além de discutir as vantagens e as principais características desse tipo de relacionamento.
+
+- Modelagem de dados (gratuito, português, texto)
+Este é um artigo que aborda o conceito de modelagem de dados, explicando seu conceito, os diferentes tipos de modelagem e suas aplicações. O texto é bem estruturado e permite que até mesmo pessoas sem experiência prévia no tema compreendam do que se trata. É uma ótima leitura para quem trabalha com processo de desenvolvimento de software.
