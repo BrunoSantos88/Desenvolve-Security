@@ -1,5 +1,13 @@
 name: Automatização Cloud AWS
 
+on:
+  push:
+    branches:
+      - desafio2
+  pull_request:
+    branches:
+      - desafio2
+
 jobs:
   create_instance:
     runs-on: ubuntu-latest
