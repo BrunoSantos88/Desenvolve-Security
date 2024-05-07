@@ -1,18 +1,28 @@
 name: Automatização Cloud AWS
 
-on:
-  push:
-    branches:
-      - desafio2  # branch de execução
-#install dependencias
+#Steps (stage)
 jobs:
   create_instance:
     runs-on: ubuntu-latest ##ubuntu_linux
+
+#(github)
     steps:
       - name: Checkout code  
         uses: actions/checkout@v2
+      with:
+          ref: desafio2 # branch /// desafio docker_express//
+          token: ${{ secrets.DESENVOLVE_KEY }}
 
-       #install dependencias aws
+#(install python)
+      - name: Install Python 3
+        run: |
+          sudo apt-get update
+          sudo apt-get install python3 -y
+
+      - name: Verify Python 3 installation
+        run: python3 --version
+
+#(install aws cli)    
       - name: Install AWS CLI
         run: |
           curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -22,20 +32,30 @@ jobs:
       - name: Verify AWS CLI installation
         run: aws --version
 
-       #install dependencias terraform
+ #(install Terraform)     
+      - name: Install Terraform
+        run: |
+          curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+          sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+          sudo apt-get update && sudo apt-get install terraform -y
+
+      - name: Verify Terraform installation
+        run: terraform --version
+
       - name: Install Terraform
         uses: hashicorp/setup-terraform@v1
         with:
           terraform_version: 1.1.0  ## //versao pacote// ##
 
-      ##/// configurar credenciais aws  ///##
+#(Verificar credencial AWS) 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+         env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
           
-     ##/// commados terraform  ///##
+#(install setup Terraform) 
       - name: Terraform Init
         run: |
           cd automatização_cloud/setup_cloud
@@ -44,8 +64,3 @@ jobs:
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
-      

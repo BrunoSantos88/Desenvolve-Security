@@ -13,7 +13,7 @@ resource "aws_s3_bucket" "express_key_bucket" {
 }
 
 resource "aws_s3_bucket_object" "public_key_object" {
-  bucket       = aws_s3_bucket.express_key_bucket.bucket
+  bucket       = aws_s3_bucket.express_key_bucket.id
   key          = "public_key.pub"
   source       = tls_public_key.express_key.public_key_openssh
   acl          = "private"    # Permissões de acesso ao objeto no S3
