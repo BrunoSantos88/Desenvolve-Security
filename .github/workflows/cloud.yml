@@ -1,19 +1,16 @@
 name: Automatização Cloud AWS
 
-#Steps (stage)
 jobs:
   create_instance:
-    runs-on: ubuntu-latest ##ubuntu_linux
+    runs-on: ubuntu-latest
 
-#(github)
     steps:
       - name: Checkout code  
         uses: actions/checkout@v2
-      with:
-          ref: desafio2 # branch /// desafio docker_express//
+        with:
+          ref: desafio2
           token: ${{ secrets.DESENVOLVE_KEY }}
 
-#(install python)
       - name: Install Python 3
         run: |
           sudo apt-get update
@@ -22,7 +19,6 @@ jobs:
       - name: Verify Python 3 installation
         run: python3 --version
 
-#(install aws cli)    
       - name: Install AWS CLI
         run: |
           curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -32,7 +28,6 @@ jobs:
       - name: Verify AWS CLI installation
         run: aws --version
 
- #(install Terraform)     
       - name: Install Terraform
         run: |
           curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
@@ -45,17 +40,15 @@ jobs:
       - name: Install Terraform
         uses: hashicorp/setup-terraform@v1
         with:
-          terraform_version: 1.1.0  ## //versao pacote// ##
+          terraform_version: 1.1.0
 
-#(Verificar credencial AWS) 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
-         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
           
-#(install setup Terraform) 
       - name: Terraform Init
         run: |
           cd automatização_cloud/setup_cloud
