@@ -1,0 +1,48 @@
+name: Automatização Cloud AWS
+
+on:
+  push:
+    branches:
+      - desafio2  # branch de execução
+#install dependencias
+jobs:
+  create_instance:
+    runs-on: ubuntu-latest ##ubuntu_linux
+    steps:
+      - name: Checkout code  
+        uses: actions/checkout@v2
+
+       #install dependencias aws
+      - name: Install AWS CLI
+        run: |
+          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          unzip awscliv2.zip
+          sudo ./aws/install
+       #install dependencias terraform
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 1.1.0  ## //versao pacote// ##
+
+      ##/// configurar credenciais aws  ///##
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+          
+     ##/// commados terraform  ///##
+      - name: Terraform Init
+        run: |
+          cd automatização_cloud/setup_cloud
+          terraform init
+          terraform fmt
+
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+      
