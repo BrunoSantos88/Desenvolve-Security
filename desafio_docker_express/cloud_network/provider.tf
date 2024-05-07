@@ -1,5 +1,5 @@
 provider "aws" {
-  version = "0.13"
+  version = "0.13.0"
 }
 
 variable "region_express_a" {
