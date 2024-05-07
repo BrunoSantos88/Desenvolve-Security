@@ -51,12 +51,13 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Terraform directory
+        run: cd desafio_docker_express/automatização_cloud/setup_cloud
           
       - name: Terraform Init
         run: |
-          cd desafio_docker_express\automatização_cloud\setup_cloud
           terraform init
-          terraform fmt
 
       - name: Terraform FMT
         run: |
