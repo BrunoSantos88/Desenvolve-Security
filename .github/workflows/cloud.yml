@@ -59,7 +59,7 @@ jobs:
 
 #Acessando diretorio projeto e executando commandos.
       - name: Terraform directory
-        run: cd desafio_docker_express/automatização_cloud/setup_cloud
+        run: cd desafio_docker_express/automatização_cloud/setup_cloud/ 
           
       - name: Terraform Init
         run: |
