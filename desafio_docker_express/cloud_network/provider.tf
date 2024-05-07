@@ -1,4 +1,7 @@
 provider "aws" {
-  region = "us-east-1"
-  version = "~> 3.0"
+  version = "0.13"
+}
+variable "region_express_a" {
+  type    = string  
+  default = "us-east-1"
 }
