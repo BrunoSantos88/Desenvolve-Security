@@ -1,4 +1,4 @@
-name: Deploy to GCS Bucket
+name: Deploy aws s3
 
 on:
   push:
