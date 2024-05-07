@@ -59,9 +59,9 @@ jobs:
 
 #Acessando diretorio projeto e executando commandos.
       - name: Terraform directory
-        run: cd desafio_docker_express\cloud_network 
+        run: cd desafio_docker_express/cloud_network
           
-      - name: Terraform init
+      - name: Terraform Init
         run: |
           terraform init 
 #Iniciar programa terraform e plugin dependecias.
