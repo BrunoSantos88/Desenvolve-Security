@@ -63,5 +63,5 @@ jobs:
           terraform init
           terraform fmt
 
-      - name: Terraform Apply
+     - name: Terraform Apply
         run: terraform apply -auto-approve
