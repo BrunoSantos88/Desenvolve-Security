@@ -10,17 +10,15 @@ resource "aws_vpc" "app_express" {
         Managed     = "terraform"
     }
 }
-
 resource "aws_subnet" "subnet_express_A" {
     vpc_id                  = aws_vpc.app_express.id
-    cidr_block              = "192.168.0.1/24"
+    cidr_block              = "192.168.0.0/24"  
     map_public_ip_on_launch = true            
     availability_zone        = var.region_express_a
 }
 resource "aws_internet_gateway" "app_express" {
     vpc_id = aws_vpc.app_express.id
 }
-
 resource "aws_route_table" "express_route" {
     vpc_id = aws_vpc.app_express.id
     
