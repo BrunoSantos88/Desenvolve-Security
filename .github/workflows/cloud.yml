@@ -1,5 +1,6 @@
 name: Automatização Cloud AWS
 
+#Branch e pull request.
 on:
   push:
     branches:
@@ -9,9 +10,10 @@ on:
       - desafio2
 
 jobs:
-  create_network:
+  create_network: #///job, oque irá executar///
     runs-on: ubuntu-latest
 
+#Login github token api Autenticação.
     steps:
       - name: Checkout code  
         uses: actions/checkout@v2
@@ -19,13 +21,11 @@ jobs:
           ref: desafio2
           token: ${{ secrets.DESENVOLVE_KEY }}
 
+#Instalando dependencias para poder funcionar.
       - name: Install Python 3
         run: |
           sudo apt-get update
           sudo apt-get install python3 -y
-
-      - name: Verify Python 3 installation
-        run: python3 --version
 
       - name: Install AWS CLI
         run: |
@@ -33,18 +33,23 @@ jobs:
               unzip awscliv2.zip
               sudo ./aws/install --update
 
-      - name: Verify AWS CLI installation
-        run: aws --version
-
       - name: Install Terraform
         run: |
           curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
           sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
           sudo apt-get update && sudo apt-get install terraform -y
 
+#Verificação dos serviços instalados.
+      - name: Verify Python 3 installation
+        run: python3 --version
+
+      - name: Verify AWS CLI installation
+        run: aws --version
+
       - name: Verify Terraform installation
         run: terraform --version
 
+#Login conta aws.
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
@@ -52,17 +57,21 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
+#Acessando diretorio projeto e executando commandos.
       - name: Terraform directory
         run: cd desafio_docker_express/automatização_cloud/setup_cloud
           
       - name: Terraform Init
         run: |
-          terraform init
-
+          terraform init 
+#Iniciar programa terraform e plugin dependecias.
       - name: Terraform FMT
         run: |
           terraform fmt
-
+#Formatar arquivos e saber qual é o atual ou somente executar alterações.
       - name: Terraform Apply
         run: terraform apply -auto-approve
-    
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+# Aprovar projeto assim que ler os arquivos
