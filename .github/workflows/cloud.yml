@@ -1,6 +1,6 @@
 name: Automatização Cloud AWS
 
-#Branch e pull request.
+#(Stage branch) 
 on:
   push:
     branches:
@@ -13,7 +13,7 @@ jobs:
   create_network: #///job, oque irá executar///
     runs-on: ubuntu-latest
 
-#Login github token api Autenticação.
+# Stage Login github token api Autenticação.
     steps:
       - name: Checkout code  
         uses: actions/checkout@v2
@@ -21,7 +21,7 @@ jobs:
           ref: desafio2
           token: ${{ secrets.DESENVOLVE_KEY }}
 
-#Instalando dependencias para poder funcionar.
+# Stage instalando dependencias para poder funcionar.
       - name: Install Python 3
         run: |
           sudo apt-get update
@@ -39,7 +39,7 @@ jobs:
           sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
           sudo apt-get update && sudo apt-get install terraform -y
 
-#Verificação dos serviços instalados.
+# stage verificação dos serviços instalados.
       - name: Verify Python 3 installation
         run: python3 --version
 
@@ -49,7 +49,7 @@ jobs:
       - name: Verify Terraform installation
         run: terraform --version
 
-#Login conta aws.
+# Stage login conta aws.
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
@@ -57,19 +57,22 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-#Acessando diretorio projeto e executando commandos.
-      - name: Terraform init
-        run: cd desafio_docker_express/cloud_network
-             terraform init
-#Iniciar programa terraform e plugin dependecias.
+# Stage Acessando diretorio projeto e executando commandos.     
+      - name: Terraform Init
+        run: |
+          cd desafio_docker_express/cloud_network
+          terraform init 
+        #iniciar programa terraform e plugin dependecias.
       - name: Terraform FMT
-        run: cd desafio_docker_express/cloud_network
-             terraform fmt
-#Formatar arquivos e saber qual é o atual ou somente executar alterações.
+        run: |
+          cd desafio_docker_express/cloud_network
+          terraform fmt
+       #formatar arquivos e saber qual é o atual ou somente executar alterações.
       - name: Terraform Apply
-        run: cd desafio_docker_express/cloud_network
-             terraform apply -auto-approve
+        run: |
+           cd desafio_docker_express/cloud_network 
+           terraform apply -auto-approve
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-# Aprovar projeto assim que ler os arquivos
+      
