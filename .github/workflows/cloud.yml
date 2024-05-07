@@ -54,7 +54,7 @@ jobs:
           
       - name: Terraform Init
         run: |
-          cd automatização_cloud/setup_cloud
+          cd desafio_docker_express\automatização_cloud\setup_cloud
           terraform init
           terraform fmt
 
