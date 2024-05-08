@@ -68,10 +68,10 @@ jobs:
           cd desafio_docker_express/cloud_network
           terraform fmt
        #formatar arquivos e saber qual é o atual ou somente executar alterações.
-      - name: Terraform Apply
+      - name: Terraform Destroy
         run: |
            cd desafio_docker_express/cloud_network 
-           terraform apply -auto-approve
+           terraform destroy -auto-approve
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
