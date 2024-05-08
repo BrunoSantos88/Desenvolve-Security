@@ -1,7 +1,8 @@
 resource "aws_vpc" "app_express" {
     cidr_block           = "192.168.0.0/16"
     enable_dns_support   = true            
-    enable_dns_hostnames = true           
+    enable_dns_hostnames = true     
+    availability_zone        = var.region_express_a
     
     tags = {
         Name        = "desenvolve"
