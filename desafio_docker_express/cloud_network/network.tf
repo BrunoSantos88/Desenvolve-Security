@@ -15,7 +15,6 @@ resource "aws_subnet" "subnet_express_A" {
     vpc_id                  = aws_vpc.app_express.id
     cidr_block              = "192.168.0.0/24"  
     map_public_ip_on_launch = true            
-    availability_zone        = var.express_availability_zone
 }
 
 resource "aws_internet_gateway" "app_express" {
