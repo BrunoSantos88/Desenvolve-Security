@@ -2,7 +2,7 @@ resource "aws_vpc" "app_express" {
     cidr_block           = "192.168.0.0/16"
     enable_dns_support   = true            
     enable_dns_hostnames = true     
-    availability_zone        = var.region_express_a
+    availability_zone        = var.express_region
     
     tags = {
         Name        = "desenvolve"
@@ -16,7 +16,7 @@ resource "aws_subnet" "subnet_express_A" {
     vpc_id                  = aws_vpc.app_express.id
     cidr_block              = "192.168.0.0/24"  
     map_public_ip_on_launch = true            
-    availability_zone        = var.region_express_a
+    availability_zone        = var.express_availability_zone
 }
 
 resource "aws_internet_gateway" "app_express" {
