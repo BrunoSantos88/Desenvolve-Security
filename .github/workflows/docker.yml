@@ -25,7 +25,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./desafio_docker_express/Dockerfile
+          file: ./desafio_docker_express/express_app/Dockerfile
           tags: express:latest
 
       - name: Docker TAG AND PUSH
