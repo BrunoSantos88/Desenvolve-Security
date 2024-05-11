@@ -21,10 +21,16 @@ jobs:
         env:
           DOCKER_PASSWORD_STDIN: true
 
-      - name: Docker BUILD AND PUSH
+      - name: Docker BUILD
         uses: docker/build-push-action@v5
         with:
           context: .
           file: ./desafio_docker_express/Dockerfile
-          push: true
           tags: brunosantos/express:latest
+
+      - name: Docker PUSH
+        uses: docker/build-push-action@v5
+        with:
+        context: .
+        push: true
+        tags: brunosantos/express:latest
