@@ -1,0 +1,31 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "desafio2" ]
+  pull_request:
+    branches: [ "desafio2" ]
+         
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      -
+       #logar git
+        name: Checkout
+        uses: actions/checkout@v4
+      -
+        #logar docker
+        name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      -
+        name: Docker Build 
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./express_app/Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/express:latest
