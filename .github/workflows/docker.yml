@@ -1,4 +1,4 @@
-name: ci
+name: Docker pipeline
 
 on:
   push:
@@ -26,11 +26,12 @@ jobs:
         with:
           context: .
           file: ./desafio_docker_express/Dockerfile
-          tags: brunosantos/express:latest
+          tags: express:latest
 
-      - name: Docker PUSH
-        uses: docker/build-push-action@v5
-        with:
-        context: .
-        push: true
-        tags: brunosantos/express:latest
+      - name: Docker TAG AND PUSH
+        run: |
+         docker tag express:latest brunosantos88/express:latest
+         docker push brunosantos88/express:latest
+        env:
+        DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USER }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
