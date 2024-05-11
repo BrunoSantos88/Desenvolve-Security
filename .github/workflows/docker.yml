@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
         env:
           DOCKER_PASSWORD_STDIN: true
-   
+
       - name: Docker BUILD AND PUSH
         uses: docker/build-push-action@v5
         with:
