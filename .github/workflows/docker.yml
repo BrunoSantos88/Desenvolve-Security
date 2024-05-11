@@ -32,6 +32,3 @@ jobs:
         run: |
          docker tag express:latest brunosantos88/express:latest
          docker push brunosantos88/express:latest
-        env:
-        DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USER }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
