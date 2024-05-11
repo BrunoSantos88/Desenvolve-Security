@@ -27,4 +27,4 @@ jobs:
           context: .
           file: ./desafio_docker_express/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/express:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/express:devtest
