@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node index.js"
- },
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon server"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
