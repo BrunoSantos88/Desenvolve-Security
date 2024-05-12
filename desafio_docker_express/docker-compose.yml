@@ -1,33 +1,15 @@
-version: '3'
+version: '3.8'
+
 services:
   express:
-    image: brunosantos88/express_prometheus:latest
+    build: 
+      context: ./express_app
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    environment:
-      - NODE_ENV=production
-    network_mode: "host"
+    networks:
+      - job2
 
-  prometheus:
-    image: prom/prometheus
-    volumes:
-    - .prometheus.yml:/etc/prometheus.yml
-    command:
-    - '--config.file=/etc/prometheus/prometheus.yml'
-    ports:
-      - '9090:9090'
-    network_mode: "host"
-
-  cadvisor:
-    image: google/cadvisor:latest
-    ports:
-      - "8080:8080"
-    volumes:
-      - /:/rootfs:ro
-      - /var/run:/var/run:rw
-      - /sys:/sys:ro
-      - /var/lib/docker/:/var/lib/docker:ro
-    network_mode: "host"
-    
-volumes:
-  grafana-data:
+networks:
+  job2:
+    driver: bridge

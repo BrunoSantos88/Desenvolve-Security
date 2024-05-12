@@ -1,12 +1,23 @@
+const express = require("express");
+const { collectDefaultMetrics, register } = require('prom-client');
 
-const http = require("http")
-const express = require("express")
+const app = express();
 
-const app = express()
+collectDefaultMetrics();
 
-app.get("/", (req, res) => res.send("Hello World!!"))
+app.get("/", (req, res) => res.send("Hello World!!"));
 
-const server = http.createServer(app)
+app.get('/metrics', async (_req, res) => {
+  try {
+    res.set('Content-Type', register.contentType);
+    res.end(await register.metrics());
+  } catch (err) {
+    res.status(500).end(err);
+  }
+});
 
-// FAZ O SERVIDOR RESPONDER NA PORTA 3000
-server.listen(3000, () => console.log('Servidor rodando na porta %s.', 3000))
+const PORT = 3000;
+
+app.listen(PORT, () => {
+  console.log("Servidor escutando na porta", PORT);
+});
