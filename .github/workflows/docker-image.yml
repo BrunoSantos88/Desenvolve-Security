@@ -28,4 +28,4 @@ jobs:
           context: .
           file: ./express_app/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/express:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/express_prometheus:latest
