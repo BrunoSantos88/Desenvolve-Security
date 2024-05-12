@@ -1,5 +1,5 @@
 const express = require('express');
-const { collectDefaultMetrics, register } = require('prom-client');
+const { register, collectDefaultMetrics } = require('prom-client');
 
 collectDefaultMetrics();
 
@@ -9,15 +9,17 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
+
 app.get('/metrics', async (_req, res) => {
   try {
     res.set('Content-Type', register.contentType);
     res.end(await register.metrics());
   } catch (err) {
-    res.status(500).end(err.toString());
+    res.status(500).end(err);
   }
 });
 
-app.listen(3000, '0.0.0.0', () => {
-  console.log('Server is running on port 3000');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
