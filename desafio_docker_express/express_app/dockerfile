@@ -1,29 +1,7 @@
-FROM node:14.17.5-buster-slim
-
-# Definir o usuário 'app'
-RUN groupadd -r app && useradd -r -g app -d /home/app -s /sbin/nologin -c "Docker image user" app
-
-# Definir o diretório HOME e mudar as permissões
-ENV HOME=/home/app
-RUN mkdir -p $HOME/webapp && chown -R app:app $HOME/*
-
-# Definir o usuário 'app' como proprietário dos arquivos
-USER app
-
-# Definir o diretório de trabalho
-WORKDIR $HOME/webapp
-
-# Copiar o arquivo package.json
-COPY package.json $HOME/webapp/
-
-# Instalar as dependências do Node.js
-RUN npm install --unsafe-perm
-
-# Copiar o restante dos arquivos do aplicativo
-COPY . $HOME/webapp
-
-# Expor a porta 3000
+FROM node:16
+WORKDIR /usr/src/app
+COPY server.js .
+COPY package*.json ./
+RUN npm install && npm i express -S
 EXPOSE 3000
-
-# Comando para iniciar o aplicativo
-CMD ["npm", "start"]
+CMD ["node", "server.js"]
