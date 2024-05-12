@@ -3,6 +3,6 @@ WORKDIR /usr/src/app
 RUN npm init -y
 COPY package*.json ./
 RUN npm install && npm install express && npm install prom-client
-COPY . . server.js ./
+COPY . .
 EXPOSE 3000
 CMD ["node","server.js"]
