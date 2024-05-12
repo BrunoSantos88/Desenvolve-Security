@@ -26,9 +26,9 @@ jobs:
         with:
           context: .
           file: ./desafio_docker_express/express_app/Dockerfile
-          tags: express:latest
+          tags: express_promethues:latest
 
       - name: Docker TAG AND PUSH
         run: |
-         docker tag express:latest brunosantos88/express
+         docker tag express_promethues:latest brunosantos88/express_prometheus
          docker push brunosantos88/express
