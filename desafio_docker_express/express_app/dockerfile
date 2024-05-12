@@ -1,6 +1,6 @@
 FROM node:16
 WORKDIR /usr/src/app
-COPY server.js .
+COPY . .
 COPY package*.json ./
 RUN npm install && npm i express -S
 EXPOSE 3000
