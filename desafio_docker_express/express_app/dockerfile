@@ -1,8 +1,8 @@
 FROM node:14
 WORKDIR /usr/src/app
-COPY server.js ..
 RUN npm init -y
 COPY package*.json ./
-RUN npm install && npm install express --save && npm install prom-client --save
+RUN npm install && npm install express && npm install prom-client
+COPY . . server.js ./
 EXPOSE 3000
 CMD ["node","server.js"]
