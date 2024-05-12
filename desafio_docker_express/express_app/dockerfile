@@ -5,4 +5,4 @@ COPY package*.json ./
 RUN npm install && npm install express && npm install prom-client
 COPY . .
 EXPOSE 3000
-CMD ["node","server.js"]
+CMD ["node", "app" "server.js"]
