@@ -2,6 +2,6 @@ FROM node:16
 WORKDIR /usr/src/app
 COPY . .
 COPY package*.json ./
-RUN npm install && npm i express -S
+RUN npm install && npm install express
 EXPOSE 3000
 CMD ["node", "server.js"]
