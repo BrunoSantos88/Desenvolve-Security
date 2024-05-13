@@ -16,7 +16,7 @@ jobs:
           chmod +x install.sh
           ./install.sh
 
-      - name: AWS LOGIN
+      - name: aws login
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -30,6 +30,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Terraform init
+        run: |
+            cd desafio_docker_express/cloud_network
+            terraform init
+
+      - name: Terraform FMT
+        run: terraform fmt
+
+      - name: Terraform Deploy
+        run: terraform apply --auto-approve
+        
   express_servidor:
     needs: cloud_network
     runs-on: ubuntu-latest
