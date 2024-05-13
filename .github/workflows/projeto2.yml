@@ -49,39 +49,3 @@ jobs:
          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
          AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
       
-
-  express_servidor:
-    needs: cloud_network
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-  express_scripts:
-    needs:
-      - cloud_network
-      - express_servidor
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name:  Terraform inicialização
-        run: |
-               cd desafio_docker_express/express_servidor
-               terraform init
-
-      - name:  Terraform FTM
-        run: |
-               cd desafio_docker_express/express_servidor
-               terraform fmt
-
-      - name:  Terraform Appove
-        run: |
-            cd desafio_docker_express/express_servidor
-            terraform apply --auto-approve
-        env:
-         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-         AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
-      
