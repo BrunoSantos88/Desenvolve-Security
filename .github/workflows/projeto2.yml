@@ -1,0 +1,47 @@
+name: Cloud docker express app.
+
+on:
+  push:
+    branches:
+      - "desafio2"
+
+jobs:
+  install_dependencias:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: |
+          chmod +x install.sh
+          ./install.sh
+
+      - name: AWS LOGIN
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+  cloud_network:
+    needs: install_dependencias
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+  express_servidor:
+    needs: cloud_network
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+  express_scripts:
+    needs:
+      - cloud_network
+      - express_servidor
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
