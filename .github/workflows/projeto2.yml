@@ -30,6 +30,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name:  Terraform inicialização
+        run: |
             cd desafio_docker_express/cloud_network
             terraform init
             terraform fmt
