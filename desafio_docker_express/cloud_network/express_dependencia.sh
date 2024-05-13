@@ -1,5 +1,4 @@
 #!/bin/bash
-#install docker
 curl https://releases.rancher.com/install-docker/19.03.sh | sh 
 usermod -aG docker root
 sudo apt-get install git -y
@@ -8,3 +7,4 @@ chmod +x /usr/local/bin/docker-compose
 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 #installnodejs
 sudo apt install nodejs -y
+
