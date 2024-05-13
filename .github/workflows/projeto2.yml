@@ -30,16 +30,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Terraform init
+      - name: Terraform Deploy
         run: |
             cd desafio_docker_express/cloud_network
             terraform init
-
-      - name: Terraform FMT
-        run: terraform fmt
-
-      - name: Terraform Deploy
-        run: terraform apply --auto-approve
+            terraform fmt
+            terraform apply --auto-approve
         
   express_servidor:
     needs: cloud_network
