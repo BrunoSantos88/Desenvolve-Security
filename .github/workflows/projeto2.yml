@@ -3,7 +3,7 @@ name: Cloud docker express app.
 on:
   push:
     branches:
-      - "desafio2"
+       - "desafio2"
 
 jobs:
   install_dependencias:
