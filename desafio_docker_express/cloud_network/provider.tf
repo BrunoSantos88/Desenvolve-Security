@@ -3,10 +3,7 @@ terraform {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 5.0"
+      region = "us-east-1"
     }
   }
-}
-
-provider "aws" {
-  region = var.express_region
 }
