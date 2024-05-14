@@ -8,4 +8,4 @@ sudo apt install docker-ce
 sudo docker --version
 sudo systemctl status docker
 sudo usermod -aG docker $USER
-docker run hello-world
+sudo systemctl start docker
