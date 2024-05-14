@@ -12,6 +12,7 @@ jobs:
         
       - name: Install Dependencies
         run: |
+          cd desafio_docker_express
           chmod +x install.sh
           ./install.sh
 
@@ -49,15 +50,23 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Install Dependencies
+       - name: Install githubRunner
+         run: |
+          cd desafio_docker_express
+          chmod +x gitrunner.sh
+          ./gitrunner.sh
+
+      - name: Install Node dependencias
         run: |
           npm init -y
           npm install
           npm install express
 
-      - name: Deploy Application
+      - name: Deploy Application Node Docker-Compose
         run: |
-               cd desafio_docker_express/express_app
-               ./deploy.sh
+              cd desafio_docker_express/express_app
+              chmod +x deploy.sh
+              ./deploy.sh
+          
 
   
