@@ -1,0 +1,67 @@
+name: Cloud docker express app.
+on:
+  push:
+    branches:
+      "devtest2"
+jobs:
+  install_dependencias:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Install Dependencies
+        run: |
+          chmod +x install.sh
+          ./install.sh
+
+      - name: aws login
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+  cloud_network:
+    needs: install_dependencias
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name:  Terraform inicialização
+        run: |
+               cd desafio_docker_express/cloud_network
+               terraform init
+               terraform fmt
+               terraform apply --auto-approve
+        env:
+         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+         AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
+
+  express_deploy:
+    needs: install_dependencias
+    needs: cloud_network
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+       - name: Install githubRunner
+         run: |
+          chmod +x gitrunner.sh
+          ./gitrunner.sh
+
+      - name: Install Node dependencias
+        run: |
+          npm init -y
+          npm install
+          npm install express
+
+      - name: Deploy Application Node Docker-Compose
+        run: |
+              cd desafio_docker_express/express_app
+              chmod +x express_deploy.sh
+              ./express_deploy.sh
