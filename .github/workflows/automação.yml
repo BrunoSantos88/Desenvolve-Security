@@ -1,34 +1,38 @@
-name: Deploy
+name: AWS Login
 
 on:
   push:
-    branches: [ devtest2 ]
+    branches:
+      - devtest2 
 
 jobs:
-  Deploy:
-    name: Deploy to EC2
+  setup:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - uses: actions/checkout@v2 
-      - name: Build & Deploy
-        env:
-            PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-            HOSTNAME: ${{secrets.SSH_HOST}}
-            USER_NAME: ${{secrets.USER_NAME}}
-      
-        run: |
-           echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key chmod 600 private_key
-           
-        
-      - name: Install Docker and Node.js on EC2
-        uses: actions/checkout@v2 
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
-          PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          HOSTNAME: ${{ secrets.SSH_HOST }}
-          USER_NAME: ${{ secrets.USER_NAME }}
-          run: |
-            ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
-              sudo apt update
-              sudo apt install -y docker.io
-              sudo apt install -y nodejs npm
+          python-version: '3.x'  # Specify the Python version you need
+
+      - name: Install AWS CLI
+        run: |
+          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          unzip awscliv2.zip
+          sudo ./aws/install
+
+      - name: Verify AWS CLI installation
+        run: aws --version
+
+      - name: Verify Python installation
+        run: python --version
+        
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: your-aws-region
