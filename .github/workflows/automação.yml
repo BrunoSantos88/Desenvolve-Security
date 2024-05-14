@@ -15,8 +15,9 @@ jobs:
         uses: easingthemes/ssh-deploy@v2
         with:
           ssh-private-key: ${{ secrets.SSH_EXPRESS_APP }}
-          source: "./"
-          target: "/home/ubuntu"
+          source: ./
+          target: /home/ubuntu
           server: ${{ secrets.REMOTE_HOST }}
-          user: "ubuntu"
-          remote-port: 22  # Specify the remote port
+          user: ubuntu
+          remote-port: 22
+          args: -rltgoDzvO
