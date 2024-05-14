@@ -13,16 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'  # Specify the Python version you need
-
-      - name: Install AWS CLI
+      - name: Install dependencias
         run: |
-          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-          unzip awscliv2.zip
-          sudo ./aws/install
+               chmod +x install.sh
+               ./installl        
 
       - name: Verify AWS CLI installation
         run: aws --version
@@ -30,6 +24,9 @@ jobs:
       - name: Verify Python installation
         run: python --version
         
+      - name: Verify Terraform
+        run: terraform --version
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
