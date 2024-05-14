@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencias
         run: |
                chmod +x install.sh
-               ./installl        
+               ./install.sh       
 
       - name: Verify AWS CLI installation
         run: aws --version
