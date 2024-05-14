@@ -24,6 +24,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
   cloud_network:
+     needs: install_dependencias
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository

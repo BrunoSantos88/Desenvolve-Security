@@ -10,12 +10,4 @@ resource "aws_instance" "express_server" {
   vpc_security_group_ids = [
      aws_security_group.express-firewall.id
   ]
-
-
-  }
-  tags = {
-    Name        = "express_server"
-    Environment = "BrunoSantos"
-    OS          = "Ubuntu20:04 "
-    Managed     = "Desenvolve"
 }
