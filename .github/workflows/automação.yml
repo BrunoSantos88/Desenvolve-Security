@@ -27,6 +27,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
       - name:  Terraform inicialização
         run: |
                cd desafio_docker_express/cloud_network
@@ -38,12 +41,11 @@ jobs:
          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
          AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
 
-express_deploy:
-  needs:
-    - install_dependencias
-    - cloud_network
-  runs-on: self-hosted
-  steps:
+  express_deploy:
+    needs: cloud_network
+    runs-on: self-hosted
+    steps:
+    
     - name: Checkout Repository
       uses: actions/checkout@v2
 
