@@ -21,11 +21,6 @@ jobs:
               node --version
               npm --version
 
-      - name: install docker && docker_compose
-        uses: actions/setup-node@v2
-        with:
-          docker-version: '19.03'
-
       - name: Install docker && docker_compose
         run: | 
              chmod +x container.sh
