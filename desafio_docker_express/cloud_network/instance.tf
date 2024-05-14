@@ -4,7 +4,9 @@ resource "aws_instance" "express_server" {
   availability_zone           = var.express_zona_a 
   disable_api_termination     = true
   subnet_id                   = aws_subnet.express_network_a.id
-  associate_public_ip_address = true                        
+  associate_public_ip_address = true    
+
+  user_data = file("gitrunner.sh")                    
 
   vpc_security_group_ids = [
      aws_security_group.express-firewall.id

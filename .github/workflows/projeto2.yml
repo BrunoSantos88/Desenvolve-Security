@@ -51,7 +51,6 @@ jobs:
 
        - name: Install githubRunner
          run: |
-          cd desafio_docker_express
           chmod +x gitrunner.sh
           ./gitrunner.sh
 
@@ -64,8 +63,8 @@ jobs:
       - name: Deploy Application Node Docker-Compose
         run: |
               cd desafio_docker_express/express_app
-              chmod +x deploy.sh
-              ./deploy.sh
+              chmod +x express_deploy.sh
+              ./express_deploy.sh
           
 
   
