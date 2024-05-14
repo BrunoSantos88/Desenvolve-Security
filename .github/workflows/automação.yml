@@ -1,23 +1,22 @@
-name: Push-to-EC2
+name: Deploy
+
 on:
   push:
-    branches:
-      - devtest2
+    branches: [ devtest2 ]
+
 jobs:
-  deploy:
+  Deploy:
     name: Deploy to EC2
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout the code
-        uses: actions/checkout@v2
-
-      - name: Copy files to EC2 using SSH
-        uses: easingthemes/ssh-deploy@v2
-        with:
-          ssh-private-key: ${{ secrets.SSH_EXPRESS_APP }}
-          source: ./
-          target: /home/ubuntu
-          server: ${{ secrets.REMOTE_HOST }}
-          user: ubuntu
-          remote-port: 22
-          args: -rltgoDzvO
+      - uses: actions/checkout@v2 
+      - name: Build & Deploy
+        env:
+            PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+            HOSTNAME: ${{secrets.SSH_HOST}}
+            USER_NAME: ${{secrets.USER_NAME}}
+      
+        run: |
+          echo "$PRIVATE_KEY" > private_key && chmod 400 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
