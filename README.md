@@ -4,3 +4,6 @@
 
 
 - Automatização cloud AWS
+
+
+- chmod -R 777
