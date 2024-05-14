@@ -12,7 +12,6 @@ jobs:
         
       - name: Install Dependencies
         run: |
-          cd desafio_docker_express
           chmod +x install.sh
           ./install.sh
 
