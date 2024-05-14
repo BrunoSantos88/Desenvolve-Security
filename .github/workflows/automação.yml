@@ -27,17 +27,3 @@ jobs:
           sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
           sudo chmod +x /usr/local/bin/docker-compose
   
-  express_deploy:
-    needs: install
-    runs-on: self-hosted
-    steps:
-    
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-
-
-    - name: Deploy Application using Docker Compose
-      run: |
-        cd express_app
-        chmod +x .deploy.sh
-        ./.deploy.sh
