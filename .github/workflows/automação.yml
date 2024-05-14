@@ -44,7 +44,6 @@ jobs:
     needs: install_dependencias
     needs: cloud_network
     runs-on: self-hosted
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
