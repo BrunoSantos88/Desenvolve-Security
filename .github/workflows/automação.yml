@@ -1,28 +1,21 @@
-name: Cloud docker express app
+name: Push-to-EC2
 on:
   push:
     branches:
-      - "devtest2"
+      - devtest2
 jobs:
-  install:
-    runs-on: self-hosted
+  deploy:
+    name: Deploy to EC2
+    runs-on: ubuntu-latest
     steps:
-    
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
+      - name: Copy files to EC2 using SSH
+        uses: easingthemes/ssh-deploy@v2
         with:
-          node-version: '14'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Setup Docker && docker-compose
-        uses: docker/setup-buildx-action@v1
-
-      - name: Setup Docker Buildx
-        uses: docker/setup-buildx-action@v1
-        with:
-          driver: docker-container
-          buildkitd-flags: --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host
-          install: false
-          use: true
+          ssh-private-key: ${{ secrets.SSH_EXPRESS_APP }}
+          source: "./"
+          target: "/home/ubuntu"
+          server: ${{ secrets.REMOTE_HOST }}
+          user: "ubuntu"
