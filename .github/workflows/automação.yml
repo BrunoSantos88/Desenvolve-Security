@@ -20,10 +20,7 @@ jobs:
         run: |
            echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key chmod 600 private_key
 
-      - name: Clone Git repository
+      - name: Execute SSH commands
         run: |
-          git clone https://github.com/BrunoSantos88/Desenvolve-Trilha-SI.git
-          cd Desenvolve-Trilha-SI
-          git switch devtest2
-          chmod +x nodejs.sh
-          ./nodejs.sh
+              sudo apt-get update
+              sudo apt-get install -y docker.io
