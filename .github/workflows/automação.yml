@@ -19,17 +19,8 @@ jobs:
       
         run: |
            echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key chmod 600 private_key
-
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Install Node.js
-        run: |
-          chmod +x nodejs.sh
-          ./nodejs.sh
-
-
-      - name: Install Dependencies
-        run: |
-          npm install
-          npm run build
+           ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
+           cd /home/ubuntu/express_app &&
+           git checkout devtest2
+       
+  
