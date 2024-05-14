@@ -34,7 +34,15 @@ jobs:
         run: |
                cd desafio_docker_express/cloud_network
                terraform init
-               terraform fmt
+
+       - name: Terraform Format
+      run: |
+             cd desafio_docker_express/cloud_network
+             terraform fmt
+
+      - name:  Terraform apply
+        run: |
+               cd desafio_docker_express/cloud_network
                terraform apply --auto-approve
         env:
          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
