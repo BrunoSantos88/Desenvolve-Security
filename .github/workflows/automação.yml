@@ -10,19 +10,20 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-
-    - name: Executing remote ssh commands using ssh key
-      uses: appleboy/ssh-action@master
-      with:
-        PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        HOSTNAME: ${{secrets.SSH_HOST}}
-        USER_NAME: ${{secrets.USER_NAME}}
+      - uses: actions/checkout@v2 
+      - name: Build & Deploy
+        env:
+            PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+            HOSTNAME: ${{secrets.SSH_HOST}}
+            USER_NAME: ${{secrets.USER_NAME}}
+      
         run: |
            echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key chmod 600 private_key
-
-    - name: Install Docker and Node.js on EC2
-      uses: appleboy/ssh-action@master
-      with:
+           
+        
+      - name: Install Docker and Node.js on EC2
+        uses: appleboy/ssh-action@master
+        with:
           PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           HOSTNAME: ${{ secrets.SSH_HOST }}
           USER_NAME: ${{ secrets.USER_NAME }}
@@ -31,4 +32,3 @@ jobs:
               sudo apt update
               sudo apt install -y docker.io
               sudo apt install -y nodejs npm
-
