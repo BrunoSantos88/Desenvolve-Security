@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        
       - name: Install Dependencies
         run: |
           chmod +x install.sh
@@ -27,8 +28,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: git checkout desafio2
-
+        uses: actions/checkout@v2
+        
       - name:  Terraform inicialização
         run: |
                cd desafio_docker_express/cloud_network
