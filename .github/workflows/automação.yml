@@ -8,18 +8,29 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Node.js
+      - name: install Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '16'
 
-      - name: Install dependencies
+      - name: Install nodejs 16
         run: | 
-              npm install
+              sudo apt update -y
+              curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+              sudo apt-get install -y nodejs
+              node --version
+              npm --version
 
-      - name: Run tests
-        run: npm test
+      - name: install docker && docker_compose
+        uses: actions/setup-node@v2
+        with:
+          docker-version: '19.03'
 
+      - name: Install docker && docker_compose
+        run: | 
+             chmod +x container.sh
+             ./container.sh
+  
   express_deploy:
     needs: install
     runs-on: self-hosted
@@ -28,13 +39,9 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Install Node dependencies
-      run: |
-        cd desafio_docker_express/express_app
-        npm install express
 
     - name: Deploy Application using Docker Compose
       run: |
-        cd desafio_docker_express/express_app
-        chmod +x express_deploy.sh
-        ./express_deploy.sh
+        cd express_app
+        chmod +x .deploy.sh
+        ./.deploy.sh
