@@ -9,3 +9,6 @@ sudo docker --version
 sudo systemctl status docker
 sudo usermod -aG docker $USER
 sudo systemctl start docker
+sudo systemctl restart docker
+/tmp/docker-setup-buildx-dRxWVC/bin/buildx restart
+/tmp/docker-setup-buildx-dRxWVC/bin/buildx create --name builder-cfd6845d-52d4-4e3a-a99d-b5d1f517b2a8 --driver docker-container --buildkitd-flags --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host --use
