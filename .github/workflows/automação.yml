@@ -20,7 +20,16 @@ jobs:
         run: |
            echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key chmod 600 private_key
 
-      - name: Execute SSH commands
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
         run: |
-              sudo apt-get update -y
-              sudo apt-get install -y docker.io
+          chmod +x nodejs.sh
+          ./nodejs.sh
+
+
+      - name: Install Dependencies
+        run: |
+          npm install
+          npm run build
