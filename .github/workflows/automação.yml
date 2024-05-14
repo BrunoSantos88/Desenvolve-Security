@@ -19,8 +19,5 @@ jobs:
           target: "/home/ubuntu"
           server: ${{ secrets.REMOTE_HOST }}
           user: "ubuntu"
-
-      - name: Execute shell script
-        run: |
-          chmod +x shellscript.sh  # Ensure the script is executable
-          ./shellscript.sh  # Execute the shell script
+          remote-port: 22  # Specify the remote port
+          args: "-rltgoDzvO"  # Additional SSH options
