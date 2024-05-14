@@ -1,8 +1,9 @@
-name: Cloud docker express app.
+name: Cloud docker express app
 on:
   push:
     branches:
-      "devtest2"
+      - "devtest2"
+
 jobs:
   install_dependencias:
     runs-on: ubuntu-latest
@@ -22,7 +23,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
- cloud_network:
+  cloud_network:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
