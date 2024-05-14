@@ -22,7 +22,7 @@ jobs:
            
         
       - name: Install Docker and Node.js on EC2
-        uses: appleboy/ssh-action@master
+        uses: actions/checkout@v2 
         with:
           PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           HOSTNAME: ${{ secrets.SSH_HOST }}
