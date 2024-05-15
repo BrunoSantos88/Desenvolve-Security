@@ -16,12 +16,12 @@ jobs:
       - name: Install SSH Client
         run: sudo apt-get update && sudo apt-get install openssh-client -y
 
-      - name: Add SSH private key and set permissions
+      - name: Create SSH directory and key file
         run: |
-           mkdir -p ~/.ssh/
-           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ./deploy.key
-           sudo chmod 600 ./deploy.key
-           echo "${{secrets.SSH_HOST}} > ~/.ssh/known_hosts
+          mkdir -p ~/.ssh/
+          echo "" > ~/.ssh/deploy.key
+          sudo chmod 600 ~/.ssh/deploy.key
+          echo 172.208.115.36 > ~/.ssh/known_hosts
          
 
       - name: Run SSH command
