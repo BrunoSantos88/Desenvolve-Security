@@ -6,7 +6,7 @@ on:
       - devtest2
 
 jobs:
-  ssh_command:
+  script_vm:
     runs-on: ubuntu-latest
 
     steps:
@@ -53,8 +53,9 @@ jobs:
               sudo npm install
               sudo npm install express
 
-      - name: UP Docker-Compose
+      - name: Docker Compose UP
         run: |
                cd express_app
-               sudo docker-compose down && docker-compose up -d
-               curl http://172.208.115.36:3000
+               chmod +x install.sh
+               ./install.sh     
+          
