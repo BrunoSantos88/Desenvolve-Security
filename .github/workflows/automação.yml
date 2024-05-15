@@ -28,4 +28,12 @@ jobs:
         run: |
            git checkout devtest2
 
+      - name: install nodejs
+        run: |
+           sudo apt update -y
+           sudo apt install nodejs -y
+           sudo apt install npm -y
+           sudo node -v
+           sudo npm -v
+    
      
