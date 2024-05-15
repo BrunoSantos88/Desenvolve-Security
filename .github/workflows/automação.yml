@@ -16,8 +16,10 @@ jobs:
       - name: Install SSH Client
         run: sudo apt-get update && sudo apt-get install openssh-client -y
 
-      - name: Add SSH private key
-        run: echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+      - name: Add SSH private key and set permissions
+        run: |
+                echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+                chmod 600 ~/.ssh/id_rsa
 
       - name: SSH into server
         run: ssh -o StrictHostKeyChecking=no ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}} "echo 'SSH connection successful'"
