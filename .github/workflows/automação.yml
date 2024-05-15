@@ -56,5 +56,5 @@ jobs:
       - name: UP Docker-Compose
         run: |
                cd express_app
-               sudo docker-compose down && docker-compose up
+               sudo docker-compose down && docker-compose up -d
                curl http://172.208.115.36:3000
