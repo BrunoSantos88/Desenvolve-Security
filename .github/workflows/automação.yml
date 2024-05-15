@@ -39,13 +39,21 @@ jobs:
           node -v
           npm -v
        
+      - name: NPM commandos
+        run: |
+              sudo npm init -y
+              sudo npm install
+              sudo npm install express
+
+      - name: NPM commandos
+        run: |
+              sudo npm init -y
+              sudo npm install
+              sudo npm install express
+
       - name: Install dependencias
         run: |
-               sudo cd Desenvolve-Trilha-SI/ && git checkout devtest2 && cd express_app
                chmod +x install.sh
-               ./install.sh     
-               sudo docker --version
-               sudo docker-compose --version
-               sudo node --version
-               sudo npm --version 
-               sudo curl http//127.0.0.0:3000
+               ./install.sh       
+
+       
