@@ -28,7 +28,6 @@ jobs:
       - name: Checkout branch
         run: |
            git checkout devtest2
-           sudo cd Desenvolve-Trilha-SI/ && git checkout devtest2 && cd express_app
 
       - name: Install NodeJs e NPM
         run: |
