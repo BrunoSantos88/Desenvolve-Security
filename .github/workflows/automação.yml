@@ -54,3 +54,4 @@ jobs:
           docker-compose -v
           cd express_app
           docker-compose up -d
+          curl localhost:3000
