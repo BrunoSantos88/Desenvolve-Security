@@ -13,14 +13,31 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Install Docker Container
+        run: |
+            sudo apt update -y
+            sudo apt install docker.io -y
+            sudo adduser $USER docker
+
+
       - name: Install Docker Compose
         run: |
           sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
           sudo chmod +x /usr/local/bin/docker-compose
           docker-compose -v
+
+      - name: Install Git
+        run: sudo apt-get update && sudo apt-get install git -y
+
+      - name: Clone repository
+        run: git clone hhttps://github.com/BrunoSantos88/Desenvolve-Trilha-SI.git
+
+      - name: Checkout branch
+        run: git checkout devtest2
        
       - name: Install dependencias
         run: |
+               sudo cd Desenvolve-Trilha-SI/ && git checkout devtest2 && cd express_app
                chmod +x install.sh
                ./install.sh     
                sudo docker --version
