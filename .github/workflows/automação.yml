@@ -7,23 +7,18 @@ on:
 
 jobs:
   ssh_command:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Install Docker
+      - name: Checkout code
+        uses: actions/checkout@v2
+       
+      - name: Install dependencias
         run: |
-           sudo apt update -y
-           sudo apt install docker.io -y
-           sudo adduser $USER docker
-
-
-      - name: Install Docker Compose
-        run: |
-          sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-          sudo chmod +x /usr/local/bin/docker-compose
-          sudo docker-compose -v
-
-      - name: Verify Docker and Docker Compose installation
-        run: |
-          docker -v
-          docker-compose -v
+               chmod +x install.sh
+               ./install.sh     
+               sudo docker --version
+               sudo docker-compose --version
+               sudo node --version
+               sudo npm --version 
+               sudo curl http//127.0.0.0:3000
