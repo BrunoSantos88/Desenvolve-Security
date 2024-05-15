@@ -19,13 +19,9 @@ jobs:
       - name: Add SSH private key and set permissions
         run: |
            mkdir -p ~/.ssh/
-           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/server.key
-           chmod 600 ~/.ssh/server.key
-           chmod 400 ~/.ssh/server.key
-
-      - name: Check SSH Connection
-        run: |
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/server.key ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}} "echo 'SSH connection successful'"
+           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ./deploy.key
+           sudo chmod 600 ./deploy.key
+           echo "${{secrets.SSH_HOST}} > ~/.ssh/known_hosts
          
 
       - name: Run SSH command
