@@ -16,6 +16,7 @@ jobs:
       - name: Install Docker Container
         run: |
             sudo apt update -y
+            apt list --upgradable -y
             sudo apt install docker.io -y
             sudo adduser $USER docker
 
