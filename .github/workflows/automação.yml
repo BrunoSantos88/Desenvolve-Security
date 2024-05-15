@@ -12,25 +12,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Install SSH Client
-        run: sudo apt-get update && sudo apt-get install openssh-client -y
-
-      - name: Create SSH directory and key file
+        
+      - name: Install dependencias
         run: |
-          mkdir -p ~/.ssh/
-          echo "" > ~/.ssh/deploy.key
-          sudo chmod 600 ~/.ssh/deploy.key
-          echo ${{secrets.SSH_HOST}} > ~/.ssh/known_hosts  "echo 'SSH connection successful'"
-         
-
-      - name: Run SSH command
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{secrets.SSH_HOST}}
-          username: ${{secrets.SSH_USERNAME}}
-          key: ${{secrets.SSH_PRIVATE_KEY}}
-          port: ${{secrets.SSH_PORT}}
-          script: |
-            echo "Running remote command"
-            ./gtihubrunner.sh
+               chmod +x install.sh
+               ./install.sh       
