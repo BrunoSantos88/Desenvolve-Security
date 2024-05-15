@@ -55,7 +55,11 @@ jobs:
 
       - name: Docker Compose UP
         run: |
-               cd express_app
+               cd express_app     
+          
+
+      - name: Docker Compose UP
+        run: |
                chmod +x install.sh
                ./install.sh     
           
