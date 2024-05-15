@@ -53,5 +53,6 @@ jobs:
 
       - name: Install dependencias
         run: |
+               cd express_app
                docker-compose up -d 
                curl http://127.0.0.0:3000       
