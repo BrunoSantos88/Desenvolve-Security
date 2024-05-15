@@ -21,6 +21,7 @@ jobs:
            mkdir -p ~/.ssh/
            echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/server.key
            chmod 600 ~/.ssh/server.key
+           chmod 400 ~/.ssh/server.key
 
       - name: Check SSH Connection
         run: |
