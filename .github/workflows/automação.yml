@@ -54,4 +54,4 @@ jobs:
           docker-compose -v
           cd express_app
           sudo docker-compose up -d
-          sudo iptables -A INPUT -p tcp --dport 3000 -j ACCEPT
+        
