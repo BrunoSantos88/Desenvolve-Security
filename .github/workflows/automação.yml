@@ -53,8 +53,8 @@ jobs:
               sudo npm install
               sudo npm install express
 
-     
-      - name: Install dependencias
+      - name: UP Docker-Compose
         run: |
-               chmod +x install.sh
-               ./install.sh    
+               cd express_app
+               sudo docker-compose down && docker-compose up
+               curl http://172.208.115.36:3000
