@@ -13,8 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install Docker Compose
+      - name: Install Docker && Compose
         run: |
+          sudo apt-get install docker -y
+          sudo adduser $USER docker
           sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
           sudo chmod +x /usr/local/bin/docker-compose
           docker-compose -v
@@ -51,8 +53,8 @@ jobs:
               sudo npm install
               sudo npm install express
 
+     
       - name: Install dependencias
         run: |
-               cd express_app
-               sudo docker-compose up -d 
-               sudo curl http://127.0.0.0:3000       
+               chmod +x install.sh
+               ./install.sh    
