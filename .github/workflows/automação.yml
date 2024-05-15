@@ -23,7 +23,7 @@ jobs:
            chmod 600 ~/.ssh/server.key
 
       - name: SSH into server
-        run: ssh -i "~/.ssh/server.key" ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}} "echo 'SSH connection successful'"
+        run: ssh -o StrictHostKeyChecking=yes -i ~/.ssh/server.key express@172.208.115.36 "echo 'SSH connection successful'
          
 
       - name: Run SSH command
