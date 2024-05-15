@@ -1,7 +1,7 @@
   #bin/bash
-  #sudo apt update -y
-  #sudo apt install docker.io -y
-  #sudo adduser $USER docker
+  sudo apt update -y
+  sudo apt install docker.io -y
+  sudo adduser $USER docker
   # Install Git && commandos
   #sudo apt-get update -y
  # sudo apt-get install git -y

@@ -13,14 +13,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install Docker Container
-        run: |
-            sudo apt update -y
-            apt list --upgradable -y
-            sudo apt install docker.io -y
-            sudo adduser $USER docker
-
-
       - name: Install Docker Compose
         run: |
           sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -34,7 +26,22 @@ jobs:
         run: git clone hhttps://github.com/BrunoSantos88/Desenvolve-Trilha-SI.git
 
       - name: Checkout branch
-        run: git checkout devtest2
+        run: |
+           git checkout devtest2
+           sudo cd Desenvolve-Trilha-SI/ && git checkout devtest2 && cd express_app
+
+      - name: Install NodeJs e NPM
+        run: |
+         sudo apt-get update -y
+         sudo apt install curl -y
+         sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+         sudo source ~/.bashrc
+         sudo nvm install --lts
+         sudo nvm alias default 24.1.2
+         sudo node -v npm -v
+         sudo npm init -y
+         sudo npm install
+         sudo npm install express
        
       - name: Install dependencias
         run: |
