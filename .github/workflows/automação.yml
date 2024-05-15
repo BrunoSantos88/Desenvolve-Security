@@ -23,7 +23,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install git -y
 
       - name: Clone repository
-        run: git clone hhttps://github.com/BrunoSantos88/Desenvolve-Trilha-SI.git
+        run: git clone https://github.com/BrunoSantos88/Desenvolve-Trilha-SI.git
 
       - name: Checkout branch
         run: |
