@@ -12,11 +12,32 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        
-      - name: Install dependencias
+
+      - name: Install Docker
+        uses: docker/setup-docker@v2
+        with:
+          docker-version: 'latest'
+
+      - name: Install Docker Compose
         run: |
-               chmod +x install.sh
-               ./install.sh
-                docker -v docker-compose -v       
-                node -v npm -v
-                curl http://127.0.0.0:3000
+          sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+          sudo chmod +x /usr/local/bin/docker-compose
+          docker-compose -v
+
+      - name: Verify Docker and Docker Compose installation
+        run: |
+          docker -v
+          docker-compose -v
+
+      - name: Check Node.js and npm versions
+        run: |
+          node -v
+          npm -v
+        
+     # - name: Install dependencias
+     #   run: |
+      #         chmod +x install.sh
+       #     ./install.sh
+        #        docker -v docker-compose -v       
+         #       node -v npm -v
+          #      curl http://127.0.0.0:3000
