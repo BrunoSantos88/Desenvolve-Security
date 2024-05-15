@@ -18,9 +18,9 @@ jobs:
 
       - name: Add SSH private key and set permissions
         run: |
-               echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
-               echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa.pub && chmod 600 ~/.ssh/id_rsa.pub
-               chmod 400 ~/.ssh/id_rsa.pub
+           mkdir -p ~/.ssh/
+           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/server.key
+           chmod 600 ~/.ssh/server.key
 
       - name: SSH into server
         run: ssh -i "~/.ssh/id_rsa.pub" ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}} "echo 'SSH connection successful'"
