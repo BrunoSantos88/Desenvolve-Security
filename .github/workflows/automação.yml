@@ -21,7 +21,7 @@ jobs:
           mkdir -p ~/.ssh/
           echo "" > ~/.ssh/deploy.key
           sudo chmod 600 ~/.ssh/deploy.key
-          echo ${{secrets.SSH_HOST}} > ~/.ssh/known_hosts
+          echo ${{secrets.SSH_HOST}} > ~/.ssh/known_hosts  "echo 'SSH connection successful'"
          
 
       - name: Run SSH command
