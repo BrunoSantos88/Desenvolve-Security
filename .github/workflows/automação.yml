@@ -16,4 +16,7 @@ jobs:
       - name: Install dependencias
         run: |
                chmod +x install.sh
-               ./install.sh       
+               ./install.sh
+                docker -v docker-compose -v       
+                node -v npm -v
+                curl http://127.0.0.0:3000
