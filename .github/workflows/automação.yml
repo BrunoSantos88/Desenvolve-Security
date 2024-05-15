@@ -53,7 +53,5 @@ jobs:
 
       - name: Install dependencias
         run: |
-               chmod +x install.sh
-               ./install.sh       
-
-       
+               docker-compose up -d 
+               curl http://127.0.0.0:3000       
