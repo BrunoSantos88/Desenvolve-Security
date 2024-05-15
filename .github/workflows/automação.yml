@@ -53,5 +53,5 @@ jobs:
           sudo chmod +x /usr/local/bin/docker-compose
           docker-compose -v
           cd express_app
-          docker-compose up -d
+          docker-compose dow && docker-compose up -d
           curl localhost:3000
