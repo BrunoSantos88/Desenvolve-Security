@@ -1,2 +1,2 @@
  #bin/bash
- sudo docker-compose dowm && docker-compose up -d
+ sudo docker-compose up -d
