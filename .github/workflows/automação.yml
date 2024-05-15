@@ -29,18 +29,15 @@ jobs:
         run: |
            git checkout devtest2
 
-      - name: Install NodeJs e NPM
+      - name: Install Node.js and npm
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: Verify Node.js and npm installation
         run: |
-         sudo apt-get update -y
-         sudo apt install curl -y
-         sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-         sudo source ~/.bashrc
-         sudo nvm install --lts
-         sudo nvm alias default 24.1.2
-         sudo node -v npm -v
-         sudo npm init -y
-         sudo npm install
-         sudo npm install express
+          node -v
+          npm -v
        
       - name: Install dependencias
         run: |
