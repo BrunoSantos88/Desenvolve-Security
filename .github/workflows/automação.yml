@@ -1,4 +1,4 @@
-name: SSH Command
+name: Deploy Express_app
 
 on:
   push:
@@ -6,23 +6,17 @@ on:
       - devtest2
 
 jobs:
-  script_vm:
+  express_vm:
     runs-on: self-hosted
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install docker & docker-compose
+      - name: Install Container && NodeJs and NPM 
         run: |
-            sudo apt  install docker.io -y
-            sudo apt  install docker-compose -y
-
-      - name: install nodejs and NPM
-        run: |
-           sudo apt update -y
-           sudo apt install nodejs -y
-           sudo apt install npm -y
+               chmod +x dependencia.sh
+               ./dependencia.sh     
 
       - name: Clone repository
         run: |
