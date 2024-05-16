@@ -5,3 +5,4 @@ sudo apt  install docker-compose -y
 sudo apt update -y
 sudo apt install nodejs -y
 sudo apt install npm -y
+echo "install complete"

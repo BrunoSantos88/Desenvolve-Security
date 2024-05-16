@@ -2,8 +2,5 @@
 
 [![dockeri.co](https://dockerico.blankenship.io/image/node)](https://hub.docker.com/_/node)
 
-
-- Automatização cloud AWS
-
-
+liberar pasta actions runner
 - chmod -R 777

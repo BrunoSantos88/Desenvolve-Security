@@ -13,10 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install Container && NodeJs and NPM 
+      - name: Install Container && NodeJs and NPM
         run: |
-               chmod +x dependencia.sh
-               ./dependencia.sh     
+         chmod +x dependencia.sh
+         ./dependencia.sh
+         echo "Install complete"
 
       - name: Clone repository
         run: |
