@@ -1,13 +1,14 @@
 # Express APP
-
+<p align="center"> 
 1. Install GITHUB RUNNER VM Linux UBUNTU 20:04
    
 - Instalar Dependencia Githb Runner.
 - Criar pasta actions-runner e execução vai fica a pasta "_work"
+</p>
+
 <p align="center">
   <img src="imagens/download.png" alt="setup instalação" width="800"> 
 </p>
-
 
 ````
 mkdir actions-runner
@@ -33,6 +34,7 @@ tar xzf ./actions-runner-linux-x64-2.316.1.tar.gz
 Criar pasta e arquivo de execução  "github/workflows/express_app.yml"
 step 1 "branch" e agente"on: self-hosted"
 </p>
+
 ````
 on:
   push:
@@ -47,6 +49,7 @@ jobs:
 <p align="center">  
 step 2 checar repositorio github 
 </p>
+
 ````
     steps:
       - name: Checkout code
@@ -55,6 +58,7 @@ step 2 checar repositorio github
 <p align="center">  
 step 3 Executar script
 </p>
+
 ````
       - name: Install Container && NodeJs and NPM
         run: |
