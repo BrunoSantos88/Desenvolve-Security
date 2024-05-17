@@ -10,6 +10,7 @@
   <img src="imagens/download.png" alt="setup instalação" width="800"> 
 </p>
 
+2. Setup instalação, acessar via ssh terminal da maquina.
 ````
 mkdir actions-runner
 chmod 777 -R actions-runner
