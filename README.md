@@ -88,7 +88,7 @@ if [[ $? -ne 0 ]]; then
 fi
 echo "Install complete"
 ````
-Passo 4: Clonar repositório e alterar branch
+Passo4: Clonar repositório e alterar branch
 ````
 - name: Clone repository
   run: |
