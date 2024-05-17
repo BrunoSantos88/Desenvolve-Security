@@ -1,11 +1,7 @@
 version: "3"
 services:
   node:
-    build: .
-    command: "npm run start"
-    working_dir: /home/node/app
-    environment:
-      - NODE_ENV=production
+    build: Dockerfile
     expose:
       - "3000"
     ports:
