@@ -1,7 +1,7 @@
 version: "3"
 services:
   node:
-    build: Dockerfile
+    build: .
     expose:
       - "3000"
     ports:
