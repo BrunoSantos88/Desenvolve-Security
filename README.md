@@ -50,11 +50,14 @@ step 2:checar repositorio github
 ````
 step 3:  Executar script
 ````
-      - name: Install Container && NodeJs and NPM
-        run: |
-         chmod +x dependencia.sh
-         ./dependencia.sh
-         echo "Install complete"
+- name: Install Container &amp;&amp; NodeJs and NPM
+  run: |
+    chmod +x dependencia.sh
+    if ./dependencia.sh; then
+      echo "Install complete"
+    else
+      echo "Install failed"
+    fi
 ````
 shellscript: dependencia.sh
 ````
