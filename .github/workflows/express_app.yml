@@ -37,7 +37,7 @@ jobs:
 
   helloWorld:
    needs: [express_vm]
-   runs-on: ubuntu_host
+   runs-on: self-hosted
 
    steps:
     - name: Send curl request
