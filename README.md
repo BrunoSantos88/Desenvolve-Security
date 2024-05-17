@@ -1,10 +1,10 @@
 # Express APP
-<p align="center"> 
+
 1. Install GITHUB RUNNER VM Linux UBUNTU 20:04
    
 - Instalar Dependencia Githb Runner.
 - Criar pasta actions-runner e execução vai fica a pasta "_work"
-</p>
+
 
 <p align="center">
   <img src="imagens/download.png" alt="setup instalação" width="800"> 
@@ -25,10 +25,9 @@ tar xzf ./actions-runner-linux-x64-2.316.1.tar.gz
   <img src="imagens/githubrunner.png" alt="após instalação" width="800"> 
 </p>
 
-<p align="center">  
+
 3.Setup githb action
 Criar pasta e arquivo de execução  "github/workflows/express_app.yml"
-</p>
 
 step 1: "branch" e agente"on: self-hosted"
 ````
