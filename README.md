@@ -23,6 +23,7 @@ tar xzf ./actions-runner-linux-x64-2.316.1.tar.gz
 2. Setup do GitHub Action
 Crie a pasta e o arquivo de execução github/workflows/express_app.yml. </p>
 Passo 1: Definir a "branch" e "agente"
+
 ````
 on:
   push:
@@ -33,6 +34,7 @@ jobs:
   express_vm:
     runs-on: self-hosted
 ````
+
 Passo 2: Checar repositório no GitHub
 ````
 steps:
