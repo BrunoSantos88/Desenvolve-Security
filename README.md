@@ -4,6 +4,9 @@ Criar a pasta actions-runner e definir que a execução ficará na pasta _work.
 <p align="center">
   <img src="imagens/download.png" alt="setup instalação" width="800">
 </p>
+<p align="center">
+  <img src="imagens/gitruuner_online.png" alt="setup instalação" width="800">
+</p>
 Setup da Instalação:
 Acesse via SSH o terminal da máquina e execute os seguintes comandos:
 
