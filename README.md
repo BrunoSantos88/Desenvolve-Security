@@ -1,4 +1,4 @@
-1. Instalar "GITHUB RUNNER" em uma VM Linux UBUNTU 20.04
+1. Usei o "GITHUB RUNNER" em uma VM Linux UBUNTU 20.04
 Instalar dependências do GitHub Runner.
 Criar a pasta actions-runner e definir que a execução ficará na pasta _work.
 <p align="center">
