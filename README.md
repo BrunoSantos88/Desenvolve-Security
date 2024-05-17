@@ -1,6 +1,6 @@
 # Express APP
 
-1. Install GITHUB RUNNER VM Linux UBUNTU 20:04 IP "secrets.HOST_EXPRESS": 3000
+1. Install GITHUB RUNNER VM Linux UBUNTU 20:04
 
 2. acessar ssh e instalar dependencias do github runner.
 ````
