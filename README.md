@@ -1,12 +1,10 @@
 # Express APP
 
 1. Install GITHUB RUNNER VM Linux UBUNTU 20:04
-
-2. acessar ssh e instalar dependencias do github runner.
 ````
 ssh -i "chave.publica" user@secrets.HOST_EXPRESS
 ````
-3. Instalar Dependencia Githb Runner.
+- Instalar Dependencia Githb Runner.
 
 ````
 Create a folder
@@ -17,17 +15,16 @@ echo "chave token" actions-runner-linux-x64-2.316.1.tar.gz" | shasum -a 256 -c
 tar xzf ./actions-runner-linux-x64-2.316.1.tar.gz
 ````
 
-Executar Start runner
+2.Executar Start runner
 ````
 ./config.sh --url https://github.com/BrunoSantos88/Desenvolve-Trilha-SI --token "chavetoken"
 ./run.sh
 ````
-
 Action usar 
 ````
 runs-on: self-hosted
 ````
-4. Setup Action
+3. Setup githb action
  
 step 1 "branch" e agente"on: self-hosted"
 ````
