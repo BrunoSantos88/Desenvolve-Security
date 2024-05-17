@@ -4,6 +4,7 @@ Criar a pasta actions-runner e definir que a execução ficará na pasta _work.
 <p align="center">
   <img src="imagens/download.png" alt="setup instalação" width="800">
 </p>
+- Caso tenha sucesso na instalação!
 <p align="center">
   <img src="imagens/gitruuner_online.png" alt="setup instalação" width="800">
 </p>
