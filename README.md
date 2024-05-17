@@ -17,13 +17,9 @@ cd actions-runner
 curl -o actions-runner-linux-x64-2.316.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.316.1/actions-runner-linux-x64-2.316.1.tar.gz
 echo "chave token" actions-runner-linux-x64-2.316.1.tar.gz" | shasum -a 256 -c
 tar xzf ./actions-runner-linux-x64-2.316.1.tar.gz
-````
-<p align="center"> 
-2.Executar Start runner
-</p>
-````
 ./config.sh --url https://github.com/BrunoSantos88/Desenvolve-Trilha-SI --token "chavetoken"
 ./run.sh
+
 ````
 <p align="center">
   <img src="imagens/githubrunner.png" alt="após instalação" width="800"> 
