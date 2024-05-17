@@ -28,11 +28,11 @@ tar xzf ./actions-runner-linux-x64-2.316.1.tar.gz
   <img src="imagens/githubrunner.png" alt="após instalação" width="800"> 
 </p>
 
-
+<p align="center">  
 3.Setup githb action
-- Criar pasta e arquivo de execução  "github/workflows/express_app.yml"
- 
+Criar pasta e arquivo de execução  "github/workflows/express_app.yml"
 step 1 "branch" e agente"on: self-hosted"
+</p>
 ````
 on:
   push:
@@ -44,13 +44,17 @@ jobs:
     runs-on: self-hosted
 
 ````
+<p align="center">  
 step 2 checar repositorio github 
+</p>
 ````
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 ````
+<p align="center">  
 step 3 Executar script
+</p>
 ````
       - name: Install Container && NodeJs and NPM
         run: |
@@ -58,7 +62,9 @@ step 3 Executar script
          ./dependencia.sh
          echo "Install complete"
 ````
+<p align="center">  
 dependencia.sh
+</p>
 
 ````
 #bin/bash
@@ -71,8 +77,9 @@ sudo apt install npm -y
 sudo apt-get install git -y
 echo "install complete"
 ````
-
+<p align="center">  
 step4 Clonar repositorio e alterar branch
+</p>
 
 ````
       - name: Clone repository
@@ -80,8 +87,9 @@ step4 Clonar repositorio e alterar branch
                sudo git clone https://github.com/BrunoSantos88/Desenvolve-Trilha-SI.git
                sudo git checkout devtest2
 ````
-
-step5 Executar e subit docker-compose.
+<p align="center">  
+step5 Executar e executar docker-compose
+</p>
 ````
       - name: Deploy_UP_Express_APP
         run: |
@@ -91,7 +99,6 @@ step5 Executar e subit docker-compose.
 ````
 <p align="center">  
 4. Apos criar PÓS Deploy_UP_Express_APP
-</p>
-
+<p align="center">  
    
 
