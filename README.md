@@ -4,6 +4,10 @@
    
 - Instalar Dependencia Githb Runner.
 - Criar pasta actions-runner e execução vai fica a pasta "_work"
+<p align="center">
+  <img src="imagens/download.png" alt="setup instalação" width="800"> 
+</p>
+
 
 ````
 mkdir actions-runner
@@ -19,6 +23,11 @@ tar xzf ./actions-runner-linux-x64-2.316.1.tar.gz
 ./config.sh --url https://github.com/BrunoSantos88/Desenvolve-Trilha-SI --token "chavetoken"
 ./run.sh
 ````
+
+<p align="center">
+  <img src="imagens/githubrunner.png" alt="após instalação" width="800"> 
+</p>
+
 
 3.Setup githb action
 - Criar pasta e arquivo de execução  "github/workflows/express_app.yml"
@@ -80,8 +89,9 @@ step5 Executar e subit docker-compose.
            sudo docker-compose up -d   
            curl http://${{secrets.HOST_EXPRESS}}:3000
 ````
-
+<p align="center">  
 4. Apos criar PÓS Deploy_UP_Express_APP
+</p>
 
    
 
