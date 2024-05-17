@@ -38,13 +38,13 @@ jobs:
     runs-on: self-hosted
 
 ````
-step 2 chegar "repositorio github" 
+step 2 checar repositorio github 
 ````
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 ````
-step 3  "executar script"
+step 3 Executar script
 ````
       - name: Install Container && NodeJs and NPM
         run: |
@@ -62,23 +62,23 @@ sudo apt  install docker-compose -y
 sudo apt update -y
 sudo apt install nodejs -y
 sudo apt install npm -y
+sudo apt-get install git -y
 echo "install complete"
 ````
 
-step4
+step4 Clonar repositorio e alterar branch
 
 ````
       - name: Clone repository
         run: |
-               sudo apt-get install git -y
                sudo git clone https://github.com/BrunoSantos88/Desenvolve-Trilha-SI.git
+               sudo git checkout devtest2
 ````
 
-step5
+step5 Executar e subit docker-compose.
 ````
       - name: Checkout branch && up app_express
         run: |
-           git checkout devtest2
            cd express_app
            sudo docker-compose up -d   
            curl http://${{secrets.HOST_EXPRESS}}:3000
