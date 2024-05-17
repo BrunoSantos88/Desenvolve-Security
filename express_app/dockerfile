@@ -3,6 +3,6 @@ WORKDIR /usr/src/app
 RUN mkdir express_app
 WORKDIR /usr/src/app/express_app
 RUN npm init -y && npm install express
-RUN echo "const express = require('express');\nconst app = express();\n\napp.get('/', (req, res) => {\n  res.send('Hello World!');\n});\n\nconst PORT = process.env.PORT || 3000;\napp.listen(PORT, () => {\n  console.log(\`Servidor rodando na porta \${PORT}\`);\n});" > express.js
+COPY express.js
 EXPOSE 3000
 CMD ["node", "express.js"]
