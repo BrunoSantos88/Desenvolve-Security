@@ -1,15 +1,14 @@
 # Express APP
 
 1. Install GITHUB RUNNER VM Linux UBUNTU 20:04
-````
-ssh -i "chave.publica" user@secrets.HOST_EXPRESS
-````
+   
 - Instalar Dependencia Githb Runner.
-- Criar pasta actions-runner e execução fica a pasta "_work"
+- Criar pasta actions-runner e execução vai fica a pasta "_work"
 
 ````
 mkdir actions-runner
-chmod 777 -R actions-runner && cd actions-runner
+chmod 777 -R actions-runner
+cd actions-runner
 curl -o actions-runner-linux-x64-2.316.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.316.1/actions-runner-linux-x64-2.316.1.tar.gz
 echo "chave token" actions-runner-linux-x64-2.316.1.tar.gz" | shasum -a 256 -c
 tar xzf ./actions-runner-linux-x64-2.316.1.tar.gz
@@ -20,12 +19,9 @@ tar xzf ./actions-runner-linux-x64-2.316.1.tar.gz
 ./config.sh --url https://github.com/BrunoSantos88/Desenvolve-Trilha-SI --token "chavetoken"
 ./run.sh
 ````
-usar: runs-on: self-hosted
-````
-runs-on: self-hosted
-````
+
 3.Setup githb action
-- Criar pasta .github/
+- Criar pasta e arquivo de execução  "github/workflows/express_app.yml"
  
 step 1 "branch" e agente"on: self-hosted"
 ````
@@ -78,12 +74,14 @@ step4 Clonar repositorio e alterar branch
 
 step5 Executar e subit docker-compose.
 ````
-      - name: Checkout branch && up app_express
+      - name: Deploy_UP_Express_APP
         run: |
            cd express_app
            sudo docker-compose up -d   
            curl http://${{secrets.HOST_EXPRESS}}:3000
 ````
+
+4. Apos criar PÓS Deploy_UP_Express_APP
 
    
 
