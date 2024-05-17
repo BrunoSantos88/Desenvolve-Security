@@ -5,9 +5,9 @@
 ssh -i "chave.publica" user@secrets.HOST_EXPRESS
 ````
 - Instalar Dependencia Githb Runner.
+- Criar pasta actions-runner e execução fica a pasta "_work"
 
 ````
-Create a folder
 mkdir actions-runner
 chmod 777 -R actions-runner && cd actions-runner
 curl -o actions-runner-linux-x64-2.316.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.316.1/actions-runner-linux-x64-2.316.1.tar.gz
@@ -24,7 +24,8 @@ usar: runs-on: self-hosted
 ````
 runs-on: self-hosted
 ````
-3. Setup githb action
+3.Setup githb action
+- Criar pasta .github/
  
 step 1 "branch" e agente"on: self-hosted"
 ````
