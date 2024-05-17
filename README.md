@@ -122,12 +122,17 @@ step5: Executar e executar docker-compose
 
 ````
 <p align="center">  
-4. Apos criar PÓS Deploy_UP_Express_APP
+4. Apos após executar commando curl ip server
 <p align="center">  
    
-
+````
    steps:
     - name: Send curl request
       run: |
         curl http://${{secrets.HOST_EXPRESS}}:3000
 ````
+
+<p align="center">
+  <img src="imagens/express_server.png" alt="termino processo." width="800"> 
+</p>
+

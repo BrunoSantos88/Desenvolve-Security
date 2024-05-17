@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install Container &amp; NodeJs and NPM
+      - name: Install Docker and Docker-Compose,NodeJs & NPM.
         run: |
           chmod +x dependencia.sh
           if ./dependencia.sh; then
@@ -33,4 +33,9 @@ jobs:
           git checkout desafio2
           cd express_app
           sudo docker-compose up -d
-          curl http://${{secrets.HOST_EXPRESS}}:3000
+  
+
+      - name: SERVER REQUEST
+        run: |
+
+            curl http://${{secrets.HOST_EXPRESS}}:3000
