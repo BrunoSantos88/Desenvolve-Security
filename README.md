@@ -56,10 +56,7 @@ step 3:  Executar script
          ./dependencia.sh
          echo "Install complete"
 ````
-<p align="center">  
-dependencia.sh
-</p>
-
+shellscript: dependencia.sh
 ````
 #bin/bash
 sudo apt update -y
