@@ -29,7 +29,7 @@ runs-on: self-hosted
 ````
 4. Setup Action
  
-step 1
+step 1 "branch" e agente"on: self-hosted"
 ````
 on:
   push:
@@ -41,13 +41,13 @@ jobs:
     runs-on: self-hosted
 
 ````
-step 2
+step 2 chegar "repositorio github" 
 ````
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 ````
-step 3
+step 3  "executar script"
 ````
       - name: Install Container && NodeJs and NPM
         run: |
@@ -55,6 +55,19 @@ step 3
          ./dependencia.sh
          echo "Install complete"
 ````
+dependencia.sh
+
+````
+#bin/bash
+sudo apt update -y
+sudo apt  install docker.io -y
+sudo apt  install docker-compose -y
+sudo apt update -y
+sudo apt install nodejs -y
+sudo apt install npm -y
+echo "install complete"
+````
+
 step4
 
 ````
