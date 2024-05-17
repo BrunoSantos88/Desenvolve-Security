@@ -1,9 +1,8 @@
 FROM node:16
 WORKDIR /usr/src/app
-RUN npm install -g express
-RUN mkdir myapp
-WORKDIR /usr/src/app/myapp
+RUN mkdir express_app
+WORKDIR /usr/src/app/express_app
 RUN npm init -y && npm install express
-RUN echo "const express = require('express');\nconst app = express();\n\napp.get('/', (req, res) => {\n  res.send('HELLOWORLD!');\n});\n\nconst PORT = process.env.PORT || 3000;\napp.listen(PORT, () => {\n  console.log(\`Servidor rodando na porta \${PORT}\`);\n});" > express.js
+RUN echo "const express = require('express');\nconst app = express();\n\napp.get('/', (req, res) => {\n  res.send('Hello World!');\n});\n\nconst PORT = process.env.PORT || 3000;\napp.listen(PORT, () => {\n  console.log(\`Servidor rodando na porta \${PORT}\`);\n});" > express.js
 EXPOSE 3000
-CMD [ "node", "express.js" ]
+CMD ["node", "express.js"]
