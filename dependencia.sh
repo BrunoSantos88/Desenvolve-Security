@@ -38,10 +38,4 @@ if [[ $? -ne 0 ]]; then
   exit 1
 fi
 
-sudo apt-get install git -y
-if [[ $? -ne 0 ]]; then
-  echo "Git installation failed"
-  exit 1
-fi
-
 echo "Install complete"

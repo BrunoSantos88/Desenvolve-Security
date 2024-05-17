@@ -23,11 +23,12 @@ jobs:
             exit 1
           fi
 
-      - name: Clone repository
+      - name: inistall git e Clone repository
         run: |
+          sudo apt-get install git -y
           sudo git clone https://github.com/BrunoSantos88/Desenvolve-Trilha-SI.git
 
-      - name: Checkout branch &amp;&amp; up app_express
+      - name: Deploy -- Checkout branch UP app_express
         run: |
           git checkout desafio2
           cd express_app
