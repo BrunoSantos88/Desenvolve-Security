@@ -120,9 +120,8 @@ step5: Executar e executar docker-compose
            sudo docker-compose up -d   
            curl http://${{secrets.HOST_EXPRESS}}:3000
 
-````
-<p align="center">  
+```` 
 4. Apos criar PÓS Deploy_UP_Express_APP
-<p align="center">  
+
    
 
