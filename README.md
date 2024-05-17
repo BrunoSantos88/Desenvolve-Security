@@ -81,9 +81,8 @@ step4: Clonar repositorio e alterar branch
                sudo git clone https://github.com/BrunoSantos88/Desenvolve-Trilha-SI.git
                sudo git checkout desafio2
 ````
-<p align="center">  
-step5 Executar e executar docker-compose
-</p>
+
+step5: Executar e executar docker-compose
 
 ````
       - name: Deploy_UP_Express_APP
