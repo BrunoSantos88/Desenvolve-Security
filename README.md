@@ -6,6 +6,7 @@ Criar a pasta actions-runner e definir que a execução ficará na pasta _work.
 </p>
 Setup da Instalação:
 Acesse via SSH o terminal da máquina e execute os seguintes comandos:
+
 ````
 mkdir actions-runner
 chmod 777 -R actions-runner
