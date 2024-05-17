@@ -61,15 +61,44 @@ step 3:  Executar script
 ````
 shellscript: dependencia.sh
 ````
-#bin/bash
+#!/bin/bash
+set -e 
 sudo apt update -y
-sudo apt  install docker.io -y
-sudo apt  install docker-compose -y
+if [[ $? -ne 0 ]]; then
+  echo "Update failed"
+  exit 1
+fi
+sudo apt install docker.io -y
+if [[ $? -ne 0 ]]; then
+  echo "Docker installation failed"
+  exit 1
+fi
+sudo apt install docker-compose -y
+if [[ $? -ne 0 ]]; then
+  echo "Docker Compose installation failed"
+  exit 1
+fi
 sudo apt update -y
+if [[ $? -ne 0 ]]; then
+  echo "Second update failed"
+  exit 1
+fi
 sudo apt install nodejs -y
+if [[ $? -ne 0 ]]; then
+  echo "Node.js installation failed"
+  exit 1
+fi
 sudo apt install npm -y
+if [[ $? -ne 0 ]]; then
+  echo "NPM installation failed"
+  exit 1
+fi
 sudo apt-get install git -y
-echo "install complete"
+if [[ $? -ne 0 ]]; then
+  echo "Git installation failed"
+  exit 1
+fi
+echo "Install complete"
 ````
 
 step4: Clonar repositorio e alterar branch
