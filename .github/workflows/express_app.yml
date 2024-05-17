@@ -34,12 +34,3 @@ jobs:
           cd express_app
           sudo docker-compose up -d
           curl http://${{secrets.HOST_EXPRESS}}:3000
-
-  helloWorld:
-   needs: [express_vm]
-   runs-on: self-hosted
-
-   steps:
-    - name: Send curl request
-      run: |
-        curl http://${{secrets.HOST_EXPRESS}}:3000
