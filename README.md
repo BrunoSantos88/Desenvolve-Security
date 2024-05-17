@@ -79,7 +79,7 @@ step4: Clonar repositorio e alterar branch
       - name: Clone repository
         run: |
                sudo git clone https://github.com/BrunoSantos88/Desenvolve-Trilha-SI.git
-               sudo git checkout devtest2
+               sudo git checkout desafio2
 ````
 <p align="center">  
 step5 Executar e executar docker-compose
