@@ -17,7 +17,7 @@ echo "chave token" actions-runner-linux-x64-2.316.1.tar.gz" | shasum -a 256 -c
 tar xzf ./actions-runner-linux-x64-2.316.1.tar.gz
 ````
 
-executr Start runner
+Executar Start runner
 ````
 ./config.sh --url https://github.com/BrunoSantos88/Desenvolve-Trilha-SI --token "chavetoken"
 ./run.sh
@@ -27,3 +27,51 @@ Action usar
 ````
 runs-on: self-hosted
 ````
+4. Setup Action
+ 
+step 1
+````
+on:
+  push:
+    branches:  
+      - deafio2
+
+jobs:
+  express_vm:
+    runs-on: self-hosted
+
+````
+step 2
+````
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+````
+step 3
+````
+      - name: Install Container && NodeJs and NPM
+        run: |
+         chmod +x dependencia.sh
+         ./dependencia.sh
+         echo "Install complete"
+````
+step4
+
+````
+      - name: Clone repository
+        run: |
+               sudo apt-get install git -y
+               sudo git clone https://github.com/BrunoSantos88/Desenvolve-Trilha-SI.git
+````
+
+step5
+````
+      - name: Checkout branch && up app_express
+        run: |
+           git checkout devtest2
+           cd express_app
+           sudo docker-compose up -d   
+           curl http://${{secrets.HOST_EXPRESS}}:3000
+````
+
+   
