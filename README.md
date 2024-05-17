@@ -122,14 +122,9 @@ step5: Executar e executar docker-compose
 
 ````
 <p align="center">  
-4. Após Deploy_UP_Express_APP
+4. Apos criar PÓS Deploy_UP_Express_APP
 <p align="center">  
-
-Step: Após deploy: executar curl ip servidor
-````
- helloWorld:
-   needs: [express_vm]
-   runs-on: ubuntu_host
+   
 
    steps:
     - name: Send curl request

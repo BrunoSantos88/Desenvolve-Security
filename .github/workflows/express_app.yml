@@ -1,0 +1,45 @@
+name: Deploy Express_app
+
+on:
+  push:
+    branches:
+      - desafio2
+
+jobs:
+  express_vm:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Container &amp; NodeJs and NPM
+        run: |
+          chmod +x dependencia.sh
+          if ./dependencia.sh; then
+            echo "Install complete"
+          else
+            echo "Install failed"
+            exit 1
+          fi
+
+      - name: Clone repository
+        run: |
+          sudo apt-get install git -y
+          sudo git clone https://github.com/BrunoSantos88/Desenvolve-Trilha-SI.git
+
+      - name: Checkout branch &amp;&amp; up app_express
+        run: |
+          cd Desenvolve-Trilha-SI
+          git checkout devtest2
+          cd express_app
+          sudo docker-compose up -d
+
+  helloWorld:
+   needs: [express_vm]
+   runs-on: ubuntu_host
+
+   steps:
+    - name: Send curl request
+      run: |
+        curl http://${{secrets.HOST_EXPRESS}}:3000
