@@ -20,7 +20,7 @@ tar xzf ./actions-runner-linux-x64-2.316.1.tar.gz
 ./config.sh --url https://github.com/BrunoSantos88/Desenvolve-Trilha-SI --token "chavetoken"
 ./run.sh
 ````
-Action usar 
+usar: runs-on: self-hosted
 ````
 runs-on: self-hosted
 ````
