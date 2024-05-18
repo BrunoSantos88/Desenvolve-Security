@@ -107,7 +107,6 @@ Passo 5: Executar e levantar o docker-compose
   run: |
     cd express_app
     sudo docker-compose up -d
-    curl http://${{secrets.HOST_EXPRESS}}:3000
 ````
 3. Enviar requisição curl após execução do comando
 ````
