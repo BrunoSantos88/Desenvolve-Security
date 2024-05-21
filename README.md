@@ -3,7 +3,7 @@
 <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" alt="JavaScript" target="_blank">  <p align="center">  
  
  <p align="center">  
-# Projeto prático: Construindo um Site Responsivo com HTML e CSS</title>
+Projeto prático: Construindo um Site Responsivo com HTML e CSS
 </p>
  
  <p align="center">  
