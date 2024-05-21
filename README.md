@@ -134,19 +134,3 @@ Após finnalizar Job Sucesso!
 <p align="center">
   <img src="imagens/express_server.png" alt="termino processo." width="800">
 </p>
-
-
-
-<table>
-<thead>
-  <tr>
-    <th colspan="2">Portas</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>22</td>
-    <td>3000<td>
-  </tr>
-</tbody>
-</table>
