@@ -145,32 +145,12 @@ Após finnalizar Job Sucesso!
 </thead>
 <tbody>
   <tr>
-    <td>22</td>
-    <td>SSH</td>
+    <td>22</td>  <td>VM LINUX</td>
+    <td>SSH</td> <td> UBUNTU 20:04</td>
   </tr>
   <tr>
-    <td>3000</td>
-    <td>NODE</td>
-  </tr>
-</tbody>
-</table>
-
-
-
-<table>
-<thead>
-  <tr>
-    <th colspan="2">PRecursos</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>VM LINUX</td>
-    <td> UBUNTU 20:04</td>
-  </tr>
-  <tr>
-    <td>CLOUD</td>
-    <td>AZURE</td>
+    <td>3000</td> <td>CLOUD</td>
+    <td>NODE</td> <td>CLOUD</td>
   </tr>
 </tbody>
 </table>
