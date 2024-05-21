@@ -1,0 +1,41 @@
+name: Deploy Express_app
+
+on:
+  push:
+    branches:
+      - desafio2
+
+jobs:
+  express_vm:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Docker and Docker-Compose,NodeJs & NPM.
+        run: |
+          chmod +x dependencia.sh
+          if ./dependencia.sh; then
+            echo "Install complete"
+          else
+            echo "Install failed"
+            exit 1
+          fi
+
+      - name: inistall git e Clone repository
+        run: |
+          sudo apt-get install git -y
+          sudo git clone https://github.com/BrunoSantos88/Desenvolve-Trilha-SI.git
+
+      - name: Deploy -- Checkout branch UP app_express
+        run: |
+          git checkout desafio2
+          cd express_app
+          sudo docker-compose up -d
+  
+
+      - name: SERVER REQUEST
+        run: |
+
+            curl http://${{secrets.HOST_EXPRESS}}:3000
