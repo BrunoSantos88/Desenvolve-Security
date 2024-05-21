@@ -140,17 +140,17 @@ Após finnalizar Job Sucesso!
 <table>
 <thead>
   <tr>
-    <th colspan="2">Portas Liberadas</th>
+    <th colspan="2">Portas Liberadas</th> <th colspan="2">CLOUD</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>22</td>  <td>VM LINUX</td>
-    <td>SSH</td> <td> UBUNTU 20:04</td>
+    <td>22</td>  <td>VM LINUX</td>      <td>CLOUD</td> 
+    <td>SSH</td> <td>UBUNTU 20:04</td>  <td>AZURE</td>
   </tr>
   <tr>
-    <td>3000</td> <td>CLOUD</td>
-    <td>NODE</td> <td>CLOUD</td>
+    <td>3000</td> <td>NODEJS</td>  <td>DOCKER</td>
+    <td>NODE</td> <td>16</td>  <td>DOCKERCOMPOSE/td>
   </tr>
 </tbody>
 </table>
