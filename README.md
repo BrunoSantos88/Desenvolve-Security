@@ -1,3 +1,6 @@
+<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=github-actions&logoColor=white" alt="GitHub Actions Badge">
+
+ 
  <p align="center">  
 Configuração de Ambiente de Desenvolvimento com Docker e Express.js
 <p>
