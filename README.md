@@ -150,7 +150,7 @@ Após finnalizar Job Sucesso!
   </tr>
   <tr>
     <td>3000</td> <td>NODEJS</td>  <td>DOCKER</td>
-    <td>NODE</td> <td>16</td>  <td>DOCKERCOMPOSE/td>
+    <td>NODE</td> <td>16</td>  <td>DOCKERCOMPOSE</td>
   </tr>
 </tbody>
 </table>
