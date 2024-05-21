@@ -1,4 +1,7 @@
-<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=github-actions&logoColor=white" alt="GitHub Actions Badge">
+<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=github-actions&logoColor=white" alt="GitHub Actions Badge"> <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white"> 
+![Node.js](https://img.shields.io/badge/Node.js-16-green?style=flat&logo=node.js&logoColor=white)
+![npm](https://img.shields.io/badge/npm-7.10.0-red?style=flat&logo=npm&logoColor=white)
+
 
  
  <p align="center">  
