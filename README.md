@@ -154,3 +154,23 @@ Após finnalizar Job Sucesso!
   </tr>
 </tbody>
 </table>
+
+
+
+<table>
+<thead>
+  <tr>
+    <th colspan="2">PRecursos</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>VM LINUX</td>
+    <td> UBUNTU 20:04</td>
+  </tr>
+  <tr>
+    <td>CLOUD</td>
+    <td>AZURE</td>
+  </tr>
+</tbody>
+</table>
