@@ -2,9 +2,12 @@
 
 <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" alt="JavaScript" target="_blank">  <p align="center">  
 
- <p align="center">  
- # Projeto prático: Construindo um Site Responsivo com HTML e CSS
- </p>
+<title>Projeto prático: Construindo um Site Responsivo com HTML e CSS</title>
+<style>
+  p {
+    text-align: center; /* Alinhar o texto centralmente */
+    font-size: 1.5em; /* Aumentar o tamanho da fonte */
+  }
  
  <p align="center">  
    Como Jogar o Quiz Desafio
