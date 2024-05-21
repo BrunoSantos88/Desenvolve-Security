@@ -140,7 +140,7 @@ Após finnalizar Job Sucesso!
 <table>
 <thead>
   <tr>
-    <th colspan="2">Portas Liberadas</th> <th colspan="2">CLOUD</th> <th colspan="2">OPERACIONAL</th>
+    <th colspan="2">Portas Liberadas</th> <th colspan="2">OPERACIONAL</th>
   </tr>
 </thead>
 <tbody>
@@ -149,8 +149,8 @@ Após finnalizar Job Sucesso!
     <td>SSH</td><td>AZURE</td><td>Linux</td>
   </tr>
   <tr>
-    <td>3000</td><td>NPM</td><td>DOCKER</td>
-    <td>NODE</td><td>Vesao</td><td>16</td>
+    <td>3000</td><td>NPM</td><td>
+    <td>NODE</td><td>16</td>
   </tr>
 </tbody>
 </table>
