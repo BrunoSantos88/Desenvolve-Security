@@ -145,12 +145,12 @@ Após finnalizar Job Sucesso!
 </thead>
 <tbody>
   <tr>
-    <td>22</td><td>CLOUD</td><td>UBUNTU 20:04</td> 
-    <td>SSH</td><td>AZURE</td><td>Linux</td>
+    <td>22</td><td>UBUNTU 20:04</td> 
+    <td>SSH</td><td>Linux</td>
   </tr>
   <tr>
-    <td>3000</td><td>NPM</td><td>
-    <td>NODE</td><td>16</td>
+    <td>3000<td>NPM</td><td>
+    <td>NODE<td>16</td>
   </tr>
 </tbody>
 </table>
