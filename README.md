@@ -149,8 +149,8 @@ Após finnalizar Job Sucesso!
     <td>SSH</td> <td>UBUNTU 20:04</td>  <td>AZURE</td>
   </tr>
   <tr>
-    <td>3000</td> <td>NODEJS</td>  <td>DOCKER</td>
-    <td>NODE</td> <td>16</td>  <td>DOCKERCOMPOSE</td>
+    <td>3000</td> <td>VERSAO</td>  <td>DOCKER</td>
+    <td>NODE</td> <td>16</td>  <td>DOCKERFILE</td>
   </tr>
 </tbody>
 </table>
