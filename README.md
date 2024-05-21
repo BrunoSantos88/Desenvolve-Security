@@ -145,12 +145,12 @@ Após finnalizar Job Sucesso!
 </thead>
 <tbody>
   <tr>
-    <td>22</td><td>VM LINUX</td><td>CLOUD</td> 
-    <td>SSH</td><td>UBUNTU 20:04</td><td>AZURE</td>
+    <td>22</td><td>CLOUD</td><td>UBUNTU 20:04</td> 
+    <td>SSH</td><td>AZURE</td><td>Linux</td>
   </tr>
   <tr>
-    <td>3000</td><td>VERSAO</td><td>DOCKER</td>
-    <td>NODE</td><td>16</td><td>DOCKERFILE</td>
+    <td>3000</td><td>NPM</td><td>DOCKER</td>
+    <td>NODE</td><td>Vesao</td><td>16</td>
   </tr>
 </tbody>
 </table>
