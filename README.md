@@ -140,17 +140,15 @@ Após finnalizar Job Sucesso!
 <table>
 <thead>
   <tr>
-    <th colspan="2">Portas Liberadas</th>
+    <th colspan="2">Portas</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>22</td>UBUNTU 20:04</td> 
-    <td>SSH</td>Linux</td>
+    <td>22</td>
   </tr>
   <tr>
-    <td>3000<td>NPM</td>
-    <td>NODE<td>16</td>
+    <td>3000<td>
   </tr>
 </tbody>
 </table>
