@@ -146,8 +146,6 @@ Após finnalizar Job Sucesso!
 <tbody>
   <tr>
     <td>22</td>
-  </tr>
-  <tr>
     <td>3000<td>
   </tr>
 </tbody>
