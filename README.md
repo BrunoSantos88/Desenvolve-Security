@@ -140,7 +140,7 @@ Após finnalizar Job Sucesso!
 <table>
 <thead>
   <tr>
-    <th colspan="2">Ports</th>
+    <th colspan="2">Portas Liberadas</th>
   </tr>
 </thead>
 <tbody>
