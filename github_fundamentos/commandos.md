@@ -15,3 +15,6 @@
 
 - git push origin branch
 
+
+
+Linl: https://pt.stackoverflow.com/questions/166248/executar-git-pull-sem-solicitar-senha
