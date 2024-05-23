@@ -15,12 +15,6 @@ Pré-requisitos:
     - Docker: Para criar contêineres da aplicação.
     - Node.js e npm: Ambiente de execução do Node.js.
 
-
- 
- <p align="center">  
-Configuração de Ambiente de Desenvolvimento com Docker e Express.js
-<p>
-
 - Instalar dependências do GitHub Runner.
 - Criar a pasta actions-runner e definir que a execução ficará na pasta _work.
 <p align="center">
