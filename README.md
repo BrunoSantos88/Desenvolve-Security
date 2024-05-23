@@ -132,10 +132,6 @@ steps:
       curl http://${{secrets.HOST_EXPRESS}}:3000
 
 ````
-Sucesso na Instalação
-<p align="center">
-  <img src="imagens/gitruuner_online.png" alt="GitHub Runner Online" width="800">
-</p>
 Página Web Após Deploy
 <p align="center">
   <img src="imagens/express_server.png" alt="Express Server Running" width="800">
