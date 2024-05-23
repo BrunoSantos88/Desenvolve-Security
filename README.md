@@ -2,6 +2,19 @@
 ![Node.js](https://img.shields.io/badge/Node.js-16-green?style=flat&logo=node.js&logoColor=white)
 ![npm](https://img.shields.io/badge/npm-7.10.0-red?style=flat&logo=npm&logoColor=white)
 
+ <p align="center">  
+Configuração de Ambiente de Desenvolvimento com Docker e Express.js
+Visão Geral
+ </p>
+
+Este guia fornece instruções detalhadas para configurar um ambiente de desenvolvimento utilizando Docker e Express.js, integrando com GitHub Actions. Seguindo estes passos, você poderá configurar um runner de GitHub Actions auto-hospedado, instalar dependências necessárias e implementar uma aplicação Express.js via Docker.
+
+Pré-requisitos:
+
+    - GitHub Actions: Configuração do runner auto-hospedado.
+    - Docker: Para criar contêineres da aplicação.
+    - Node.js e npm: Ambiente de execução do Node.js.
+
 
  
  <p align="center">  
@@ -117,7 +130,7 @@ Passo 5: Executar e levantar o docker-compose
     cd express_app
     sudo docker-compose up -d
 ````
-3. Enviar requisição curl após execução do comando
+6. Enviar Requisição curl Após Execução do Comando
 ````
 steps:
   - name: Send curl request
@@ -125,12 +138,15 @@ steps:
       curl http://${{secrets.HOST_EXPRESS}}:3000
 
 ````
-Após finalizar Job Sucesso!
+Sucesso na Instalação
 <p align="center">
-  <img src="imagens/sucesspjob.png" alt="jobsucesso." width="800">
+  <img src="imagens/gitruuner_online.png" alt="GitHub Runner Online" width="800">
 </p>
-
-Pagina Web!
+Página Web Após Deploy
 <p align="center">
-  <img src="imagens/express_server.png" alt="termino processo." width="800">
+  <img src="imagens/express_server.png" alt="Express Server Running" width="800">
+</p>
+Job Finalizado com Sucesso
+<p align="center">
+  <img src="imagens/sucesspjob.png" alt="Job Sucesso" width="800">
 </p>
