@@ -118,7 +118,7 @@ echo "Install complete"
     cd Desenvolve-Trilha-SI
     sudo git checkout desafio2
 ````
-5. Executar e levantar o docker-compose
+5. Executar docker-compose
 ````
 - name: Deploy_UP_Express_APP
   run: |
