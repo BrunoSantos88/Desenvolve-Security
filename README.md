@@ -40,9 +40,11 @@ Acesse via SSH o terminal da máquina e execute os seguintes comandos:
 <p align="center">
   <img src="imagens/githubrunner.png" alt="após instalação" width="800">
 </p>
-2. Setup do GitHub Action
+
+Setup do GitHub Action
 Crie a pasta e o arquivo de execução github/workflows/express_app.yml. </p>
-Passo 1: Definir a "branch" e "agente"
+
+1. Definir a "branch" e "agente"
 
 ````
 on:
@@ -55,13 +57,13 @@ jobs:
     runs-on: self-hosted
 ````
 
-Passo 2: Checar repositório no GitHub
+2. Checar repositório no GitHub
 ````
 steps:
   - name: Checkout code
     uses: actions/checkout@v2
 ````
-Passo 3: Executar script
+3. Executar script
 ````
 - name: Install Container & NodeJs and NPM
   run: |
@@ -72,7 +74,7 @@ Passo 3: Executar script
       echo "Install failed"
     fi
 ````
-Script Shell: dependencia.sh
+shellscript.sh
 ````
 #!/bin/bash
 set -e 
@@ -108,7 +110,7 @@ if [[ $? -ne 0 ]]; then
 fi
 echo "Install complete"
 ````
-Passo4: Clonar repositório e alterar branch
+4. Clonar repositório e alterar branch
 ````
 - name: Clone repository
   run: |
@@ -116,14 +118,14 @@ Passo4: Clonar repositório e alterar branch
     cd Desenvolve-Trilha-SI
     sudo git checkout desafio2
 ````
-Passo 5: Executar e levantar o docker-compose
+5. Executar e levantar o docker-compose
 ````
 - name: Deploy_UP_Express_APP
   run: |
     cd express_app
     sudo docker-compose up -d
 ````
-6. Enviar Requisição curl Após Execução do Comando
+6. Enviar Requisição curl
 ````
 steps:
   - name: Send curl request
