@@ -11,9 +11,9 @@ Este guia fornece instruções detalhadas para configurar um ambiente de desenvo
 
 Pré-requisitos:
 
-    - GitHub Actions: Configuração do runner auto-hospedado.
-    - Docker: Para criar contêineres da aplicação.
-    - Node.js e npm: Ambiente de execução do Node.js.
+    GitHub Actions: Configuração do runner auto-hospedado.
+    Docker: Para criar contêineres da aplicação.
+    Node.js e npm: Ambiente de execução do Node.js.
 
 - Instalar dependências do GitHub Runner.
 - Criar a pasta actions-runner e definir que a execução ficará na pasta _work.
