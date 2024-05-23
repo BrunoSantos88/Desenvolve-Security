@@ -4,7 +4,6 @@
 
  <p align="center">  
 Configuração de Ambiente de Desenvolvimento com Docker e Express.js
-Visão Geral
  </p>
 
 Este guia fornece instruções detalhadas para configurar um ambiente de desenvolvimento utilizando Docker e Express.js, integrando com GitHub Actions. Seguindo estes passos, você poderá configurar um runner de GitHub Actions auto-hospedado, instalar dependências necessárias e implementar uma aplicação Express.js via Docker.
