@@ -133,11 +133,12 @@ steps:
       curl http://${{secrets.HOST_EXPRESS}}:3000
 
 ````
-Página Web Após Deploy
+Página Web!
 <p align="center">
   <img src="imagens/express_server.png" alt="Express Server Running" width="800">
 </p>
-Job Finalizado com Sucesso
+
+Job Finalizado com Sucesso!
 <p align="center">
   <img src="imagens/sucesspjob.png" alt="Job Sucesso" width="800">
 </p>
