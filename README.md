@@ -14,6 +14,12 @@ Pré-requisitos:
     Docker: Para criar contêineres da aplicação.
     Node.js e npm: Ambiente de execução do Node.js.
 
+Cursos Alura:
+
+    https://cursos.alura.com.br/course/docker-criando-gerenciando-containers
+    https://cursos.alura.com.br/course/node-js-api-rest-express-mongodb
+    https://cursos.alura.com.br/course/integracao-continua-testes-automatizados-pipeline-github-actions
+
 - Instalar dependências do GitHub Runner.
 - Criar a pasta actions-runner e definir que a execução ficará na pasta _work.
 <p align="center">
