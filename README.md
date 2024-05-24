@@ -20,8 +20,11 @@ Cursos Alura:
     https://cursos.alura.com.br/course/node-js-api-rest-express-mongodb
     https://cursos.alura.com.br/course/integracao-continua-testes-automatizados-pipeline-github-actions
 
-- Instalar dependências do GitHub Runner.
-- Criar a pasta actions-runner e definir que a execução ficará na pasta _work.
+Instalar antes: 
+
+    Instalar dependências do GitHub Runner.
+    Criar a pasta actions-runner e definir que a execução ficará na pasta _work.
+    
 <p align="center">
   <img src="imagens/download.png" alt="setup instalação" width="800">
 </p>
