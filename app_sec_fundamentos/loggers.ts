@@ -1,12 +1,3 @@
-# Instalar Pino e pino_pretty
-
-Gravar logs.
-
-* npm install pino pino-pretty --save
-
-* criar arquivo logger.ts
-
-```
 import pino from 'pino';
 
 const transport = pino.transport({
@@ -27,17 +18,3 @@ const transport = pino.transport({
 export const logger = pino({
     timestamp: pino.stdTimeFunctions.isoTime,
 }, transport)
-
-```
-
-- Criando import
-
-```
-import { logger } from '../logger.js'
-```
-
-* criar pasta logs
-
-```
-mkdir logs 
-```
