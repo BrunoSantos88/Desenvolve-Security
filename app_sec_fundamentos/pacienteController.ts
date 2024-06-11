@@ -36,7 +36,7 @@ export const criarPaciente = async (
   req: Request,
   res: Response
 ): Promise<void> => {
-    logger.info('Criando paciente')
+    req.log.info('Criando paciente')
     const pacienteData = req.body
 
     const pacienteSanitizado: Paciente = sanitizacaoPaciente(pacienteData)
