@@ -1,0 +1,20 @@
+POST /rest/user/login HTTP/1.1
+Host: localhost:3000
+Content-Length: 36
+sec-ch-ua: "Chromium";v="125", "Not.A/Brand";v="24"
+Accept: application/json, text/plain, */*
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.112 Safari/537.36
+sec-ch-ua-platform: "Linux"
+Origin: http://localhost:3000
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:3000/page?id=1%27
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: language=en; welcomebanner_status=dismiss
+Connection: keep-alive
+
+{"email":"user@user","password":"*"}

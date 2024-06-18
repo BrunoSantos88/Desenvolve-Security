@@ -1,0 +1,3 @@
+cursor.execute("SELECT * FROM users WHERE id = %s", (user_id,))
+SELECT * FROM users WHERE username = ''' AND password = 'password';
+SELECT * FROM users WHERE username = '' OR 1=1--' AND password = 'password';
