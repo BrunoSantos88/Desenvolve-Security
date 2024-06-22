@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: juice-shop
+  namespace: juiceshop
+spec:
+  replicas: 15  # Adjust as needed
+  selector:
+    matchLabels:
+      app: juice-shop
+  template:
+    metadata:
+      labels:
+        app: juice-shop
+    spec:
+      containers:
+      - name: juice-shop
+        image: bkimminich/juice-shop
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: juice-shop-service
+  namespace: juiceshop
+spec:
+  selector:
+    app: juice-shop  # Seleciona pods com rótulo 'app: juice-shop'
+  ports:
+    - protocol: TCP
+      port: 80  # Porta do serviço
+      targetPort: 3000  # Porta do container
+      nodePort: 30000  # Porta NodePort específica (você pode escolher um número de porta disponível)
+  type: NodePort  # Tipo de serviço - NodePort para exposição através de portas nos nós
+---

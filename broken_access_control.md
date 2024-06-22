@@ -12,4 +12,4 @@ Existem várias formas de acessar controle quebrado pode ocorrer, incluindo:
 
 4. Permissões Excessivas: Concessão de permissões além do necessário para usuários ou contas, aumentando o risco de acesso indevido a recursos sensíveis.
 
-* Para mitigar vulnerabilidades de Broken Access Control, é importante implementar práticas de segurança robustas, como autenticação forte, autorização baseada em princípios do mínimo privilégio, validação rigorosa de entrada de dados, auditoria de acesso e monitoramento contínuo de acesso a recursos sensíveis.
+* Para mitigar vulnerabilidades de Broken Access Control, é importante implementar práticas de segurança robustas, como autenticação forte, autorização baseada em princípios do mínimo privilégio, validação rigorosa de entrada de dados, auditoria de acesso e monitoramento contínuo de acesso a recursos sensíveis. 
