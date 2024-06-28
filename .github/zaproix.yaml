@@ -1,26 +1,24 @@
-name: ZAP Baseline Scan
+name: OWASP ZAP Scan
 
-on:
-  push:
-    branches:
-      - devtest3
-  pull_request:
-    branches:
-      - devtest3
+on: [devtest3]
 
 jobs:
   zap_scan:
     runs-on: ubuntu-latest
-
-    container:
-      image: owasp/zap2docker-stable
-      options: --shm-size=2g
-
+    
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Run ZAP Baseline Scan
-        run: |
-          docker pull softwaresecurityproject/zap-stable
-          docker run -v $(pwd):/zap/wrk/:rw -t softwaresecurityproject/zap-stable zap-baseline.py -t http://juice.hostdevtest.shop -r zap_report.html --auth-username admin@admin.com --auth-password admin
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: Run OWASP ZAP Scan
+      run: |
+        docker run -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-stable zap-baseline.py \
+          -t http://juice.hostdevtest.shop \
+          -g gen.conf \
+          -r zap_report.html
+    
+    - name: Upload Report as Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: zap-report
+        path: zap_report.html
