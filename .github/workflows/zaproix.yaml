@@ -23,6 +23,7 @@ jobs:
         run: |
           wget https://github.com/zaproxy/zaproxy/releases/download/v2.15.0/ZAP_2.15.0_Linux.tar.gz
           tar -xzf ZAP_2.15.0_Linux.tar.gz
+          mv ZAP_2.15.0 zap
 
       - name: Run OWASP ZAP Scan
         run: |
