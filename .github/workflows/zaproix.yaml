@@ -21,9 +21,8 @@ jobs:
 
       - name: Download OWASP ZAP
         run: |
-          wget https://github.com/zaproxy/zaproxy/releases/download/v2.11.0/ZAP_2.11.0_Core.tar.gz
-          tar -xzf ZAP_2.11.0_Core.tar.gz
-          mv ZAP_2.11.0 zap
+          wget https://github.com/zaproxy/zaproxy/releases/download/v2.15.0/ZAP_2.15.0_Linux.tar.gz
+          tar -xzf ZAP_2.15.0_Linux.tar.gz
 
       - name: Run OWASP ZAP Scan
         run: |
