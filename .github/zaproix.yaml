@@ -22,15 +22,5 @@ jobs:
 
       - name: Run ZAP Baseline Scan
         run: |
-          docker pull owasp/dependency-check
-          docker run -v $(pwd):/zap/wrk/:rw -t owasp/dependency-check zap-baseline.py -t http://juice.hostdevtest.shop -r zap_report.html --auth-username admin@admin.com --auth-password admin
-
-      - name: Save ZAP Report
-        if: always()
-        run: mv zap_report.html $GITHUB_WORKSPACE/zap_report.html
-
-      - name: Upload ZAP report as artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: zap-report
-          path: $GITHUB_WORKSPACE/zap_report.html
+          docker pull softwaresecurityproject/zap-stable
+          docker run -v $(pwd):/zap/wrk/:rw -t softwaresecurityproject/zap-stable zap-baseline.py -t http://juice.hostdevtest.shop -r zap_report.html --auth-username admin@admin.com --auth-password admin
