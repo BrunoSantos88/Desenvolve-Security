@@ -4,7 +4,7 @@ metadata:
   name: juice-shop
   namespace: juiceshop
 spec:
-  replicas: 15  # Adjust as needed
+  replicas: 5
   selector:
     matchLabels:
       app: juice-shop
@@ -18,7 +18,9 @@ spec:
         image: bkimminich/juice-shop
         ports:
         - containerPort: 3000
+
 ---
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -26,11 +28,9 @@ metadata:
   namespace: juiceshop
 spec:
   selector:
-    app: juice-shop  # Seleciona pods com rótulo 'app: juice-shop'
+    app: juice-shop
   ports:
     - protocol: TCP
-      port: 80  # Porta do serviço
-      targetPort: 3000  # Porta do container
-      nodePort: 30000  # Porta NodePort específica (você pode escolher um número de porta disponível)
-  type: NodePort  # Tipo de serviço - NodePort para exposição através de portas nos nós
----
+      port: 80
+      targetPort: 3000
+  type: LoadBalancer

@@ -34,3 +34,7 @@ autenticação para realizar tarefas que deveriam ser restritas.
 *  Fuzzing
 
 O Fuzzing é uma técnica para testar o software usando ferramentas automáticas para fornecer entradas inválidas ou inesperadas para um programa ou função em um programa, logo verificando os resultados para ver se o programa falha ou age de forma inapropriada.
+
+
+
+link: https://en.wikipedia.org/wiki/List_of_file_signatures
