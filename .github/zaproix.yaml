@@ -22,8 +22,8 @@ jobs:
 
       - name: Run ZAP Baseline Scan
         run: |
-          docker pull owasp/zap2docker-stable
-          docker run -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-stable zap-baseline.py -t http://juice.hostdevtest.shop -r zap_report.html --auth-username admin@admin.com --auth-password admin
+          docker pull owasp/dependency-check
+          docker run -v $(pwd):/zap/wrk/:rw -t owasp/dependency-check zap-baseline.py -t http://juice.hostdevtest.shop -r zap_report.html --auth-username admin@admin.com --auth-password admin
 
       - name: Save ZAP Report
         if: always()
