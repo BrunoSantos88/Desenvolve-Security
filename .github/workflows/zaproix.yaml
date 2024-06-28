@@ -1,6 +1,9 @@
 name: OWASP ZAP Scan
 
-on: [devtest3]
+on:
+  push:
+    branches:
+      - devtest3  # Trigger on pushes to the devtest3 branch
 
 jobs:
   zap_scan:
@@ -24,7 +27,7 @@ jobs:
       - name: Run OWASP ZAP Scan
         run: |
           cd zap
-          ./zap.sh -cmd -quickurl http://juice.hostdevtest.shop -quickout /zap/report.html -quickprogress
+          ./zap.sh -cmd -quickurl http://juice.hostdevtest.shop -quickout report.html -quickprogress
 
       - name: Upload ZAP Report
         uses: actions/upload-artifact@v2
