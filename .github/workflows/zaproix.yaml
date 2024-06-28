@@ -35,3 +35,15 @@ jobs:
         with:
           name: zap-report
           path: zap/report.html
+
+
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: zap-report  
+          path: zap-report  
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.ZAP_TOKEN_GIT}}
+          publish_dir: ./zap-report  
