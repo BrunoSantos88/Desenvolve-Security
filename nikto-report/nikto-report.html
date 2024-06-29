@@ -1,0 +1,3875 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+ <title>Nikto Report</title>
+ <style type="text/css">
+  .dataTable
+  {
+   font-family: tahoma, sans-serif;
+   font-size: 11pt; 
+   font-weight: normal; 
+   color: #000066;
+   background: #EEEEEE;
+   border: thin solid black;
+   width: 95%;
+  }
+  .headerTable
+  {
+   font-family: tahoma, sans-serif;
+   font-size: 15pt; 
+   font-weight: normal; 
+   color: white;
+   background: #000066;
+   border: thin solid black;
+   width: 300px;
+  }
+  .column-head
+  {
+   width: 15em;
+   font-weight:bold;
+   vertical-align: top;
+  }
+  .copyright
+  {
+   font-family: tahoma, sans-serif;
+   font-size: 10pt;
+   font-weight: normal;
+   font-style: italic;
+   color: black;
+  }
+  body
+  {
+   background: white;
+  }
+ </style>
+</head>
+<body>
+<div>
+<a name="1"></a>
+<table class="headerTable">
+ <tr>
+   <td>juice.hostdevtest.shop / 172.214.126.203 port 80</td>
+ </tr>
+</table>
+<table class="dataTable">
+ <tr>
+   <td class="column-head">Target IP</td>
+   <td>172.214.126.203</td>
+ </tr>
+ <tr>
+   <td class="column-head">Target hostname</td>
+   <td>juice.hostdevtest.shop</td>
+ </tr>
+  <tr>
+   <td class="column-head">Target Port</td>
+   <td>80</td>
+ </tr>
+  <tr>
+   <td class="column-head">HTTP Server</td>
+   <td></td>
+ </tr>
+ <tr>
+   <td class="column-head">Site Link (Name)</td>
+   <td><a href="http://juice.hostdevtest.shop:80/">http://juice.hostdevtest.shop:80/</a></td>
+ </tr>
+ <tr>
+   <td class="column-head">Site Link (IP)</td>
+   <td><a href="http://172.214.126.203:80/">http://172.214.126.203:80/</a></td>
+ </tr>
+ </table>
+</div>
+<p></p>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>GET</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/: Retrieved access-control-allow-origin header: *.</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/">http://juice.hostdevtest.shop:80/</a><br>
+      <a href="http://172.214.126.203:80/">http://172.214.126.203:80/</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>GET</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/: Uncommon header 'x-recruiting' found, with contents: /#/jobs.</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/">http://juice.hostdevtest.shop:80/</a><br>
+      <a href="http://172.214.126.203:80/">http://172.214.126.203:80/</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/ftp/</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>GET</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/robots.txt: Entry '/ftp/' is returned a non-forbidden or redirect HTTP code (200).</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/ftp/">http://juice.hostdevtest.shop:80/ftp/</a><br>
+      <a href="http://172.214.126.203:80/ftp/">http://172.214.126.203:80/ftp/</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://portswigger.net/kb/issues/00600600_robots-txt-file'>https://portswigger.net/kb/issues/00600600_robots-txt-file</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/robots.txt</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>GET</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/robots.txt: contains 1 entry which should be manually viewed.</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/robots.txt">http://juice.hostdevtest.shop:80/robots.txt</a><br>
+      <a href="http://172.214.126.203:80/robots.txt">http://172.214.126.203:80/robots.txt</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://developer.mozilla.org/en-US/docs/Glossary/Robots.txt'>https://developer.mozilla.org/en-US/docs/Glossary/Robots.txt</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>assets/public/favicon_js.ico</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>GET</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>assets/public/favicon_js.ico: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type.</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80assets/public/favicon_js.ico">http://juice.hostdevtest.shop:80assets/public/favicon_js.ico</a><br>
+      <a href="http://172.214.126.203:80assets/public/favicon_js.ico">http://172.214.126.203:80assets/public/favicon_js.ico</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/'>https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/backup.cer</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/backup.cer: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/backup.cer">http://juice.hostdevtest.shop:80/backup.cer</a><br>
+      <a href="http://172.214.126.203:80/backup.cer">http://172.214.126.203:80/backup.cer</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/dump.tgz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/dump.tgz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/dump.tgz">http://juice.hostdevtest.shop:80/dump.tgz</a><br>
+      <a href="http://172.214.126.203:80/dump.tgz">http://172.214.126.203:80/dump.tgz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/backup.alz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/backup.alz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/backup.alz">http://juice.hostdevtest.shop:80/backup.alz</a><br>
+      <a href="http://172.214.126.203:80/backup.alz">http://172.214.126.203:80/backup.alz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/shop.egg</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/shop.egg: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/shop.egg">http://juice.hostdevtest.shop:80/shop.egg</a><br>
+      <a href="http://172.214.126.203:80/shop.egg">http://172.214.126.203:80/shop.egg</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice_hostdevtest_shop.tgz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice_hostdevtest_shop.tgz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.tgz">http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.tgz</a><br>
+      <a href="http://172.214.126.203:80/juice_hostdevtest_shop.tgz">http://172.214.126.203:80/juice_hostdevtest_shop.tgz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/dump.pem</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/dump.pem: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/dump.pem">http://juice.hostdevtest.shop:80/dump.pem</a><br>
+      <a href="http://172.214.126.203:80/dump.pem">http://172.214.126.203:80/dump.pem</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtestshop.cer</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtestshop.cer: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtestshop.cer">http://juice.hostdevtest.shop:80/juicehostdevtestshop.cer</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtestshop.cer">http://172.214.126.203:80/juicehostdevtestshop.cer</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/database.tar.bz2</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/database.tar.bz2: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/database.tar.bz2">http://juice.hostdevtest.shop:80/database.tar.bz2</a><br>
+      <a href="http://172.214.126.203:80/database.tar.bz2">http://172.214.126.203:80/database.tar.bz2</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtestshop.egg</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtestshop.egg: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtestshop.egg">http://juice.hostdevtest.shop:80/juicehostdevtestshop.egg</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtestshop.egg">http://172.214.126.203:80/juicehostdevtestshop.egg</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.tgz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.tgz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.tgz">http://juice.hostdevtest.shop:80/juice.tgz</a><br>
+      <a href="http://172.214.126.203:80/juice.tgz">http://172.214.126.203:80/juice.tgz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.shop.tar</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.shop.tar: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.tar">http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.tar</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.shop.tar">http://172.214.126.203:80/juice.hostdevtest.shop.tar</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.tar.lzma</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.tar.lzma: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.tar.lzma">http://juice.hostdevtest.shop:80/juice.hostdevtest.tar.lzma</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.tar.lzma">http://172.214.126.203:80/juice.hostdevtest.tar.lzma</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/site.tar.bz2</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/site.tar.bz2: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/site.tar.bz2">http://juice.hostdevtest.shop:80/site.tar.bz2</a><br>
+      <a href="http://172.214.126.203:80/site.tar.bz2">http://172.214.126.203:80/site.tar.bz2</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/archive.tar.bz2</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/archive.tar.bz2: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/archive.tar.bz2">http://juice.hostdevtest.shop:80/archive.tar.bz2</a><br>
+      <a href="http://172.214.126.203:80/archive.tar.bz2">http://172.214.126.203:80/archive.tar.bz2</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice_hostdevtest_shop.war</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice_hostdevtest_shop.war: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.war">http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.war</a><br>
+      <a href="http://172.214.126.203:80/juice_hostdevtest_shop.war">http://172.214.126.203:80/juice_hostdevtest_shop.war</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.war</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.war: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.war">http://juice.hostdevtest.shop:80/juice.war</a><br>
+      <a href="http://172.214.126.203:80/juice.war">http://172.214.126.203:80/juice.war</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/backup.tar</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/backup.tar: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/backup.tar">http://juice.hostdevtest.shop:80/backup.tar</a><br>
+      <a href="http://172.214.126.203:80/backup.tar">http://172.214.126.203:80/backup.tar</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.tar.bz2</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.tar.bz2: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.tar.bz2">http://juice.hostdevtest.shop:80/juice.hostdevtest.tar.bz2</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.tar.bz2">http://172.214.126.203:80/juice.hostdevtest.tar.bz2</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/shop.tgz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/shop.tgz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/shop.tgz">http://juice.hostdevtest.shop:80/shop.tgz</a><br>
+      <a href="http://172.214.126.203:80/shop.tgz">http://172.214.126.203:80/shop.tgz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/dump.egg</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/dump.egg: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/dump.egg">http://juice.hostdevtest.shop:80/dump.egg</a><br>
+      <a href="http://172.214.126.203:80/dump.egg">http://172.214.126.203:80/dump.egg</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/shop.pem</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/shop.pem: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/shop.pem">http://juice.hostdevtest.shop:80/shop.pem</a><br>
+      <a href="http://172.214.126.203:80/shop.pem">http://172.214.126.203:80/shop.pem</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/172.214.126.203.tar.lzma</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/172.214.126.203.tar.lzma: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/172.214.126.203.tar.lzma">http://juice.hostdevtest.shop:80/172.214.126.203.tar.lzma</a><br>
+      <a href="http://172.214.126.203:80/172.214.126.203.tar.lzma">http://172.214.126.203:80/172.214.126.203.tar.lzma</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.shop.alz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.shop.alz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.alz">http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.alz</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.shop.alz">http://172.214.126.203:80/juice.hostdevtest.shop.alz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtest.pem</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtest.pem: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtest.pem">http://juice.hostdevtest.shop:80/juicehostdevtest.pem</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtest.pem">http://172.214.126.203:80/juicehostdevtest.pem</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.jks</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.jks: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.jks">http://juice.hostdevtest.shop:80/juice.jks</a><br>
+      <a href="http://172.214.126.203:80/juice.jks">http://172.214.126.203:80/juice.jks</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice_hostdevtest_shop.tar</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice_hostdevtest_shop.tar: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.tar">http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.tar</a><br>
+      <a href="http://172.214.126.203:80/juice_hostdevtest_shop.tar">http://172.214.126.203:80/juice_hostdevtest_shop.tar</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice_hostdevtest_shop.tar.lzma</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice_hostdevtest_shop.tar.lzma: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.tar.lzma">http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.tar.lzma</a><br>
+      <a href="http://172.214.126.203:80/juice_hostdevtest_shop.tar.lzma">http://172.214.126.203:80/juice_hostdevtest_shop.tar.lzma</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/172.214.126.203.tar</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/172.214.126.203.tar: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/172.214.126.203.tar">http://juice.hostdevtest.shop:80/172.214.126.203.tar</a><br>
+      <a href="http://172.214.126.203:80/172.214.126.203.tar">http://172.214.126.203:80/172.214.126.203.tar</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/site.tar.lzma</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/site.tar.lzma: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/site.tar.lzma">http://juice.hostdevtest.shop:80/site.tar.lzma</a><br>
+      <a href="http://172.214.126.203:80/site.tar.lzma">http://172.214.126.203:80/site.tar.lzma</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.egg</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.egg: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.egg">http://juice.hostdevtest.shop:80/juice.hostdevtest.egg</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.egg">http://172.214.126.203:80/juice.hostdevtest.egg</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/backup.war</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/backup.war: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/backup.war">http://juice.hostdevtest.shop:80/backup.war</a><br>
+      <a href="http://172.214.126.203:80/backup.war">http://172.214.126.203:80/backup.war</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/172.214.126.203.cer</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/172.214.126.203.cer: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/172.214.126.203.cer">http://juice.hostdevtest.shop:80/172.214.126.203.cer</a><br>
+      <a href="http://172.214.126.203:80/172.214.126.203.cer">http://172.214.126.203:80/172.214.126.203.cer</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/archive.cer</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/archive.cer: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/archive.cer">http://juice.hostdevtest.shop:80/archive.cer</a><br>
+      <a href="http://172.214.126.203:80/archive.cer">http://172.214.126.203:80/archive.cer</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/dump.tar</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/dump.tar: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/dump.tar">http://juice.hostdevtest.shop:80/dump.tar</a><br>
+      <a href="http://172.214.126.203:80/dump.tar">http://172.214.126.203:80/dump.tar</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.egg</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.egg: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.egg">http://juice.hostdevtest.shop:80/juice.egg</a><br>
+      <a href="http://172.214.126.203:80/juice.egg">http://172.214.126.203:80/juice.egg</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice_hostdevtest_shop.pem</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice_hostdevtest_shop.pem: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.pem">http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.pem</a><br>
+      <a href="http://172.214.126.203:80/juice_hostdevtest_shop.pem">http://172.214.126.203:80/juice_hostdevtest_shop.pem</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/shop.cer</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/shop.cer: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/shop.cer">http://juice.hostdevtest.shop:80/shop.cer</a><br>
+      <a href="http://172.214.126.203:80/shop.cer">http://172.214.126.203:80/shop.cer</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.shop.tar.lzma</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.shop.tar.lzma: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.tar.lzma">http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.tar.lzma</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.shop.tar.lzma">http://172.214.126.203:80/juice.hostdevtest.shop.tar.lzma</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.tgz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.tgz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.tgz">http://juice.hostdevtest.shop:80/juice.hostdevtest.tgz</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.tgz">http://172.214.126.203:80/juice.hostdevtest.tgz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/shop.war</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/shop.war: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/shop.war">http://juice.hostdevtest.shop:80/shop.war</a><br>
+      <a href="http://172.214.126.203:80/shop.war">http://172.214.126.203:80/shop.war</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/hostdevtest.pem</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/hostdevtest.pem: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/hostdevtest.pem">http://juice.hostdevtest.shop:80/hostdevtest.pem</a><br>
+      <a href="http://172.214.126.203:80/hostdevtest.pem">http://172.214.126.203:80/hostdevtest.pem</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/172.214.126.203.jks</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/172.214.126.203.jks: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/172.214.126.203.jks">http://juice.hostdevtest.shop:80/172.214.126.203.jks</a><br>
+      <a href="http://172.214.126.203:80/172.214.126.203.jks">http://172.214.126.203:80/172.214.126.203.jks</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/site.jks</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/site.jks: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/site.jks">http://juice.hostdevtest.shop:80/site.jks</a><br>
+      <a href="http://172.214.126.203:80/site.jks">http://172.214.126.203:80/site.jks</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.cer</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.cer: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.cer">http://juice.hostdevtest.shop:80/juice.hostdevtest.cer</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.cer">http://172.214.126.203:80/juice.hostdevtest.cer</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/archive.egg</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/archive.egg: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/archive.egg">http://juice.hostdevtest.shop:80/archive.egg</a><br>
+      <a href="http://172.214.126.203:80/archive.egg">http://172.214.126.203:80/archive.egg</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/archive.tgz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/archive.tgz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/archive.tgz">http://juice.hostdevtest.shop:80/archive.tgz</a><br>
+      <a href="http://172.214.126.203:80/archive.tgz">http://172.214.126.203:80/archive.tgz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtest.war</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtest.war: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtest.war">http://juice.hostdevtest.shop:80/juicehostdevtest.war</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtest.war">http://172.214.126.203:80/juicehostdevtest.war</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/database.tar</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/database.tar: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/database.tar">http://juice.hostdevtest.shop:80/database.tar</a><br>
+      <a href="http://172.214.126.203:80/database.tar">http://172.214.126.203:80/database.tar</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/dump.cer</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/dump.cer: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/dump.cer">http://juice.hostdevtest.shop:80/dump.cer</a><br>
+      <a href="http://172.214.126.203:80/dump.cer">http://172.214.126.203:80/dump.cer</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/site.alz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/site.alz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/site.alz">http://juice.hostdevtest.shop:80/site.alz</a><br>
+      <a href="http://172.214.126.203:80/site.alz">http://172.214.126.203:80/site.alz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/shop.tar</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/shop.tar: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/shop.tar">http://juice.hostdevtest.shop:80/shop.tar</a><br>
+      <a href="http://172.214.126.203:80/shop.tar">http://172.214.126.203:80/shop.tar</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/backup.tgz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/backup.tgz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/backup.tgz">http://juice.hostdevtest.shop:80/backup.tgz</a><br>
+      <a href="http://172.214.126.203:80/backup.tgz">http://172.214.126.203:80/backup.tgz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/database.cer</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/database.cer: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/database.cer">http://juice.hostdevtest.shop:80/database.cer</a><br>
+      <a href="http://172.214.126.203:80/database.cer">http://172.214.126.203:80/database.cer</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.shop.jks</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.shop.jks: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.jks">http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.jks</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.shop.jks">http://172.214.126.203:80/juice.hostdevtest.shop.jks</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/archive.war</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/archive.war: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/archive.war">http://juice.hostdevtest.shop:80/archive.war</a><br>
+      <a href="http://172.214.126.203:80/archive.war">http://172.214.126.203:80/archive.war</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/database.pem</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/database.pem: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/database.pem">http://juice.hostdevtest.shop:80/database.pem</a><br>
+      <a href="http://172.214.126.203:80/database.pem">http://172.214.126.203:80/database.pem</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/172.214.126.203.tgz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/172.214.126.203.tgz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/172.214.126.203.tgz">http://juice.hostdevtest.shop:80/172.214.126.203.tgz</a><br>
+      <a href="http://172.214.126.203:80/172.214.126.203.tgz">http://172.214.126.203:80/172.214.126.203.tgz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.tar.lzma</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.tar.lzma: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.tar.lzma">http://juice.hostdevtest.shop:80/juice.tar.lzma</a><br>
+      <a href="http://172.214.126.203:80/juice.tar.lzma">http://172.214.126.203:80/juice.tar.lzma</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/172.214.126.203.egg</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/172.214.126.203.egg: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/172.214.126.203.egg">http://juice.hostdevtest.shop:80/172.214.126.203.egg</a><br>
+      <a href="http://172.214.126.203:80/172.214.126.203.egg">http://172.214.126.203:80/172.214.126.203.egg</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/database.tgz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/database.tgz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/database.tgz">http://juice.hostdevtest.shop:80/database.tgz</a><br>
+      <a href="http://172.214.126.203:80/database.tgz">http://172.214.126.203:80/database.tgz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtest.tar</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtest.tar: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtest.tar">http://juice.hostdevtest.shop:80/juicehostdevtest.tar</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtest.tar">http://172.214.126.203:80/juicehostdevtest.tar</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/dump.war</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/dump.war: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/dump.war">http://juice.hostdevtest.shop:80/dump.war</a><br>
+      <a href="http://172.214.126.203:80/dump.war">http://172.214.126.203:80/dump.war</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice_hostdevtest_shop.jks</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice_hostdevtest_shop.jks: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.jks">http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.jks</a><br>
+      <a href="http://172.214.126.203:80/juice_hostdevtest_shop.jks">http://172.214.126.203:80/juice_hostdevtest_shop.jks</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.war</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.war: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.war">http://juice.hostdevtest.shop:80/juice.hostdevtest.war</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.war">http://172.214.126.203:80/juice.hostdevtest.war</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.shop.tar.bz2</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.shop.tar.bz2: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.tar.bz2">http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.tar.bz2</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.shop.tar.bz2">http://172.214.126.203:80/juice.hostdevtest.shop.tar.bz2</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/backup.jks</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/backup.jks: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/backup.jks">http://juice.hostdevtest.shop:80/backup.jks</a><br>
+      <a href="http://172.214.126.203:80/backup.jks">http://172.214.126.203:80/backup.jks</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtestshop.tar.bz2</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtestshop.tar.bz2: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtestshop.tar.bz2">http://juice.hostdevtest.shop:80/juicehostdevtestshop.tar.bz2</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtestshop.tar.bz2">http://172.214.126.203:80/juicehostdevtestshop.tar.bz2</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/172.214.126.203.pem</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/172.214.126.203.pem: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/172.214.126.203.pem">http://juice.hostdevtest.shop:80/172.214.126.203.pem</a><br>
+      <a href="http://172.214.126.203:80/172.214.126.203.pem">http://172.214.126.203:80/172.214.126.203.pem</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.shop.pem</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.shop.pem: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.pem">http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.pem</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.shop.pem">http://172.214.126.203:80/juice.hostdevtest.shop.pem</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/hostdevtest.alz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/hostdevtest.alz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/hostdevtest.alz">http://juice.hostdevtest.shop:80/hostdevtest.alz</a><br>
+      <a href="http://172.214.126.203:80/hostdevtest.alz">http://172.214.126.203:80/hostdevtest.alz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtestshop.pem</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtestshop.pem: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtestshop.pem">http://juice.hostdevtest.shop:80/juicehostdevtestshop.pem</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtestshop.pem">http://172.214.126.203:80/juicehostdevtestshop.pem</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/dump.jks</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/dump.jks: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/dump.jks">http://juice.hostdevtest.shop:80/dump.jks</a><br>
+      <a href="http://172.214.126.203:80/dump.jks">http://172.214.126.203:80/dump.jks</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice_hostdevtest_shop.alz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice_hostdevtest_shop.alz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.alz">http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.alz</a><br>
+      <a href="http://172.214.126.203:80/juice_hostdevtest_shop.alz">http://172.214.126.203:80/juice_hostdevtest_shop.alz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/hostdevtest.tgz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/hostdevtest.tgz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/hostdevtest.tgz">http://juice.hostdevtest.shop:80/hostdevtest.tgz</a><br>
+      <a href="http://172.214.126.203:80/hostdevtest.tgz">http://172.214.126.203:80/hostdevtest.tgz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtest.egg</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtest.egg: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtest.egg">http://juice.hostdevtest.shop:80/juicehostdevtest.egg</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtest.egg">http://172.214.126.203:80/juicehostdevtest.egg</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtest.tar.bz2</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtest.tar.bz2: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtest.tar.bz2">http://juice.hostdevtest.shop:80/juicehostdevtest.tar.bz2</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtest.tar.bz2">http://172.214.126.203:80/juicehostdevtest.tar.bz2</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/site.tar</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/site.tar: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/site.tar">http://juice.hostdevtest.shop:80/site.tar</a><br>
+      <a href="http://172.214.126.203:80/site.tar">http://172.214.126.203:80/site.tar</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/shop.alz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/shop.alz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/shop.alz">http://juice.hostdevtest.shop:80/shop.alz</a><br>
+      <a href="http://172.214.126.203:80/shop.alz">http://172.214.126.203:80/shop.alz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/172.214.126.203.alz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/172.214.126.203.alz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/172.214.126.203.alz">http://juice.hostdevtest.shop:80/172.214.126.203.alz</a><br>
+      <a href="http://172.214.126.203:80/172.214.126.203.alz">http://172.214.126.203:80/172.214.126.203.alz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice_hostdevtest_shop.egg</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice_hostdevtest_shop.egg: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.egg">http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.egg</a><br>
+      <a href="http://172.214.126.203:80/juice_hostdevtest_shop.egg">http://172.214.126.203:80/juice_hostdevtest_shop.egg</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.jks</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.jks: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.jks">http://juice.hostdevtest.shop:80/juice.hostdevtest.jks</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.jks">http://172.214.126.203:80/juice.hostdevtest.jks</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/database.egg</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/database.egg: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/database.egg">http://juice.hostdevtest.shop:80/database.egg</a><br>
+      <a href="http://172.214.126.203:80/database.egg">http://172.214.126.203:80/database.egg</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.tar.bz2</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.tar.bz2: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.tar.bz2">http://juice.hostdevtest.shop:80/juice.tar.bz2</a><br>
+      <a href="http://172.214.126.203:80/juice.tar.bz2">http://172.214.126.203:80/juice.tar.bz2</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtestshop.war</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtestshop.war: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtestshop.war">http://juice.hostdevtest.shop:80/juicehostdevtestshop.war</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtestshop.war">http://172.214.126.203:80/juicehostdevtestshop.war</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/hostdevtest.cer</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/hostdevtest.cer: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/hostdevtest.cer">http://juice.hostdevtest.shop:80/hostdevtest.cer</a><br>
+      <a href="http://172.214.126.203:80/hostdevtest.cer">http://172.214.126.203:80/hostdevtest.cer</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/backup.tar.lzma</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/backup.tar.lzma: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/backup.tar.lzma">http://juice.hostdevtest.shop:80/backup.tar.lzma</a><br>
+      <a href="http://172.214.126.203:80/backup.tar.lzma">http://172.214.126.203:80/backup.tar.lzma</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/hostdevtest.tar.bz2</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/hostdevtest.tar.bz2: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/hostdevtest.tar.bz2">http://juice.hostdevtest.shop:80/hostdevtest.tar.bz2</a><br>
+      <a href="http://172.214.126.203:80/hostdevtest.tar.bz2">http://172.214.126.203:80/hostdevtest.tar.bz2</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtest.alz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtest.alz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtest.alz">http://juice.hostdevtest.shop:80/juicehostdevtest.alz</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtest.alz">http://172.214.126.203:80/juicehostdevtest.alz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/hostdevtest.jks</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/hostdevtest.jks: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/hostdevtest.jks">http://juice.hostdevtest.shop:80/hostdevtest.jks</a><br>
+      <a href="http://172.214.126.203:80/hostdevtest.jks">http://172.214.126.203:80/hostdevtest.jks</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtest.jks</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtest.jks: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtest.jks">http://juice.hostdevtest.shop:80/juicehostdevtest.jks</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtest.jks">http://172.214.126.203:80/juicehostdevtest.jks</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.tar</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.tar: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.tar">http://juice.hostdevtest.shop:80/juice.hostdevtest.tar</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.tar">http://172.214.126.203:80/juice.hostdevtest.tar</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/shop.jks</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/shop.jks: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/shop.jks">http://juice.hostdevtest.shop:80/shop.jks</a><br>
+      <a href="http://172.214.126.203:80/shop.jks">http://172.214.126.203:80/shop.jks</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/archive.tar</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/archive.tar: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/archive.tar">http://juice.hostdevtest.shop:80/archive.tar</a><br>
+      <a href="http://172.214.126.203:80/archive.tar">http://172.214.126.203:80/archive.tar</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/site.war</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/site.war: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/site.war">http://juice.hostdevtest.shop:80/site.war</a><br>
+      <a href="http://172.214.126.203:80/site.war">http://172.214.126.203:80/site.war</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtest.tgz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtest.tgz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtest.tgz">http://juice.hostdevtest.shop:80/juicehostdevtest.tgz</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtest.tgz">http://172.214.126.203:80/juicehostdevtest.tgz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.pem</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.pem: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.pem">http://juice.hostdevtest.shop:80/juice.hostdevtest.pem</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.pem">http://172.214.126.203:80/juice.hostdevtest.pem</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/database.tar.lzma</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/database.tar.lzma: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/database.tar.lzma">http://juice.hostdevtest.shop:80/database.tar.lzma</a><br>
+      <a href="http://172.214.126.203:80/database.tar.lzma">http://172.214.126.203:80/database.tar.lzma</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/database.jks</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/database.jks: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/database.jks">http://juice.hostdevtest.shop:80/database.jks</a><br>
+      <a href="http://172.214.126.203:80/database.jks">http://172.214.126.203:80/database.jks</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/backup.egg</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/backup.egg: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/backup.egg">http://juice.hostdevtest.shop:80/backup.egg</a><br>
+      <a href="http://172.214.126.203:80/backup.egg">http://172.214.126.203:80/backup.egg</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtestshop.alz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtestshop.alz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtestshop.alz">http://juice.hostdevtest.shop:80/juicehostdevtestshop.alz</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtestshop.alz">http://172.214.126.203:80/juicehostdevtestshop.alz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/archive.tar.lzma</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/archive.tar.lzma: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/archive.tar.lzma">http://juice.hostdevtest.shop:80/archive.tar.lzma</a><br>
+      <a href="http://172.214.126.203:80/archive.tar.lzma">http://172.214.126.203:80/archive.tar.lzma</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/site.cer</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/site.cer: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/site.cer">http://juice.hostdevtest.shop:80/site.cer</a><br>
+      <a href="http://172.214.126.203:80/site.cer">http://172.214.126.203:80/site.cer</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.pem</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.pem: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.pem">http://juice.hostdevtest.shop:80/juice.pem</a><br>
+      <a href="http://172.214.126.203:80/juice.pem">http://172.214.126.203:80/juice.pem</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/dump.alz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/dump.alz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/dump.alz">http://juice.hostdevtest.shop:80/dump.alz</a><br>
+      <a href="http://172.214.126.203:80/dump.alz">http://172.214.126.203:80/dump.alz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/dump.tar.bz2</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/dump.tar.bz2: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/dump.tar.bz2">http://juice.hostdevtest.shop:80/dump.tar.bz2</a><br>
+      <a href="http://172.214.126.203:80/dump.tar.bz2">http://172.214.126.203:80/dump.tar.bz2</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/hostdevtest.tar.lzma</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/hostdevtest.tar.lzma: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/hostdevtest.tar.lzma">http://juice.hostdevtest.shop:80/hostdevtest.tar.lzma</a><br>
+      <a href="http://172.214.126.203:80/hostdevtest.tar.lzma">http://172.214.126.203:80/hostdevtest.tar.lzma</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtest.tar.lzma</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtest.tar.lzma: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtest.tar.lzma">http://juice.hostdevtest.shop:80/juicehostdevtest.tar.lzma</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtest.tar.lzma">http://172.214.126.203:80/juicehostdevtest.tar.lzma</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/shop.tar.lzma</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/shop.tar.lzma: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/shop.tar.lzma">http://juice.hostdevtest.shop:80/shop.tar.lzma</a><br>
+      <a href="http://172.214.126.203:80/shop.tar.lzma">http://172.214.126.203:80/shop.tar.lzma</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.shop.egg</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.shop.egg: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.egg">http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.egg</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.shop.egg">http://172.214.126.203:80/juice.hostdevtest.shop.egg</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.shop.tgz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.shop.tgz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.tgz">http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.tgz</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.shop.tgz">http://172.214.126.203:80/juice.hostdevtest.shop.tgz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.alz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.alz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.alz">http://juice.hostdevtest.shop:80/juice.hostdevtest.alz</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.alz">http://172.214.126.203:80/juice.hostdevtest.alz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/archive.jks</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/archive.jks: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/archive.jks">http://juice.hostdevtest.shop:80/archive.jks</a><br>
+      <a href="http://172.214.126.203:80/archive.jks">http://172.214.126.203:80/archive.jks</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/site.pem</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/site.pem: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/site.pem">http://juice.hostdevtest.shop:80/site.pem</a><br>
+      <a href="http://172.214.126.203:80/site.pem">http://172.214.126.203:80/site.pem</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/archive.pem</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/archive.pem: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/archive.pem">http://juice.hostdevtest.shop:80/archive.pem</a><br>
+      <a href="http://172.214.126.203:80/archive.pem">http://172.214.126.203:80/archive.pem</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.alz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.alz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.alz">http://juice.hostdevtest.shop:80/juice.alz</a><br>
+      <a href="http://172.214.126.203:80/juice.alz">http://172.214.126.203:80/juice.alz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/site.tgz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/site.tgz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/site.tgz">http://juice.hostdevtest.shop:80/site.tgz</a><br>
+      <a href="http://172.214.126.203:80/site.tgz">http://172.214.126.203:80/site.tgz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/database.alz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/database.alz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/database.alz">http://juice.hostdevtest.shop:80/database.alz</a><br>
+      <a href="http://172.214.126.203:80/database.alz">http://172.214.126.203:80/database.alz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/172.214.126.203.war</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/172.214.126.203.war: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/172.214.126.203.war">http://juice.hostdevtest.shop:80/172.214.126.203.war</a><br>
+      <a href="http://172.214.126.203:80/172.214.126.203.war">http://172.214.126.203:80/172.214.126.203.war</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/hostdevtest.tar</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/hostdevtest.tar: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/hostdevtest.tar">http://juice.hostdevtest.shop:80/hostdevtest.tar</a><br>
+      <a href="http://172.214.126.203:80/hostdevtest.tar">http://172.214.126.203:80/hostdevtest.tar</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/shop.tar.bz2</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/shop.tar.bz2: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/shop.tar.bz2">http://juice.hostdevtest.shop:80/shop.tar.bz2</a><br>
+      <a href="http://172.214.126.203:80/shop.tar.bz2">http://172.214.126.203:80/shop.tar.bz2</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtest.cer</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtest.cer: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtest.cer">http://juice.hostdevtest.shop:80/juicehostdevtest.cer</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtest.cer">http://172.214.126.203:80/juicehostdevtest.cer</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtestshop.tar.lzma</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtestshop.tar.lzma: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtestshop.tar.lzma">http://juice.hostdevtest.shop:80/juicehostdevtestshop.tar.lzma</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtestshop.tar.lzma">http://172.214.126.203:80/juicehostdevtestshop.tar.lzma</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtestshop.jks</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtestshop.jks: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtestshop.jks">http://juice.hostdevtest.shop:80/juicehostdevtestshop.jks</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtestshop.jks">http://172.214.126.203:80/juicehostdevtestshop.jks</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/dump.tar.lzma</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/dump.tar.lzma: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/dump.tar.lzma">http://juice.hostdevtest.shop:80/dump.tar.lzma</a><br>
+      <a href="http://172.214.126.203:80/dump.tar.lzma">http://172.214.126.203:80/dump.tar.lzma</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice_hostdevtest_shop.cer</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice_hostdevtest_shop.cer: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.cer">http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.cer</a><br>
+      <a href="http://172.214.126.203:80/juice_hostdevtest_shop.cer">http://172.214.126.203:80/juice_hostdevtest_shop.cer</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.shop.war</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.shop.war: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.war">http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.war</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.shop.war">http://172.214.126.203:80/juice.hostdevtest.shop.war</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/hostdevtest.egg</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/hostdevtest.egg: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/hostdevtest.egg">http://juice.hostdevtest.shop:80/hostdevtest.egg</a><br>
+      <a href="http://172.214.126.203:80/hostdevtest.egg">http://172.214.126.203:80/hostdevtest.egg</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.hostdevtest.shop.cer</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.hostdevtest.shop.cer: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.cer">http://juice.hostdevtest.shop:80/juice.hostdevtest.shop.cer</a><br>
+      <a href="http://172.214.126.203:80/juice.hostdevtest.shop.cer">http://172.214.126.203:80/juice.hostdevtest.shop.cer</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/172.214.126.203.tar.bz2</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/172.214.126.203.tar.bz2: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/172.214.126.203.tar.bz2">http://juice.hostdevtest.shop:80/172.214.126.203.tar.bz2</a><br>
+      <a href="http://172.214.126.203:80/172.214.126.203.tar.bz2">http://172.214.126.203:80/172.214.126.203.tar.bz2</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.cer</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.cer: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.cer">http://juice.hostdevtest.shop:80/juice.cer</a><br>
+      <a href="http://172.214.126.203:80/juice.cer">http://172.214.126.203:80/juice.cer</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/archive.alz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/archive.alz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/archive.alz">http://juice.hostdevtest.shop:80/archive.alz</a><br>
+      <a href="http://172.214.126.203:80/archive.alz">http://172.214.126.203:80/archive.alz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice.tar</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice.tar: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice.tar">http://juice.hostdevtest.shop:80/juice.tar</a><br>
+      <a href="http://172.214.126.203:80/juice.tar">http://172.214.126.203:80/juice.tar</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtestshop.tar</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtestshop.tar: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtestshop.tar">http://juice.hostdevtest.shop:80/juicehostdevtestshop.tar</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtestshop.tar">http://172.214.126.203:80/juicehostdevtestshop.tar</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/site.egg</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/site.egg: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/site.egg">http://juice.hostdevtest.shop:80/site.egg</a><br>
+      <a href="http://172.214.126.203:80/site.egg">http://172.214.126.203:80/site.egg</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/backup.pem</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/backup.pem: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/backup.pem">http://juice.hostdevtest.shop:80/backup.pem</a><br>
+      <a href="http://172.214.126.203:80/backup.pem">http://172.214.126.203:80/backup.pem</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juicehostdevtestshop.tgz</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juicehostdevtestshop.tgz: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juicehostdevtestshop.tgz">http://juice.hostdevtest.shop:80/juicehostdevtestshop.tgz</a><br>
+      <a href="http://172.214.126.203:80/juicehostdevtestshop.tgz">http://172.214.126.203:80/juicehostdevtestshop.tgz</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/backup.tar.bz2</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/backup.tar.bz2: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/backup.tar.bz2">http://juice.hostdevtest.shop:80/backup.tar.bz2</a><br>
+      <a href="http://172.214.126.203:80/backup.tar.bz2">http://172.214.126.203:80/backup.tar.bz2</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/hostdevtest.war</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/hostdevtest.war: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/hostdevtest.war">http://juice.hostdevtest.shop:80/hostdevtest.war</a><br>
+      <a href="http://172.214.126.203:80/hostdevtest.war">http://172.214.126.203:80/hostdevtest.war</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/juice_hostdevtest_shop.tar.bz2</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/juice_hostdevtest_shop.tar.bz2: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.tar.bz2">http://juice.hostdevtest.shop:80/juice_hostdevtest_shop.tar.bz2</a><br>
+      <a href="http://172.214.126.203:80/juice_hostdevtest_shop.tar.bz2">http://172.214.126.203:80/juice_hostdevtest_shop.tar.bz2</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/database.war</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>HEAD</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/database.war: Potentially interesting backup/cert file found. .</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/database.war">http://juice.hostdevtest.shop:80/database.war</a><br>
+      <a href="http://172.214.126.203:80/database.war">http://172.214.126.203:80/database.war</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://cwe.mitre.org/data/definitions/530.html'>https://cwe.mitre.org/data/definitions/530.html</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/ftp/</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>GET</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/ftp/: This might be interesting.</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/ftp/">http://juice.hostdevtest.shop:80/ftp/</a><br>
+      <a href="http://172.214.126.203:80/ftp/">http://172.214.126.203:80/ftp/</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/public/</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>GET</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/public/: This might be interesting.</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/public/">http://juice.hostdevtest.shop:80/public/</a><br>
+      <a href="http://172.214.126.203:80/public/">http://172.214.126.203:80/public/</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/wp-content/plugins/nextgen-gallery/products/photocrati_nextgen/modules/nextgen_addgallery_page/static/jquery.filetree/connectors/jqueryFileTree.php</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/wp-content/plugins/nextgen-gallery/products/photocrati_nextgen/modules/nextgen_addgallery_page/static/jquery.filetree/connectors/jqueryFileTree.php: NextGEN Gallery LFI.</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/wp-content/plugins/nextgen-gallery/products/photocrati_nextgen/modules/nextgen_addgallery_page/static/jquery.filetree/connectors/jqueryFileTree.php">http://juice.hostdevtest.shop:80/wp-content/plugins/nextgen-gallery/products/photocrati_nextgen/modules/nextgen_addgallery_page/static/jquery.filetree/connectors/jqueryFileTree.php</a><br>
+      <a href="http://172.214.126.203:80/wp-content/plugins/nextgen-gallery/products/photocrati_nextgen/modules/nextgen_addgallery_page/static/jquery.filetree/connectors/jqueryFileTree.php">http://172.214.126.203:80/wp-content/plugins/nextgen-gallery/products/photocrati_nextgen/modules/nextgen_addgallery_page/static/jquery.filetree/connectors/jqueryFileTree.php</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://seclists.org/fulldisclosure/2014/Feb/171'>https://seclists.org/fulldisclosure/2014/Feb/171</a></td>
+</table>
+
+<table class="dataTable">
+  <tr>
+    <td class="column-head">URI</td>
+    <td>/wordpress/wp-content/plugins/nextgen-gallery/products/photocrati_nextgen/modules/nextgen_addgallery_page/static/jquery.filetree/connectors/jqueryFileTree.php</td>
+  </tr>
+  <tr>
+    <td class="column-head">HTTP Method</td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td class="column-head">Description</td>
+    <td>/wordpress/wp-content/plugins/nextgen-gallery/products/photocrati_nextgen/modules/nextgen_addgallery_page/static/jquery.filetree/connectors/jqueryFileTree.php: NextGEN Gallery LFI.</td>
+  </tr>
+  <tr>
+    <td class="column-head">Test Links</td>
+    <td>
+      <a href="http://juice.hostdevtest.shop:80/wordpress/wp-content/plugins/nextgen-gallery/products/photocrati_nextgen/modules/nextgen_addgallery_page/static/jquery.filetree/connectors/jqueryFileTree.php">http://juice.hostdevtest.shop:80/wordpress/wp-content/plugins/nextgen-gallery/products/photocrati_nextgen/modules/nextgen_addgallery_page/static/jquery.filetree/connectors/jqueryFileTree.php</a><br>
+      <a href="http://172.214.126.203:80/wordpress/wp-content/plugins/nextgen-gallery/products/photocrati_nextgen/modules/nextgen_addgallery_page/static/jquery.filetree/connectors/jqueryFileTree.php">http://172.214.126.203:80/wordpress/wp-content/plugins/nextgen-gallery/products/photocrati_nextgen/modules/nextgen_addgallery_page/static/jquery.filetree/connectors/jqueryFileTree.php</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="column-head">References</td>
+    <td><a href='https://seclists.org/fulldisclosure/2014/Feb/171'>https://seclists.org/fulldisclosure/2014/Feb/171</a></td>
+</table>
+
+<div>
+<p></p>
+<table class="headerTable">
+ <tr>
+  <td>Host Summary</td>
+ </tr>
+</table>
+<table  class="dataTable">
+ <tr>
+  <td class="column-head">Start Time</td>
+  <td>2024-06-28 23:54:11</td>
+ </tr>
+ <tr>
+  <td class="column-head">End Time</td>
+  <td>2024-06-29 00:12:53</td>
+ </tr>
+ <tr>
+  <td class="column-head">Elapsed Time</td>
+  <td>1122 seconds</td>
+ </tr>
+ <tr>
+  <td class="column-head">Statistics</td>
+  <td>7915 requests, 2 errors, 149 findings</td>
+ </tr>
+</table>
+</div>
+<p></p>
+
+<p></p>
+<table class="headerTable">
+  <tr>
+    <td>Scan Summary</td>
+  </tr>
+</table>
+<table class="dataTable">
+  <tr>
+    <td class="column-head">Software Details</td>
+    <td><a href="http://cirt.net/">Nikto 2.5.0</a></td>
+  <tr>
+    <td class="column-head">CLI Options</td>
+    <td>-h http://juice.hostdevtest.shop -o nikto-report.html</td>
+  </tr>
+  <tr>
+    <td class="column-head">Hosts Tested</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td class="column-head">Start Time</td>
+    <td>Fri Jun 28 23:54:10 2024</td>
+  </tr>
+  <tr>
+    <td class="column-head">End Time</td>
+    <td>Sat Jun 29 00:12:53 2024</td>
+  </tr>
+  <tr>
+    <td class="column-head">Elapsed Time</td>
+    <td>1123 seconds</td>
+  </tr>
+</table>
+<p></p>
+<p class="copyright">&copy; 2008 Chris Sullo</p>
+
+<!-- (c) 2008 Chris Sullo -->
+
+</body>
+</html>
+
