@@ -57,7 +57,7 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
-          username: ilovegamesrp@gmail.com
+          username: ilovegamesrp
           password: ${{ secrets.EMAIL_PASSWORD }}  #
           subject: OWASP ZAP and Nikto Scan Report
           to: ilovegamesrp@gmail.com
