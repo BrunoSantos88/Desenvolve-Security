@@ -56,7 +56,7 @@ jobs:
       - name: Copy Reports to Docs Folder
         run: |
           mkdir -p docs
-          cp zap/report.html docs/zap-report.html
+          cp report.html docs/zap-report.html
           cp nikto-report.html docs/nikto-report.html
 
       - name: Deploy to GitHub Pages
