@@ -55,7 +55,7 @@ jobs:
       - name: Send mail
         uses: dawidd6/action-send-mail@v3
         with:
-         connection_url: ${{secrets.MAIL_CONNECTION}}
+         connection_url: ${{ secrets.MAIL_CONNECTION }}
          server_address: smtp.gmail.com
          server_port: 465
          secure: true
@@ -65,5 +65,5 @@ jobs:
             <h1>OWASP ZAP and Nikto Scan Report</h1>
             <p>The scans have been completed successfully.</p>
          attachments: |
-            zap/report.html
-            nikto-report.html
+             zap/report.html
+             nikto-report.html
