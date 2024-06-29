@@ -52,19 +52,18 @@ jobs:
           name: nikto-html-report
           path: nikto-report.html
 
-      - name: Send Email Notification
+      - name: Send mail
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          username: ilovegamesrp
-          password: ${{ secrets.EMAIL_PASSWORD }}  #
-          subject: OWASP ZAP and Nikto Scan Report
-          to: ilovegamesrp@gmail.com
-          from: ilovegamesrp@gmail.com
-          body: |
+         connection_url: ${{secrets.MAIL_CONNECTION}}
+         server_address: smtp.gmail.com
+         server_port: 465
+         secure: true
+         subject: OWASP ZAP and Nikto Scan Report
+         from: ilovegamesrp@gmail.com
+         body: |
             <h1>OWASP ZAP and Nikto Scan Report</h1>
             <p>The scans have been completed successfully.</p>
-          attachments: |
+         attachments: |
             zap/report.html
             nikto-report.html
