@@ -51,12 +51,4 @@ jobs:
           name: nikto-html-report
           path: nikto-report.html
 
-      - name: Send Email with Report
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 587
-          subject: "Nikto HTML Report"
-          body: "Please find the attached Nikto HTML report."
-          to: ilovegamesrpg@gmail.com
-          attachments: nikto-report.html
+  
