@@ -3,7 +3,7 @@ name: OWASP ZAP Scan
 on:
   push:
     branches:
-      - devtest3  # Trigger on pushes to the devtest3 branch
+       [devtest3]
 
 jobs:
   zap_scan:
@@ -35,15 +35,31 @@ jobs:
         with:
           name: zap-report
           path: zap/report.html
+   
 
+      - name: Install Nikto
+        run: sudo apt-get install nikto -y
 
-      - name: Download artifact
-        uses: actions/download-artifact@v2
+      - name: Run Nikto Scan and Generate HTML Report
+        run: |
+          nikto -h  http://juice.hostdevtest.shop -Format html -o nikto-report.html
+          cat nikto-report.html  # Display report in the logs (optional)
+
+      - name: Upload Nikto HTML Report
+        uses: actions/upload-artifact@v2
         with:
-          name: zap-report  
-          path: zap-report  
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+          name: nikto-html-report
+          path: nikto-report.html
+
+      - name: Send Email with Report
+        uses: dawidd6/action-send-mail@v3
         with:
-          github_token: ${{ secrets.ZAP_TOKEN_GIT}}
-          publish_dir: ./zap-report  
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.GMAIL_ADDRESS }}
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          subject: "Nikto HTML Report"
+          body: "Please find the attached Nikto HTML report."
+          to: ${{ secrets.GMAIL_ADDRESS }}
+          from: ${{ secrets.GMAIL_ADDRESS }}
+          attachments: nikto-report.html
