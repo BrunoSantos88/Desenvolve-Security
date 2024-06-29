@@ -1,0 +1,32 @@
+name: OWASP ZAP Scan
+
+on:
+  push:
+    branches:
+       [devtest3]
+
+jobs:
+  zap_scan:
+    runs-on: ubuntu-latest
+    name: Scan the web application with OWASP ZAP
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Send Email
+        uses: hilarion5/send-mail@v1
+        with:
+          smtp-server: smtp.gmail.com
+          smtp-port: 465
+          smtp-secure: true
+          from-email: ilovegamesrpg@gmail.com
+          to-email: ilovegamesrpg@gmail.com
+          username: ilovegamesrpg@gmail.com
+          password: *Mulekao1988*
+          subject: Test Email
+          body: This is a test email sent from GitHub Actions.
+          html: |
+            <h1>This is a test email</h1>
+            <p>Test Paragraph</p>
+
+
