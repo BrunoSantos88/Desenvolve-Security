@@ -1,14 +1,14 @@
-name: OWASP ZAP Scan
+name: OWASP ZAP and Nikto Scan
 
 on:
   push:
     branches:
-       [devtest3]
+      - devtest3
 
 jobs:
-  zap_scan:
+  zap_and_nikto_scan:
     runs-on: ubuntu-latest
-    name: Scan the web application with OWASP ZAP
+    name: Scan the web application with OWASP ZAP and Nikto
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -35,14 +35,15 @@ jobs:
         with:
           name: zap-report
           path: zap/report.html
-   
 
       - name: Install Nikto
-        run: sudo apt-get install nikto -y
+        run: |
+          sudo apt-get update
+          sudo apt-get install nikto -y
 
       - name: Run Nikto Scan and Generate HTML Report
         run: |
-          nikto -h  http://juice.hostdevtest.shop -Format html -o nikto-report.html
+          nikto -h http://juice.hostdevtest.shop -Format html -o nikto-report.html
           cat nikto-report.html  # Display report in the logs (optional)
 
       - name: Upload Nikto HTML Report
@@ -51,4 +52,19 @@ jobs:
           name: nikto-html-report
           path: nikto-report.html
 
-  
+      - name: Send Email Notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: Bruno Santos
+          password: *Mulekao1988*
+          subject: OWASP ZAP and Nikto Scan Report
+          to: ilovegamesrp@gmail.com
+          from: ilovegamesrp@gmail.com
+          body: |
+            <h1>OWASP ZAP and Nikto Scan Report</h1>
+            <p>The scans have been completed successfully.</p>
+          attachments: |
+            zap/report.html
+            nikto-report.html
