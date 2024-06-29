@@ -59,5 +59,4 @@ jobs:
           subject: "Nikto HTML Report"
           body: "Please find the attached Nikto HTML report."
           to: ilovegamesrpg@gmail.com
-          from: ${{ secrets.GMAIL_ADDRESS }}
           attachments: nikto-report.html
