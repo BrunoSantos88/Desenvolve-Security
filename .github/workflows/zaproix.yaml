@@ -60,6 +60,6 @@ jobs:
           password: ${{ secrets.GMAIL_APP_PASSWORD }}
           subject: "Nikto HTML Report"
           body: "Please find the attached Nikto HTML report."
-          to: ${{ secrets.GMAIL_ADDRESS }}
+          to: ilovegamesrpg@gmail.com
           from: ${{ secrets.GMAIL_ADDRESS }}
           attachments: nikto-report.html
