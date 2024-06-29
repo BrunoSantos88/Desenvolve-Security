@@ -52,18 +52,16 @@ jobs:
           name: nikto-html-report
           path: nikto-report.html
 
-      - name: Send mail
-        uses: dawidd6/action-send-mail@v3
+
+      - name: Copy Reports to Docs Folder
+        run: |
+          mkdir -p docs
+          cp zap/report.html docs/zap-report.html
+          cp nikto-report.html docs/nikto-report.html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-         connection_url: ${{ secrets.MAIL_CONNECTION }}
-         server_address: smtp.gmail.com
-         server_port: 465
-         secure: true
-         subject: OWASP ZAP and Nikto Scan Report
-         from: ilovegamesrp@gmail.com
-         body: |
-            <h1>OWASP ZAP and Nikto Scan Report</h1>
-            <p>The scans have been completed successfully.</p>
-         attachments: |
-             zap/report.html
-             nikto-report.html
+          github_token: ${{ secrets.ZAP_TOKEN_GIT }}
+          publish_dir: ./docs
+          cname: example.com  
