@@ -1,4 +1,4 @@
-# nuclei
+# commandos e linkd Nuclei
 
 * nuclei -h
 

@@ -7,7 +7,7 @@ Link https://github.com/danielmiessler/SecLists/tree/master
   && unzip SecList.zip \
   && rm -f SecList.zip
 
-  # Kali Linux
+# Kali Linux
 
   * apt-get -y install seclists
 

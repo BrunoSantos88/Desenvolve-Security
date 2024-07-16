@@ -3,7 +3,7 @@ name: OWASP ZAP and Nikto Scan
 on:
   push:
     branches:
-      - devtest3
+      - "suabranch"
 
 jobs:
   zap_and_nikto_scan:
@@ -28,7 +28,7 @@ jobs:
       - name: Run OWASP ZAP Scan
         run: |
           cd zap
-          ./zap.sh -cmd -quickurl http://juice.hostdevtest.shop -quickout report.html -quickprogress
+          ./zap.sh -cmd -quickurl http://demo.testfire.net -quickout report.html -quickprogress
 
       - name: Upload ZAP Report
         uses: actions/upload-artifact@v2
@@ -43,7 +43,7 @@ jobs:
 
       - name: Run Nikto Scan and Generate HTML Report
         run: |
-          nikto -h http://juice.hostdevtest.shop -Format html -o nikto-report.html
+          nikto -h http://demo.testfire.net/ -Format html -o nikto-report.html
           cat nikto-report.html  # Display report in the logs (optional)
 
       - name: Upload Nikto HTML Report
@@ -58,10 +58,3 @@ jobs:
           mkdir -p docs
           cp report.html docs/zap-report.html
           cp nikto-report.html docs/nikto-report.html
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.ZAP_TOKEN_GIT }}
-          publish_dir: ./docs
-          cname: example.com  
