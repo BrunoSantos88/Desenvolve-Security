@@ -1,5 +1,7 @@
 # Introdução à Privilege Escalation
 
+CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+
 * Descrição
 Ocorre quando um usuário comum acessa dados ou funcionalidades de outro usuário com permissões semelhantes.
 Ato de explorar uma vulnerabilidade ou falha de design em um sistema para obter acesso ou permissões elevadas

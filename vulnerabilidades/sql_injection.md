@@ -1,4 +1,5 @@
 # SQL INJECTION
+
 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H
 
 * Descrição

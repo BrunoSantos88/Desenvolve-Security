@@ -1,5 +1,7 @@
 # Improper Input Validation
 
+CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+
 * Descrição
 Improper Input Validation é uma falha de segurança que ocorre quando um sistema não verifica
 corretamente os dados de entrada fornecidos por um usuário ou uma fonte externa antes de processá-los.

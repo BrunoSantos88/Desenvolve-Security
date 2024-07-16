@@ -1,5 +1,7 @@
 # Lack of Resources & Rate Limiting
 
+CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N
+
 * Descrição
 As solicitações de API consomem recursos como rede, CPU, memória e armazenamento. A quantidade de
 recursos necessários para satisfazer uma solicitação depende muito da entrada do usuário e da lógica de

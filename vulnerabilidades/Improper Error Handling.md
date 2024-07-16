@@ -1,4 +1,5 @@
 # 1.4- Improper Error Handling
+
 CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
 
 * Descrição

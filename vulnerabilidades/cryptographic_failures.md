@@ -1,5 +1,7 @@
  # Cryptographic Failures
 
+ CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+
 * Descrição
 A falha de criptografia ocorre quando um sistema ou protocolo de criptografia não consegue proteger a informação
 conforme esperado.
