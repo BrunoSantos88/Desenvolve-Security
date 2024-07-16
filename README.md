@@ -54,7 +54,7 @@ significativos nas contas dos usuários. A ausência de criptografia no site, se
 o uso de SSL/TLS, também pode resultar em vazamentos de dados dos
 clientes. </p>
 
-Metodologia:
+* Metodologia:
 Foi utilizado o Zaproxy para escanear vulnerabilidades e o Burp Suite para
 realizar inputs no proxy e identificar falhas. Ferramentas do Kali Linux foram
 empregadas para scan de API, endereços de rede, mapeamento de portas e
