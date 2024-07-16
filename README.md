@@ -19,16 +19,16 @@ de negocio online.
 - http://juice.hostdevtest.shop/rest/user/login
 
 # Análise das Vulnerabilidades
-1.1 Security Misconfiguration
-1.2- SQL INJECTION
-1.3 Broken Authentication
-1.4- Improper Error Handling
-1.5 Cryptographic Failures
-1.6 Privilege Escalation
-1.7- Cross-Site Scripting (XSS)
-1.8 File Path Manipulation
-1.9 Improper Input Validation
-1.10 Lack of Resources & Rate Limiting
+1.1 Security Misconfiguration </p>
+1.2- SQL INJECTION </p>
+1.3 Broken Authentication </p>
+1.4- Improper Error Handling </p>
+1.5 Cryptographic Failures </p>
+1.6 Privilege Escalation </p>
+1.7- Cross-Site Scripting (XSS) </p>
+1.8 File Path Manipulation </p>
+1.9 Improper Input Validation </p>
+1.10 Lack of Resources & Rate Limiting </p>
 
 # Conclusão
 * Estado de Segurança:
