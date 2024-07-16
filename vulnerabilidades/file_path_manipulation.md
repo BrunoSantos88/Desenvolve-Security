@@ -1,5 +1,7 @@
 # File-Path Manipulation 
 
+CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+
 * Descrição
 È o processo de construção, modificação e interpretação de caminhos de arquivos no sistema de arquivos .
 Em programação, isso frequentemente envolve a manipulação de strings que representam os caminhos
