@@ -1,4 +1,4 @@
-name: OWASP ZAP and Nikto Scan
+name: SCAN WEB OWASP ZAP and Nikto Scan
 
 on:
   push:
