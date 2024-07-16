@@ -31,7 +31,7 @@ de negocio online.
 1.10 Lack of Resources & Rate Limiting
 
 # Conclusão
-* Estado de Segurança
+* Estado de Segurança:
 O site Juice Shop possui muitas vulnerabilidades que podem causar impactos
 críticos, incluindo a paralisação total em um ataque de DDOS. Além disso, há
 risco de vazamentos de dados e prejuízos financeiros caso essas
@@ -39,7 +39,7 @@ vulnerabilidades sejam exploradas com sucesso. Seguindo as regras
 regulamentares da LGPD, o vazamento de dados de clientes pode acarretar
 sérios prejuízos. </p>
 
-* Resumo das Vulnerabilidades
+* Resumo das Vulnerabilidades:
 Atualmente, a aplicação web apresenta diversas vulnerabilidades devido à
 ausência de headers, resultando na vulnerabilidade Misconfiguration. Isso
 facilita a visualização e a interação indevida entre cliente/servidor. Além disso,
@@ -54,4 +54,16 @@ significativos nas contas dos usuários. A ausência de criptografia no site, se
 o uso de SSL/TLS, também pode resultar em vazamentos de dados dos
 clientes. </p>
 
-# Foram reportadas 10 falhas sendo: 4-CRITICA | 3-ALTA | 3-MEDIA
+Metodologia:
+Foi utilizado o Zaproxy para escanear vulnerabilidades e o Burp Suite para
+realizar inputs no proxy e identificar falhas. Ferramentas do Kali Linux foram
+empregadas para scan de API, endereços de rede, mapeamento de portas e
+parâmetros de SQL, incluindo: Nuclei, Nikto, Nmap, Dirb, Gobuster e Sqlmap.
+Na análise de criptografia no acesso HTTP, o tcpdump foi utilizado para
+capturar o tráfego de rede e, com o Wireshark, foi realizada uma análise
+detalhada dos parâmetros da camada HTTP.
+O CVSS foi utilizado para qualificar o impacto vulnerabilidade , enquanto a
+metodologia OWASP Top 10 foi utilizada para identificar, compreender a
+exploração da vulnerabilidade. </p>
+
+* Foram reportadas 10 falhas sendo: 4-CRITICA | 3-ALTA | 3-MEDIA
