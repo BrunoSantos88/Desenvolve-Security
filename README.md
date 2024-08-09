@@ -64,7 +64,7 @@
             <tr>
             <tr>
             <th>Foram reportadas</th>
-                <th> 6 Falhas </th>
+                <th> 6 </th>
                 <th> 3-ALTA | 3-MEDIO </th> 
         </tr>
     </table>
