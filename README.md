@@ -43,15 +43,31 @@ de negocio online.
         <tr>
             <td>SQL INJECTION </td>
             <td>Impacto: ALTO </td>
-            <td> CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
+            <td> 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
        <tr>
-            <td>Juice Shop</td>
-            <td>Bruno Santos Turma 4 SI</td>
+             <td>SQL INJECTION </td>
+            <td>Impacto: ALTO </td>
+            <td> 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
        <tr>
        <tr>
-            <td>url</td>
-            <td> http://juice.hostdevtest.shop</td>
-            </td>
+            <td>SQL INJECTION </td>
+            <td>Impacto: ALTO </td>
+            <td> 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
+   <tr>
+       <tr>
+            <td>SQL INJECTION </td>
+            <td>Impacto: ALTO </td>
+            <td> 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
+   <tr>
+       <tr>
+             <td>SQL INJECTION </td>
+            <td>Impacto: ALTO </td>
+            <td> 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
+   <tr>
+       <tr>
+             <td>SQL INJECTION </td>
+            <td>Impacto: ALTO </td>
+            <td> 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
             <tr>
     </table>
 </h3> 
