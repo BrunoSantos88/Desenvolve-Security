@@ -42,31 +42,31 @@ de negocio online.
         </tr>
         <tr>
             <td>SQL INJECTION </td>
-            <td>Impacto: ALTO </td>
+            <td> ALTO </td>
             <td> 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
        <tr>
-             <td>SQL INJECTION </td>
-            <td>Impacto: ALTO </td>
+             <td>Broken Authentication</td>
+            <td> ALTO </td>
             <td> 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
        <tr>
        <tr>
-            <td>SQL INJECTION </td>
-            <td>Impacto: ALTO </td>
-            <td> 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
-   <tr>
-       <tr>
-            <td>SQL INJECTION </td>
-            <td>Impacto: ALTO </td>
+            <td>Cryptographic Failures</td>
+            <td> ALTO </td>
             <td> 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
    <tr>
        <tr>
-             <td>SQL INJECTION </td>
-            <td>Impacto: ALTO </td>
+            <td>Path Traversal </td>
+            <td>MEDIO</td>
             <td> 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
    <tr>
        <tr>
-             <td>SQL INJECTION </td>
-            <td>Impacto: ALTO </td>
+             <td>Lack of Resources & Rate Limiting</td>
+            <td>MEDIO</td>
+            <td> 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
+   <tr>
+       <tr>
+             <td>Improper Input Validation</td>
+            <td>NEDIO </td>
             <td> 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
             <tr>
     </table>
