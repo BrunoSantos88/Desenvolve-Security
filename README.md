@@ -31,7 +31,7 @@
         <tr>
             <th>Análise das Vulnerabilidades</th>
                 <th> Impacto </th>
-                <th>  CVSS  </th>
+                <th>  CVSS https://chandanbn.github.io/cvss/ </th>
         </tr>
         <tr>
             <td>SQL INJECTION </td>
