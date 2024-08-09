@@ -10,7 +10,8 @@ de negocio online.
 <h3>
     <table>
         <tr>
-            <th>Controle de versão e Escopo</th>
+            <th>Controle de versão</th>
+                <th> Escopo </th>
         </tr>
         <tr>
             <td>Versão:1</td>
