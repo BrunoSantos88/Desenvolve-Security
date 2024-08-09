@@ -14,25 +14,20 @@ de negocio online.
         </tr>
         <tr>
             <td>Versão:1</td>
-            <td>Abordagem sequencial onde cada fase é concluida antes de passar para a proxima</td>
-            <td>Estrutura clara e fácil de entender </td>
-            <td> Pouca flexibilidade para mudança de requisitos</td>
+            <td>Data 15/07/2024</td>
+       <tr>
+            <td>Juice Shop</td>
+            <td>Bruno Santos Turma 4 SI</td>
+       <tr>
+       <tr>
+            <td>url</td>
+            <td>http://juice.hostdevtest.shop
+- http://juice.hostdevtest.shop/login
+- http://juice.hostdevtest.shop/rest/user/login</td>
+       <tr>
     </table>
 </h3> 
 </p>
-
-
-
-
-* Controle de versão e Escopo
-- Versão:1
-- Data 15/07/2024
-- Juice Shop
-- Bruno Santos Turma 4 SI
-* Escopo
-- http://juice.hostdevtest.shop
-- http://juice.hostdevtest.shop/login
-- http://juice.hostdevtest.shop/rest/user/login
 
 # Análise das Vulnerabilidades
 1.1-SQL INJECTION Impacto: ALTA CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </p>
