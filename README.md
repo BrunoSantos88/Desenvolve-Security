@@ -24,7 +24,8 @@ de negocio online.
             <td>url</td>
             <td>http://juice.hostdevtest.shop</td>
                 http://juice.hostdevtest.shop/login 
-                http://juice.hostdevtest.shop/rest/user/login</td>
+                http://juice.hostdevtest.shop/rest/user/login
+            </td>
             <tr>
     </table>
 </h3> 
