@@ -31,7 +31,7 @@
         <tr>
             <th>Análise das Vulnerabilidades</th>
                 <th> Impacto </th>
-                <th>  CVSS https://www.first.org/cvss/calculator/3.1  </th>
+                <th>  CVSS 3.1  </th>
         </tr>
         <tr>
             <td>SQL INJECTION </td>
