@@ -18,7 +18,8 @@
             <th> 09/08</th>
        <tr>
             <td>Juice Shop</td>
-            <td>Bruno Santos Turma 4 SI</td>
+            <td>Bruno Santos Turma 4 </td>
+              <td>   SI </td>
             </td>
             <tr>
     </table>
