@@ -95,4 +95,4 @@
 
 - Foi utilizado o Zaproxy para scanear e o Burp Suite para realizar inputs no proxy e identificar falhas. Ferramentas do Kali Linux foram empregadas para scan de API, endereços de rede, mapeamento de portas e parâmetros de SQL, incluindo: Nuclei, Nikto, Nmap, Dirb, Gobuster e Sqlmap.
 Na análise de criptografia no acesso HTTP, o tcpdump foi utilizado para capturar o tráfego de rede e, com o Wireshark, foi realizada uma análise detalhada dos parâmetros da camada HTTP.
-O CVSS foi utilizado para qualificar o impacto e metodologia OWASP Top 10.
+O CVSS foi utilizado para qualificar o impacto e metodologia OWASP Top 10 para indentificar.
