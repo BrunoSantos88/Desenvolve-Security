@@ -59,7 +59,7 @@
    <tr>
        <tr>
              <td>Improper Input Validation</td>
-            <td>NEDIO </td>
+            <td>MEDIO </td>
             <td> CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N  </td>
             <tr>
             <tr>
