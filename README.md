@@ -72,8 +72,7 @@ de negocio online.
             <tr>
             <th>Foram reportadas</th>
                 <th> 6 Falhas </th>
-                <th> 3-ALTA </th>
-                <th> 3-MEDIO </th>
+                <th> 3-ALTA | 3-MEDIO </th> 
         </tr>
     </table>
 </h3> 
