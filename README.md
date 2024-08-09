@@ -1,12 +1,5 @@
 # Pentest no Juice Shop
 
-* DESCRIÇÃO DA EMPRESA
-- Há Juice Shop é uma aplicação web que simula uma
-loja online de venda de sucos de frutas. No entanto,
-há relatos de problemas com usuários fictícios e
-danos financeiros ocorrendo diariamente na regra
-de negocio online.
-
 <h3>
     <table>
         <tr>
