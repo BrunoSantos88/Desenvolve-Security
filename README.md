@@ -37,7 +37,8 @@ de negocio online.
     <table>
         <tr>
             <th>Análise das Vulnerabilidades</th>
-                <th> Escopo </th>
+                <th> Impacto </th>
+                <th>  CVSS  </th>
         </tr>
         <tr>
             <td>SQL INJECTION </td>
