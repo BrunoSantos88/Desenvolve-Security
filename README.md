@@ -32,7 +32,7 @@ de negocio online.
 # Análise das Vulnerabilidades
 - SQL INJECTION Impacto: ALTA CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </p>
 - Explicação: SQL Injection permite que um invasor manipule consultas SQL, levando ao acesso a dados não autorizados (Confidencialidade: Alta) e modificação ou destruição de dados (Integridade: Alto). Embora não tenha impacto direto na disponibilidade, pode levar a violações de dados, razão pela qual o impacto é classificado como Alto.
-- 
+
 <h3>
     <table>
         <tr>
@@ -43,7 +43,6 @@ de negocio online.
             <td>SQL INJECTION </td>
             <td>Impacto: ALTO </td>
             <td> CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
-            
        <tr>
             <td>Juice Shop</td>
             <td>Bruno Santos Turma 4 SI</td>
