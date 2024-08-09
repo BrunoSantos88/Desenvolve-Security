@@ -5,17 +5,15 @@
         <tr>
             <th>Controle de versão</th>
                 <th> Escopo </th>
+                <th> Datas</th>
+                
         </tr>
         <tr>
             <td>Versão:1</td>
-            <td>Data 15/07/2024</td>
+            <td>http://juice.hostdevtest.shop</td>
        <tr>
             <td>Juice Shop</td>
             <td>Bruno Santos Turma 4 SI</td>
-       <tr>
-       <tr>
-            <td>url</td>
-            <td> http://juice.hostdevtest.shop</td>
             </td>
             <tr>
     </table>
