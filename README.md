@@ -10,6 +10,12 @@
         <tr>
             <td>Versão:1</td>
             <td>http://juice.hostdevtest.shop</td>
+            <th> 15/07</th>
+       <tr>
+           <tr>
+            <td>Versão:2</td>
+            <td>http://juice.hostdevtest.shop</td>
+            <th> 09/08</th>
        <tr>
             <td>Juice Shop</td>
             <td>Bruno Santos Turma 4 SI</td>
