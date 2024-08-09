@@ -22,10 +22,10 @@ de negocio online.
        <tr>
        <tr>
             <td>url</td>
-            <td>http://juice.hostdevtest.shop
-- http://juice.hostdevtest.shop/login
-- http://juice.hostdevtest.shop/rest/user/login</td>
-       <tr>
+            <td>http://juice.hostdevtest.shop</td>
+                http://juice.hostdevtest.shop/login 
+                http://juice.hostdevtest.shop/rest/user/login</td>
+            <tr>
     </table>
 </h3> 
 </p>
