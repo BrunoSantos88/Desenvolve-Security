@@ -36,31 +36,31 @@
         <tr>
             <td>SQL INJECTION </td>
             <td> ALTO </td>
-            <td> 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
+            <td> CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
        <tr>
              <td>Broken Authentication</td>
             <td> ALTO </td>
-            <td> 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
+            <td> CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L </td>
        <tr>
        <tr>
             <td>Cryptographic Failures</td>
             <td> ALTO </td>
-            <td> 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
+            <td> CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
    <tr>
        <tr>
             <td>Path Traversal </td>
             <td>MEDIO</td>
-            <td> 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N </td>
+            <td> CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N </td>
    <tr>
        <tr>
              <td>Lack of Resources & Rate Limiting</td>
             <td>MEDIO</td>
-            <td> 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N </td>
+            <td> CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N </td>
    <tr>
        <tr>
              <td>Improper Input Validation</td>
             <td>NEDIO </td>
-            <td> 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N  </td>
+            <td> CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N  </td>
             <tr>
             <tr>
             <th>Foram reportadas</th>
