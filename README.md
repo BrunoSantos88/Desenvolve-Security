@@ -38,3 +38,9 @@ de negocio online.
 - Sem a validação de entrada adequada, um invasor pode injetar dados maliciosos no aplicativo, levando a acesso ou modificação de dados não autorizados. No entanto, isso não afeta diretamente a confidencialidade ou a disponibilidade, portanto, o impacto geral é o Medio.
 
 Foram reportadas 6 falhas sendo: 3-ALTA | 3-MEDIO
+
+# Metodologia
+
+- Foi utilizado o Zaproxy para scanear e o Burp Suite para realizar inputs no proxy e identificar falhas. Ferramentas do Kali Linux foram empregadas para scan de API, endereços de rede, mapeamento de portas e parâmetros de SQL, incluindo: Nuclei, Nikto, Nmap, Dirb, Gobuster e Sqlmap.
+- Na análise de criptografia no acesso HTTP, o tcpdump foi utilizado para capturar o tráfego de rede e, com o Wireshark, foi realizada uma análise detalhada dos parâmetros da camada HTTP.
+- O CVSS foi utilizado para qualificar o impacto e metodologia OWASP Top 10.**
