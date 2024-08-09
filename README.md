@@ -6,7 +6,6 @@
             <th>Controle de versão</th>
                 <th> Escopo </th>
                 <th> Datas</th>
-                
         </tr>
         <tr>
             <td>Versão:1</td>
