@@ -30,8 +30,33 @@ de negocio online.
 </p>
 
 # Análise das Vulnerabilidades
-1.1-SQL INJECTION Impacto: ALTA CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </p>
-- Explicação: SQL Injection permite que um invasor manipule consultas SQL, levando ao acesso a dados não autorizados (Confidencialidade: Alta) e modificação ou destruição de dados (Integridade: Alto). Embora não tenha impacto direto na disponibilidade, pode levar a violações de dados, razão pela qual o impacto é classificado como Alto. 
+- SQL INJECTION Impacto: ALTA CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </p>
+- Explicação: SQL Injection permite que um invasor manipule consultas SQL, levando ao acesso a dados não autorizados (Confidencialidade: Alta) e modificação ou destruição de dados (Integridade: Alto). Embora não tenha impacto direto na disponibilidade, pode levar a violações de dados, razão pela qual o impacto é classificado como Alto.
+- 
+<h3>
+    <table>
+        <tr>
+            <th>Análise das Vulnerabilidades</th>
+                <th> Escopo </th>
+        </tr>
+        <tr>
+            <td>SQL INJECTION </td>
+            <td>Impacto: ALTO </td>
+            <td> CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N </td>
+            
+       <tr>
+            <td>Juice Shop</td>
+            <td>Bruno Santos Turma 4 SI</td>
+       <tr>
+       <tr>
+            <td>url</td>
+            <td> http://juice.hostdevtest.shop</td>
+            </td>
+            <tr>
+    </table>
+</h3> 
+</p>
+
   
 1.2 Broken Authentication Impacto: ALTA CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L  </p>
 - Credenciais comprometidas podem levar ao acesso não autorizado a contas de usuário e dados confidenciais (Confidentiality: High). Além disso, os invasores podem se passar por usuários legítimos para executar ações em seu nome, levando a modificação ou destruição de dados (Integridade: Alta). Embora o impacto da disponibilidade seja baixo, o dano potencial à confidencialidade e integridade torna o impacto geral Alto.
