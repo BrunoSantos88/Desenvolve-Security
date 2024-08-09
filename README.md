@@ -77,10 +77,10 @@
 
   
 1.2 Broken Authentication 
-- Credenciais comprometidas podem levar ao acesso não autorizado a contas de usuário e dados confidenciais (Confidentiality: High). Além disso, os invasores podem se passar por usuários legítimos para executar ações em seu nome, levando a modificação ou destruição de dados (Integridade: Alta). Embora o impacto da disponibilidade seja baixo, o dano potencial à confidencialidade e integridade torna o impacto geral Alto.
+- Credenciais comprometidas podem levar ao acesso não autorizado a contas de usuário e dados confidenciais. Além disso, os invasores podem se passar por usuários legítimos para executar ações em seu nome, levando a modificação ou destruição de dados. Embora o impacto da disponibilidade seja baixo, o dano potencial à confidencialidade e integridade torna o impacto geral Alto.
   
 1.3 Cryptographic Failures 
-- Falhas criptográficas podem resultar no comprometimento de dados confidenciais (Confidencialidade: Alta) e modificação ou destruição de dados não autorizados (Integridade: Alta). Embora o impacto da disponibilidade seja Nenhum, o dano potencial à confidencialidade e integridade torna o impacto geral Alto. 
+- Falhas criptográficas podem resultar no comprometimento de dados confidenciais é Alta e modificação ou destruição de dados não autorizados é Alta. Embora o impacto da disponibilidade seja Nenhum, o dano potencial à confidencialidade e integridade torna o impacto geral Alto. 
 
 1.4 Path Traversal 
 - O Path Traversal permite que um invasor acesse ou modifique arquivos fora do diretório pretendido, levando a acesso ou modificação de dados não autorizados. No entanto, isso não afeta diretamente a confidencialidade ou a disponibilidade, portanto, o impacto geral é o Medio
