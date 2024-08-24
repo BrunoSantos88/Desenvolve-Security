@@ -1,0 +1,10 @@
+https://random-status-code.herokuapp.com/
+https://www.alura.com.br
+https://www.caelum.com.brhttp://example.com - online: true
+http://example.org - online: true
+24/08/2024 18:29:26 - https://www.google.com - online: true
+24/08/2024 18:29:26 - https://www.github.com - online: true
+24/08/2024 18:29:26 - https://www.example.com - online: true
+24/08/2024 18:30:14 - https://www.alura.com.br - online: true
+24/08/2024 18:30:14 - https://www.caelum.com.br - online: true
+24/08/2024 18:30:15 - https://random-status-code.herokuapp.com/ - online: false
