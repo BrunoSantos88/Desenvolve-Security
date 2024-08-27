@@ -1,7 +1,10 @@
+package main
+
 import (
 	"fmt"
-	"banco/contas"
-	"banco/clientes"
+
+	"GoProjetoBanco/banco/clientes"
+	"GoProjetoBanco/banco/contas"
 )
 
 func main() {

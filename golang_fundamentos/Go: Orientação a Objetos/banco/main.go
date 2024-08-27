@@ -1,7 +1,7 @@
+package main
+
 import (
 	"fmt"
-	"banco/contas"
-	"banco/clientes"
 )
 
 func main() {
