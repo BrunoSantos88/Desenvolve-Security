@@ -1,4 +1,4 @@
-goprojeto/
+goprojetobanco/
 │
 ├── main.go
 └── banco/

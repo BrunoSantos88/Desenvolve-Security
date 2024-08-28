@@ -8,3 +8,16 @@ type ContaCorrente struct {
 	NumeroConta   int
 	Saldo         float64
 }
+
+func (c *ContaCorrente) Depositar(valorDoDeposito float64) string {
+	if valorDoDeposito > 0 {
+		c.Saldo += valorDoDeposito
+		return "Depósito realizado com sucesso"
+	} else {
+		return "Valor do depósito menor que zero"
+	}
+}
+
+func (c *ContaCorrente) ObterSaldo() float64 {
+	return c.Saldo
+}
