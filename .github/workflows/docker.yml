@@ -23,9 +23,3 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: |
           echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-
-      - name: Tag and push Docker image
-        run: |
-          IMAGE_TAG=my-quiz:latest
-          docker tag my-quiz:$(date +%s) $IMAGE_TAG
-          docker push $IMAGE_TAG
